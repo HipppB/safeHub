@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-03T12:23:58.551Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15" etag="0e8KoslgpKFMaP-TkVlj" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-03T12:55:00.588Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15" etag="PPpQ2um_GwGwdynKcLpc" version="20.4.0" type="github">
   <diagram id="8Fomc0AZO4FN7XBAN6qD" name="Page-1">
-    <mxGraphModel dx="895" dy="1722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1997" dy="2403" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -118,6 +118,9 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-37" value="Click sur &lt;br&gt;un graphique" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=1;" edge="1" parent="1" source="wFw56l5t1BwNAsLt9trj-11" target="wFw56l5t1BwNAsLt9trj-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-11" value="Dashboard - User - avec produit" style="swimlane;" vertex="1" parent="1">
           <mxGeometry x="617" y="70" width="210" height="200" as="geometry">
             <mxRectangle x="670" y="60" width="120" height="30" as="alternateBounds" />
@@ -154,34 +157,87 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=1;" edge="1" parent="1" source="wFw56l5t1BwNAsLt9trj-16" target="wFw56l5t1BwNAsLt9trj-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=block;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wFw56l5t1BwNAsLt9trj-16" target="wFw56l5t1BwNAsLt9trj-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="490.66666666666697" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-16" value="Dashboard - Gestionnaire et Admin" style="swimlane;" vertex="1" parent="1">
-          <mxGeometry x="617" y="290" width="210" height="200" as="geometry">
+          <mxGeometry x="617" y="390" width="210" height="200" as="geometry">
             <mxRectangle x="670" y="60" width="120" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wFw56l5t1BwNAsLt9trj-17" value="Metrics&lt;br&gt;(code produit)" style="whiteSpace=wrap;html=1;" vertex="1" parent="wFw56l5t1BwNAsLt9trj-16">
+        <mxCell id="wFw56l5t1BwNAsLt9trj-17" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="wFw56l5t1BwNAsLt9trj-16">
           <mxGeometry y="20" width="210" height="180" as="geometry" />
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=1;" edge="1" parent="1" source="Z2G2KV7_FwyXqnljN_IR-4" target="wFw56l5t1BwNAsLt9trj-17">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="560" y="165" />
-              <mxPoint x="560" y="400" />
+              <mxPoint x="560" y="500" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="wFw56l5t1BwNAsLt9trj-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=1;" edge="1" parent="1" source="wFw56l5t1BwNAsLt9trj-12">
+        <mxCell id="wFw56l5t1BwNAsLt9trj-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=1;" edge="1" parent="1" source="wFw56l5t1BwNAsLt9trj-12" target="wFw56l5t1BwNAsLt9trj-29">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="990" y="180.00000000000023" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wFw56l5t1BwNAsLt9trj-28" value="Dashboard - User - avec produit" style="swimlane;" vertex="1" parent="1">
-          <mxGeometry x="990" y="70" width="210" height="200" as="geometry">
+        <mxCell id="wFw56l5t1BwNAsLt9trj-34" value="Profil&lt;br&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="wFw56l5t1BwNAsLt9trj-27">
+          <mxGeometry x="-0.4038" y="-5" relative="1" as="geometry">
+            <mxPoint x="22" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-28" value="Profil" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="930" y="70" width="210" height="200" as="geometry">
             <mxRectangle x="670" y="60" width="120" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-29" value="&lt;br&gt;Champ Nom&lt;br&gt;Champ Prénom&lt;br&gt;Champ Age&lt;br&gt;&lt;br&gt;Bouton &quot;Profil&quot;&lt;br&gt;Bouton &quot;Déconnexion&quot;&lt;br&gt;Bouton &quot;Ajouter un produit&quot;" style="whiteSpace=wrap;html=1;" vertex="1" parent="wFw56l5t1BwNAsLt9trj-28">
           <mxGeometry y="20" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-35" value="Propriétés" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="930" y="-160" width="210" height="200" as="geometry">
+            <mxRectangle x="670" y="60" width="120" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-36" value="&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Stats : Max, min, moyenne&lt;br&gt;Notifications, et Historique&lt;br&gt;Bouton &quot;Contact&quot; Bouton &quot;Reset&quot;" style="whiteSpace=wrap;html=1;" vertex="1" parent="wFw56l5t1BwNAsLt9trj-35">
+          <mxGeometry y="20" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-38" value="Graph de la propriété" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wFw56l5t1BwNAsLt9trj-35">
+          <mxGeometry x="20" y="40" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-39" value="bannière tips écologique" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="wFw56l5t1BwNAsLt9trj-35">
+          <mxGeometry x="10" y="160" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=1;" edge="1" parent="1" source="wFw56l5t1BwNAsLt9trj-12" target="TvtiboMg3xRF9wBlMIQy-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="722" y="320" />
+              <mxPoint x="580" y="320" />
+              <mxPoint x="580" y="705" />
+              <mxPoint x="155" y="705" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-41" value="Déconnexion" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="wFw56l5t1BwNAsLt9trj-40">
+          <mxGeometry x="-0.8637" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-44" value="Ajout produit Gestionnaire Admin" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="930" y="390" width="210" height="200" as="geometry">
+            <mxRectangle x="670" y="60" width="120" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-45" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="wFw56l5t1BwNAsLt9trj-44">
+          <mxGeometry y="20" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="wFw56l5t1BwNAsLt9trj-46" value="L&#39;User à accès aux produits dans son habitation, il les ajoute grâce au code produit que &amp;nbsp;lui donne le gestionnaire. Il peut y avoir plusieurs users par produits et un user peut avoir accès à plusieurs produit. Les users ont accès aux metrics confidentielles issue des produits qu&#39;ils ont.&lt;br&gt;Ils ne peuvent pas supprimer les données non confidentiels ou modifier un produit.&amp;nbsp;&lt;br&gt;&lt;br&gt;Le gestionnaire à accès à tout les produits dont il est ajouté en tant que gestionnaire ou qu&#39;il à lui même configuré. Il n&#39;y a qu&#39;un gestionnaire par produit.&lt;br&gt;Le gestionnaire ne peut pas accéder aux informations confidentielles (données de santé) et peut supprimer n&#39;importe quelle donnée issue du produit.&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;br&gt;L&#39;administrateur à accès à tout les produits et peut modifier les gestionnaires des différents produits. Il peut y avoir plusieurs administrateur.&lt;br&gt;L&#39;administrateur peut tout modifier toute les données. Il ne peut pas accéder aux données confidentielles (mais il peut les supprimer)&lt;br&gt;&lt;br&gt;Les données confidentielles sont automatiquement retirés lorsque le code produit est modifié" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="750" width="550" height="310" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
