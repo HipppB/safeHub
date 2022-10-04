@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T12:39:28.910Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15" etag="rp2z5Glphpy9jLl_ou0w" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-04T12:41:42.374Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15" etag="-KXF2nZyvDQ2r7oE0n4M" version="20.4.0" type="github">
   <diagram id="8Fomc0AZO4FN7XBAN6qD" name="Page-1">
     <mxGraphModel dx="1527" dy="2114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -164,15 +164,16 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="960" y="490.66666666666697" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="827" y="520" />
+              <mxPoint x="820" y="520" />
+              <mxPoint x="940" y="520" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=1;" parent="1" source="wFw56l5t1BwNAsLt9trj-16" target="wFw56l5t1BwNAsLt9trj-53" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="827" y="530" />
-              <mxPoint x="879" y="530" />
+              <mxPoint x="820" y="540" />
+              <mxPoint x="879" y="540" />
               <mxPoint x="879" y="760" />
             </Array>
           </mxGeometry>
@@ -279,7 +280,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-44" value="Ajout produit Gestionnaire/Admin" style="swimlane;" parent="1" vertex="1">
-          <mxGeometry x="930" y="420" width="210" height="200" as="geometry">
+          <mxGeometry x="950" y="420" width="210" height="200" as="geometry">
             <mxRectangle x="670" y="60" width="120" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
