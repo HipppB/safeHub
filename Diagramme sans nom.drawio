@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T12:04:46.772Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="86rFKYAWKoRuq8O_zCAj" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-04T12:21:34.074Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="xhErMSDqBQPg_MMYbjtW" version="20.4.0" type="github">
   <diagram id="8Fomc0AZO4FN7XBAN6qD" name="Page-1">
-    <mxGraphModel dx="1455" dy="2169" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1400" dy="2005" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -368,7 +368,7 @@
         <mxCell id="wFw56l5t1BwNAsLt9trj-85" value="Données de l&#39;utilisateurs&lt;br&gt;Produits associé à l&#39;utilisateurs&lt;br&gt;(Actuels et anciens)&lt;br&gt;Possibilité de retirer un produit&lt;br&gt;&lt;br&gt;&lt;br&gt;Bouton &quot;Supprimer l&#39;utilisateur&quot;&lt;br&gt;Bouton &quot;Associer un produit&quot;&lt;br&gt;Bouton &quot;Mettre/retirer Gestionnaire&quot;&lt;br&gt;Bouton &quot;Mettre/retirer Admin&quot;" style="rounded=0;whiteSpace=wrap;html=1;" parent="wFw56l5t1BwNAsLt9trj-83" vertex="1">
           <mxGeometry x="13" y="30" width="187" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="wFw56l5t1BwNAsLt9trj-88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=block;endFill=1;" parent="1" source="wFw56l5t1BwNAsLt9trj-17" target="TvtiboMg3xRF9wBlMIQy-14" edge="1">
+        <mxCell id="wFw56l5t1BwNAsLt9trj-88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="1" source="wFw56l5t1BwNAsLt9trj-17" target="TvtiboMg3xRF9wBlMIQy-14" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="550" y="490" />
