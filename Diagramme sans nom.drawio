@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T12:33:38.094Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15" etag="967Dj7osUXQ2xO9fm3F6" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-04T12:38:34.618Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="0IClTJqQD8j6wAO0ZB5o" version="20.4.0" type="github">
   <diagram id="8Fomc0AZO4FN7XBAN6qD" name="Page-1">
-    <mxGraphModel dx="618" dy="1551" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1711" dy="2191" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -583,6 +583,9 @@
         </mxCell>
         <mxCell id="zcl_KMXIE3ddpEgMDRwE-82" value="&lt;br&gt;texte : Objet et Contenu&lt;br&gt;Bouton &quot;Cloturer / rouvrir&quot;&lt;br&gt;Bouton &quot;En cours&quot;&lt;br&gt;" style="whiteSpace=wrap;html=1;" parent="zcl_KMXIE3ddpEgMDRwE-81" vertex="1">
           <mxGeometry y="20" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="RmG-UfN4-0M2-4QU90NS-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" edge="1" parent="1" source="wFw56l5t1BwNAsLt9trj-12" target="TvtiboMg3xRF9wBlMIQy-14">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
