@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T21:46:15.233Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.53" etag="5z1L07IQ52zv3zUmntdW" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-07T09:56:30.648Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="t4B8ri5kfNgl3kW9bt7D" version="20.4.0" type="github">
   <diagram id="8Fomc0AZO4FN7XBAN6qD" name="Page-1">
-    <mxGraphModel dx="2368" dy="2479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1153" dy="1812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -259,7 +259,7 @@
             <mxRectangle x="670" y="60" width="120" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="wFw56l5t1BwNAsLt9trj-29" value="&lt;br&gt;Champ Nom&lt;br&gt;Champ Prénom&lt;br&gt;Champ Age&lt;br&gt;Champ email de contact&lt;br&gt;Liste picker langues&lt;br&gt;&lt;br&gt;Bouton &quot;Profil&quot;&lt;br&gt;Bouton &quot;Déconnexion&quot;&lt;br&gt;Bouton &quot;Ajouter un produit&quot;&lt;br&gt;Bouton &quot;Messagerie&quot;&lt;br&gt;Bouton &quot;Nouveau ticket&quot;" style="whiteSpace=wrap;html=1;" parent="wFw56l5t1BwNAsLt9trj-28" vertex="1">
+        <mxCell id="wFw56l5t1BwNAsLt9trj-29" value="&lt;br&gt;Champ Nom&lt;br&gt;Champ Prénom&lt;br&gt;Champ Age&lt;br&gt;Champ email de contact&lt;br&gt;Liste picker langues&lt;br&gt;&lt;br&gt;Bouton &quot;Modifier le profil&quot;&lt;br&gt;Bouton &quot;Déconnexion&quot;&lt;br&gt;Bouton &quot;Ajouter un produit&quot;&lt;br&gt;Bouton &quot;Messagerie&quot;&lt;br&gt;Bouton &quot;Nouveau ticket&quot;" style="whiteSpace=wrap;html=1;" parent="wFw56l5t1BwNAsLt9trj-28" vertex="1">
           <mxGeometry y="20" width="210" height="180" as="geometry" />
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-35" value="Propriétés" style="swimlane;" parent="1" vertex="1">
