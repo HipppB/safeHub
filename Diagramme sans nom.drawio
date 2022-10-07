@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-07T10:01:28.879Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15" etag="ga7Nx40xzaeXREg0xpDK" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-07T10:32:14.865Z" agent="5.0 (X11)" etag="NA6O4ny3zZ-Uq0SnvvEj" version="20.4.0" type="github">
   <diagram id="8Fomc0AZO4FN7XBAN6qD" name="Page-1">
-    <mxGraphModel dx="1299" dy="2081" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="5688" dy="4253" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -206,7 +206,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="EZ635x1kSuNYY0ZF9sBV-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="wFw56l5t1BwNAsLt9trj-16" target="EZ635x1kSuNYY0ZF9sBV-9">
+        <mxCell id="EZ635x1kSuNYY0ZF9sBV-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="wFw56l5t1BwNAsLt9trj-16" target="EZ635x1kSuNYY0ZF9sBV-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-16" value="Dashboard - Gestionnaire et Admin" style="swimlane;" parent="1" vertex="1">
@@ -232,7 +232,7 @@
         <mxCell id="wFw56l5t1BwNAsLt9trj-73" value="Boutons Utilisateurs" style="rounded=0;whiteSpace=wrap;html=1;" parent="wFw56l5t1BwNAsLt9trj-16" vertex="1">
           <mxGeometry x="13" y="56" width="187" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EZ635x1kSuNYY0ZF9sBV-8" value="Edit Tips" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wFw56l5t1BwNAsLt9trj-16">
+        <mxCell id="EZ635x1kSuNYY0ZF9sBV-8" value="Edit Tips" style="rounded=0;whiteSpace=wrap;html=1;" parent="wFw56l5t1BwNAsLt9trj-16" vertex="1">
           <mxGeometry x="150" y="90" width="50" height="46" as="geometry" />
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endArrow=block;endFill=1;" parent="1" source="Z2G2KV7_FwyXqnljN_IR-4" target="wFw56l5t1BwNAsLt9trj-17" edge="1">
@@ -307,7 +307,7 @@
           <mxGeometry y="20" width="210" height="180" as="geometry" />
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-46" value="Le User a accès aux produits dans son habitation, il les ajoute grâce au code produit que &amp;nbsp;lui donne le gestionnaire. Il peut y avoir plusieurs users par produits et un user peut avoir accès à plusieurs produits. Les users ont accès aux metrics confidentielles issues des produits qu&#39;ils ont.&lt;br&gt;Ils ne peuvent pas supprimer les données non confidentielles ou modifier un produit.&amp;nbsp;&lt;br&gt;&lt;br&gt;Le gestionnaire a accès à tous les produits dont il est ajouté en tant que gestionnaire ou qu&#39;il a lui même configuré. Il n&#39;y a qu&#39;un gestionnaire par produit.&lt;br&gt;Le gestionnaire ne peut pas accéder aux informations confidentielles (données de santé) et peut supprimer n&#39;importe quelle donnée issue du produit.&amp;nbsp;&lt;br&gt;&lt;br&gt;&lt;br&gt;L&#39;administrateur a accès à tout les produits et peut modifier les gestionnaires des différents produits. Il peut y avoir plusieurs administrateurs.&lt;br&gt;L&#39;administrateur peut tout modifier toutes les données. Il ne peut pas accéder aux données confidentielles (mais il peut les supprimer)&lt;br&gt;&lt;br&gt;Les données confidentielles sont automatiquement retirées lorsque le code produit est modifié&lt;br&gt;&lt;br&gt;Seul les administrateurs peuvent passer un utilisateur Gestionnaire ou administrateur" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="243" y="-860" width="577" height="310" as="geometry" />
+          <mxGeometry x="473" y="-870" width="577" height="310" as="geometry" />
         </mxCell>
         <mxCell id="wFw56l5t1BwNAsLt9trj-52" value="Modifier produit Gestionnaire/Admin" style="swimlane;" parent="1" vertex="1">
           <mxGeometry x="1120" y="510" width="210" height="200" as="geometry">
@@ -639,18 +639,18 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="EZ635x1kSuNYY0ZF9sBV-9" value="Tips" style="swimlane;" vertex="1" parent="1">
+        <mxCell id="EZ635x1kSuNYY0ZF9sBV-9" value="Tips" style="swimlane;" parent="1" vertex="1">
           <mxGeometry x="840" y="600" width="210" height="200" as="geometry">
             <mxRectangle x="670" y="60" width="120" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EZ635x1kSuNYY0ZF9sBV-10" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="EZ635x1kSuNYY0ZF9sBV-9">
+        <mxCell id="EZ635x1kSuNYY0ZF9sBV-10" value="" style="whiteSpace=wrap;html=1;" parent="EZ635x1kSuNYY0ZF9sBV-9" vertex="1">
           <mxGeometry y="20" width="210" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="EZ635x1kSuNYY0ZF9sBV-11" value="Ajouter un tip" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="EZ635x1kSuNYY0ZF9sBV-9">
+        <mxCell id="EZ635x1kSuNYY0ZF9sBV-11" value="Ajouter un tip" style="rounded=0;whiteSpace=wrap;html=1;" parent="EZ635x1kSuNYY0ZF9sBV-9" vertex="1">
           <mxGeometry x="14.5" y="30" width="175.5" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EZ635x1kSuNYY0ZF9sBV-18" value="Liste des tips (Avec bouton pour en supprimer)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="EZ635x1kSuNYY0ZF9sBV-9">
+        <mxCell id="EZ635x1kSuNYY0ZF9sBV-18" value="Liste des tips (Avec bouton pour en supprimer)" style="rounded=0;whiteSpace=wrap;html=1;" parent="EZ635x1kSuNYY0ZF9sBV-9" vertex="1">
           <mxGeometry x="14.5" y="70" width="175.5" height="120" as="geometry" />
         </mxCell>
       </root>
