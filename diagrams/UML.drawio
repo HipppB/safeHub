@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-10T08:40:11.207Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="s4YVA4QaDEenCqq-ssX1" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-10T08:55:51.818Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="5fl-ccbRiTJktn6tcGCg" version="20.4.0" type="github">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
     <mxGraphModel dx="1673" dy="1665" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -182,7 +182,7 @@
         <mxCell id="MRITQzIosKG4krWKa2Ue-93" value="" style="swimlane;startSize=0;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-92">
           <mxGeometry width="350" height="747.63" as="geometry" />
         </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-94" value="Consulter et contacter les utilisateurs et les gestionaires" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
+        <mxCell id="MRITQzIosKG4krWKa2Ue-94" value="Envoyer les informations recueillies" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
           <mxGeometry x="40" y="30.0028677713899" width="260" height="90.01035847142374" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-95" value="S&#39;informer sur l&#39;utilisation du produit" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
@@ -191,10 +191,10 @@
         <mxCell id="MRITQzIosKG4krWKa2Ue-96" value="Recevoir des conseils sur les meilleures pratiques à adopter en termes de santé et d&#39;environnement" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
           <mxGeometry x="35" y="639.9964254311802" width="260" height="91.40178221170105" as="geometry" />
         </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-97" value="Consulter et modifier les informations de tous les produits" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
+        <mxCell id="MRITQzIosKG4krWKa2Ue-97" value="Recevoir les seuils de chaque capteur" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
           <mxGeometry x="40" y="139.99553601623268" width="260" height="94.86980047345283" as="geometry" />
         </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-98" value="Supprimer les données de n&#39;importe quel utilisateur" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
+        <mxCell id="MRITQzIosKG4krWKa2Ue-98" value="Déclencher une mesure de rythme cardiaque" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
           <mxGeometry x="35" y="259.9955360162327" width="260" height="94.86980047345283" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-99" value="Modifier les droits d&#39;accès des utilisateurs aux produits" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-93">
