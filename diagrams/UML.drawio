@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-11T12:56:44.110Z" agent="5.0 (X11)" etag="uOQS0l8QAXe8v5R2ov-j" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-11T12:56:51.203Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="TFoeAFX31M1XpnAAE_7B" version="20.4.0" type="github">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
-    <mxGraphModel dx="2523" dy="2007" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2036" dy="1750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -129,7 +129,7 @@
         <mxCell id="MRITQzIosKG4krWKa2Ue-54" value="Contacter un administrateur ou un locataire" style="ellipse;whiteSpace=wrap;html=1;" parent="MRITQzIosKG4krWKa2Ue-51" vertex="1">
           <mxGeometry x="40" y="221.36286777138992" width="260" height="90.01035847142374" as="geometry" />
         </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-90" value="Définir une limite sur un produit" style="ellipse;whiteSpace=wrap;html=1;" parent="MRITQzIosKG4krWKa2Ue-51" vertex="1">
+        <mxCell id="MRITQzIosKG4krWKa2Ue-90" value="Définir un seuil d&#39;alerte sur un produit" style="ellipse;whiteSpace=wrap;html=1;" parent="MRITQzIosKG4krWKa2Ue-51" vertex="1">
           <mxGeometry x="40" y="328.81286777138985" width="260" height="90.01035847142374" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-59" value="L&#39;application web" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="MRITQzIosKG4krWKa2Ue-50" vertex="1">
