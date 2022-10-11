@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-11T13:09:03.215Z" agent="5.0 (X11)" etag="-rjL4ox3Nz46GSDtjiMS" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-11T13:15:12.310Z" agent="5.0 (X11)" etag="5eem27IyI_qaIRfOaqYD" version="20.4.0" type="github" pages="2">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
     <mxGraphModel dx="2272" dy="1871" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -308,10 +308,25 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="uRH8EmZQEbIcoMjRM6yF-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="120" y="140" width="30" height="60" as="geometry" />
+          <mxGeometry x="80" y="305" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uRH8EmZQEbIcoMjRM6yF-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="120" y="490" width="30" height="60" as="geometry" />
+          <mxGeometry x="80" y="910" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jHtub7HlsUdOdWbNaKXf-1" value="" style="swimlane;startSize=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="130" width="620" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="jHtub7HlsUdOdWbNaKXf-5" value="Contacter son gestionnaire ou &lt;br&gt;un administrateur" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="jHtub7HlsUdOdWbNaKXf-1">
+          <mxGeometry x="330" y="9.996523503550918" width="260" height="91.63368616841394" as="geometry" />
+        </mxCell>
+        <mxCell id="jHtub7HlsUdOdWbNaKXf-6" value="Consulter les données collectées par le HUB" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="jHtub7HlsUdOdWbNaKXf-1">
+          <mxGeometry x="20" y="167.56553601623267" width="260" height="94.86980047345283" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaL46gP6WzaHVnObzE5n-3" value="Consulter les données collectées par le HUB" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="jHtub7HlsUdOdWbNaKXf-1">
+          <mxGeometry x="330" y="139.99553601623268" width="260" height="94.86980047345283" as="geometry" />
+        </mxCell>
+        <mxCell id="ZaL46gP6WzaHVnObzE5n-2" value="Consulter les données collectées par le HUB" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="jHtub7HlsUdOdWbNaKXf-1">
+          <mxGeometry x="330" y="299.9955360162327" width="260" height="94.86980047345283" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
