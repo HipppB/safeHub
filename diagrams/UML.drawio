@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-10-11T13:46:33.062Z" agent="5.0 (X11)" etag="XgnjXoFyavRdYrXCw-P8" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-13T18:39:54.247Z" agent="5.0 (Windows)" etag="Shii50iZ4-ZxmvEOp0rB" version="20.4.0" type="github" pages="2">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
-    <mxGraphModel dx="2272" dy="1871" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="5002" dy="3400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -66,48 +66,6 @@
         <mxCell id="MRITQzIosKG4krWKa2Ue-19" value="" style="group;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-640" y="-150" width="715" height="779.25" as="geometry" />
         </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-20" value="" style="group" parent="MRITQzIosKG4krWKa2Ue-19" vertex="1" connectable="0">
-          <mxGeometry x="255" width="460" height="779.25" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-21" value="" style="group" parent="MRITQzIosKG4krWKa2Ue-20" vertex="1" connectable="0">
-          <mxGeometry width="350" height="779.25" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-22" value="" style="swimlane;startSize=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-21" vertex="1">
-          <mxGeometry width="350" height="510" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-25" value="Consulter et contacter les utilisateurs et les gestionaires" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-22" vertex="1">
-          <mxGeometry x="40" y="30.0028677713899" width="260" height="90.01035847142374" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-42" value="Consulter et modifier les informations de tous les produits" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-22" vertex="1">
-          <mxGeometry x="40" y="139.99553601623268" width="260" height="94.86980047345283" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-43" value="Supprimer les données de n&#39;importe quel utilisateur" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-22" vertex="1">
-          <mxGeometry x="35" y="259.9955360162327" width="260" height="94.86980047345283" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-44" value="Modifier les droits d&#39;accès des utilisateurs aux produits" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-22" vertex="1">
-          <mxGeometry x="35" y="399.9955360162327" width="260" height="94.86980047345283" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-30" value="L&#39;application web" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-21" vertex="1">
-          <mxGeometry x="120" y="509.9967331755157" width="110" height="31.623266824484276" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-35" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-19" source="MRITQzIosKG4krWKa2Ue-32" target="MRITQzIosKG4krWKa2Ue-25" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-45" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-19" source="MRITQzIosKG4krWKa2Ue-32" target="MRITQzIosKG4krWKa2Ue-42" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-46" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-19" source="MRITQzIosKG4krWKa2Ue-32" target="MRITQzIosKG4krWKa2Ue-43" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-47" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-19" source="MRITQzIosKG4krWKa2Ue-32" target="MRITQzIosKG4krWKa2Ue-44" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-31" value="" style="group;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-19" vertex="1" connectable="0">
-          <mxGeometry x="10" y="190" width="50" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="MRITQzIosKG4krWKa2Ue-32" value="Administrateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-31" vertex="1">
-          <mxGeometry width="50" height="100" as="geometry" />
-        </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-48" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="-715" y="790" width="715" height="779.25" as="geometry" />
         </mxCell>
@@ -118,7 +76,7 @@
           <mxGeometry width="350" height="779.25" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-51" value="" style="swimlane;startSize=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-50" vertex="1">
-          <mxGeometry width="350" height="450" as="geometry" />
+          <mxGeometry x="-20" y="-380" width="350" height="450" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-52" value="Consulter les produits dont il est le gestionnaire" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-51" vertex="1">
           <mxGeometry x="40" y="10.541088941494758" width="260" height="96.49312817044303" as="geometry" />
@@ -133,10 +91,10 @@
           <mxGeometry x="40" y="328.81286777138985" width="260" height="90.01035847142374" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-59" value="L&#39;application web" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-50" vertex="1">
-          <mxGeometry x="110" y="449.9967331755157" width="110" height="31.623266824484276" as="geometry" />
+          <mxGeometry x="90" y="69.99673317551571" width="110" height="31.623266824484276" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-60" value="" style="group;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-48" vertex="1" connectable="0">
-          <mxGeometry x="15" y="170" width="50" height="100" as="geometry" />
+          <mxGeometry x="-5" y="-210" width="50" height="100" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-61" value="Gestionaire" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-60" vertex="1">
           <mxGeometry width="50" height="100" as="geometry" />
@@ -146,7 +104,7 @@
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-63" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-48" source="MRITQzIosKG4krWKa2Ue-61" target="MRITQzIosKG4krWKa2Ue-53" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="100" y="750" as="sourcePoint" />
+            <mxPoint x="80" y="370" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-64" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-48" source="MRITQzIosKG4krWKa2Ue-61" target="MRITQzIosKG4krWKa2Ue-54" edge="1">
@@ -156,10 +114,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-106" value="" style="group;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="150" y="-970" width="570" height="779.25" as="geometry" />
+          <mxGeometry x="110" y="-970" width="570" height="779.25" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-92" value="" style="group" parent="MRITQzIosKG4krWKa2Ue-106" vertex="1" connectable="0">
-          <mxGeometry x="240" width="350" height="779.25" as="geometry" />
+          <mxGeometry x="210" width="350" height="779.25" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-105" value="" style="group" parent="MRITQzIosKG4krWKa2Ue-92" vertex="1" connectable="0">
           <mxGeometry y="10" width="350" height="290" as="geometry" />
@@ -176,23 +134,27 @@
         <mxCell id="MRITQzIosKG4krWKa2Ue-100" value="L&#39;application web" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-105" vertex="1">
           <mxGeometry x="110" y="230.0032169443099" width="110" height="22.03235484119844" as="geometry" />
         </mxCell>
-        <mxCell id="--6eLwL6I9U0zij4m0DK-12" value="SafeHUB" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-92">
+        <mxCell id="--6eLwL6I9U0zij4m0DK-12" value="SafeHUB" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-92" vertex="1">
           <mxGeometry x="140" y="449.9965906541393" width="110" height="18.993409345860726" as="geometry" />
         </mxCell>
-        <mxCell id="--6eLwL6I9U0zij4m0DK-10" value="" style="swimlane;startSize=0;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-92">
-          <mxGeometry x="40" y="300" width="310" height="137.93" as="geometry" />
+        <mxCell id="--6eLwL6I9U0zij4m0DK-10" value="" style="swimlane;startSize=0;" parent="MRITQzIosKG4krWKa2Ue-92" vertex="1">
+          <mxGeometry y="302.07" width="350" height="137.93" as="geometry" />
         </mxCell>
-        <mxCell id="--6eLwL6I9U0zij4m0DK-11" value="Déclencher une mesure de rythme cardiaque" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="--6eLwL6I9U0zij4m0DK-10">
-          <mxGeometry x="25" y="24.149999999999977" width="260" height="91.98" as="geometry" />
+        <mxCell id="--6eLwL6I9U0zij4m0DK-11" value="Déclencher une mesure de rythme cardiaque" style="ellipse;whiteSpace=wrap;html=1;" parent="--6eLwL6I9U0zij4m0DK-10" vertex="1">
+          <mxGeometry x="40" y="22.08" width="260" height="87.92" as="geometry" />
         </mxCell>
-        <mxCell id="--6eLwL6I9U0zij4m0DK-8" value="Utilisateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="MRITQzIosKG4krWKa2Ue-92">
+        <mxCell id="--6eLwL6I9U0zij4m0DK-8" value="Utilisateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="MRITQzIosKG4krWKa2Ue-92" vertex="1">
           <mxGeometry x="-190" y="340.1400000000001" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="--6eLwL6I9U0zij4m0DK-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="MRITQzIosKG4krWKa2Ue-92" source="--6eLwL6I9U0zij4m0DK-8" target="--6eLwL6I9U0zij4m0DK-8">
+        <mxCell id="--6eLwL6I9U0zij4m0DK-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-92" source="--6eLwL6I9U0zij4m0DK-8" target="--6eLwL6I9U0zij4m0DK-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="--6eLwL6I9U0zij4m0DK-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="MRITQzIosKG4krWKa2Ue-92" source="--6eLwL6I9U0zij4m0DK-8" target="--6eLwL6I9U0zij4m0DK-11">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="--6eLwL6I9U0zij4m0DK-7" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-92" source="--6eLwL6I9U0zij4m0DK-8" target="--6eLwL6I9U0zij4m0DK-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="370" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-104" value="" style="group;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-106" vertex="1" connectable="0">
           <mxGeometry y="134.62" width="80" height="110" as="geometry" />
@@ -213,7 +175,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-109" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
-          <mxGeometry x="310" y="-30" width="880" height="390.01" as="geometry" />
+          <mxGeometry x="230" y="-240" width="880" height="390.01" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-111" value="Avoir renseigné un code produit" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-109" vertex="1">
           <mxGeometry x="600" y="250" width="240" height="80" as="geometry" />
@@ -249,7 +211,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-113" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="190" y="130" width="50" height="100" as="geometry" />
+          <mxGeometry x="110" y="-80" width="50" height="100" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-114" value="Utilisateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="MRITQzIosKG4krWKa2Ue-113" vertex="1">
           <mxGeometry width="50" height="100" as="geometry" />
@@ -258,7 +220,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-128" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
-          <mxGeometry x="590" y="520" width="630" height="490" as="geometry" />
+          <mxGeometry x="310" y="380" width="630" height="490" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-130" value="Consulter et modifier son profil" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-128" vertex="1">
           <mxGeometry x="40" y="115.95197835644234" width="260" height="94.86980047345283" as="geometry" />
@@ -294,7 +256,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-135" value="" style="group;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="400" y="710" width="50" height="100" as="geometry" />
+          <mxGeometry x="120" y="570" width="50" height="100" as="geometry" />
         </mxCell>
         <mxCell id="MRITQzIosKG4krWKa2Ue-136" value="Utilisateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-135" vertex="1">
           <mxGeometry width="50" height="100" as="geometry" />
@@ -311,44 +273,80 @@
         <mxCell id="MRITQzIosKG4krWKa2Ue-148" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" source="MRITQzIosKG4krWKa2Ue-136" target="MRITQzIosKG4krWKa2Ue-134" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-1" value="" style="swimlane;startSize=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="-960" width="620" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-2" value="Consulter la température" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="PD3lDoKQfuBRoECyc60C-1">
+          <mxGeometry x="350" y="9.996523503550918" width="260" height="91.63368616841394" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="PD3lDoKQfuBRoECyc60C-1" source="PD3lDoKQfuBRoECyc60C-6" target="PD3lDoKQfuBRoECyc60C-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="PD3lDoKQfuBRoECyc60C-1" source="PD3lDoKQfuBRoECyc60C-6" target="PD3lDoKQfuBRoECyc60C-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.015;entryY=0.337;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="PD3lDoKQfuBRoECyc60C-1" source="PD3lDoKQfuBRoECyc60C-6" target="PD3lDoKQfuBRoECyc60C-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-6" value="Contrôler la qualité de l&#39;environnement de la pièce" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="PD3lDoKQfuBRoECyc60C-1">
+          <mxGeometry x="10" y="179.99553601623268" width="260" height="94.86980047345283" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-7" value="Consulter la concentration de CO2" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="PD3lDoKQfuBRoECyc60C-1">
+          <mxGeometry x="340" y="149.99553601623268" width="260" height="94.86980047345283" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-8" value="Consulter la concentration de micro-particules" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;align=center;" vertex="1" parent="PD3lDoKQfuBRoECyc60C-1">
+          <mxGeometry x="350" y="289.9955360162327" width="260" height="94.86980047345283" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-9" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" source="PD3lDoKQfuBRoECyc60C-10" target="PD3lDoKQfuBRoECyc60C-6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PD3lDoKQfuBRoECyc60C-10" value="Utilisateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="1">
+          <mxGeometry x="920" y="-773" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-22" value="" style="swimlane;startSize=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" vertex="1">
+          <mxGeometry x="-477" y="-240" width="350" height="510" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-25" value="Consulter et contacter les utilisateurs et les gestionaires" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-22" vertex="1">
+          <mxGeometry x="40" y="30.0028677713899" width="260" height="90.01035847142374" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-42" value="Consulter et modifier les informations de tous les produits" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-22" vertex="1">
+          <mxGeometry x="40" y="139.99553601623268" width="260" height="94.86980047345283" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-43" value="Supprimer les données de n&#39;importe quel utilisateur" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-22" vertex="1">
+          <mxGeometry x="35" y="259.9955360162327" width="260" height="94.86980047345283" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-44" value="Modifier les droits d&#39;accès des utilisateurs aux produits" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-22" vertex="1">
+          <mxGeometry x="35" y="399.9955360162327" width="260" height="94.86980047345283" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-30" value="L&#39;application web" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" vertex="1">
+          <mxGeometry x="-357" y="269.9967331755157" width="110" height="31.623266824484276" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-35" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" source="MRITQzIosKG4krWKa2Ue-32" target="MRITQzIosKG4krWKa2Ue-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-45" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" source="MRITQzIosKG4krWKa2Ue-32" target="MRITQzIosKG4krWKa2Ue-42" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-46" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" source="MRITQzIosKG4krWKa2Ue-32" target="MRITQzIosKG4krWKa2Ue-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-47" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" source="MRITQzIosKG4krWKa2Ue-32" target="MRITQzIosKG4krWKa2Ue-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-31" value="" style="group;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-722" y="-50" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MRITQzIosKG4krWKa2Ue-32" value="Administrateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" parent="MRITQzIosKG4krWKa2Ue-31" vertex="1">
+          <mxGeometry width="50" height="100" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="wkqtqm4ICVMwkfXTM5cH" name="Page-2">
-    <mxGraphModel dx="1422" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1038" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="jHtub7HlsUdOdWbNaKXf-1" value="" style="swimlane;startSize=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="1">
-          <mxGeometry x="160" y="140" width="620" height="430" as="geometry" />
-        </mxCell>
-        <mxCell id="jHtub7HlsUdOdWbNaKXf-5" value="Consulter la température" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="jHtub7HlsUdOdWbNaKXf-1">
-          <mxGeometry x="350" y="9.996523503550918" width="260" height="91.63368616841394" as="geometry" />
-        </mxCell>
-        <mxCell id="VF01wbVhJXHasdwpZQq_-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="jHtub7HlsUdOdWbNaKXf-1" source="jHtub7HlsUdOdWbNaKXf-6" target="jHtub7HlsUdOdWbNaKXf-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="W2lm2PJN0SWfhMltvbwo-1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="jHtub7HlsUdOdWbNaKXf-1" source="jHtub7HlsUdOdWbNaKXf-6" target="ZaL46gP6WzaHVnObzE5n-3">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="W2lm2PJN0SWfhMltvbwo-2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.015;entryY=0.337;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="jHtub7HlsUdOdWbNaKXf-1" source="jHtub7HlsUdOdWbNaKXf-6" target="ZaL46gP6WzaHVnObzE5n-2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="jHtub7HlsUdOdWbNaKXf-6" value="Contrôler la qualité de l&#39;environnement de la pièce" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="jHtub7HlsUdOdWbNaKXf-1">
-          <mxGeometry x="10" y="179.99553601623268" width="260" height="94.86980047345283" as="geometry" />
-        </mxCell>
-        <mxCell id="ZaL46gP6WzaHVnObzE5n-3" value="Consulter la concentration de CO2" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="jHtub7HlsUdOdWbNaKXf-1">
-          <mxGeometry x="340" y="119.99553601623268" width="260" height="94.86980047345283" as="geometry" />
-        </mxCell>
-        <mxCell id="ZaL46gP6WzaHVnObzE5n-2" value="Consulter la concentration de micro-particules" style="ellipse;whiteSpace=wrap;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;align=center;" vertex="1" parent="jHtub7HlsUdOdWbNaKXf-1">
-          <mxGeometry x="340" y="229.99553601623268" width="260" height="94.86980047345283" as="geometry" />
-        </mxCell>
-        <mxCell id="_cCFRhsUnC-mb23LQMEw-1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" edge="1" parent="1" source="9C0GJe0Nw63y1PM1p_nP-1" target="jHtub7HlsUdOdWbNaKXf-6">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="9C0GJe0Nw63y1PM1p_nP-1" value="Utilisateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=inter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3Dinter;" vertex="1" parent="1">
-          <mxGeometry x="70" y="327" width="30" height="60" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
