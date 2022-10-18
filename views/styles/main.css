@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin-top: 0;
+  padding-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+h1,
+p {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+* {
+  font-size: 1.25em;
+  font-family: "Urbanist", sans-serif;
+}
+
+.gradienttext {
+  background-image: linear-gradient(105.05deg, #f76b1c 9.09%, #fad961 92.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+.title {
+  font-size: 3em;
+  font-family: "Bebas Neue", cursive;
+
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  font-size: 1em;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+.input label {
+  color: #f76b1c;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 15px 0 15px 0;
+}
+
+.inputContainer {
+  position: relative;
+  /* background-color: #fad961; */
+  display: flex;
+}
+.inputContainer input {
+  border: none;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0 20px 0 20px;
+  margin: 0 0 0 0;
+  height: 100px;
+
+  flex: 1;
+}
+
+.inputContainer::before {
+  z-index: -1;
+  position: absolute;
+  top: -1.5px;
+  right: -1.5px;
+  left: -1.5px;
+  bottom: -1.5px;
+  content: "";
+  background: linear-gradient(105.05deg, #f76b1c 9.09%, #fad961 92.67%);
+  /* background-color: red; */
+  border-radius: 11px;
+}
+
+.input img {
+  z-index: 2;
+  position: absolute;
+
+  right: 0;
+  width: 60px;
+  align-self: center;
+  right: 20px;
+}
+.rightAl {
+  align-self: flex-end;
+}
+
+.button {
+  display: flex;
+  border: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 100px;
+  border-radius: 25px;
+  background-color: #f76b1c;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+
+  cursor: pointer;
+  background: linear-gradient(210.94deg, #f76b1c -2.79%, #fad961 214.85%);
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.urbanist {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}
+/* font weight */
+.w600 {
+  font-weight: 600;
+}
+
+/* font size */
+
+.s1 {
+  font-size: 1em;
+}
+
+.s3 {
+  font-size: 3em;
+}
+.s1-1 {
+  font-size: 1.1em;
+}
+.s1-15 {
+  font-size: 1.15em;
+}
+.s1-2 {
+  font-size: 1.2em;
+}
+.s1-25 {
+  font-size: 1.25em;
+}
+.s1-3 {
+  font-size: 1.3em;
+}
+.s1-35 {
+  font-size: 1.35em;
+}
+.s1-4 {
+  font-size: 1.4em;
+}
+.s1-45 {
+  font-size: 1.45em;
+}
+.s1-5 {
+  font-size: 1.5em;
+}
+.s1-55 {
+  font-size: 1.55em;
+}
+.s1-6 {
+  font-size: 1.6em;
+}
+.s1-65 {
+  font-size: 1.65em;
+}
+.s1-7 {
+  font-size: 1.7em;
+}
+.s1-75 {
+  font-size: 1.75em;
+}
+.s1-8 {
+  font-size: 1.8em;
+}
+.s1-85 {
+  font-size: 1.85em;
+}
+.s1-9 {
+  font-size: 1.9em;
+}
+.s1-95 {
+  font-size: 1.95em;
+}
+.s2 {
+  font-size: 2em;
+}
+.s2-1 {
+  font-size: 2.1em;
+}
+
+/* margin top */
+.mT10 {
+  margin-top: 10px;
+}
+
+.mT15 {
+  margin-top: 15px;
+}
+.mT20 {
+  margin-top: 20px;
+}
+.mT25 {
+  margin-top: 25px;
+}
+
+.mT100 {
+  margin-top: 100px;
+}
+
+.mT150 {
+  margin-top: 150px;
+}
+.mT200 {
+  margin-top: 200px;
+}
