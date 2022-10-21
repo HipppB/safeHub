@@ -73,7 +73,7 @@ p {
     background: linear-gradient(210.94deg, #f76b1c -2.79%, #fad961 214.85%);
 }
 /* More than one input ? */
-.inputsContainer {
+.input-list-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,13 +84,13 @@ p {
     margin-top: 50px;
 }
 /* inputs */
-.inputContainer {
+.input-container {
     display: flex;
     flex-direction: column;
     width: 80vw;
     z-index: 2;
 }
-.inputContainer label {
+.input-container label {
     color: #f76b1c;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -142,7 +142,7 @@ p {
     border: none;
     border-radius: 10px;
 }
-.inputContainer img {
+.input-container img {
     z-index: 2;
     position: absolute;
 
@@ -173,6 +173,7 @@ p {
 
 .gradienttext {
     background-image: linear-gradient(105.05deg, #f76b1c 9.09%, #fad961 92.67%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
