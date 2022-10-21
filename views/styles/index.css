@@ -18,14 +18,14 @@ h3 {
 
 /* Main styles */
 body {
-    margin-top: 0;
-    padding-top: 0;
+    margin: 0;
+    padding: 0;
     top: 0;
     left: 0;
-    width: 100vw;
-    /* width: 100%; */
-    /* height: 100%; */
-    /* position: relative; */
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -124,6 +124,8 @@ p {
     right: -1.5px;
     left: -1.5px;
     bottom: -1.5px;
+    padding: 1.5px;
+
     content: '';
     background: linear-gradient(105.05deg, #f76b1c 9.09%, #fad961 92.67%);
     border-radius: 11px;
