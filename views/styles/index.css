@@ -116,11 +116,26 @@ p {
 .input-container::before {
     z-index: -1;
     position: absolute;
-    inset: -1.5px;
+    inset: -2px;
     content: '';
-    background: linear-gradient(105.05deg, #f76b1c 9.09%, #fad961 92.67%);
+    background: linear-gradient(210.94deg, #ff2b1c, #f76b1c, #fad961, #f76b1c);
     border-radius: 11px;
+    background-size: 400%;
+    animation: steam 10s linear infinite;
 }
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
 .input-container::after {
     content: '';
     z-index: 1;
