@@ -1,16 +1,28 @@
-.backButton {
-    position: absolute;
-    margin-top: 50px;
-    width: 1em;
-    margin-left: 25px;
+.header-container {
+    margin-top: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+h1,
+.title {
+    margin-top: 15px;
 }
 
 .title-container {
-    justify-content: center;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.title,
-.gradienttext {
-    margin-top: 5%;
+.backButton {
+    display: flex;
+    width: 1em;
+    margin-left: 5%;
+}
+
+.logout {
+    width: 2em;
 }
