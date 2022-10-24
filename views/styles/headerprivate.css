@@ -1,0 +1,31 @@
+.header-container {
+    margin-top: 1em;
+    align-items: center;
+    display: flex;
+}
+
+h1,
+.title {
+    margin-top: 15px;
+}
+
+.title-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.backButton {
+    display: flex;
+    width: 0.75em;
+    margin-left: 5%;
+}
+
+.container-logout {
+}
+
+.logout {
+    margin-top: 9px;
+    width: 1.5em;
+}
