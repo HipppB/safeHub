@@ -102,6 +102,7 @@ p {
     display: flex;
 }
 .input-container input {
+    outline: none;
     border: none;
     font-family: 'Urbanist', sans-serif;
     font-size: 1em;
@@ -121,6 +122,8 @@ p {
     background: linear-gradient(210.94deg, #ff2b1c, #f76b1c, #fad961, #f76b1c);
     border-radius: 11px;
     background-size: 400%;
+}
+.input-container:has(input:focus)::before {
     animation: steam 10s linear infinite;
 }
 
