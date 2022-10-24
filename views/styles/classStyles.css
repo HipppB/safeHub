@@ -2,6 +2,10 @@
     align-self: flex-end;
 }
 
+.leftAl {
+    align-self: flex-start;
+}
+
 /* font weight */
 
 .w400 {
@@ -104,4 +108,8 @@
 }
 .mT200 {
     margin-top: 200px;
+}
+
+.mT400 {
+    margin-top: 400px;
 }
