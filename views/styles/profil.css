@@ -2,7 +2,6 @@
     margin-top: 1em;
     align-items: center;
     display: flex;
-    justify-content: flex-start;
 }
 
 h1,
@@ -11,18 +10,22 @@ h1,
 }
 
 .title-container {
-    width: 100%;
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
 }
 
 .backButton {
     display: flex;
-    width: 1em;
+    width: 0.75em;
     margin-left: 5%;
 }
 
+.container-logout {
+}
+
 .logout {
-    width: 2em;
+    margin-top: 9px;
+    width: 1.5em;
 }
