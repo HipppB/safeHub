@@ -1,0 +1,16 @@
+.backButton {
+    position: absolute;
+    margin-top: 50px;
+    width: 1em;
+    margin-left: 25px;
+}
+
+.title-container {
+    justify-content: center;
+    display: flex;
+}
+
+.title,
+.gradienttext {
+    margin-top: 5%;
+}
