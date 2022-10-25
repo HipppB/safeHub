@@ -1,5 +1,4 @@
 .header-container {
-    margin-top: 1em;
     align-items: center;
     display: flex;
 }
@@ -7,29 +6,38 @@
 h1,
 .title {
     margin-top: 15px;
-    font-size: 1.1em;
+    font-size: 10vw;
 }
 
 .title-container {
     display: flex;
-    flex-grow: 1;
+    flex-grow: 2;
     justify-content: center;
     align-items: center;
+}
+
+.backButton-container {
+    align-items: center;
+    padding-left: 3vw;
+    flex-grow: 1;
+    width: 100px;
 }
 
 .backButton {
     display: flex;
     width: 0.35em;
-    padding-left: 25%;
+    font-size: 10vw;
 }
 
-.backButton-container {
-    width: 51.61px;
-    align-items: center;
+.container-logout {
+    width: 100px;
+    padding-right: 3vw;
+    flex-grow: 1;
+    justify-content: right;
+    display: flex;
 }
 
 .logout {
-    margin-top: 9px;
     width: 0.75em;
-    padding-right: 15px;
+    font-size: 10vw;
 }
