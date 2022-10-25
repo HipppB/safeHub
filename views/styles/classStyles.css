@@ -16,6 +16,10 @@
 }
 
 /* font size */
+.s05 {
+    font-size: 0.5em;
+}
+
 .s1 {
     font-size: 1em;
 }
@@ -112,4 +116,8 @@
 
 .mT400 {
     margin-top: 400px;
+}
+
+.mB50 {
+    margin-bottom: 50px;
 }
