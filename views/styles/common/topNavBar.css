@@ -1,21 +1,12 @@
-/* Put this code in your body to incorporate the public header */
+/* Put this code in your head to incorporate the public header */
 /* 
-    <div class="topNavBar-container">
-            <div class="topNavBar-burgerMenu"></div>
-            <img
-                class="topNavBar-logo"
-                src="./assets/logo.svg"
-                alt="logo"
-            />
-            <div class="langage-selector">
-                <div class="langage-selector__flag"></div>
-                <div class="langage-selector__text">FR</div>
-            </div>
-    </div> 
+    <link rel="stylesheet" href="./styles/common/topNavBar.css" />
+    <script
+        type="text/javascript"
+        src="./scripts/common/topNavBar.js"
+        async
+    ></script>
 */
-/* Do not forget to import this CSS file and the JS file */
-/* Path: views/styles/common/topNavBar.css */
-/* Path: views/scripts/common/topNavBar.js */
 
 .topNavBar-container {
     background-color: white;
