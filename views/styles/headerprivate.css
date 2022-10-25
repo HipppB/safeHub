@@ -7,6 +7,7 @@
 h1,
 .title {
     margin-top: 15px;
+    font-size: 1.1em;
 }
 
 .title-container {
@@ -18,12 +19,17 @@ h1,
 
 .backButton {
     display: flex;
-    width: 0.75em;
-    margin-left: 5%;
+    width: 0.35em;
+    padding-left: 25%;
+}
+
+.backButton-container {
+    width: 51.61px;
+    align-items: center;
 }
 
 .logout {
     margin-top: 9px;
-    width: 1.5em;
+    width: 0.75em;
     padding-right: 15px;
 }
