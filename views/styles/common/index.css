@@ -181,7 +181,13 @@ p {
 }
 
 .gradienttext {
-    background-image: linear-gradient(105.05deg, #f76b1c 9.09%, #fad961 92.67%);
+    background-image: linear-gradient(
+        90.94deg,
+        #ff2b1c,
+        #f76b1c,
+        #fad961,
+        #f76b1c
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

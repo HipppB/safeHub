@@ -2,34 +2,30 @@
     margin-top: 1em;
     align-items: center;
     display: flex;
-}
-
-h1,
-.title {
-    margin-top: 15px;
-    font-size: 1.1em;
-}
-
-.title-container {
-    display: flex;
+    justify-content: center;
     flex-grow: 1;
+}
+.header-container .title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.icon-container img {
+    display: flex;
+    width: 13px;
+}
+
+.icon-container {
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 50px;
 }
-
-.backButton {
-    display: flex;
-    width: 0.35em;
-    padding-left: 25%;
+.icon-container:first-of-type {
+    justify-content: flex-start;
+    padding-left: 10px;
 }
-
-.backButton-container {
-    width: 51.61px;
-    align-items: center;
-}
-
-.logout {
-    margin-top: 9px;
-    width: 0.75em;
-    padding-right: 15px;
+.icon-container:last-of-type {
+    justify-content: flex-end;
+    padding-right: 10px;
 }
