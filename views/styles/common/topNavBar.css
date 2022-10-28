@@ -3,9 +3,10 @@
     <link rel="stylesheet" href="./styles/common/topNavBar.css" />
     <script
         type="text/javascript"
-        src="./scripts/common/topNavBar.js"
+        src="./scripts/common/component.js"
         async
     ></script>
+    <div class="topNavBar-container"></div>
 */
 
 .topNavBar-container {
