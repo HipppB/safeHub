@@ -27,3 +27,43 @@ div:nth-child(5) {
     font-size: 3vmin;
     color: black;
 }
+
+.modifierProduit {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modifBtn {
+    height: 9vmin;
+    font-size: 3.75vmin;
+    border-radius: 8px;
+}
+
+.ajoutBtn {
+    height: 9vmin;
+    font-size: 3.75vmin;
+    border-radius: 8px;
+    color: #f76b1c;
+    /* border-color: #f76b1c; */
+    background-color: transparent;
+    background: none;
+}
+
+.ajoutBtn::before {
+    z-index: -1;
+    background: linear-gradient(105.05deg, #f76b1c 9.09%, #fad961 92.67%);
+    height: 9.5vmin;
+    width: 81vw;
+    border: solid 2px;
+    border-radius: 9px;
+}
+
+.ajoutBtn::after {
+    content: 'Modifier le produit';
+    z-index: 1;
+    background-color: white;
+}
