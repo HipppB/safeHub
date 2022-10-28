@@ -2,14 +2,22 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
         <title>SafeHub - Connexion</title>
-        <link rel="stylesheet" href="./styles/index.css" />
-        <link rel="stylesheet" href="./styles/classStyles.css" />
+        <link rel="stylesheet" href="./styles/common/index.css" />
+        <link
+            rel="stylesheet"
+            href="./styles/common/identificationPagesStyles.css"
+        />
         <link rel="stylesheet" href="./styles/connexion.css" />
+        <link rel="stylesheet" href="./styles/common/classStyles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <img src="./assets/icons/backButton.svg" class="backButton" />
+        <img
+            src="./assets/icons/backButton.svg"
+            class="backButton"
+            onclick="window.location.href = './';"
+        />
         <img src="./assets/hex.svg" class="blob" />
         <div class="title-container">
             <h1 class="title gradienttext">Connexion</h1>
@@ -27,7 +35,7 @@
                         <img src="./assets/icons/mail.svg" />
                     </div>
                 </div>
-                <div class="input-label-container mT25">
+                <div class="input-label-container">
                     <label for="password">Mot de passe</label>
                     <div class="input-container">
                         <input type="password" name="password" />
@@ -36,15 +44,19 @@
                 </div>
             </div>
 
-            <a href="#" class="gradienttext rightAl inter w600 mT15"
+            <a
+                href="./forgotPassword.html"
+                class="gradienttext urbanist s05 mT10 rightAl"
                 >Mot de passe oublié ?</a
             >
 
-            <input type="submit" class="button mT150" value="Se connecter" />
+            <input type="submit" class="button mT25" value="Se connecter" />
 
-            <div class="mT25 s1 urbanist">
+            <div class="mT25 mB50 s05 urbanist">
                 Pas de compte ?
-                <a href="#" class="gradienttext urbanist">S'inscrire</a>
+                <a href="./inscription.html" class="gradienttext urbanist"
+                    >S'inscrire</a
+                >
             </div>
         </form>
     </body>

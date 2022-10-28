@@ -1,18 +1,19 @@
 .blob {
     position: absolute;
-    top: 10em;
-    right: -2px;
+    top: 0;
+    right: 0;
     width: 60vw;
 }
 
 .backButton {
     position: absolute;
     margin-top: 50px;
-    width: 1em;
+    width: 0.5em;
 }
 
 body {
     padding-inline: 5vw;
+    width: 90vw;
     display: flex;
     flex-direction: column;
 }
@@ -20,20 +21,17 @@ body {
 .illu-container {
     position: relative;
     align-self: center;
-    width: 60vw;
-    height: 40vw;
-    margin-top: 100px;
-}
-.illu {
-    position: absolute;
-    top: -50px;
-    right: -70px;
-    width: 100%;
+    width: 60vmin;
 }
 
+.illu {
+    position: absolute;
+    right: -20px;
+    width: 60vmin;
+}
 .title-container {
-    margin-top: 200px;
-    margin-left: 50px;
+    margin-top: 100px;
+    margin-left: 20px;
 }
 
 form {
