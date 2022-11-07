@@ -75,6 +75,22 @@ p {
     font-size: 0.6em;
     cursor: pointer;
     background: linear-gradient(210.94deg, #f76b1c -2.79%, #fad961 214.85%);
+    transition-duration: 50ms;
+}
+
+.button:hover {
+    transform: scale(101%);
+    transition-duration: 50ms;
+    background: linear-gradient(
+        75deg,
+        #ff3e1c,
+        #f76b1c,
+        #fabd61,
+        #f76b1c,
+        #ff3e1c
+    );
+    animation: steam 10s linear infinite;
+    background-size: 400%;
 }
 
 /* .test-container {
@@ -219,13 +235,7 @@ p {
 }
 
 .gradienttext {
-    background-image: linear-gradient(
-        90.94deg,
-        #ff2b1c,
-        #f76b1c,
-        #fad961,
-        #f76b1c
-    );
+    background-image: linear-gradient(150deg, #ff2b1c, #f76b1c, #fad961);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
