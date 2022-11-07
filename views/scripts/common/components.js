@@ -5,7 +5,7 @@ css :
     <link rel="stylesheet" href="./styles/common/topNavBar.css" />
 
 
-- Header with Pptional button - Title - Optional button
+- Header with Optional button - Title - Optional button
 <div class="header-container" title="" leftButtonPath="" rightButtonPath="" leftAction="" rightAction=""/>
 
 css :
