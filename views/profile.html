@@ -3,18 +3,22 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/common/index.css" />
+        <link rel="stylesheet" href="./styles/headerprivate.css" />
         <link rel="stylesheet" href="./styles/profil.css" />
 
         <title>SafeHub - Profil</title>
     </head>
     <body>
         <div class="header-container">
-            <img
-                src="./assets/icons/backButton.svg"
-                class="backButton"
-                alt="BackButton"
-            />
+            <div class="backButton-container">
+                <img
+                    src="./assets/icons/backButton.svg"
+                    class="backButton"
+                    alt="BackButton"
+                />
+            </div>
+
             <div class="title-container">
                 <h1 class="title gradienttext">Profil</h1>
             </div>
@@ -25,6 +29,10 @@
                     alt="logout"
                 />
             </div>
+        </div>
+        <div class="central-container">
+            <h2 class="gradienttext">Nom Prénom</h2>
+            <a>XX ans</a>
         </div>
     </body>
 </html>

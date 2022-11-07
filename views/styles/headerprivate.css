@@ -2,27 +2,30 @@
     margin-top: 1em;
     align-items: center;
     display: flex;
-}
-
-h1,
-.title {
-    margin-top: 15px;
-}
-
-.title-container {
-    display: flex;
+    justify-content: center;
     flex-grow: 1;
+}
+.header-container .title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.icon-container img {
+    display: flex;
+    width: 13px;
+}
+
+.icon-container {
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 50px;
 }
-
-.backButton {
-    display: flex;
-    width: 0.75em;
-    margin-left: 5%;
+.icon-container:first-of-type {
+    justify-content: flex-start;
+    padding-left: 10px;
 }
-
-.logout {
-    margin-top: 9px;
-    width: 1.5em;
+.icon-container:last-of-type {
+    justify-content: flex-end;
+    padding-right: 10px;
 }
