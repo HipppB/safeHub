@@ -1,4 +1,4 @@
-.input {
+.button-outlined {
     color: #f76b1c;
     font-family: 'Urbanist', sans-serif;
     font-weight: 400;
@@ -40,3 +40,4 @@
     justify-content: center;
     align-items: center;
     width: 50px;
+}
