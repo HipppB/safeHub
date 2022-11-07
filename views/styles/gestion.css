@@ -24,3 +24,19 @@
     align-items: center;
     /* background-clip: padding-box; */
 }
+
+.header-container .title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.icon-container img {
+    display: flex;
+    width: 13px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
