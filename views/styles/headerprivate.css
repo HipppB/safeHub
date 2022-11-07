@@ -1,4 +1,3 @@
-
 .header-container .title {
     flex-grow: 1;
     text-align: center;
@@ -22,7 +21,7 @@
 .icon-container:last-of-type {
     justify-content: flex-end;
     padding-right: 10px;
-=======
+}
 
 h1,
 .title {
@@ -61,5 +60,4 @@ h1,
 .logout {
     width: 0.75em;
     font-size: 10vw;
-
 }
