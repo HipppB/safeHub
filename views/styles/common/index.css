@@ -127,7 +127,7 @@ p {
     display: flex;
     /* padding: 2px; */
     inset: -2px;
-    background: linear-gradient(75deg, #ff2b1c, #f76b1c, #fad961, #f76b1c);
+    background: linear-gradient(135deg, #f76b1c, #fad961);
 }
 /* More than one input ? */
 .input-list-container {
