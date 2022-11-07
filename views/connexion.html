@@ -11,8 +11,17 @@
         <link rel="stylesheet" href="./styles/connexion.css" />
         <link rel="stylesheet" href="./styles/common/classStyles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="./styles/common/topNavBar.css" />
+
+        <script
+            type="text/javascript"
+            src="./scripts/common/components.js"
+            async
+        ></script>
     </head>
     <body>
+        <div class="topNavBar-container"></div>
         <img
             src="./assets/icons/backButton.svg"
             class="backButton"
@@ -28,20 +37,20 @@
         </div>
         <form>
             <div class="input-list-container">
-                <div class="input-label-container">
-                    <label for="email">Email</label>
-                    <div class="input-container">
-                        <input type="email" name="email" />
-                        <img src="./assets/icons/mail.svg" />
-                    </div>
-                </div>
-                <div class="input-label-container">
-                    <label for="password">Mot de passe</label>
-                    <div class="input-container">
-                        <input type="password" name="password" />
-                        <img src="./assets/icons/lock.svg" />
-                    </div>
-                </div>
+                <div
+                    class="input-label-container"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    path="./assets/icons/mail.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    type="password"
+                    name="password"
+                    placeholder="Mot de passe"
+                    path="./assets/icons/lock.svg"
+                ></div>
             </div>
 
             <a
