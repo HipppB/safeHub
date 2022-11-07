@@ -1,7 +1,28 @@
-.header-container {
-    align-items: center;
-    display: flex;
+
+.header-container .title {
+    flex-grow: 1;
+    text-align: center;
 }
+
+.icon-container img {
+    display: flex;
+    width: 13px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+.icon-container:first-of-type {
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+.icon-container:last-of-type {
+    justify-content: flex-end;
+    padding-right: 10px;
+=======
 
 h1,
 .title {
@@ -40,4 +61,5 @@ h1,
 .logout {
     width: 0.75em;
     font-size: 10vw;
+
 }

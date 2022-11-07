@@ -2,17 +2,62 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Contact</title>
-        <link rel="stylesheet" href="./styles/common/index.css" />
-        <link rel="stylesheet" href="./styles/common/topNavBar.css" />
-        <link rel="stylesheet" href="./styles/common/classStyles.css" />
-        <script
-            type="text/javascript"
-            src="./scripts/common/topNavBar.js"
-            async
-        ></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+        <title>SafeHub - Contact</title>
+        <link rel="stylesheet" href="./styles/index.css" />
+        <link rel="stylesheet" href="./styles/classStyles.css" />
+        <link rel="stylesheet" href="./styles/inscription.css" />
     </head>
-    <body></body>
+    <body>
+        <img src="./assets/icons/backButton.svg" class="backButton" />
+        <img src="./assets/hex_incri.svg" class="blob" />
+        <div class="title-container">
+            <h1 class="title gradienttext">Contact</h1>
+            <p class="subtitle">Parlez nous de nos produits !</p>
+        </div>
+        <div class="illu-container">
+            <img src="./assets/form_inscri.svg" class="illu" />
+        </div>
+        <form>
+            <div class="input-list-container">
+                <div class="input-label-container">
+                    <label for="firstname">Prénom</label>
+                    <div class="input-container">
+                        <input type="text" name="firstname" />
+                        <img src="./assets/icons/person.svg" />
+                    </div>
+                </div>
+                <div class="input-label-container">
+                    <label for="surname">Nom</label>
+                    <div class="input-container">
+                        <input type="text" name="surname" />
+                        <img src="./assets/icons/person.svg" />
+                    </div>
+                </div>
+                <div class="input-label-container">
+                    <label for="email">Email</label>
+                    <div class="input-container">
+                        <input type="email" name="email" />
+                        <img src="./assets/icons/mail.svg" />
+                    </div>
+                </div>
+                <div class="input-label-container">
+                    <label for="phone">Téléphone</label>
+                    <div class="input-container">
+                        <input type="number" name="telephone" />
+                        <img src="./assets/icons/lock.svg" />
+                    </div>
+                </div>
+                <div class="input-label-container">
+                    <label for="password">Message</label>
+                    <div class="input-container">
+                        <input type="text" name="Message" />
+                        <img src="./assets/icons/lock.svg" />
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="button mT150" value="Envoyer" />
+        </form>
+    </body>
 </html>

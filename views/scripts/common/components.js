@@ -22,7 +22,11 @@ css :
 */
 
 const inputHTML = `
-<label for="{name}">{placeholder}</label><div class="input-container"><input type="{type}" name="{name}" /><img src="{path}" /></div>
+<label for="{name}">{placeholder}</label>
+    <div class="input-container">
+        <input type="{type}" name="{name}" />
+        <img src="{path}" />
+    </div>
 `
 
 const headerHTML = `
@@ -46,21 +50,20 @@ const headerHTML = `
     </div>
 `
 const headerTitleButton = `
-        <div class="backButton-container">
+        <div class="icon-container">
             <img
                 src="{leftButtonPath}"
-                class="backButton"
                 alt=""
             />
         </div>
-        <div class="title-container">
+
             <h1 class="title gradienttext">{title}</h1>
-        </div>
-        <div class="container-logout">
+
+        <div class="icon-container">
             <img
                 src="{rightButtonPath}"
-                class="logout"
                 alt=""
+                style="width:{width}; height: {height};"
             />
         </div>
 `
@@ -98,11 +101,14 @@ function searchForHeader() {
         const rightButtonPath = header.getAttribute('rightButtonPath')
         const leftAction = header.getAttribute('leftAction')
         const rightAction = header.getAttribute('rightAction')
-
+        const height = header.getAttribute('height')
+        const width = header.getAttribute('width')
         header.innerHTML = headerTitleButton
             .replace('{title}', title)
             .replace('{leftButtonPath}', leftButtonPath)
             .replace('{rightButtonPath}', rightButtonPath)
+            .replace('{height}', height)
+            .replace('{width}', width)
     })
 }
 searchForInputs()
