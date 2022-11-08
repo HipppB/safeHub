@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+body {
+    min-height: 100vh !important ;
+}
+
 h2,
 .central-container {
     font-size: 6vmin;
