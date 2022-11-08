@@ -1,0 +1,35 @@
+.central-container {
+    display: flex;
+    margin: 7.5%;
+}
+
+.central-container,
+p {
+    flex-direction: column;
+    font-size: 3.5vmin;
+}
+
+.questionTicket {
+    width: 100%;
+    font-weight: 600;
+    font-size: 6vmin;
+}
+
+.central-container,
+div {
+    align-items: center;
+}
+
+.envoyerTicket {
+    display: flex;
+    justify-content: center;
+}
+
+.small-stroke {
+    margin: 10px;
+    width: 50%;
+    height: 1px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
