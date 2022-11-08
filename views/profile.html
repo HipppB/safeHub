@@ -6,11 +6,16 @@
         <link rel="stylesheet" href="./styles/common/index.css" />
         <link rel="stylesheet" href="./styles/headerprivate.css" />
         <link rel="stylesheet" href="./styles/profil.css" />
-        
+        <link rel="stylesheet" href="./styles/index.css" />
+        <script
+            type="text/javascript"
+            src="./scripts/common/components.js"
+            async
+        ></script>
         <title>SafeHub - Profil</title>
     </head>
     <body>
-        <div class="header-container">
+        <!-- <div class="header-container">
             <div class="backButton-container">
                 <img
                     src="./assets/icons/backButton.svg"
@@ -29,10 +34,15 @@
                     alt="logout"
                 />
             </div>
+        </div> -->
+        <div
+            class="header-container"
+            title="Profil"
+            leftButtonPath="./assets/icons/backButton.svg"
+            rightButtonPath="./assets/icons/logout.svg" width="25px"
+            >
         </div>
-        <div class="topNavBar-container">
-            <div class="header-container" title="Profil" leftButtonPath="A" rightButtonPath="B" leftAction="" rightAction=""/>
-        </div>
+       
         <div class="central-container">
             <h2 class="gradienttext">Nom Prénom</h2>
             <div>XX ans</div>
@@ -41,13 +51,16 @@
             <div>example@example.com</div>
         </div>
         <div class="modifierProduit">
-            <bouton class="button modifBtn">
+            <bouton class="button">    
                 Modifier le produit
             </bouton>
-            <bouton class="button ajoutBtn">    
+            <bouton class="button-outlined">
+                Ajout produit
             </bouton>
-            <input type="button" class="button ajoutBtn">
-            </input>
+            <bouton class="button-outlined">
+                Nouveau ticket
+            </bouton> 
         </div>
+        <img src="./assets/message_icon.svg" class="messageIcon">
     </body>
 </html>

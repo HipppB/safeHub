@@ -31,6 +31,36 @@
     z-index: -1;
 }
 
+.blob2 {
+    position: absolute;
+    left: 0;
+    top: 32em;
+    z-index: -1;
+}
+
+.blob3 {
+    position: absolute;
+    right: 0;
+    top: 44em;
+    z-index: -1;
+}
+
+.blob4 {
+    position: absolute;
+    right: 3em;
+    width: 20vw;
+    top: 41em;
+    z-index: -1;
+}
+
+.blob5 {
+    position: absolute;
+    right: 3em;
+    width: 20vw;
+    top: 41em;
+    z-index: -1;
+}
+
 .homeImage {
     width: 10em;
 }
