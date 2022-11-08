@@ -106,7 +106,7 @@ p {
 .button-outlined {
     border: none;
     margin: 2px;
-    width: calc(80vw - 4px);
+    width: 80vw;
     height: 46px;
     border-radius: 9px;
     background-color: white;
@@ -127,9 +127,28 @@ p {
     border-radius: 10px;
     display: flex;
     /* padding: 2px; */
-    inset: -2px;
-    background: linear-gradient(75deg, #ff2b1c, #f76b1c, #fad961, #f76b1c);
+    inset: -1px;
+    background: linear-gradient(75deg, #f76b1c, #fad961);
 }
+
+.button-outlined-red {
+    border: none;
+    margin: 2px;
+    width: calc(80vw - 4px);
+    height: 46px;
+    border-radius: 9px;
+    background-color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 0.6em;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: solid 1px rgb(255, 51, 51);
+}
+
 /* More than one input ? */
 .input-list-container {
     display: flex;
