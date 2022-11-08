@@ -30,9 +30,9 @@ const inputHTML = `
 `
 
 const headerHTML = `
-    <div class="topNavBar-burgerMenu" onclick="toggleBurgerMenu()">
-        <img src="./assets/icons/burgerIcon.svg" />
-        <div class="topNavBar-burgerMenu-content-container"></div>
+<div class="topNavBar-container-items">
+    <div class="topNavBar-burgerMenu" >
+        <img src="./assets/icons/burgerIcon.svg" onclick="toggleBurgerMenu()"/>
     </div>
     <a class="link" href="./faq.html">FAQ</a>
     <a class="link" href="./contact.html">CONTACT</a>
@@ -48,6 +48,7 @@ const headerHTML = `
             src="./assets/icons/arrowDown.svg"
         />
     </div>
+</div>
 `
 const headerTitleButton = `
         <div class="icon-container">
@@ -110,6 +111,11 @@ function searchForHeader() {
             .replace('{height}', height)
             .replace('{width}', width)
     })
+}
+
+function toggleBurgerMenu() {
+    const burgerMenu = document.querySelector('.topNavBar-container')
+    burgerMenu.classList.toggle('topNavBar-burgerMenu--shown')
 }
 searchForInputs()
 searchForNavBar()
