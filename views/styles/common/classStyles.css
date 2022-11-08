@@ -121,10 +121,6 @@
     margin-top: 400px;
 }
 
-.mB50 {
-    margin-bottom: 50px;
-}
-
 /* margin right */
 .mR10 {
     margin-right: 10px;
@@ -188,5 +184,38 @@
 }
 
 .mL400 {
-    margin-top: 400px;
+    margin-left: 400px;
+}
+
+/* margin bottom */
+.mB10 {
+    margin-bottom: 10px;
+}
+
+.mB15 {
+    margin-bottom: 15px;
+}
+.mB20 {
+    margin-bottom: 20px;
+}
+.mB25 {
+    margin-bottom: 25px;
+}
+.mB50 {
+    margin-bottom: 50px;
+}
+
+.mB100 {
+    margin-bottom: 100px;
+}
+
+.mB150 {
+    margin-bottom: 150px;
+}
+.mB200 {
+    margin-bottom: 200px;
+}
+
+.mB400 {
+    margin-bottom: 400px;
 }
