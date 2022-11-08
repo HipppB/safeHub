@@ -6,11 +6,16 @@
         <link rel="stylesheet" href="./styles/common/index.css" />
         <link rel="stylesheet" href="./styles/headerprivate.css" />
         <link rel="stylesheet" href="./styles/profil.css" />
-
+        <link rel="stylesheet" href="./styles/index.css" />
+        <script
+            type="text/javascript"
+            src="./scripts/common/components.js"
+            async
+        ></script>
         <title>SafeHub - Profil</title>
     </head>
     <body>
-        <div class="header-container">
+        <!-- <div class="header-container">
             <div class="backButton-container">
                 <img
                     src="./assets/icons/backButton.svg"
@@ -29,10 +34,33 @@
                     alt="logout"
                 />
             </div>
+        </div> -->
+        <div
+            class="header-container"
+            title="Profil"
+            leftButtonPath="./assets/icons/backButton.svg"
+            rightButtonPath="./assets/icons/logout.svg" width="25px"
+            >
         </div>
+       
         <div class="central-container">
             <h2 class="gradienttext">Nom Prénom</h2>
-            <a>XX ans</a>
+            <div>XX ans</div>
+            <div class="small-stroke""></div>
+            <div>+33 9 75 43 78 07</div>
+            <div>example@example.com</div>
         </div>
+        <div class="modifierProduit">
+            <bouton class="button">    
+                Modifier le produit
+            </bouton>
+            <bouton class="button-outlined">
+                Ajout produit
+            </bouton>
+            <bouton class="button-outlined">
+                Nouveau ticket
+            </bouton> 
+        </div>
+        <img src="./assets/message_icon.svg" class="messageIcon">
     </body>
 </html>

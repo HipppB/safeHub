@@ -6,13 +6,40 @@
 
 h2,
 .central-container {
-    font-size: 0.9em;
+    font-size: 6vmin;
     display: flex;
     justify-content: center;
 }
 
-a,
-.central-container:nth-child(1) {
-    font-size: 0.75em;
+.small-stroke {
+    margin: 10px;
+    width: 20%;
+    height: 1px;
+    background-color: black;
+}
+.central-container > div:nth-child(2) {
+    font-size: 4vmin;
     color: #636363;
+}
+
+.central-container > div:nth-child(4),
+div:nth-child(5) {
+    font-size: 4vmin;
+    color: black;
+}
+
+.modifierProduit {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.messageIcon {
+    position: absolute;
+    bottom: 10%;
+    right: 7.5%;
+    width: 50px;
 }
