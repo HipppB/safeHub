@@ -22,3 +22,11 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.search-input {
+    width: 85vw;
+    border-radius: 7px;
+    border-color: #f76b1c;
+    padding: 15px 0px;
+    font-size: 0.5em;
+}

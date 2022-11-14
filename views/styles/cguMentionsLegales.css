@@ -16,3 +16,12 @@
 
     font-weight: 700;
 }
+
+.icon-container-modify {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon-container-modify a {
+    cursor: pointer;
+}
