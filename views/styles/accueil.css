@@ -29,6 +29,9 @@
     top: 10em;
     width: 90vw;
     z-index: -1;
+    animation: scaleBlob 10s infinite;
+}
+@keyframes scaleBlob {
 }
 
 .blob2 {
