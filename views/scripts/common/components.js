@@ -37,7 +37,7 @@ const headerHTML = `
     <a class="link" href="./faq.html">FAQ</a>
     <a class="link" href="./contact.html">CONTACT</a>
     <div class="topNavBar-logo-container">
-        <img class="topNavBar-logo" src="./assets/logo.svg" alt="logo" />
+        <img class="topNavBar-logo" src="./assets/logo.svg" alt="logo" onclick="window.location.href = './';"/>
     </div>
     <a class="link" href="./connexion.html">CONNEXION</a>
     <div class="langage-selector">
