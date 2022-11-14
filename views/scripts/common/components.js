@@ -101,13 +101,18 @@ function searchForInputs() {
 
 function searchForNavBar() {
     const navBar = document.querySelectorAll('.topNavBar-container')
+    const body = document.querySelector('body')
+
     navBar.forEach((navBar) => {
         navBar.innerHTML = headerHTML
+        body.style.cssText = 'padding-top: 50px;'
+        console.log('e')
     })
 }
 
 function searchForHeader() {
     const header = document.querySelectorAll('.header-container')
+
     header.forEach((header) => {
         const title = header.getAttribute('title')
         const leftButtonPath = header.getAttribute('leftButtonPath')
@@ -116,6 +121,7 @@ function searchForHeader() {
         const rightAction = header.getAttribute('rightAction')
         const height = header.getAttribute('height')
         const width = header.getAttribute('width')
+
         header.innerHTML = headerTitleButton
             .replace('{title}', title)
             .replace('{leftButtonPath}', leftButtonPath)
