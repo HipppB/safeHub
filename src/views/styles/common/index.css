@@ -30,6 +30,7 @@ body {
     right: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 h1,
@@ -47,6 +48,7 @@ p {
 
 .subtitle {
     font-style: normal;
+    color: #3d3d3d;
     font-weight: 400;
     letter-spacing: -0.02em;
     padding: 0 0 0 0;
@@ -93,6 +95,11 @@ p {
     background-size: 400%;
 }
 
+.button:focus {
+    transform: scale(99%);
+    transition-timing-function: ease-in-out;
+}
+
 /* .test-container {
     width: 100%;
     height: 100px;
@@ -103,6 +110,35 @@ p {
     position: relative;
 } */
 .button-outlined {
+    border: none;
+    margin: 2px;
+    width: 80vw;
+    height: 46px;
+    border-radius: 9px;
+    background-color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 0.6em;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #f76b1c;
+    /* background-clip: padding-box; */
+}
+.button-outlined::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    /* padding: 2px; */
+    inset: -1px;
+    background: linear-gradient(75deg, #f76b1c, #fad961);
+}
+
+.button-outlined-red {
     border: none;
     margin: 2px;
     width: calc(80vw - 4px);
@@ -117,18 +153,18 @@ p {
     justify-content: center;
     display: flex;
     align-items: center;
-    /* background-clip: padding-box; */
+    color: #ff2b1c;
+    border: solid 1px rgb(255, 51, 51);
 }
-.button-outlined::before {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    border-radius: 10px;
-    display: flex;
-    /* padding: 2px; */
-    inset: -2px;
-    background: linear-gradient(75deg, #ff2b1c, #f76b1c, #fad961, #f76b1c);
+
+.button-outlined-red:hover {
+    transform: scale(101%);
 }
+
+.button-outlined-red:focus {
+    transform: scale(99%);
+}
+
 /* More than one input ? */
 .input-list-container {
     display: flex;
@@ -235,7 +271,7 @@ p {
 }
 
 .gradienttext {
-    background-image: linear-gradient(150deg, #ff2b1c, #f76b1c, #fad961);
+    background-image: linear-gradient(150deg, #f76b1c, #fad961);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
