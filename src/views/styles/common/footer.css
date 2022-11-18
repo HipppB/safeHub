@@ -1,0 +1,28 @@
+.footer-container {
+    /* height: fit-content; */
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(10, 10, 10);
+}
+
+.footer-container a {
+    color: white;
+    font-size: 0.5em;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.line {
+    height: 1px;
+    width: 70vw;
+    margin-bottom: 0.5em;
+    background-color: #313131;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 0.5em;
+}

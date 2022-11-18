@@ -29,6 +29,20 @@ Fichier css : `common/index.css`
 
 ---
 
+## Footer
+
+Fichiers css :
+`common/index.css`
+, `common/topNavBar.css`<br>
+
+### Pages publiques
+
+            <div class="footer-container"></div>
+
+### Pages privées
+
+            <div class="footer-container" small="true"></div>
+
 ## Entêtes
 
 ### Pages publiques, avec navigation

@@ -29,6 +29,7 @@
     top: 10em;
     width: 90vw;
     z-index: -1;
+    overflow: hidden;
     animation: scaleBlob 10s infinite;
 }
 @keyframes scaleBlob {
@@ -39,6 +40,7 @@
     left: 0;
     top: 32em;
     z-index: -1;
+    overflow: hidden;
 }
 
 .blob3 {
@@ -46,6 +48,7 @@
     right: 0;
     top: 44em;
     z-index: -1;
+    overflow: hidden;
 }
 
 .blob4 {
@@ -54,6 +57,7 @@
     width: 20vw;
     top: 41em;
     z-index: -1;
+    overflow: hidden;
 }
 
 .blob5 {
@@ -62,6 +66,7 @@
     width: 20vw;
     top: 41em;
     z-index: -1;
+    overflow: hidden;
 }
 
 .homeImage {
@@ -125,31 +130,4 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.footer-container {
-    height: 20vh;
-    padding: 1.5em 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(10, 10, 10);
-}
-
-.footer-container a {
-    color: white;
-    font-size: 0.5em;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.line {
-    height: 1px;
-    width: 70vw;
-    background-color: #313131;
-}
-
-.footer-container p {
-    font-size: 0.5em;
 }
