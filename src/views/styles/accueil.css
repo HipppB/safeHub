@@ -131,30 +131,3 @@
     flex-direction: column;
     align-items: center;
 }
-
-.footer-container {
-    height: 20vh;
-    padding: 1.5em 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(10, 10, 10);
-}
-
-.footer-container a {
-    color: white;
-    font-size: 0.5em;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-.line {
-    height: 1px;
-    width: 70vw;
-    background-color: #313131;
-}
-
-.footer-container p {
-    font-size: 0.5em;
-}

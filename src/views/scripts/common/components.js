@@ -83,6 +83,19 @@ const headerTitleButton = `
             />
         </div>
 `
+
+const footerLinks = `
+            <a href="./cgu.html">Conditions générales d'utilisation</a>
+            <a href="./mentionslegales.html">Mentions légales</a>
+            <a href="./faq.html">FAQ</a>
+            <a href="./contact.html">Contact</a>
+            <div class="line mT25"></div>
+`
+const footer = `
+            <p class="gradienttext mT10">Crée par AllSafe - Copyright 2022</p>
+
+`
+
 function searchForInputs() {
     const inputs = document.querySelectorAll('.input-label-container')
 
@@ -134,6 +147,16 @@ function searchForHeader() {
     })
 }
 
+function searchForFooter() {
+    const footerContainer = document.querySelectorAll('.footer-container')
+    footerContainer.forEach((footerContainer) => {
+        if (footerContainer.getAttribute('small') !== 'true') {
+            footerContainer.innerHTML = footerLinks + footer
+        } else {
+            footerContainer.innerHTML = footer
+        }
+    })
+}
 function toggleBurgerMenu() {
     const burgerMenu = document.querySelector('.topNavBar-container')
     burgerMenu.classList.toggle('topNavBar-burgerMenu--shown')
@@ -141,3 +164,4 @@ function toggleBurgerMenu() {
 searchForInputs()
 searchForNavBar()
 searchForHeader()
+searchForFooter()
