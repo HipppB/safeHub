@@ -51,15 +51,18 @@ const headerHTML = `
     
 </div>
 <div class="topNavBar-burgerMenu-content-container">
-
-<div class="link-Burger">
-    <a href="./faq.html">Connexion</a>
-</div  ><div class="link-Burger">    <a  href="./connexion.html">FAQ</a>
-</div ><div class="link-Burger">   <a  href="./connexion.html">Contact</a>
-</div ><div class="link-Burger">   <a  href="./contact.html">Mention Légale</a>
-</div ><div class="link-Burger">   <a  href="./connexion.html">CGU</a>
-</div>  
-
+    
+    <div class="link-Burger">
+        <a href="./faq.html">FAQ</a>
+    </div>
+    <div class="lineHeader"></div>
+    <div class="link-Burger">
+        <a  href="./contact.html">Contact</a>
+    </div>
+    <div class="lineHeader"></div>
+    <div class="link-Burger">
+        <a href="./faq.html">Connexion</a>
+    </div> 
 </div>
 `
 const headerTitleButton = `
