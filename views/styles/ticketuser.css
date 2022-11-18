@@ -20,6 +20,52 @@ div {
     align-items: center;
 }
 
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20%;
+}
+
+.nouveauticket {
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+    width: 80vw;
+    height: 10px;
+    margin-bottom: -5px;
+}
+
+.nouveauticket p {
+    font-size: 0.7rem;
+    color: black;
+}
+
+.messageticket {
+    display: flex;
+    justify-content: center;
+    color: #c8c8c8;
+}
+
+.objet {
+    height: 3em;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2%;
+    font-size: 0.4em;
+}
+
+.contenu {
+    height: 12em;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 2%;
+    padding-top: 2%;
+    font-size: 0.3em;
+}
+
 .envoyerTicket {
     display: flex;
     justify-content: center;
