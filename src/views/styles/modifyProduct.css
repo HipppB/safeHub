@@ -1,0 +1,13 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+}
+
+.list {
+    gap: 10px;
+}
