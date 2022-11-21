@@ -55,14 +55,15 @@ const headerHTML = `
             src="./assets/icons/arrowDown.svg"
         />
         <div class="langage-selector-content-container">
+            
             <div class="langage-selector-content-container__item">
                 <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
                 <div class="langage-selector__text">FR</div>
             </div>
             <div class="langage-selector-content-container__item">
-                <img src="./assets/englishFlag.png" class="langage-selector__flag" />
-                <div class="langage-selector__text">EN</div>
-            </div>
+            <img src="./assets/englishFlag.png" class="langage-selector__flag" />
+            <div class="langage-selector__text">EN</div>
+        </div>
         </div>
     </div>
     
