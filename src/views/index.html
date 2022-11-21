@@ -13,6 +13,11 @@
             src="./scripts/common/components.js"
             async
         ></script>
+        <script
+            type="text/javascript"
+            src="./scripts/carousel.js"
+            async
+        ></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -96,11 +101,71 @@
 
         <!-- Temoignages -->
         <div class="testimonies mT150">
+            <img src="./assets/home_blob5.svg" class="blob5" />
             <h1 class="title gradienttext">Témoignages</h1>
             <p class="home-subtitle">
                 Lorem ipsum dolor sit amet, consectetur<br />
                 adipiscing elit.
             </p>
+            <div class="mL50 mR50 mT50 mB100">
+                <div class="carousel-container" data-carousel>
+                    <div class="carousel-buttons">
+                        <a data-carousel-button-prev>
+                            <svg
+                                width="9"
+                                height="16"
+                                viewBox="0 0 9 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="carousel-button carousel-button-previous"
+                            >
+                                <path
+                                    d="M8 15L1 8L8 1"
+                                    stroke="#f76b1c"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                        <a data-carousel-button-next>
+                            <svg
+                                width="9"
+                                height="16"
+                                viewBox="0 0 9 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="carousel-button carousel-button-next"
+                            >
+                                <path
+                                    d="M1 1L8 8L1 15"
+                                    stroke="#fad961"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="slides" data-carousel-slides-container>
+                        <div class="slide">
+                            <p class="gradienttext">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit.
+                            </p>
+                            <div class="profil-container">
+                                <img
+                                    src="./assets/image-profile.png"
+                                    class="profil-image"
+                                />
+                                <div class="name-job">
+                                    <p class="name gradienttext">John Doe</p>
+                                    <p>Ingénieur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
