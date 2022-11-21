@@ -24,7 +24,7 @@ css :
 const inputHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
-        <input type="{type}" name="{name}" />
+        <input type="{type}" name="{name}" placeholder={placeholderInside}/>
         <img src="{path}" />
     </div>
 `
@@ -61,8 +61,18 @@ const headerHTML = `
     </div>
     <div class="lineHeader"></div>
     <div class="link-Burger">
-        <a href="./faq.html">Connexion</a>
+        <a href="./Connexion.html">Connexion</a>
     </div> 
+</div>
+<div class="langage-selector-content-container">
+    <div class="langage-selector-content-container__item">
+        <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
+        <div class="langage-selector__text">FR</div>
+    </div>
+    <div class="langage-selector-content-container__item">
+        <img src="./assets/englishFlag.png" class="langage-selector__flag" />
+        <div class="langage-selector__text">EN</div>
+    </div>
 </div>
 `
 const headerTitleButton = `
@@ -103,6 +113,8 @@ function searchForInputs() {
         const newInput = inputHTML
         const type = input.getAttribute('type')
         const name = input.getAttribute('name')
+        const placeholderInside = input.getAttribute('placeholderInside')
+        console.log(name)
         const placeholder = input.getAttribute('placeholder')
         const path = input.getAttribute('path')
 
@@ -111,6 +123,7 @@ function searchForInputs() {
             .replace('{name}', name)
             .replace('{placeholder}', placeholder)
             .replace('{path}', path)
+            .replace('{placeholderInside}', placeholderInside)
     })
     console.log(inputs)
 }
@@ -156,6 +169,10 @@ function searchForFooter() {
             footerContainer.innerHTML = footer
         }
     })
+}
+function toggleBurgerMenu() {
+    const burgerMenu = document.querySelector('.topNavBar-container')
+    burgerMenu.classList.toggle('topNavBar-burgerMenu--shown')
 }
 function toggleBurgerMenu() {
     const burgerMenu = document.querySelector('.topNavBar-container')
