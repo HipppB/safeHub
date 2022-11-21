@@ -211,6 +211,13 @@ p {
 }
 .input-container textarea {
     height: 150px;
+    padding-top: 2%;
+    padding-left: 5%;
+}
+
+.input-container textarea::placeholder {
+    color: #c6c6c6;
+    font-size: 0.81em;
 }
 
 .input-container::before {
