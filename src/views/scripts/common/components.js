@@ -24,7 +24,14 @@ css :
 const inputHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
-        <input type="{type}" name="{name}" placeholder={placeholderInside}/>
+        <input type="{type}" name="{name}" placeholder="{placeholderInside}"/>
+        <img src="{path}" />
+    </div>
+`
+const inputTextAreaHTML = `
+<label for="{name}">{placeholder}</label>
+    <div class="input-container">
+        <textarea rows="5" type="{type}" name="{name}" placeholder="{placeholderInside}"></textarea>
         <img src="{path}" />
     </div>
 `
@@ -110,15 +117,21 @@ function searchForInputs() {
     const inputs = document.querySelectorAll('.input-label-container')
 
     inputs.forEach((input) => {
-        const newInput = inputHTML
         const type = input.getAttribute('type')
         const name = input.getAttribute('name')
         const placeholderInside = input.getAttribute('placeholderInside')
         console.log(name)
         const placeholder = input.getAttribute('placeholder')
         const path = input.getAttribute('path')
+        const isTextArea = input.getAttribute('multiline')
+        let newInput = inputHTML
 
-        input.innerHTML = inputHTML
+        if (isTextArea === 'true') {
+            console.log('IS TEXT AREA')
+            newInput = inputTextAreaHTML
+        }
+
+        input.innerHTML = newInput
             .replace('{type}', type)
             .replace('{name}', name)
             .replace('{placeholder}', placeholder)
