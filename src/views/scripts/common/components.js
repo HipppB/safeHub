@@ -24,7 +24,7 @@ css :
 const inputHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
-        <input type="{type}" name="{name}" placeholder={placeholderInside}/>
+        <input type="{type}" name="{name}" placeholder="{placeholderInside}"/>
         <img src="{path}" />
     </div>
 `
