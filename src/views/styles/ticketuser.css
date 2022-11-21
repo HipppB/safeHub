@@ -36,11 +36,6 @@ div {
     padding-bottom: 1%;
 }
 
-.input-container input::placeholder {
-    color: #c6c6c6;
-    font-size: 0.81em;
-}
-
 .nouveauticket {
     display: flex;
     border: none;

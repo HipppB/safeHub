@@ -10,7 +10,7 @@
 */
 
 .topNavBar-container {
-    z-index: 3;
+    z-index: 5;
     transition-duration: 0.5s;
     background-color: white;
     left: 0;
@@ -45,6 +45,7 @@
 .topNavBar-logo {
     width: 35px;
     height: 35px;
+    cursor: pointer;
 }
 
 .langage-selector {
@@ -117,6 +118,7 @@
 
     width: 50px;
     align-items: center;
+    cursor: pointer;
 }
 .burgerMenu-Logo {
     display: flex;
