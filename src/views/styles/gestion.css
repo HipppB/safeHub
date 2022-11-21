@@ -1,7 +1,7 @@
 .small-button-outlined {
     border: none;
     margin: 2px;
-    width: calc(40vw - 2px);
+    width: 35vw;
     height: 46px;
     border-radius: 9px;
     background-color: white;
