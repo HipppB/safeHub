@@ -1,7 +1,7 @@
 .small-button-outlined {
     /*border: none;*/
     margin: 2px;
-    width: 40vw;
+    width: 30vw;
     height: 46px;
     border-radius: 9px;
     background-color: white;
@@ -12,7 +12,6 @@
     position: relative;
     justify-content: center;
     display: flex;
-    direction: row;
     flex-wrap: nowrap;
     align-items: center;
     color: #f76b1c;
