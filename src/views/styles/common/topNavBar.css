@@ -10,19 +10,25 @@
 */
 
 .topNavBar-container {
+    z-index: 3;
     transition-duration: 0.5s;
     background-color: white;
     left: 0;
-    height: 30px;
     padding: 10px 20px 15px 20px;
     border-radius: 0 0 20px 20px;
     box-shadow: 0px 2px 92px -17px rgba(255, 205, 78, 0.79);
     border-radius: 0px 0px 25px 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 .topNavBar-container-items {
+    margin-top: 10px;
     display: flex;
     z-index: 1;
+    /* background-color: green; */
     justify-content: space-between;
+
     align-items: center;
 }
 
@@ -44,7 +50,7 @@
 .langage-selector {
     display: flex;
     font-size: 12px;
-
+    width: 50px;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -59,30 +65,57 @@
     height: 12px;
 }
 
-/* Burger menu is shown */
 .topNavBar-burgerMenu-content-container {
-    display: none;
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    /* background: #d5d5d5; */
+    display: flex;
+    flex-direction: column;
+}
+.link-Burger {
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+.link-Burger a {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 .topNavBar-burgerMenu--shown .topNavBar-burgerMenu-content-container {
-    position: fixed;
+    max-height: 50vh;
+    transition: max-height 0.25s ease-in;
+}
+
+.topNavBar-burgerMenu--shown.topNavBar-container {
+    max-height: auto;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    background-color: red;
-    height: 80vh;
-    z-index: 2;
-    border-radius: 0 0 20px 20px;
+    right: 0;
 }
+
 .topNavBar-burgerMenu--shown {
-    background-color: red;
-    height: 90vh;
+    /* height: 60vh; */
     align-items: baseline;
     transition-timing-function: ease-in-out;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.topNavBar-burgerMenu {
+    display: flex;
+
+    width: 50px;
+    align-items: center;
 }
 .burgerMenu-Logo {
     display: flex;
@@ -101,10 +134,17 @@
     width: 100%;
     height: 70px;
     background-color: white;
+    justify-content: center;
+    display: flex;
 }
 
 .topNavBar-container .link {
     display: none;
+}
+.lineHeader {
+    justify-self: center;
+    height: 1px;
+    background-color: rgba(255, 205, 78, 0.79);
 }
 
 @media (min-width: 564px) {
@@ -119,7 +159,7 @@
     }
 
     .topNavBar-container {
-        height: 30px;
+        height: 50px;
     }
     .topNavBar-container .link {
         display: flex;
@@ -133,3 +173,37 @@
         display: none;
     }
 }
+
+.langage-selector-content-container {
+    /* display: none; */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 92px -17px rgba(255, 205, 78, 0.79);
+    z-index: 2;
+}
+.langage-selector-content-container--shown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.langage-selector-content-container--shown > * {
+    margin: 5px;
+}
+.langage-selector-content-container--shown > *:hover {
+    cursor: pointer;
+}
+/* <div class="langage-selector-content-container">
+    <div class="langage-selector-content-container__item">
+        <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
+        <div class="langage-selector__text">FR</div>
+    </div>
+    <div class="langage-selector-content-container__item">
+        <img src="./assets/englishFlag.png" class="langage-selector__flag" />
+        <div class="langage-selector__text">EN</div>
+    </div>
+</div> */

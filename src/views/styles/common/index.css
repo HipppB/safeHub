@@ -30,6 +30,7 @@ body {
     right: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 h1,
@@ -94,6 +95,11 @@ p {
     background-size: 400%;
 }
 
+.button:focus {
+    transform: scale(99%);
+    transition-timing-function: ease-in-out;
+}
+
 /* .test-container {
     width: 100%;
     height: 100px;
@@ -118,6 +124,7 @@ p {
     justify-content: center;
     display: flex;
     align-items: center;
+    color: #f76b1c;
     /* background-clip: padding-box; */
 }
 .button-outlined::before {
@@ -146,7 +153,16 @@ p {
     justify-content: center;
     display: flex;
     align-items: center;
+    color: #ff2b1c;
     border: solid 1px rgb(255, 51, 51);
+}
+
+.button-outlined-red:hover {
+    transform: scale(101%);
+}
+
+.button-outlined-red:focus {
+    transform: scale(99%);
 }
 
 /* More than one input ? */
