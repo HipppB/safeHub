@@ -1,0 +1,40 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.coeurPouls {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    margin-top: 10%;
+}
+
+.imageCoeur {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+}
+
+.nombreBPM {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    color: #e84b30;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.containerButton {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
