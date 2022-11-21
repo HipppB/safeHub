@@ -3,16 +3,19 @@
     top: 0;
     right: 0;
     width: 60vw;
+    z-index: -1;
 }
 
 .backButton {
     position: absolute;
     margin-top: 50px;
-    width: 1em;
+    width: 0.5em;
+    display: none;
 }
 
 body {
-    padding-inline: 5vw;
+    /* padding-inline: 5vw; */
+    /* width: 90vw;  */
     display: flex;
     flex-direction: column;
 }
@@ -20,17 +23,17 @@ body {
 .illu-container {
     position: relative;
     align-self: center;
-    width: 60vw;
-    height: 60vw;
-}
-.illu {
-    position: absolute;
-    top: -50px;
-    width: 100%;
+    width: 60vmin;
 }
 
+.illu {
+    position: absolute;
+    right: -20px;
+    width: 60vmin;
+}
 .title-container {
-    margin-top: 200px;
+    margin-top: 60px;
+    margin-left: 20px;
 }
 
 form {

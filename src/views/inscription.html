@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>SafeHub - Inscription</title>
+        <link rel="stylesheet" href="./styles/common/index.css" />
+        <link
+            rel="stylesheet"
+            href="./styles/common/identificationPagesStyles.css"
+        />
+        <link rel="stylesheet" href="./styles/inscription.css" />
+        <link rel="stylesheet" href="./styles/common/classStyles.css" />
+        <link rel="stylesheet" href="./styles/common/topNavBar.css" />
+
+        <script
+            type="text/javascript"
+            src="./scripts/common/components.js"
+            async
+        ></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <div class="topNavBar-container"></div>
+        <img
+            src="./assets/icons/backButton.svg"
+            class="backButton"
+            onclick="window.location.href = './';"
+        />
+        <img src="./assets/hex_incri.svg" class="blob" />
+        <div class="title-container">
+            <h1 class="title gradienttext">Inscription</h1>
+            <p class="subtitle">Bienvenue !</p>
+        </div>
+
+        <div class="illu-container">
+            <img src="./assets/form_inscri.svg" class="illu" />
+        </div>
+
+        <form>
+            <div class="input-list-container">
+                <div
+                    class="input-label-container"
+                    name="firstname"
+                    placeholder="Prénom"
+                    path="./assets/icons/person.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    name="surname"
+                    placeholder="Nom"
+                    path="./assets/icons/person.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    path="./assets/icons/mail.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    type="password"
+                    name="password"
+                    placeholder="Mot de passe"
+                    path="./assets/icons/lock.svg"
+                ></div>
+            </div>
+
+            <div class="urbanist s05 mT10 leftAl">
+                En vous inscrivant, vous acceptez nos
+                <a href="#" class="gradienttext inter mT15">CGU</a>
+                et nos <br />
+                <a href="#" class="gradienttext inter mT15"
+                    >Mentions Légales ?</a
+                >
+            </div>
+
+            <input type="submit" class="button mT25" value="S'inscrire" />
+
+            <div class="mT10 mB50 s05 urbanist">
+                Vous avez déjà un compte ?
+                <a href="./connexion.html" class="gradienttext urbanist"
+                    >Connectez-vous</a
+                >
+            </div>
+        </form>
+    </body>
+</html>

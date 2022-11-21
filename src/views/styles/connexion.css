@@ -1,0 +1,6 @@
+.illu-container {
+    height: 60vmin;
+}
+.illu {
+    top: calc(-10px);
+}

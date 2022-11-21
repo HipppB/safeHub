@@ -1,0 +1,45 @@
+.small-button-outlined {
+    border: none;
+    margin: 2px;
+    width: 40vw;
+    height: 46px;
+    border-radius: 9px;
+    background-color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 0.6em;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: #f76b1c;
+    /* background-clip: padding-box; */
+}
+
+.small-button-outlined::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    /* padding: 2px; */
+    inset: -1px;
+    background: linear-gradient(75deg, #f76b1c, #fad961);
+}
+
+.header-container .title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.icon-container img {
+    display: flex;
+    width: 13px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
