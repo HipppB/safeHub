@@ -196,7 +196,8 @@ p {
     display: flex;
     margin: 2px;
 }
-.input-container input {
+.input-container input,
+.input-container textarea {
     outline: none;
     border: none;
     font-family: 'Urbanist', sans-serif;
@@ -208,6 +209,9 @@ p {
     width: 100%;
     padding-right: 50px;
 }
+.input-container textarea {
+    height: 150px;
+}
 
 .input-container::before {
     z-index: -1;
@@ -218,7 +222,8 @@ p {
     border-radius: 5px;
     background-size: 400%;
 }
-.input-container:has(input:focus)::before {
+.input-container:has(input:focus)::before,
+.input-container:has(textarea:focus)::before {
     animation: steam 10s linear infinite;
 }
 
