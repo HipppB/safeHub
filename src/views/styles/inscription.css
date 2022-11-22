@@ -1,5 +1,5 @@
 .illu-container {
-    height: 40vw;
+    height: min(40vmin, 300px);
 }
 .illu {
     top: 0px;
