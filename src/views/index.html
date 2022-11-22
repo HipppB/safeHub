@@ -4,13 +4,15 @@
         <meta charset="utf-8" />
         <title>SafeHub - Page d'accueil</title>
         <link rel="stylesheet" href="./styles/common/index.css" />
-        <link rel="stylesheet" href="./styles/common/topNavBar.css" />
-        <link rel="stylesheet" href="./styles/common/classStyles.css" />
         <link rel="stylesheet" href="./styles/accueil.css" />
-        <link rel="stylesheet" href="./styles/common/footer.css" />
         <script
             type="text/javascript"
             src="./scripts/common/components.js"
+            async
+        ></script>
+        <script
+            type="text/javascript"
+            src="./scripts/carousel.js"
             async
         ></script>
 
@@ -19,12 +21,12 @@
     <body>
         <!-- Hero section -->
         <div class="topNavBar-container"></div>
-        <div class="home-title">
+        <div class="home-title mL25 mR25">
             <h1 class="title gradienttext">Domotic for your safety</h1>
             <p class="home-subtitle">
-                Lorem ipsum dolor sit amet, consectetur<br />
-                adipiscing elit. Curabitur hendrerit laoreet<br />
-                dictum.
+                Sécurité, fiabilité et sérénité. <br />
+                Laissez place à une automatisation sécurisée dans votre
+                propriété
             </p>
             <a href="./connexion.html" class="outline-button gradienttext mT100"
                 >Se connecter</a
@@ -37,8 +39,8 @@
         <div class="ourService mT150">
             <h1 class="title gradienttext">Nos services</h1>
             <p class="home-subtitle">
-                Lorem ipsum dolor sit amet, consectetur<br />
-                adipiscing elit.
+                Un produit innovant respectant nos valeurs,<br />
+                inventé pour vous
             </p>
             <div class="images-section mT50">
                 <div class="images-container">
@@ -62,30 +64,27 @@
                 <div class="servicePoint">
                     <img src="./assets/icons/homeInline.svg" class="" />
                     <div class="mL20">
-                        <p class="serviceTitle gradienttext">Lorem ipsum</p>
+                        <p class="serviceTitle gradienttext">Sécurité</p>
                         <p class="serviceParagraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Lorem ipsum dolor sit amet.
+                            Un dispositif avec une sécurité à l'air du temps.
                         </p>
                     </div>
                 </div>
                 <div class="servicePoint">
                     <img src="./assets/icons/homeInline.svg" class="" />
                     <div class="mL20">
-                        <p class="serviceTitle gradienttext">Lorem ipsum</p>
+                        <p class="serviceTitle gradienttext">Fiabilité</p>
                         <p class="serviceParagraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Lorem ipsum dolor sit amet.
+                            Disponible pour vous à tout moment de la journée
                         </p>
                     </div>
                 </div>
                 <div class="servicePoint">
                     <img src="./assets/icons/homeInline.svg" class="" />
                     <div class="mL20">
-                        <p class="serviceTitle gradienttext">Lorem ipsum</p>
+                        <p class="serviceTitle gradienttext">Sérénité</p>
                         <p class="serviceParagraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Lorem ipsum dolor sit amet.
+                            Laissez notre produit travailler pour vous
                         </p>
                     </div>
                 </div>
@@ -96,14 +95,71 @@
 
         <!-- Temoignages -->
         <div class="testimonies mT150">
+            <img src="./assets/home_blob5.svg" class="blob5" />
             <h1 class="title gradienttext">Témoignages</h1>
-            <p class="home-subtitle">
-                Lorem ipsum dolor sit amet, consectetur<br />
-                adipiscing elit.
-            </p>
+            <p class="home-subtitle">Ces clients nous ont fait confiance</p>
+            <div class="mL50 mR50 mT50 mB100">
+                <div class="carousel-container" data-carousel>
+                    <div class="carousel-buttons">
+                        <a data-carousel-button-prev>
+                            <svg
+                                width="9"
+                                height="16"
+                                viewBox="0 0 9 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="carousel-button carousel-button-previous"
+                            >
+                                <path
+                                    d="M8 15L1 8L8 1"
+                                    stroke="#f76b1c"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                        <a data-carousel-button-next>
+                            <svg
+                                width="9"
+                                height="16"
+                                viewBox="0 0 9 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="carousel-button carousel-button-next"
+                            >
+                                <path
+                                    d="M1 1L8 8L1 15"
+                                    stroke="#fad961"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="slides" data-carousel-slides-container>
+                        <div class="slide">
+                            <p class="gradienttext">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit.
+                            </p>
+                            <div class="profil-container">
+                                <img
+                                    src="./assets/image-profile.png"
+                                    class="profil-image"
+                                />
+                                <div class="name-job">
+                                    <p class="name gradienttext">John Doe</p>
+                                    <p>Ingénieur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
-        <div class="footer-container" small="true"></div>
+        <div class="footer-container" small="false"></div>
     </body>
 </html>

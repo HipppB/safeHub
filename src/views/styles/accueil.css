@@ -62,9 +62,9 @@
 
 .blob5 {
     position: absolute;
-    right: 3em;
+    left: -1em;
     width: 20vw;
-    top: 41em;
+    top: 56em;
     z-index: -1;
     overflow: hidden;
 }
@@ -130,4 +130,98 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.carousel-container {
+    --current-slide: 0;
+    position: relative;
+}
+
+.carousel-button {
+    border-radius: 100%;
+    border: solid 2px;
+    width: 0.3em;
+    height: 0.3em;
+    padding: 10px;
+    top: 35%;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.carousel-button:hover {
+    transform: scale(103%);
+}
+
+.carousel-button-previous {
+    border-color: #f76b1c;
+    position: absolute;
+    left: -7%;
+    background-color: #fff;
+}
+
+.carousel-button-next {
+    border-color: #fad961;
+    background-color: #fff;
+    position: absolute;
+    right: -7%;
+}
+
+.slides {
+    /* border: solid 2px #f76b1c; */
+    border-radius: 10px;
+    padding: 30px 35px 20px 35px;
+    display: flex;
+    transition: transform 0.5s;
+    transform: translateX(calc(-100% * var(--current-slide)));
+}
+
+.slide::before {
+    z-index: -1;
+    position: absolute;
+    inset: -2px;
+    content: '';
+    background: linear-gradient(90deg, #f76b1c, #fad961);
+    border-radius: 5px;
+}
+
+.slide::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slide p {
+    font-size: 0.23em;
+    z-index: 3;
+}
+
+.profil-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+}
+
+.profil-image {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.name-job {
+    font-size: 0.7em;
+}
+
+.name {
+    font-weight: 600;
 }

@@ -47,18 +47,32 @@ const headerHTML = `
         <img class="topNavBar-logo" src="./assets/logo.svg" alt="logo" onclick="window.location.href = './';"/>
     </div>
     <a class="link" href="./connexion.html">CONNEXION</a>
-    <div class="langage-selector">
+    <div class="langage-selector" onclick="toggleLangages()"    >
         <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
         <div class="langage-selector__text">FR</div>
         <img
             class="langage-selector__arrow"
             src="./assets/icons/arrowDown.svg"
         />
+        <div class="langage-selector-content-container">
+            
+            <div class="langage-selector-content-container__item">
+                <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
+                <div class="langage-selector__text">FR</div>
+            </div>
+            <div class="langage-selector-content-container__item">
+            <img src="./assets/englishFlag.png" class="langage-selector__flag" />
+            <div class="langage-selector__text">EN</div>
+        </div>
+        </div>
     </div>
     
 </div>
 <div class="topNavBar-burgerMenu-content-container">
-    
+    <div class="link-Burger">
+        <a href="./index.html">Accueil</a>
+    </div>
+    <div class="lineHeader"></div>
     <div class="link-Burger">
         <a href="./faq.html">FAQ</a>
     </div>
@@ -71,16 +85,7 @@ const headerHTML = `
         <a href="./Connexion.html">Connexion</a>
     </div> 
 </div>
-<div class="langage-selector-content-container">
-    <div class="langage-selector-content-container__item">
-        <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
-        <div class="langage-selector__text">FR</div>
-    </div>
-    <div class="langage-selector-content-container__item">
-        <img src="./assets/englishFlag.png" class="langage-selector__flag" />
-        <div class="langage-selector__text">EN</div>
-    </div>
-</div>
+
 `
 const headerTitleButton = `
         <div class="icon-container">
@@ -117,12 +122,12 @@ function searchForInputs() {
     const inputs = document.querySelectorAll('.input-label-container')
 
     inputs.forEach((input) => {
-        const type = input.getAttribute('type')
-        const name = input.getAttribute('name')
-        const placeholderInside = input.getAttribute('placeholderInside')
+        const type = input.getAttribute('type') || 'text'
+        const name = input.getAttribute('name') || ''
+        const placeholderInside = input.getAttribute('placeholderInside') || ''
         console.log(name)
-        const placeholder = input.getAttribute('placeholder')
-        const path = input.getAttribute('path')
+        const placeholder = input.getAttribute('placeholder') || ''
+        const path = input.getAttribute('path') || ''
         const isTextArea = input.getAttribute('multiline')
         let newInput = inputHTML
 
@@ -187,9 +192,9 @@ function toggleBurgerMenu() {
     const burgerMenu = document.querySelector('.topNavBar-container')
     burgerMenu.classList.toggle('topNavBar-burgerMenu--shown')
 }
-function toggleBurgerMenu() {
-    const burgerMenu = document.querySelector('.topNavBar-container')
-    burgerMenu.classList.toggle('topNavBar-burgerMenu--shown')
+function toggleLangages() {
+    const lang = document.querySelector('.langage-selector-content-container')
+    lang.classList.toggle('langage-selector-content-container--shown')
 }
 searchForInputs()
 searchForNavBar()

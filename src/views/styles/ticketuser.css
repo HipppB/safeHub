@@ -23,8 +23,17 @@ div {
 .middle-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     margin-top: 20%;
+}
+
+.input-label-container {
+    display: block;
+}
+
+.input-container input {
+    padding-left: 5%;
+    padding-bottom: 1%;
 }
 
 .nouveauticket {
