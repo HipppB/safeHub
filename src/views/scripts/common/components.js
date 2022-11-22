@@ -55,20 +55,24 @@ const headerHTML = `
             src="./assets/icons/arrowDown.svg"
         />
         <div class="langage-selector-content-container">
+            
             <div class="langage-selector-content-container__item">
                 <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
                 <div class="langage-selector__text">FR</div>
             </div>
             <div class="langage-selector-content-container__item">
-                <img src="./assets/englishFlag.png" class="langage-selector__flag" />
-                <div class="langage-selector__text">EN</div>
-            </div>
+            <img src="./assets/englishFlag.png" class="langage-selector__flag" />
+            <div class="langage-selector__text">EN</div>
+        </div>
         </div>
     </div>
     
 </div>
 <div class="topNavBar-burgerMenu-content-container">
-    
+    <div class="link-Burger">
+        <a href="./index.html">Accueil</a>
+    </div>
+    <div class="lineHeader"></div>
     <div class="link-Burger">
         <a href="./faq.html">FAQ</a>
     </div>
@@ -118,12 +122,12 @@ function searchForInputs() {
     const inputs = document.querySelectorAll('.input-label-container')
 
     inputs.forEach((input) => {
-        const type = input.getAttribute('type')
-        const name = input.getAttribute('name')
-        const placeholderInside = input.getAttribute('placeholderInside')
+        const type = input.getAttribute('type') || 'text'
+        const name = input.getAttribute('name') || ''
+        const placeholderInside = input.getAttribute('placeholderInside') || ''
         console.log(name)
-        const placeholder = input.getAttribute('placeholder')
-        const path = input.getAttribute('path')
+        const placeholder = input.getAttribute('placeholder') || ''
+        const path = input.getAttribute('path') || ''
         const isTextArea = input.getAttribute('multiline')
         let newInput = inputHTML
 
