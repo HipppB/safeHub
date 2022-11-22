@@ -1,20 +1,25 @@
 .line {
     height: 1px;
     background-color: #d8d8d8;
-    width: 60vw;
+    width: min(80vw, 500px);
 }
 
 .titleFAQ {
-    font-size: 0.6em;
+    font-size: 0.5em;
 }
 
 .paragraphFAQ {
-    font-size: 0.4em;
+    font-size: 0.3em;
 }
 
 .line-container {
-    margin-left: calc(50% - 20px);
-    transform: translateX(-50%);
+    /* margin-left: calc(50% - 20px); */
+    /* transform: translateX(-50%); */
+}
+
+.faq-container {
+    align-self: center;
+    width: min(80vw, 500px);
 }
 
 .faqListContainer {
