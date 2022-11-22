@@ -1,0 +1,17 @@
+.input-container search{
+    border: none;
+    margin: 2px;
+    width: min(80vw, 500px);
+    height: 46px;
+    border-radius: 9px;
+    background-color: white;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 0.6em;
+    cursor: pointer;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #f76b1c;
+}
