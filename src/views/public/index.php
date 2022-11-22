@@ -3,16 +3,16 @@
     <head>
         <meta charset="utf-8" />
         <title>SafeHub - Page d'accueil</title>
-        <link rel="stylesheet" href="../styles/common/index.css" />
-        <link rel="stylesheet" href="../styles/accueil.css" />
+        <link rel="stylesheet" href="views/styles/common/index.css" />
+        <link rel="stylesheet" href="views/styles/accueil.css" />
         <script
             type="text/javascript"
-            src="../scripts/common/components.js"
+            src="views/scripts/common/components.js"
             async
         ></script>
         <script
             type="text/javascript"
-            src="../scripts/carousel.js"
+            src="views/scripts/carousel.js"
             async
         ></script>
 
@@ -29,12 +29,12 @@
                 propriété
             </p>
             <a
-                href="../connexion.html"
+                href="views/connexion.html"
                 class="outline-button gradienttext mT100"
                 >Se connecter</a
             >
-            <img src="../assets/home_blob.svg" class="blob" />
-            <img src="../assets/home_image.svg" class="mT100 homeImage" />
+            <img src="views/assets/home_blob.svg" class="blob" />
+            <img src="views/assets/home_image.svg" class="mT100 homeImage" />
         </div>
 
         <!-- Nos services -->
@@ -47,24 +47,24 @@
             <div class="images-section mT50">
                 <div class="images-container">
                     <img
-                        src="../assets/imagePlaceholder.jpg"
+                        src="views/assets/imagePlaceholder.jpg"
                         class="verticalImage"
                     />
                     <div class="mL10">
                         <img
-                            src="../assets/imagePlaceholder.jpg"
+                            src="views/assets/imagePlaceholder.jpg"
                             class="horizontalImage"
                         /><img
-                            src="../assets/imagePlaceholder.jpg"
+                            src="views/assets/imagePlaceholder.jpg"
                             class="horizontalImage"
                         />
                     </div>
                 </div>
             </div>
-            <img src="../assets/home_blob2.svg" class="blob2" />
+            <img src="views/assets/home_blob2.svg" class="blob2" />
             <div class="servicePoints mT50">
                 <div class="servicePoint">
-                    <img src="../assets/icons/homeInline.svg" class="" />
+                    <img src="views/assets/icons/homeInline.svg" class="" />
                     <div class="mL20">
                         <p class="serviceTitle gradienttext">Sécurité</p>
                         <p class="serviceParagraph">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="servicePoint">
-                    <img src="../assets/icons/homeInline.svg" class="" />
+                    <img src="views/assets/icons/homeInline.svg" class="" />
                     <div class="mL20">
                         <p class="serviceTitle gradienttext">Fiabilité</p>
                         <p class="serviceParagraph">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="servicePoint">
-                    <img src="../assets/icons/homeInline.svg" class="" />
+                    <img src="views/assets/icons/homeInline.svg" class="" />
                     <div class="mL20">
                         <p class="serviceTitle gradienttext">Sérénité</p>
                         <p class="serviceParagraph">
@@ -91,13 +91,13 @@
                     </div>
                 </div>
             </div>
-            <img src="../assets/home_blob3.svg" class="blob3" />
-            <img src="../assets/home_blob4.svg" class="blob4" />
+            <img src="views/assets/home_blob3.svg" class="blob3" />
+            <img src="views/assets/home_blob4.svg" class="blob4" />
         </div>
 
         <!-- Temoignages -->
         <div class="testimonies mT150">
-            <img src="../assets/home_blob5.svg" class="blob5" />
+            <img src="views/assets/home_blob5.svg" class="blob5" />
             <h1 class="title gradienttext">Témoignages</h1>
             <p class="home-subtitle">Ces clients nous ont fait confiance</p>
             <div class="mL50 mR50 mT50 mB100">
@@ -147,7 +147,7 @@
                             </p>
                             <div class="profil-container">
                                 <img
-                                    src="../assets/image-profile.png"
+                                    src="views/assets/image-profile.png"
                                     class="profil-image"
                                 />
                                 <div class="name-job">
