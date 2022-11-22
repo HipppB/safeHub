@@ -38,22 +38,3 @@
     );
     animation: steam 10s linear infinite;
 }
-.but {
-    display: flex;
-    border: none;
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    width: 80vw;
-    height: 50px;
-    border-radius: 10px;
-    background-color: #f76b1c;
-    color: white;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 400;
-    font-size: 0.6em;
-    cursor: pointer;
-    background: linear-gradient(210.94deg, #f76b1c -2.79%, #fad961 214.85%);
-    transition-duration: 50ms;
-}
