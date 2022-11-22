@@ -1,11 +1,8 @@
 <?php
 
 if(isset($_GET['url']) && !empty($_GET['url'])) {
-    // Si la variable cible est passé en GET
-    $url = $_GET['url']; //user, sensor, etc.
-    
+    $url = str_replace([".html", ".php"], "",$_GET['url']);
 } else {
-    // Si aucun contrôleur défini en GET, on bascule sur utilisateurs
     $url = 'index';
 }
 

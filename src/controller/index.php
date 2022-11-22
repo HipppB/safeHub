@@ -1,3 +1,3 @@
 <?php
-include('views/public/index.php');
+include('views/public/index.html');
 
