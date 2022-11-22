@@ -19,89 +19,97 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <!-- Hero section -->
-        <div class="topNavBar-container"></div>
-        <div class="home-title mL25 mR25">
-            <h1 class="title gradienttext">Domotic for your safety</h1>
-            <p class="home-subtitle">
-                Sécurité, fiabilité et sérénité. <br />
-                Laissez place à une automatisation sécurisée dans votre
-                propriété
-            </p>
-            <a
-                href="views/connexion.html"
-                class="outline-button gradienttext mT100"
-                >Se connecter</a
-            >
-            <img src="views/assets/home_blob.svg" class="blob" />
-            <img src="views/assets/home_image.svg" class="mT100 homeImage" />
-        </div>
-
-        <!-- Nos services -->
-        <div class="ourService mT150">
-            <h1 class="title gradienttext">Nos services</h1>
-            <p class="home-subtitle">
-                Un produit innovant respectant nos valeurs,<br />
-                inventé pour vous
-            </p>
-            <div class="images-section mT50">
-                <div class="images-container">
+        <div class="home-container">
+            <!-- Hero section -->
+            <div class="topNavBar-container"></div>
+            <div class="home-title-container mL25 mR25">
+                <div class="title-container">
+                    <h1 class="gradienttext">Domotic for your safety</h1>
+                    <p class="home-subtitle">
+                        Sécurité, fiabilité et sérénité. <br />
+                        Laissez place à une automatisation sécurisée dans votre
+                        propriété
+                    </p>
+                    <a href="./connexion.html" class="outline-button mT100"
+                        >Se connecter</a
+                    >
+                </div>
+                <div>
+                    <img src="views/assets/home_blob.svg" class="blob" />
                     <img
-                        src="views/assets/imagePlaceholder.jpg"
-                        class="verticalImage"
+                        src="views/assets/home_image.svg"
+                        class="mT100 homeImage"
                     />
-                    <div class="mL10">
+                </div>
+            </div>
+
+            <!-- Nos services -->
+            <div class="ourService mT150">
+                <h1 class="gradienttext">Nos services</h1>
+                <p class="home-subtitle-categories">
+                    Un produit innovant respectant nos valeurs,<br />
+                    inventé pour vous
+                </p>
+                <div class="images-section mT50">
+                    <div class="images-container">
                         <img
                             src="views/assets/imagePlaceholder.jpg"
-                            class="horizontalImage"
-                        /><img
-                            src="views/assets/imagePlaceholder.jpg"
-                            class="horizontalImage"
+                            class="verticalImage"
                         />
+                        <div class="mL10">
+                            <img
+                                src="views/assets/imagePlaceholder.jpg"
+                                class="horizontalImage"
+                            /><img
+                                src="views/assets/imagePlaceholder.jpg"
+                                class="horizontalImage"
+                            />
+                        </div>
                     </div>
                 </div>
+                <img src="views/assets/home_blob2.svg" class="blob2" />
+                <div class="servicePoints mT50">
+                    <div class="servicePoint">
+                        <img src="views/assets/icons/homeInline.svg" class="" />
+                        <div class="mL20">
+                            <p class="serviceTitle gradienttext">Sécurité</p>
+                            <p class="serviceParagraph">
+                                Un dispositif avec une sécurité à l'air du
+                                temps.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="servicePoint">
+                        <img src="views/assets/icons/homeInline.svg" class="" />
+                        <div class="mL20">
+                            <p class="serviceTitle gradienttext">Fiabilité</p>
+                            <p class="serviceParagraph">
+                                Disponible pour vous à tout moment de la journée
+                            </p>
+                        </div>
+                    </div>
+                    <div class="servicePoint">
+                        <img src="views/assets/icons/homeInline.svg" class="" />
+                        <div class="mL20">
+                            <p class="serviceTitle gradienttext">Sérénité</p>
+                            <p class="serviceParagraph">
+                                Laissez notre produit travailler pour vous
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <img src="views/assets/home_blob3.svg" class="blob3" />
+                <img src="views/assets/home_blob4.svg" class="blob4" />
             </div>
-            <img src="views/assets/home_blob2.svg" class="blob2" />
-            <div class="servicePoints mT50">
-                <div class="servicePoint">
-                    <img src="views/assets/icons/homeInline.svg" class="" />
-                    <div class="mL20">
-                        <p class="serviceTitle gradienttext">Sécurité</p>
-                        <p class="serviceParagraph">
-                            Un dispositif avec une sécurité à l'air du temps.
-                        </p>
-                    </div>
-                </div>
-                <div class="servicePoint">
-                    <img src="views/assets/icons/homeInline.svg" class="" />
-                    <div class="mL20">
-                        <p class="serviceTitle gradienttext">Fiabilité</p>
-                        <p class="serviceParagraph">
-                            Disponible pour vous à tout moment de la journée
-                        </p>
-                    </div>
-                </div>
-                <div class="servicePoint">
-                    <img src="views/assets/icons/homeInline.svg" class="" />
-                    <div class="mL20">
-                        <p class="serviceTitle gradienttext">Sérénité</p>
-                        <p class="serviceParagraph">
-                            Laissez notre produit travailler pour vous
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <img src="views/assets/home_blob3.svg" class="blob3" />
-            <img src="views/assets/home_blob4.svg" class="blob4" />
-        </div>
 
-        <!-- Temoignages -->
-        <div class="testimonies mT150">
-            <img src="views/assets/home_blob5.svg" class="blob5" />
-            <h1 class="title gradienttext">Témoignages</h1>
-            <p class="home-subtitle">Ces clients nous ont fait confiance</p>
-            <div class="mL50 mR50 mT50 mB100">
-                <div class="carousel-container" data-carousel>
+            <!-- Temoignages -->
+            <div class="testimonies mT150">
+                <img src="views/assets/home_blob5.svg" class="blob5" />
+                <h1 class="title gradienttext">Témoignages</h1>
+                <p class="home-subtitle-categories">
+                    Ces clients nous ont fait confiance
+                </p>
+                <div class="carousel-container mT50 mB200" data-carousel>
                     <div class="carousel-buttons">
                         <a data-carousel-button-prev>
                             <svg
@@ -160,7 +168,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Footer -->
         <div class="footer-container" small="false"></div>
     </body>
