@@ -67,7 +67,7 @@ p {
     margin: 0;
     align-items: center;
     justify-content: center;
-    width: 80vw;
+    width: min(80vw, 500px);
     height: 50px;
     border-radius: 10px;
     background-color: #f76b1c;
@@ -100,19 +100,10 @@ p {
     transition-timing-function: ease-in-out;
 }
 
-/* .test-container {
-    width: 100%;
-    height: 100px;
-    background-color: purple;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-} */
 .button-outlined {
     border: none;
     margin: 2px;
-    width: 80vw;
+    width: min(80vw, 500px);
     height: 46px;
     border-radius: 9px;
     background-color: white;
@@ -141,7 +132,7 @@ p {
 .button-outlined-red {
     border: none;
     margin: 2px;
-    width: calc(80vw - 4px);
+    width: calc(min(80vw, 500px) - 4px);
     height: 46px;
     border-radius: 9px;
     background-color: white;
@@ -180,7 +171,7 @@ p {
 .input-label-container {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: min(80vw, 500px);
     z-index: 2;
 }
 .input-label-container label {

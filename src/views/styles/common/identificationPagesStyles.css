@@ -2,20 +2,17 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 60vw;
+    width: min(60vw, 500px);
     z-index: -1;
 }
 
 .backButton {
-    position: absolute;
-    margin-top: 50px;
-    width: 0.5em;
     display: none;
 }
 
 body {
     /* padding-inline: 5vw; */
-    /* width: 90vw;  */
+    /* width: 90vw; */
     display: flex;
     flex-direction: column;
 }
@@ -23,13 +20,13 @@ body {
 .illu-container {
     position: relative;
     align-self: center;
-    width: 60vmin;
+    width: min(60vmin, 400px);
 }
 
 .illu {
     position: absolute;
     right: -20px;
-    width: 60vmin;
+    width: min(60vmin, 400px);
 }
 .title-container {
     margin-top: 60px;
