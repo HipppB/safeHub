@@ -28,7 +28,7 @@
     z-index: 1;
     color: #e84b30;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 .containerButton {
@@ -37,4 +37,97 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
+}
+
+.low-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.low-title {
+    display: flex;
+    justify-content: left;
+    font-weight: bold;
+    font-size: 0.4em;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.anormale {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.anormale-top {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.anormale-signal {
+    font-size: 0.2em;
+    background-color: #ff7d7d;
+    color: white;
+    border-radius: 23px;
+    padding: 5px 10px 5px 10px;
+}
+
+.anormale-horaire {
+    font-size: 0.25em;
+    color: #b4b4b4;
+}
+
+.anormale-frequence {
+    display: flex;
+    font-size: 0.3em;
+    text-indent: 5px;
+    margin-left: 5%;
+}
+
+.color-frequence {
+    color: #f76b1c;
+    font-size: 1em;
+}
+
+.small-stroke {
+    width: 100%;
+    height: 1px;
+    background-color: #f9f9f9;
+}
+
+.normal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.normal-top {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.normal-signal {
+    font-size: 0.2em;
+    background-color: #7dff92;
+    color: white;
+    border-radius: 23px;
+    padding: 5px 10px 5px 10px;
+}
+
+.normal-horaire {
+    font-size: 0.25em;
+    color: #b4b4b4;
+}
+
+.normal-frequence {
+    display: flex;
+    font-size: 0.3em;
+    text-indent: 5px;
+    margin-left: 5%;
 }
