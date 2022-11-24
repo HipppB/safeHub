@@ -8,3 +8,10 @@
     margin-bottom: 30px;
     background-color: #8e8b8b;
 }
+
+body {
+    display: flex;
+    justify-content: space-between;
+    min-height: calc(100vh - 50px);
+    flex-direction: column;
+}
