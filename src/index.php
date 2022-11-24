@@ -5,7 +5,7 @@ header('Cache-Control: post-check=0, pre-check=0', FALSE);
 header('Pragma: no-cache');
 
 if(isset($_GET['url']) && !empty($_GET['url'])) {
-    $url = str_replace([".html", ".php"], "", strtolower($_GET['url']));
+    $url = str_replace([".html", ".php"], "", strtolower(htmlspecialchars($_GET['url'])));
 } else {
     $url = 'index';
 }
