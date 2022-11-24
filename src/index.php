@@ -10,5 +10,5 @@ if(isset($_GET['url']) && !empty($_GET['url'])) {
     $url = 'index';
 }
 
-// On appelle le contrôleur
-include('controller/' . $url . '.php');
+if(file_exists('controller/' . $url . '.php')) include('controller/' . $url . '.php');
+echo "404 page not found";
