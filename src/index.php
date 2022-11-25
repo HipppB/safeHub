@@ -10,8 +10,8 @@ if(isset($_GET['url']) && !empty($_GET['url'])) {
     $url = 'index';
 }
 
-if(file_exists('controller/' . $url . '.php')) {
+if(file_exists('controller/' . $url . '.php')) { // Check if there is a controller
     include('controller/' . $url . '.php');
 } else {
-    include('controller/404.php');
+    include('controller/404.php'); // If not, 404
 }
