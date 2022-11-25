@@ -1,4 +1,5 @@
-
+-- Execute this script in the database you want to use for the MVC application.
+-- Specify the database name you choose in the .env file.
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 -- --------------------------------------------------------
