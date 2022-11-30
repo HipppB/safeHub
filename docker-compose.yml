@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+        - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+        - ./src:/src
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/src
+  mysql:
+    image: mysql:latest
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: overwatch
+        MYSQL_PASSWORD: test
+        MYSQL_DATABASE: safehub
+    ports:
+        - "3306:3306"
+    volumes:
+      - mysqldata:/var/lib/mysql
+volumes:
+    mysqldata:
