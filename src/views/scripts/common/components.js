@@ -39,29 +39,29 @@ const inputTextAreaHTML = `
 const headerHTML = `
 <div class="topNavBar-container-items">
     <div class="topNavBar-burgerMenu" >
-        <img src="./assets/icons/burgerIcon.svg" onclick="toggleBurgerMenu()"/>
+        <img src="../views/assets/icons/burgerIcon.svg" onclick="toggleBurgerMenu()"/>
     </div>
-    <a class="link" href="./faq.html">FAQ</a>
-    <a class="link" href="./contact.html">CONTACT</a>
+    <a class="link" href="./faq">FAQ</a>
+    <a class="link" href="./contact">CONTACT</a>
     <div class="topNavBar-logo-container">
-        <img class="topNavBar-logo" src="./assets/logo.svg" alt="logo" onclick="window.location.href = './';"/>
+        <img class="topNavBar-logo" src="../views/assets/logo.svg" alt="logo" onclick="window.location.href = './';"/>
     </div>
-    <a class="link" href="./connexion.html">CONNEXION</a>
+    <a class="link" href="./connexion">CONNEXION</a>
     <div class="langage-selector" onclick="toggleLangages()"    >
-        <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
+        <img src="../views/assets/frenchFlag.png" class="langage-selector__flag" />
         <div class="langage-selector__text">FR</div>
         <img
             class="langage-selector__arrow"
-            src="./assets/icons/arrowDown.svg"
+            src="../views/assets/icons/arrowDown.svg"
         />
         <div class="langage-selector-content-container">
             
             <div class="langage-selector-content-container__item">
-                <img src="./assets/frenchFlag.png" class="langage-selector__flag" />
+                <img src="../views/assets/frenchFlag.png" class="langage-selector__flag" />
                 <div class="langage-selector__text">FR</div>
             </div>
             <div class="langage-selector-content-container__item">
-            <img src="./assets/englishFlag.png" class="langage-selector__flag" />
+            <img src="../views/assets/englishFlag.png" class="langage-selector__flag" />
             <div class="langage-selector__text">EN</div>
         </div>
         </div>
@@ -70,19 +70,19 @@ const headerHTML = `
 </div>
 <div class="topNavBar-burgerMenu-content-container">
     <div class="link-Burger">
-        <a href="./index.html">Accueil</a>
+        <a href="./index">Accueil</a>
     </div>
     <div class="lineHeader"></div>
     <div class="link-Burger">
-        <a href="./faq.html">FAQ</a>
+        <a href="./faq">FAQ</a>
     </div>
     <div class="lineHeader"></div>
     <div class="link-Burger">
-        <a  href="./contact.html">Contact</a>
+        <a  href="./contact">Contact</a>
     </div>
     <div class="lineHeader"></div>
     <div class="link-Burger">
-        <a href="./Connexion.html">Connexion</a>
+        <a href="./Connexion">Connexion</a>
     </div> 
 </div>
 
@@ -107,10 +107,10 @@ const headerTitleButton = `
 `
 
 const footerLinks = `
-            <a href="./cgu.html">Conditions générales d'utilisation</a>
-            <a href="./mentionslegales.html">Mentions légales</a>
-            <a href="./faq.html">FAQ</a>
-            <a href="./contact.html">Contact</a>
+            <a href="./cgu">Conditions générales d'utilisation</a>
+            <a href="./mentionslegales">Mentions légales</a>
+            <a href="./faq">FAQ</a>
+            <a href="./contact">Contact</a>
             <div class="line mT25"></div>
 `
 const footer = `

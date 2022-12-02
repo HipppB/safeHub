@@ -15,6 +15,10 @@ body {
     /* width: 90vw; */
     display: flex;
     flex-direction: column;
+
+    justify-content: space-between;
+    min-height: calc(100vh - 50px);
+    /* background-color: red; */
 }
 
 .illu-container {
