@@ -39,29 +39,29 @@ const inputTextAreaHTML = `
 const headerHTML = `
 <div class="topNavBar-container-items">
     <div class="topNavBar-burgerMenu" >
-        <img src="views/assets/icons/burgerIcon.svg" onclick="toggleBurgerMenu()"/>
+        <img src="../views/assets/icons/burgerIcon.svg" onclick="toggleBurgerMenu()"/>
     </div>
     <a class="link" href="./faq">FAQ</a>
     <a class="link" href="./contact">CONTACT</a>
     <div class="topNavBar-logo-container">
-        <img class="topNavBar-logo" src="views/assets/logo.svg" alt="logo" onclick="window.location.href = './';"/>
+        <img class="topNavBar-logo" src="../views/assets/logo.svg" alt="logo" onclick="window.location.href = './';"/>
     </div>
     <a class="link" href="./connexion">CONNEXION</a>
     <div class="langage-selector" onclick="toggleLangages()"    >
-        <img src="views/assets/frenchFlag.png" class="langage-selector__flag" />
+        <img src="../views/assets/frenchFlag.png" class="langage-selector__flag" />
         <div class="langage-selector__text">FR</div>
         <img
             class="langage-selector__arrow"
-            src="views/assets/icons/arrowDown.svg"
+            src="../views/assets/icons/arrowDown.svg"
         />
         <div class="langage-selector-content-container">
             
             <div class="langage-selector-content-container__item">
-                <img src="views/assets/frenchFlag.png" class="langage-selector__flag" />
+                <img src="../views/assets/frenchFlag.png" class="langage-selector__flag" />
                 <div class="langage-selector__text">FR</div>
             </div>
             <div class="langage-selector-content-container__item">
-            <img src="views/assets/englishFlag.png" class="langage-selector__flag" />
+            <img src="../views/assets/englishFlag.png" class="langage-selector__flag" />
             <div class="langage-selector__text">EN</div>
         </div>
         </div>
