@@ -8,9 +8,9 @@
     border-radius: 20px;
     border-width: 1px;
     gap: 25px;
-    padding-left: 5%;
     padding-top: 5%;
     margin: 5%;
+    justify-content: space-evenly;
 }
 
 .barline-text {
