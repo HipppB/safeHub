@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>SafeHub - Ajout produit</title>
+        <link rel="stylesheet" href="../views/styles/common/index.css" />
+        <link rel="stylesheet" href="../views/styles/common/classStyles.css" />
+        <link rel="stylesheet" href="../views/styles/headerPrivate.css" />
+
+        <script
+            type="text/javascript"
+            src="../views/scripts/common/components.js"
+            async
+        ></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <div
+            class="header-container"
+            title="Ajout produit"
+            leftButtonPath="../views/assets/icons/backButton.svg"
+        ></div>
+
+        <div class="input-list-container">
+            <div
+                class="input-label-container"
+                type="text"
+                name="name "
+                placeholder="Nom"
+                path="../views/assets/icons/person.svg"
+            ></div>
+
+            <div
+                class="input-label-container"
+                type="text"
+                name="propertyName"
+                placeholder="Nom de la propriété"
+                path="../views/assets/icons/house.svg"
+            ></div>
+            <div
+                class="input-label-container"
+                type="text"
+                name="roomName"
+                placeholder="Pièce"
+                path="../views/assets/icons/house.svg"
+            ></div>
+            <div
+                class="input-label-container"
+                type="textarea"
+                name="comments"
+                placeholder="Commentaires"
+                path="../views/assets/icons/modify.svg"
+            ></div>
+            <div
+                class="input-label-container"
+                type="number"
+                name="productCode"
+                placeholder="Code produit"
+                path="../views/assets/icons/mail.svg"
+            ></div>
+            <div
+                class="input-label-container"
+                type="number"
+                name="userCode"
+                placeholder="Code user"
+                path="../views/assets/icons/mail.svg"
+            ></div>
+
+            <div
+                class="input-label-container"
+                type="date"
+                name="userCodeExpirationDate"
+                placeholder="Date d'expiration du code user"
+                path="../views/assets/icons/calendar.svg"
+            ></div>
+
+            <div class="button" type="summit">Ajouter le produit</div>
+        </div>
+    </body>
+</html>

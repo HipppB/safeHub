@@ -1,19 +1,36 @@
-.home-title {
+.home-container {
+    width: min(80vw, 1450px);
+    align-self: center;
+}
+
+.home-title-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    text-align: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container h1 {
+    font-size: 0.83em;
 }
 
 .home-subtitle {
-    text-align: center;
+    /* text-align: center; */
     font-style: normal;
     color: #3d3d3d;
     font-weight: 400;
     letter-spacing: -0.02em;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
-    font-size: 0.6em;
+    font-size: 0.35em;
 }
 
 .outline-button {
@@ -21,18 +38,37 @@
     border-radius: 50px;
     padding: 10px 50px;
     font-size: 0.5em;
+    color: #f76b1c;
+}
+
+.outline-button:hover {
+    border: transparent;
+    border-radius: 50px;
+    padding: 11px 52px;
+    font-size: 0.5em;
+    background: linear-gradient(130deg, #f76b1c, #fad961);
+    color: #fff;
 }
 
 .blob {
     position: absolute;
     right: -3em;
     top: 10em;
-    width: 90vw;
     z-index: -1;
     overflow: hidden;
-    animation: scaleBlob 10s infinite;
+    width: min(90vw, 800px);
+    animation: scaleBlob 3s infinite;
 }
 @keyframes scaleBlob {
+    0% {
+        transform: scale(110%);
+    }
+    50% {
+        transform: scale(95%);
+    }
+    100% {
+        transform: scale(110%);
+    }
 }
 
 .blob2 {
@@ -41,6 +77,8 @@
     top: 32em;
     z-index: -1;
     overflow: hidden;
+    width: min(20vw, 270px);
+    animation: scaleBlob 2s infinite;
 }
 
 .blob3 {
@@ -49,47 +87,63 @@
     top: 44em;
     z-index: -1;
     overflow: hidden;
+    width: min(20vw, 270px);
+    animation: scaleBlob 3s infinite;
 }
 
 .blob4 {
     position: absolute;
     right: 3em;
-    width: 20vw;
     top: 41em;
     z-index: -1;
     overflow: hidden;
+    width: min(10vw, 270px);
+    animation: scaleBlob 3s 2s infinite;
 }
 
 .blob5 {
     position: absolute;
     left: -1em;
-    width: 20vw;
-    top: 56em;
+    top: min(56em, 2300px);
     z-index: -1;
     overflow: hidden;
+    width: min(20vw, 270px);
+    animation: scaleBlob 2s infinite;
 }
 
 .homeImage {
-    width: 10em;
+    width: min(80vw, 700px);
 }
 
 .ourService {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.home-subtitle-categories {
+    font-style: normal;
+    color: #3d3d3d;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-size: 0.5em;
+    text-align: center;
 }
 
 .verticalImage {
-    width: 2.5em;
-    height: 3.5em;
+    width: 2em;
+    height: 3em;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
 .horizontalImage {
-    width: 3em;
-    height: 1.5em;
+    width: 2.25em;
+    height: 1.25em;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.25);
@@ -107,14 +161,15 @@
 .servicePoints {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
 }
 
 .servicePoint {
     display: flex;
     align-items: flex-start;
-    width: 75vw;
-    margin-top: 40px;
+    width: fit-content;
 }
 
 .serviceTitle {
@@ -123,7 +178,7 @@
 
 .serviceParagraph {
     font-size: 0.25em;
-    width: 55vw;
+    width: fit-content;
 }
 
 .testimonies {
@@ -135,6 +190,7 @@
 .carousel-container {
     --current-slide: 0;
     position: relative;
+    width: min(80vw, 370px);
 }
 
 .carousel-button {
@@ -224,4 +280,84 @@
 
 .name {
     font-weight: 600;
+}
+
+@media screen and (min-width: 1300px) {
+    .home-container {
+        width: min(80vw, 1450px);
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .home-title-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 50px;
+        text-align: start;
+        justify-content: center;
+    }
+
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .title-container h1 {
+        font-size: 1.5em;
+    }
+
+    .home-subtitle {
+        width: 40vw;
+        font-size: 0.6em;
+    }
+
+    .blob {
+        top: 5em;
+        right: 0em;
+    }
+
+    .blob4 {
+        top: 40em;
+    }
+
+    .images-container {
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .images-container div {
+        display: flex;
+        gap: 50px;
+        margin-left: 0;
+    }
+
+    .verticalImage {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .horizontalImage {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .serviceParagraph {
+        width: fit-content;
+    }
+
+    .servicePoints {
+        margin-top: 100px;
+    }
 }

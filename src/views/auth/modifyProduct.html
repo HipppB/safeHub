@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>SafeHub - Page d'accueil</title>
+        <link rel="stylesheet" href="../views/styles/common/index.css" />
+        <link rel="stylesheet" href="../views/styles/modifyProduct.css" />
+        <link rel="stylesheet" href="../views/styles/headerprivate.css" />
+        <script
+            type="text/javascript"
+            src="../views/scripts/common/components.js"
+            async
+        ></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <div
+            class="header-container"
+            title="Modifier le produit"
+            leftButtonPath="../views/assets/icons/backButton.svg"
+            onclick="window.location.href = './';"
+        ></div>
+        <form class="page-container">
+            <div class="input-list-container list">
+                <div
+                    class="input-label-container"
+                    name="surname"
+                    placeholder="Nom"
+                    path="../views/assets/icons/person.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    name="property"
+                    placeholder="Nom de la propriété"
+                    path="../views/assets/icons/house.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    name="room"
+                    placeholder="Pièce"
+                    path="../views/assets/icons/house.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    name="comment"
+                    placeholder="Commentaire"
+                    path="../views/assets/icons/modify.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    name="productCode"
+                    placeholder="Code produit"
+                    path="../views/assets/icons/mail.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    name="userCode"
+                    placeholder="Code utilisateur"
+                    path="../views/assets/icons/mail.svg"
+                ></div>
+                <div
+                    class="input-label-container"
+                    name="userCodeExpireDate"
+                    placeholder="Code d'expiration du Code user"
+                    path="../views/assets/icons/calendar.svg"
+                ></div>
+            </div>
+
+            <input type="submit" class="button mT25" value="Valider" />
+            <button class="button-outlined mT10">
+                Reset les données produit
+            </button>
+            <button class="button-outlined-red mT20 mB50">
+                Supprimer le produit
+            </button>
+        </form>
+        <!-- Footer -->
+        <div class="footer-container" small="true"></div>
+    </body>
+</html>

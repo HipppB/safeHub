@@ -1,9 +1,5 @@
-.input-label-container {
-    width: 90vw;
-}
-
 .ligne {
-    width: 100%;
+    width: 90%;
     height: 1.5px;
     border: none;
     margin-left: auto;
@@ -12,29 +8,10 @@
     margin-bottom: 30px;
     background-color: #8e8b8b;
 }
-.textstyle {
-    background-image: linear-gradient(150deg, #fad961, #f76b1c);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    width: fit-content;
-}
-.effectHovertext:hover {
-    /* background-image: linear-gradient(150deg, #f76b1c, #fad961); */
-    background-clip: text;
-    -webkit-background-clip: text;
-    /* -webkit-text-fill-color: transparent; */
 
-    width: fit-content;
-    transform: scale(101%);
-    transition-duration: 50ms;
-    background-image: linear-gradient(
-        75deg,
-        #ff3e1c,
-        #f76b1c,
-        #fabd61,
-        #f76b1c,
-        #ff3e1c
-    );
-    animation: steam 10s linear infinite;
+body {
+    display: flex;
+    justify-content: space-between;
+    min-height: calc(100vh - 50px);
+    flex-direction: column;
 }

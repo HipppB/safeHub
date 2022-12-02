@@ -11,3 +11,9 @@
 .list {
     gap: 10px;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh);
+    justify-content: space-between;
+}

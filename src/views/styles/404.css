@@ -1,0 +1,5 @@
+@media screen and (max-width: 1300px) {
+    .blob {
+        display: none;
+    }
+}

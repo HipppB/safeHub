@@ -1,0 +1,45 @@
+.blob {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min(60vw, 500px);
+    z-index: -1;
+}
+
+.backButton {
+    display: none;
+}
+
+body {
+    /* padding-inline: 5vw; */
+    /* width: 90vw; */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    min-height: calc(100vh - 50px);
+    /* background-color: red; */
+}
+
+.illu-container {
+    position: relative;
+    align-self: center;
+    width: min(60vmin, 400px);
+}
+
+.illu {
+    position: absolute;
+    right: -20px;
+    width: min(60vmin, 400px);
+}
+.title-container {
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
