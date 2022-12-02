@@ -63,7 +63,6 @@
 }
 
 .temperature-message {
-    display: flex;
     font-size: 0.3em;
     text-indent: 2px;
 }
@@ -81,5 +80,5 @@
 
 .color-frequence {
     color: #f76b1c;
-    font-size: 1em;
+    font-size: inherit;
 }
