@@ -3,15 +3,22 @@ header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
 header('Cache-Control: no-store, no-cache, must-revalidate');
 header('Cache-Control: post-check=0, pre-check=0', FALSE);
 header('Pragma: no-cache');
+$url = str_replace([".html", ".php"], "", strtolower(htmlspecialchars($_GET['url'])));
+$path = explode("/", $url);
 
-if(isset($_GET['url']) && !empty($_GET['url'])) {
-    $url = str_replace([".html", ".php"], "", strtolower(htmlspecialchars($_GET['url'])));
-} else {
-    $url = 'index';
+if($url[-1] === "/") {
+    //remove the last character
+    $url = substr($url, 0, -1);
+    header('Location: ../'.$path[-1]);
 }
+
+if(!(isset($_GET['url']) && !empty($_GET['url']))) {
+    $url = 'index';  
+} 
 
 if(file_exists('controller/' . $url . '.php')) { // Check if there is a controller
-    include('controller/' . $url . '.php');
+    require 'controller/' . $url . '.php';
 } else {
-    include('controller/404.php'); // If not, 404
+    header('Location: ../404');
 }
+
