@@ -19,6 +19,6 @@ if(!(isset($_GET['url']) && !empty($_GET['url']))) {
 if(file_exists('controller/' . $url . '.php')) { // Check if there is a controller
     require 'controller/' . $url . '.php';
 } else {
-    require 'controller/404.php'; // If not, 404
+    header('Location: ../404');
 }
 
