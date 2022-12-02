@@ -1,3 +1,3 @@
 <?php
-include('views/public/ajoutProduit.html');
+require 'views/auth/ajoutProduit.html';
 
