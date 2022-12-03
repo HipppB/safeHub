@@ -1,6 +1,6 @@
 <?php
 // In this file all request for the user table
-require 'connectDb.php';
+require_once 'connectDb.php';
 $db = connectDb();
 
 function getUserByEmail($email)

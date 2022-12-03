@@ -176,6 +176,7 @@ function searchForHeader() {
             .replace('{rightButtonPath}', rightButtonPath)
             .replace('{height}', height)
             .replace('{width}', width)
+            .replace('{rightAction}', rightAction)
     })
 }
 

@@ -30,5 +30,3 @@ if (file_exists('controller/' . $url . '.php')) {
 } else {
     header('Location: ../404');
 }
-
-echo htmlspecialchars($_GET['name']);

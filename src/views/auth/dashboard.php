@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,6 +21,8 @@
             class="header-container"
             title="Dashboard"
             leftButtonPath="../views/assets/icons/backButton.svg"
+            rightAction="window.location.href = './profile';"></div>
+
         ></div>
 
         <main>
@@ -31,14 +34,18 @@
                     importer.
                 </p>
             </div>
-            <form method="POST">
+            <form method="POST" id='form'>
                 <div
                     class="input-label-container"
-                    name="firstname"
+                    name="productUserCode"
                     placeholder="Code produit"
                 ></div>
+                <?php if ($error == 401) {
+                    echo "<p class='error'>Code produit incorrect</p>";
+                } ?>
             <input type="submit" class="button mT25" value="Ajouter" />
             </form>
         </main>
     </body>
 </html>
+
