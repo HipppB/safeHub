@@ -11,7 +11,7 @@ if(!empty($email) && !empty($password)) {
     // If the user doesn't exist or the password is incorrect we need to redirect
     // the user to the login page
     
-    if(!loginUser($email, $password)) {
+    if(loginUser($email, $password)) {
         header("Location: /");
     } else {
         $error = 401;
