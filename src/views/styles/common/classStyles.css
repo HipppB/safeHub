@@ -219,3 +219,7 @@
 .mB400 {
     margin-bottom: 400px;
 }
+
+.isButton {
+    cursor: pointer;
+}

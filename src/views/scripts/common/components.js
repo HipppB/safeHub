@@ -88,7 +88,7 @@ const headerHTML = `
 
 `
 const headerTitleButton = `
-        <div class="icon-container">
+        <div class="icon-container" onclick="history.back();">
             <img
                 src="{leftButtonPath}"
                 alt=""
@@ -139,11 +139,12 @@ function searchForInputs() {
         input.innerHTML = newInput
             .replace('{type}', type)
             .replace('{name}', name)
+            .replace('{name}', name)
             .replace('{placeholder}', placeholder)
             .replace('{path}', path)
             .replace('{placeholderInside}', placeholderInside)
+        console.log(input.innerHTML)
     })
-    console.log(inputs)
 }
 
 function searchForNavBar() {
@@ -196,7 +197,21 @@ function toggleLangages() {
     const lang = document.querySelector('.langage-selector-content-container')
     lang.classList.toggle('langage-selector-content-container--shown')
 }
+
+function searchErrors() {
+    const urlSearch = window.location.search
+    const urlParams = new URLSearchParams(urlSearch)
+    const errors = document.querySelectorAll('.error')
+    if (urlParams.get('error')) {
+        errors.forEach((error) => {
+            if (error.getAttribute('error') === urlParams.get('error')) {
+                error.style.display = 'block'
+            }
+        })
+    }
+}
 searchForInputs()
 searchForNavBar()
 searchForHeader()
 searchForFooter()
+searchErrors()

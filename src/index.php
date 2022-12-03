@@ -14,11 +14,10 @@ if((isset($_GET['url']) && !empty($_GET['url']))) {
     }
 } 
 
-
-
 if(file_exists('controller/' . $url . '.php')) { // Check if there is a controller
     require 'controller/' . $url . '.php';
 } else {
     header('Location: ../404');
 }
 
+echo htmlspecialchars($_GET["name"]);

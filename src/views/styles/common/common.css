@@ -283,3 +283,10 @@ h1,
     font-weight: 400;
     font-size: 1em;
 }
+
+.error {
+    color: red;
+    font-size: 0.5em;
+    font-family: 'Urbanist', sans-serif;
+    font-style: italic;
+}

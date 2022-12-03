@@ -28,7 +28,7 @@
         <div class="illu-container">
             <img src="views/assets/form.svg" class="illu" />
         </div>
-        <form>
+        <form method="POST">
             <div class="input-list-container">
                 <div
                     class="input-label-container"
@@ -53,7 +53,11 @@
             >
 
             <input type="submit" class="button mT25" value="Se connecter" />
-
+            <?php
+                if($error === 401) {
+                    echo "<p class='error'>Email ou mot de passe incorrect</p>";
+                }
+            ?>
             <div class="mT25 mB50 s05 urbanist">
                 Pas de compte ?
                 <a href="./inscription" class="gradienttext urbanist"
