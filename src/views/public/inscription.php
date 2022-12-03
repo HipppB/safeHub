@@ -35,7 +35,7 @@
             <img src="views/assets/form_inscri.svg" class="illu" />
         </div>
 
-        <form>
+        <form method="POST">
             <div class="input-list-container">
                 <div
                     class="input-label-container"
@@ -43,12 +43,18 @@
                     placeholder="Prénom"
                     path="views/assets/icons/person.svg"
                 ></div>
+                <?php if ($error['error-firstname']) {
+                    echo "<div class='error'>Veuillez renseigner votre prénom</div>";
+                } ?>
                 <div
                     class="input-label-container"
-                    name="surname"
+                    name="lastname"
                     placeholder="Nom"
                     path="views/assets/icons/person.svg"
                 ></div>
+                <?php if ($error['error-lastname']) {
+                    echo "<div class='error'>Veuillez renseigner votre nom</div>";
+                } ?>
                 <div
                     class="input-label-container"
                     type="email"
@@ -56,6 +62,7 @@
                     placeholder="Email"
                     path="views/assets/icons/mail.svg"
                 ></div>
+                
                 <div
                     class="input-label-container"
                     type="password"
@@ -63,6 +70,9 @@
                     placeholder="Mot de passe"
                     path="views/assets/icons/lock.svg"
                 ></div>
+                <?php if ($error['error-password']) {
+                    echo "<div class='error'>Veuillez renseigner votre mot de passe</div>";
+                } ?>
             </div>
 
             <div class="urbanist s05 mT10 leftAl">

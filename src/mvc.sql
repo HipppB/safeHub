@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastname` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL UNIQUE,
-  `phone` varchar(20) NOT NULL,
-  `birth_date` date NOT NULL,
+  `phone` varchar(20),
+  `birth_date` date,
   `is_admin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;

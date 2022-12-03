@@ -24,16 +24,30 @@
         ></div>
 
         <div class="central-container">
-            <h2 class="gradienttext">Nom Prénom</h2>
-            <div>XX ans</div>
+            <h2 class="gradienttext">
+                <?php echo $user['name'] . ' ' . $user['lastname']; ?></h2>
+            <div>
+            <?php if (new DateTime($user['birth_date'])) {
+                $start_datetime = new DateTime();
+                $diff = $start_datetime->diff(
+                    new DateTime($user['birth_date'])
+                );
+                echo $diff->y;
+            } else {
+                echo 'N/A';
+            } ?>    
+            ans</div>
             <div class="small-stroke"></div>
-            <div>+33 9 75 43 78 07</div>
-            <div>example@example.com</div>
+            
+            <?php echo '<div>' . $user['phone'] . '</div>'; ?>
+            <div>
+                <?php echo $user['email']; ?></h2>
+            </div>
         </div>
         <div class="modifierProduit">
-            <bouton class="button"> Modifier le produit </bouton>
-            <bouton class="button-outlined"> Ajout produit </bouton>
-            <bouton class="button-outlined"> Nouveau ticket </bouton>
+            <a class="button" href="./modifProfile"> Modifier le profil </a>
+            <a class="button-outlined" href="./ajoutProduit"> Ajout produit </a>
+            <a class="button-outlined"  href="./ticketuser"> Nouveau ticket </a>
         </div>
         <img src="../views/assets/message_icon.svg" class="messageIcon" />
     </body>

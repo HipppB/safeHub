@@ -54,3 +54,23 @@ function getUserProducts($user_id)
 
     return $query->fetchAll();
 }
+
+function register($name, $lastname, $email, $password)
+{
+    global $db;
+    $query = $db->prepare(
+        'INSERT INTO users (name, lastname, email, password) VALUES (:name, :lastname, :email, :password)'
+    );
+    try {
+        $query->execute([
+            'name' => $name,
+            'lastname' => $lastname,
+            'email' => $email,
+            'password' => password_hash($password, PASSWORD_DEFAULT),
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    return false;
+}
