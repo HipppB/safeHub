@@ -223,3 +223,8 @@
 .isButton {
     cursor: pointer;
 }
+
+.wm50p {
+    max-width: min(80vw, 500px);
+    background-color: red;
+}

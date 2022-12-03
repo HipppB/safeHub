@@ -12,7 +12,7 @@ if(!empty($email) && !empty($password)) {
     // the user to the login page
     
     if(loginUser($email, $password)) {
-        header("Location: /");
+        header("Location: /panel/gestion");
     } else {
         $error = 401;
         require 'views/public/connexion.php';
