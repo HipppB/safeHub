@@ -1,3 +1,6 @@
 <?php
-include('views/auth/modifProfile.html');
-
+require 'model/user.requests.php';
+if (!userIsConnected()) {
+    header('Location: /connexion');
+}
+include 'views/auth/modifProfile.html';

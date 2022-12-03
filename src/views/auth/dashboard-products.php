@@ -17,28 +17,29 @@
 
 ></div>
 
-<main>
-  <?php foreach ($products as $product) {
-      echo "
-      <section>
-        <header>
-          <img src='../views/assets/icons/homeInline.svg' alt='house'>
-          <h2 class='gradienttext'>" .
-          $product['product_name'] .
-          ' (' .
-          $product['room_name'] .
-          ")</h2>
-        </header>
-        <div class='graphList'>
-          <img src='../views/assets/graph.svg' alt='graph'/>
-          <img src='../views/assets/graph.svg' alt='graph'/>
-          <img src='../views/assets/graph.svg' alt='graph'/>
-          <img src='../views/assets/graph.svg' alt='graph'/>
-        </div>
-    </section>
-    ";
-  } ?>
-</main>
-
+    <main>
+      <?php foreach ($products as $product) {
+          echo "
+          <section>
+            <header>
+              <img src='../views/assets/icons/homeInline.svg' alt='house'>
+              <h2 class='gradienttext'>" .
+              $product['product_name'] .
+              ' (' .
+              $product['room_name'] .
+              ")</h2>
+            </header>
+            <div class='graphList'>
+              <img src='../views/assets/graph.svg' alt='graph'/>
+              <img src='../views/assets/graph.svg' alt='graph'/>
+              <img src='../views/assets/graph.svg' alt='graph'/>
+              <img src='../views/assets/graph.svg' alt='graph'/>
+            </div>
+        </section>
+        ";
+      } ?>
+    </main>
+    <!-- Footer -->
+    <div class="footer-container" small="true"></div>
 </body>
 </html>

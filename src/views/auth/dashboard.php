@@ -46,6 +46,8 @@
             <input type="submit" class="button mT25" value="Ajouter" />
             </form>
         </main>
+        <!-- Footer -->
+        <div class="footer-container" small="true"></div>
     </body>
 </html>
 

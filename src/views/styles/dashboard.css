@@ -1,5 +1,5 @@
 main {
-    flex:1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +9,6 @@ main {
 
 #text {
     font-size: 0.6rem;
-
     margin: 0 3rem;
     display: flex;
     flex-direction: column;
@@ -32,8 +31,6 @@ hr {
     flex: 3;
 }
 
-body {
+/* body {
     margin: 0.5rem;
-}
-
-
+} */

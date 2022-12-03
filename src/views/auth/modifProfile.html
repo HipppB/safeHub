@@ -5,6 +5,7 @@
         <title>SafeHub - Modifier le profil</title>
         <link rel="stylesheet" href="../views/styles/common/index.css" />
         <link rel="stylesheet" href="../views/styles/inscription.css" />
+        <link rel="stylesheet" href="../views/styles/headerprivate.css" />
 
         <script
             type="text/javascript"
@@ -15,17 +16,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div class="topNavBar-container"></div>
-        <img
-            src="../views/assets/icons/backButton.svg"
-            class="backButton"
-            onclick="window.location.href = './';"
-        />
-        <img src="../views/assets/hex_incri.svg" class="blob" />
-        <div class="title-container">
-            <h1 class="title gradienttext">Modifier le profil</h1>
-            <p class="subtitle">Information</p>
-        </div>
+        <div
+            class="header-container"
+            title="Modifier le profil"
+            leftButtonPath="../views/assets/icons/backButton.svg"
+            width="25px"
+        ></div>
 
         <form>
             <div class="input-list-container">
@@ -59,7 +55,7 @@
             <!-- gradienttext urbanist -->
 
             <input type="submit" class="button mT25" value="Envoyer" />
-            <div class="mT10 mB50 s05 urbanist">
+            <div class="mT10 mB50 s05 urbanist gradienttext">
                 <a
                     href="../views/resetPassword.html"
                     class="textstyle urbanist effectHovertext"
@@ -67,5 +63,7 @@
                 >
             </div>
         </form>
+        <!-- Footer -->
+        <div class="footer-container" small="true"></div>
     </body>
 </html>

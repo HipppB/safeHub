@@ -59,3 +59,12 @@ h1,
     width: 0.75em;
     font-size: 10vw;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh);
+    width: 100vw;
+    margin: 0;
+}
