@@ -1,0 +1,39 @@
+main {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+#text {
+    font-size: 0.6rem;
+
+    margin: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+hr {
+    background: linear-gradient(210.94deg, #f76b1c -2.79%, #fad961 214.85%);
+    width: 20%;
+    height: 2px;
+    border: none;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 3;
+}
+
+body {
+    margin: 0.5rem;
+}
+
+
