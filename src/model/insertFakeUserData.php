@@ -7,6 +7,7 @@ $queryAddUser = $db->prepare("INSERT INTO users
     (`name`, `lastname`, `password`, `email`, `phone`, `birth_date`, `is_admin`) 
     VALUES (:name, :lastname, :password, :email, :phone, :birth_date, :is_admin)"
     );
+
 $queryDeleteAllUser = $db->prepare("DELETE FROM users");
 echo "request prepared"."<br>";
 $queryDeleteAllUser->execute();
@@ -30,4 +31,29 @@ $queryAddUser->execute([
     "is_admin" => "0"
 ]);
 
-echo "Fake users inserted";
+echo "Fake users inserted"."<br>";
+
+// create fake products
+
+$queryAddProduct = $db->prepare("INSERT INTO products
+    (`product_name`, `room_name`, `house_name`, `product_code`, `user_code`, `expiration_date`, `db_max`, `temp_max`) 
+    VALUES (:product_name, :room_name, :house_name, :product_code, :user_code, :expiration_date, :db_max, :temp_max)"
+    );
+$queryDeleteAllProducts = $db->prepare("DELETE FROM products");
+$queryDeleteAllProducts->execute();
+   
+try {
+$queryAddProduct->execute([
+    "product_name" => "produit magnifique",
+    "room_name" => "salon",
+    "house_name" => "maison 1",
+    "product_code" => "NDIJQDQZZQ",
+    "user_code" => "HEGJ",
+    "expiration_date" => "2022-12-06",
+    "db_max" => "0",
+    "temp_max" => "0"
+]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+echo "Fake products created";

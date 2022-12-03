@@ -2,8 +2,11 @@
 $error;
 $email = htmlspecialchars($_POST["email"]);
 $password = htmlspecialchars($_POST["password"]);
+if($_SESSION["user"]) {
+    header("Location: /panel/dashboard");
+} 
 if(!empty($email) && !empty($password)) {
-    require "model/user.model.php";
+    require "model/user.requests.php";
 
     // Here we need to check if the user exists and if the password is correct
     // If the user exists and the password is correct we need to create a session
@@ -12,7 +15,7 @@ if(!empty($email) && !empty($password)) {
     // the user to the login page
     
     if(loginUser($email, $password)) {
-        header("Location: /panel/gestion");
+        header("Location: /panel/dashboard");
     } else {
         $error = 401;
         require 'views/public/connexion.php';
