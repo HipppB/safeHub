@@ -54,7 +54,7 @@
 
             <input type="submit" class="button mT25" value="Se connecter" />
             <?php
-                if($error === 401) {
+                if($error) {
                     echo "<p class='error'>Email ou mot de passe incorrect</p>";
                 }
             ?>
