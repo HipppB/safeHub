@@ -24,7 +24,7 @@ css :
 const inputHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
-        <input type="{type}" name="{name}" placeholder="{placeholderInside}"/>
+        <input type="{type}" name="{name}" placeholder="{placeholderInside}" value="{value}"/>
         <img src="{path}" />
     </div>
 `
@@ -129,6 +129,7 @@ function searchForInputs() {
         const placeholder = input.getAttribute('placeholder') || ''
         const path = input.getAttribute('path') || ''
         const isTextArea = input.getAttribute('multiline')
+        const value = input.getAttribute('value') || ''
         let newInput = inputHTML
 
         if (isTextArea === 'true') {
@@ -143,6 +144,7 @@ function searchForInputs() {
             .replace('{placeholder}', placeholder)
             .replace('{path}', path)
             .replace('{placeholderInside}', placeholderInside)
+            .replace('{value}', value)
         console.log(input.innerHTML)
     })
 }
