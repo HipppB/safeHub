@@ -97,7 +97,7 @@ const headerTitleButton = `
 
             <h1 class="title gradienttext">{title}</h1>
 
-        <div class="icon-container">
+        <div class="icon-container" onclick="{rightAction}">
             <img
                 src="{rightButtonPath}"
                 alt=""
