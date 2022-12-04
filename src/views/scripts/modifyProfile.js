@@ -69,9 +69,7 @@ function changeFormSubmit() {
                         )
                     }
                     // if response is successful
-                    if (response.success) {
-                        window.alert('Votre profil à été mis à jour !')
-                    }
+                    window.alert(response.message)
                 }
                 // get result
                 sendXMLHttpObject(formData, '', callback)

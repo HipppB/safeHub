@@ -109,3 +109,17 @@ function updateUser($id, $name, $lastname, $phone, $email)
         return $e->getMessage();
     }
 }
+
+function emailExist($email)
+{
+    global $db;
+    $query = $db->prepare('SELECT * FROM users WHERE email = :email');
+    $query->execute([
+        'email' => $email,
+    ]);
+    $user = $query->fetch();
+    if ($user) {
+        return true;
+    }
+    return false;
+}
