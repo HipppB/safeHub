@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8" />
@@ -12,6 +12,11 @@
             src="../views/scripts/common/components.js"
             async
         ></script>
+        <script
+            type="text/javascript"
+            src="../views/scripts/modifyProfile.js"
+            defer
+        ></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -21,27 +26,32 @@
             title="Modifier le profil"
             leftButtonPath="../views/assets/icons/backButton.svg"
             width="25px"
+
+
         ></div>
 
-        <form>
+        <form id="modify-profile-form">
             <div class="input-list-container">
                 <div
                     class="input-label-container"
-                    name="firstname"
+                    name="name"
                     placeholder="Prénom"
+                    value="<?php echo $user['name']; ?>"
                     path="../views/assets/icons/person.svg"
                 ></div>
                 <div
                     class="input-label-container"
-                    name="surname"
+                    name="lastname"
                     placeholder="Nom"
+                    value="<?php echo $user['lastname']; ?>"
                     path="../views/assets/icons/person.svg"
                 ></div>
                 <div
                     class="input-label-container"
-                    type="number"
-                    name="telephone"
+                    type="phone"
+                    name="phone"
                     placeholder="Telephone"
+                    value="<?php echo $user['phone']; ?>"
                     path="../views/assets/icons/lock.svg"
                 ></div>
                 <div
@@ -49,6 +59,7 @@
                     type="email"
                     name="email"
                     placeholder="Email"
+                    value="<?php echo $user['email']; ?>"
                     path="../views/assets/icons/mail.svg"
                 ></div>
             </div>

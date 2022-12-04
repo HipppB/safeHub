@@ -99,6 +99,7 @@ const headerTitleButton = `
 
         <div class="icon-container" onclick="{rightAction}">
             <img
+                id="rightButtonImg"
                 src="{rightButtonPath}"
                 alt=""
                 style="width:{width}; height: {height};"
@@ -179,6 +180,10 @@ function searchForHeader() {
             .replace('{height}', height)
             .replace('{width}', width)
             .replace('{rightAction}', rightAction)
+
+        if (!rightButtonPath) {
+            document.getElementById('rightButtonImg').style.display = 'none'
+        }
     })
 }
 

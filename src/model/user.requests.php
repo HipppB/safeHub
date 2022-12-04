@@ -12,6 +12,20 @@ function getUserByEmail($email)
     ]);
     return $query->fetch();
 }
+
+function getUser($id, $setInSession)
+{
+    global $db;
+    $query = $db->prepare('SELECT * FROM users WHERE id = :id');
+    $query->execute([
+        'id' => $id,
+    ]);
+    $user = $query->fetch();
+    if (isset($setInSession) && $setInSession) {
+        $_SESSION['user'] = $user;
+    }
+    return $user;
+}
 function loginUser($email, $password)
 {
     $user = getUserByEmail($email);
@@ -73,4 +87,25 @@ function register($name, $lastname, $email, $password)
         echo $e->getMessage();
     }
     return false;
+}
+
+// Update user data
+function updateUser($id, $name, $lastname, $phone, $email)
+{
+    global $db;
+    $query = $db->prepare(
+        'UPDATE users SET name = :name, lastname = :lastname, phone = :phone, email = :email WHERE id = :id'
+    );
+    try {
+        $query->execute([
+            'id' => $id,
+            'name' => $name,
+            'lastname' => $lastname,
+            'phone' => $phone,
+            'email' => $email,
+        ]);
+        return 1;
+    } catch (PDOException $e) {
+        return $e->getMessage();
+    }
 }

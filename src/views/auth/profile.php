@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="modifierProduit">
-            <a class="button" href="./modifProfile"> Modifier le profil </a>
+            <a class="button" href="./edit-profile"> Modifier le profil </a>
             <a class="button-outlined" href="./ajoutProduit"> Ajout produit </a>
             <a class="button-outlined"  href="./ticketuser"> Nouveau ticket </a>
         </div>
