@@ -1,3 +1,2 @@
 <?php
-include('views/public/contact.html');
-
+include 'views/public/contact.php';

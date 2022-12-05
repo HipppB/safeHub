@@ -1,3 +1,2 @@
 <?php
-include('views/public/cgu.html');
-
+include 'views/public/cgu.php';

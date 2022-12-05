@@ -95,3 +95,5 @@ foreach ($translations as $key => $value) {
         ]);
     }
 }
+
+echo 'Fake translations created';

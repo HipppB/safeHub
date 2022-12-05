@@ -8,7 +8,7 @@
         <script
             type="text/javascript"
             src="views/scripts/common/components.js"
-            async
+
         ></script>
         <script
             type="text/javascript"
@@ -21,17 +21,18 @@
     <body>
         <div class="home-container">
             <!-- Hero section -->
-            <div class="topNavBar-container"></div>
+            <?php require 'views/components/header.php'; ?>
+            
             <div class="home-title-container mL25 mR25">
                 <div class="title-container">
                     <h1 class="gradienttext">Domotic for your safety</h1>
                     <p class="home-subtitle">
-                        Sécurité, fiabilité et sérénité. <br />
-                        Laissez place à une automatisation sécurisée dans votre
-                        propriété
+                        <?php printTranslation('home_subtitle'); ?>
+                       <br />
+                       <?php printTranslation('home_sub2'); ?>
                     </p>
                     <a href="./connexion" class="outline-button mT100"
-                        >Se connecter</a
+                        ><?php printTranslation('connect'); ?></a
                     >
                 </div>
                 <div>

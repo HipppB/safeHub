@@ -19,7 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div class="topNavBar-container"></div>
+        <?php require 'views/components/header.php'; ?>
         <div class="title-container">
             <h1 class="title gradienttext">Contact</h1>
 

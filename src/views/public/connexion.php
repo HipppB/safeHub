@@ -13,7 +13,7 @@
         ></script>
     </head>
     <body>
-        <div class="topNavBar-container"></div>
+    <?php require 'views/components/header.php'; ?>
         <img
             src="views/assets/icons/backButton.svg"
             class="backButton"

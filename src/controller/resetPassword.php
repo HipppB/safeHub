@@ -1,3 +1,2 @@
 <?php
-include('views/public/resetPassword.html');
-
+include 'views/public/resetPassword.php';

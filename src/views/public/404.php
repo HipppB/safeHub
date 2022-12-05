@@ -22,7 +22,7 @@
     <body>
         <div class="home-container">
             <!-- Hero section -->
-            <div class="topNavBar-container"></div>
+            <?php require 'views/components/header.php'; ?>
             <div class="home-title-container mL25 mR25">
                 <div class="title-container">
                     <h1 class="gradienttext">404</h1>

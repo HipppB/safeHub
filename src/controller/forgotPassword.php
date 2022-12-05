@@ -1,3 +1,2 @@
 <?php
-include('views/public/forgotPassword.html');
-
+include 'views/public/forgotPassword.php';

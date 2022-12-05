@@ -9,8 +9,10 @@ header('Pragma: no-cache');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$url = 'index';
-if (isset($_GET['url']) && !empty($_GET['url'])) {
+if (!isset($url)) {
+    $url = 'index';
+}
+if (isset($_GET['url']) && !empty($_GET['url']) && !isset($skip)) {
     $url = str_replace(
         ['.html', '.php'],
         '',
@@ -23,6 +25,7 @@ if (isset($_GET['url']) && !empty($_GET['url'])) {
         header('Location: ../' . $path[-1]);
     }
 }
+error_log('url: ' . $url);
 
 if (file_exists('controller/' . $url . '.php')) {
     // Check if there is a controller

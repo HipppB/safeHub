@@ -1,3 +1,2 @@
 <?php
-include('views/public/mentionslegales.html');
-
+include 'views/public/mentionslegales.php';
