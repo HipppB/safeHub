@@ -42,6 +42,7 @@
     margin-left: 5%;
     color: grey;
     margin-right: 5%;
+    margin-bottom: 4%;
 }
 
 .notif-top {
@@ -60,13 +61,35 @@
     color: white;
     border-radius: 23px;
     padding: 5px 12px 5px 12px;
-    margin: 10px;
+    margin-left: 5px;
+    margin-right: 12px;
 }
 
+.image-notif-normale {
+    font-size: 0.2em;
+    background-color: #68f06f;
+    color: white;
+    border-radius: 23px;
+    padding: 5px 12px 5px 12px;
+    margin-left: 5px;
+    margin-right: 12px;
+}
+
+.image-notif-deja-vue {
+    font-size: 0.2em;
+    background-color: #b4b4b4;
+    color: #b4b4b4;
+    border-color: #b4b4b4;
+    border-radius: 23px;
+    padding: 5px 12px 5px 12px;
+    margin-left: 5px;
+    margin-right: 12px;
+}
 .horaire {
     font-size: 0.4em;
     color: #b4b4b4;
     margin-left: 10%;
+    margin-top: 2%;
 }
 
 .anormale-frequence {
