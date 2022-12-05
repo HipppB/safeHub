@@ -39,19 +39,19 @@
 }
 
 .notification {
-    margin-left: 15px;
+    margin-left: 5%;
     color: grey;
+    margin-right: 5%;
 }
 
 .notif-top {
     display: flex;
     justify-content: left;
-    margin-left: 5%;
-    margin-right: 5%;
 }
-.notif-bottom {
-    margin-left: 5%;
-    margin-right: 5%;
+.notif-middle {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
 }
 
 .image-notif-importante {
@@ -64,8 +64,9 @@
 }
 
 .horaire {
-    font-size: 0.3em;
+    font-size: 0.4em;
     color: #b4b4b4;
+    margin-left: 10%;
 }
 
 .anormale-frequence {
