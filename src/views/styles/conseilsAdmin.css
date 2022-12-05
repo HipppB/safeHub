@@ -1,2 +1,25 @@
+.conseils-container {
+    align-self: center;
+    width: min(80vw, 500px);
+}
+
+.conseilsParagraph {
+    font-size: 0.3em;
+    color: rgb(143, 143, 143);
+}
+
+.conseilsTitle {
+    font-size: 0.5em;
+}
+
 .line {
+    height: 1px;
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+.iconParagraph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
