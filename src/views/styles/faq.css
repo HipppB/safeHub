@@ -10,6 +10,7 @@
 
 .paragraphFAQ {
     font-size: 0.3em;
+    color: rgb(143, 143, 143);
 }
 
 .line-container {
@@ -34,4 +35,28 @@
     border-color: #f76b1c;
     padding: 15px 0px;
     font-size: 0.5em;
+}
+
+.question-container {
+    border: solid 1px rgb(221, 221, 221);
+    border-radius: 7px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faqText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 85%;
+}
+
+.faqIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+    gap: 30px;
+    cursor: pointer;
 }
