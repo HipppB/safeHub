@@ -157,4 +157,18 @@ CREATE TABLE IF NOT EXISTS `tips_users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `translations`
+--
+
+CREATE TABLE IF NOT EXISTS `translations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key` varchar(64) NOT NULL,
+  `lang` varchar(2) NOT NULL,
+  `value` text NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `key_lang` (`key`,`lang`),
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
