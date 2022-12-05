@@ -1,10 +1,10 @@
-.input-container search{
+.input-container search {
     border: none;
     margin: 2px;
     width: min(80vw, 500px);
     height: 46px;
     border-radius: 9px;
-    background-color: white;
+    background-color: grey;
     font-family: 'Urbanist', sans-serif;
     font-weight: 400;
     font-size: 0.6em;
@@ -14,4 +14,63 @@
     display: flex;
     align-items: center;
     color: #f76b1c;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.low-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.low-title {
+    display: flex;
+    justify-content: left;
+    font-weight: bold;
+    font-size: 0.6em;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.notification {
+    margin-left: 15px;
+    color: grey;
+}
+
+.notif-top {
+    display: flex;
+    justify-content: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.notif-bottom {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.image-notif-importante {
+    font-size: 0.2em;
+    background-color: #ff7d7d;
+    color: white;
+    border-radius: 23px;
+    padding: 5px 12px 5px 12px;
+    margin: 10px;
+}
+
+.horaire {
+    font-size: 0.3em;
+    color: #b4b4b4;
+}
+
+.anormale-frequence {
+    display: flex;
+    font-size: 0.3em;
+    text-indent: 5px;
+    margin-left: 5%;
 }
