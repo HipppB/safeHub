@@ -56,11 +56,11 @@ const headerHTML = `
         />
         <div class="langage-selector-content-container">
             
-            <div class="langage-selector-content-container__item">
+            <div class="langage-selector-content-container__item" onclick="onClickLangage('fr')">
                 <img src="../views/assets/frenchFlag.png" class="langage-selector__flag" />
                 <div class="langage-selector__text">FR</div>
             </div>
-            <div class="langage-selector-content-container__item">
+            <div class="langage-selector-content-container__item" onclick="onClickLangage('en')">
             <img src="../views/assets/englishFlag.png" class="langage-selector__flag" />
             <div class="langage-selector__text">EN</div>
         </div>
@@ -218,8 +218,80 @@ function searchErrors() {
         })
     }
 }
-searchForInputs()
-searchForNavBar()
-searchForHeader()
-searchForFooter()
-searchErrors()
+function sendXMLHttpObject(content, url, callback, method = 'POST') {
+    var xmlHttp = false
+    if (window.XMLHttpRequest) {
+        xmlHttp = new XMLHttpRequest()
+    } else if (window.ActiveXObject) {
+        try {
+            xmlHttp = new ActiveXObject('Microsoft.XMLHTTP')
+        } catch (e) {
+            try {
+                xmlHttp = new ActiveXObject('Msxml2.XMLHTTP')
+            } catch (e) {
+                xmlHttp = false
+            }
+        }
+    }
+    if (!xmlHttp) return false
+
+    xmlHttp.open(method, url, true)
+    xmlHttp.setRequestHeader(
+        'Content-Type',
+        'application/x-www-form-urlencoded'
+    )
+    xmlHttp.send(content)
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            callback(xmlHttp.responseText)
+        }
+    }
+
+    return xmlHttp
+}
+/**
+ * @param {String} HTML representing a single element
+ * @return {Element}
+ */
+function htmlToElement(html) {
+    var template = document.createElement('template')
+    html = html.trim() // Never return a text node of whitespace as the result
+    template.innerHTML = html
+    return html
+}
+
+function onClickLangage(lang) {
+    console.log(lang)
+    function callback(response) {
+        // parse response
+        let r = htmlToElement(response.replace('<!DOCTYPE html>', ''))
+        console.log(r)
+        let html = document.querySelector('html')
+        console.log('HEYHEYEHYE')
+        console.log(html)
+        document.removeChild(html)
+
+        var element = document.createElement('html')
+        element.innerHTML = r
+        console.log(element)
+        document.appendChild(element)
+        searchforAll()
+    }
+    console.log(window.location.pathname)
+    sendXMLHttpObject(
+        '',
+        `../action?action=changeLang&lang=${lang}&path=${window.location.pathname}`,
+        callback,
+        'GET'
+    )
+}
+
+function searchforAll() {
+    searchForInputs()
+    searchForNavBar()
+    searchForHeader()
+    searchForFooter()
+    searchErrors()
+}
+
+searchforAll()

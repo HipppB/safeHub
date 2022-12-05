@@ -2,5 +2,13 @@
     "home_subtitle": {
         "fr": "Sécurité, fiabilité et sérénité.",
         "en": "Security, reliability and serenity."
+    },
+    "home_sub2": {
+        "fr": "Laissez place à une automatisation sécurisée dans votre propriété",
+        "en": "Let place to a secure automation in your property"
+    },
+    "connect": {
+        "fr": "Se connecter",
+        "en": "Log in"
     }
 }
