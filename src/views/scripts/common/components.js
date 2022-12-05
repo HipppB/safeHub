@@ -24,7 +24,7 @@ css :
 const inputHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
-        <input type="{type}" name="{name}" placeholder="{placeholderInside}"/>
+        <input type="{type}" name="{name}" placeholder="{placeholderInside}" value="{value}"/>
         <img src="{path}" />
     </div>
 `
@@ -88,7 +88,7 @@ const headerHTML = `
 
 `
 const headerTitleButton = `
-        <div class="icon-container">
+        <div class="icon-container" onclick="history.back();">
             <img
                 src="{leftButtonPath}"
                 alt=""
@@ -97,8 +97,9 @@ const headerTitleButton = `
 
             <h1 class="title gradienttext">{title}</h1>
 
-        <div class="icon-container">
+        <div class="icon-container" onclick="{rightAction}">
             <img
+                id="rightButtonImg"
                 src="{rightButtonPath}"
                 alt=""
                 style="width:{width}; height: {height};"
@@ -129,6 +130,7 @@ function searchForInputs() {
         const placeholder = input.getAttribute('placeholder') || ''
         const path = input.getAttribute('path') || ''
         const isTextArea = input.getAttribute('multiline')
+        const value = input.getAttribute('value') || ''
         let newInput = inputHTML
 
         if (isTextArea === 'true') {
@@ -139,11 +141,13 @@ function searchForInputs() {
         input.innerHTML = newInput
             .replace('{type}', type)
             .replace('{name}', name)
+            .replace('{name}', name)
             .replace('{placeholder}', placeholder)
             .replace('{path}', path)
             .replace('{placeholderInside}', placeholderInside)
+            .replace('{value}', value)
+        console.log(input.innerHTML)
     })
-    console.log(inputs)
 }
 
 function searchForNavBar() {
@@ -175,6 +179,11 @@ function searchForHeader() {
             .replace('{rightButtonPath}', rightButtonPath)
             .replace('{height}', height)
             .replace('{width}', width)
+            .replace('{rightAction}', rightAction)
+
+        if (!rightButtonPath) {
+            document.getElementById('rightButtonImg').style.display = 'none'
+        }
     })
 }
 
@@ -196,7 +205,21 @@ function toggleLangages() {
     const lang = document.querySelector('.langage-selector-content-container')
     lang.classList.toggle('langage-selector-content-container--shown')
 }
+
+function searchErrors() {
+    const urlSearch = window.location.search
+    const urlParams = new URLSearchParams(urlSearch)
+    const errors = document.querySelectorAll('.error')
+    if (urlParams.get('error')) {
+        errors.forEach((error) => {
+            if (error.getAttribute('error') === urlParams.get('error')) {
+                error.style.display = 'block'
+            }
+        })
+    }
+}
 searchForInputs()
 searchForNavBar()
 searchForHeader()
 searchForFooter()
+searchErrors()

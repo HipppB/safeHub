@@ -1,0 +1,28 @@
+main {
+    flex: 1;
+    font-size: 0.4rem;
+    margin-top: 1rem;
+    /* background-color: red; */
+    max-width: min(80vw, 800px);
+    align-self: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 0.4rem;
+}
+
+h2 {
+    font-weight: normal;
+    margin-left: 0.5rem;
+}
+
+.graphList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.graphList img {
+    margin: 0.2rem;
+}

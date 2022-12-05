@@ -4,6 +4,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
+
 --
 -- Structure de la table `users`
 --
@@ -13,8 +14,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastname` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL UNIQUE,
-  `phone` varchar(20) NOT NULL,
-  `birth_date` date NOT NULL,
+  `phone` varchar(20),
+  `birth_date` date,
   `is_admin` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
@@ -43,8 +44,8 @@ CREATE TABLE IF NOT EXISTS `notifications_users` (
   `id_notification` int(11) NOT NULL,
   `read` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (id_notification) REFERENCES notifications(id),
-  FOREIGN KEY (id_user) REFERENCES users(id)
+  FOREIGN KEY (id_notification) REFERENCES notifications(id) ON DELETE CASCADE,
+  FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -60,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `products` (
   `product_code` varchar(16) NOT NULL UNIQUE,
   `user_code` varchar(16) NOT NULL,
   `expiration_date` date NOT NULL,
-  `db_max` int(11) NOT NULL,
-  `temp_max` int(11) NOT NULL,
+  `db_max` int(11),
+  `temp_max` int(11),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
@@ -88,9 +89,9 @@ CREATE TABLE IF NOT EXISTS `products_users` (
   `id_role` int(11) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (id_user) REFERENCES users(id),
-  FOREIGN KEY (id_product) REFERENCES products(id),
-  FOREIGN KEY (id_role) REFERENCES roles(id)
+  FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE,
+  FOREIGN KEY (id_role) REFERENCES roles(id) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
@@ -121,8 +122,8 @@ CREATE TABLE IF NOT EXISTS `metrics` (
   `data` int(255) NOT NULL,
   `id_type` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`id_type`) REFERENCES types(`id`),
-  FOREIGN KEY (`id_product`) REFERENCES products(`id`)
+  FOREIGN KEY (`id_type`) REFERENCES types(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`id_product`) REFERENCES products(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
@@ -152,9 +153,22 @@ CREATE TABLE IF NOT EXISTS `tips_users` (
   `id_tip` int(11) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`),
-  FOREIGN KEY (`id_tip`) REFERENCES tips(`id`),
-  FOREIGN KEY (`id_product`) REFERENCES products(`id`)
+  FOREIGN KEY (`id_tip`) REFERENCES tips(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`id_product`) REFERENCES products(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `translations`
+--
+
+CREATE TABLE IF NOT EXISTS `translations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `key` varchar(64) NOT NULL,
+  `lang` varchar(2) NOT NULL,
+  `value` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 

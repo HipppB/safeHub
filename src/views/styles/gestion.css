@@ -1,7 +1,8 @@
 .small-button-outlined {
     border: none;
-    margin: 2px;
-    width: 40vw;
+    width: calc(min(40vw, 250px) - 4px);
+    flex: 1;
+    flex-grow: 1;
     height: 46px;
     border-radius: 9px;
     background-color: white;
@@ -13,7 +14,6 @@
     justify-content: center;
     align-items: center;
     color: #f76b1c;
-    /* background-clip: padding-box; */
 }
 
 .small-button-outlined::before {
@@ -22,7 +22,7 @@
     position: absolute;
     border-radius: 10px;
     display: flex;
-    /* padding: 2px; */
+
     inset: -1px;
     background: linear-gradient(75deg, #f76b1c, #fad961);
 }
@@ -42,4 +42,9 @@
     justify-content: center;
     align-items: center;
     width: 50px;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
 }

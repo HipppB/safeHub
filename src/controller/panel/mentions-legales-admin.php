@@ -1,4 +1,6 @@
 <?php
-include('views/auth/mentions-legales-admin.html');
-
-
+require 'model/user.requests.php';
+if (!userIsConnected()) {
+    header('Location: /connexion');
+}
+include 'views/auth/mentions-legales-admin.html';

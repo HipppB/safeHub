@@ -219,3 +219,11 @@
 .mB400 {
     margin-bottom: 400px;
 }
+
+.isButton {
+    cursor: pointer;
+}
+
+.wm50p {
+    max-width: min(80vw, 500px);
+}
