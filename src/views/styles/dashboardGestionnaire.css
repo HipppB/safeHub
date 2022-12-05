@@ -54,7 +54,9 @@
     justify-content: space-between;
     margin-left: 10%;
 }
-
+.notifi p {
+    color: #b4b4b4;
+}
 .image-notif-importante {
     font-size: 0.2em;
     background-color: #ff7d7d;
