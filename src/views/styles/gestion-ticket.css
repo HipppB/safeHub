@@ -1,0 +1,53 @@
+.line {
+    height: 1px;
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+.iconParagraph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-container {
+    align-self: center;
+    width: min(80vw, 500px);
+}
+
+.ticketParagraph {
+    font-size: 0.3em;
+    color: rgb(143, 143, 143);
+}
+
+.status {
+    font-size: 0.2em;
+    background-color: #ff7d7d;
+    color: #fff;
+    width: 75px;
+    padding: 3px 0;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.status-inprogress {
+    font-size: 0.2em;
+    background-color: #ffbc7d;
+    color: #fff;
+    width: 75px;
+    padding: 3px 0;
+    text-align: center;
+
+    border-radius: 30px;
+}
+
+.status-done {
+    font-size: 0.2em;
+    background-color: #88ff7d;
+    color: #fff;
+    width: 75px;
+    padding: 3px 0;
+    text-align: center;
+
+    border-radius: 30px;
+}
