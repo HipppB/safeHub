@@ -18,24 +18,33 @@
         </div>
         <a class="link" href="./connexion">CONNEXION</a>
         <div class="langage-selector" onclick="toggleLangages()">
-            <img
-                src="../views/assets/frenchFlag.png"
-                class="langage-selector__flag"
-            />
-            <div class="langage-selector__text">FR</div>
+        <?php echo $_SESSION['lang'] == 'en'
+            ? '<img
+            src="../views/assets/englishFlag.png"
+            class="langage-selector__flag"
+        />'
+            : '<img
+        src="../views/assets/frenchFlag.png"
+        class="langage-selector__flag"
+    />'; ?>
+            <div class="langage-selector__text"><?php echo $_SESSION['lang'] ==
+            'en'
+                ? 'EN'
+                : 'FR'; ?>
+            </div>
             <img
                 class="langage-selector__arrow"
                 src="../views/assets/icons/arrowDown.svg"
             />
             <div class="langage-selector-content-container">
-                <div class="langage-selector-content-container__item">
+                <div class="langage-selector-content-container__item" onclick="onClickLangage('fr')">
                     <img
                         src="../views/assets/frenchFlag.png"
                         class="langage-selector__flag"
                     />
                     <div class="langage-selector__text">FR</div>
                 </div>
-                <div class="langage-selector-content-container__item">
+                <div class="langage-selector-content-container__item" onclick="onClickLangage('en')">
                     <img
                         src="../views/assets/englishFlag.png"
                         class="langage-selector__flag"
