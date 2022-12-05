@@ -35,3 +35,7 @@
     padding: 15px 0px;
     font-size: 0.5em;
 }
+
+.question-container {
+    border: solid 1px rgb(196, 196, 196);
+}
