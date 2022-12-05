@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div class="topNavBar-container"></div>
+    <?php require 'views/components/header.php'; ?>
         <div class="mL20">
             <p class="gradienttext title mT50">Mentions légales</p>
             <p class="updateTitle">Dernière mise à jour le X</p>

@@ -1,3 +1,2 @@
 <?php
-include('views/public/faq.html');
-
+include 'views/public/faq.php';

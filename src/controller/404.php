@@ -1,3 +1,2 @@
 <?php
-include('views/public/404.html');
-
+include 'views/public/404.php';
