@@ -2,13 +2,12 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Gestion</title>
+        <title>SafeHub - Dashboard Gestionnaire</title>
         <link rel="stylesheet" href="./styles/common/index.css" />
         <link rel="stylesheet" href="./styles/common/classStyles.css" />
         <link rel="stylesheet" href="./styles/dashboardGestionnaire.css" />
         <link rel="stylesheet" href="./styles/headerPrivate.css" />
         <link rel="stylesheet" href="./styles/ticketuser.css" />
-
 
         <script
             type="text/javascript"
@@ -17,70 +16,63 @@
         ></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
-<body>
-
-    <div
+    <body>
+        <div
             class="header-container"
             title="Ajout produit"
             leftButtonPath="../views/assets/icons/backButton.svg"
             rightButtonPath="../views/assets/icons/person.svg"
-    ></div>
+        ></div>
 
-    <div class="input-list-container">
-        <button class="button">Ajouter un produit</button>
+        <div class="input-list-container">
+            <button class="button">Ajouter un produit</button>
 
-        <button class="button">Gestion du site</button>
+            <button class="button">Gestion du site</button>
+        </div>
 
-    </div>
+        <!-- TODO: re-use and adjust the bpm part-->
+        <div class="low-title">Dernières notifications</div>
 
-    <!-- TODO: re-use and adjust the bpm part--> 
-    <div class="low-title">
-        Dernières notifications
-    </div>
-    <div class="small-stroke"></div>
-     <div class="gradient-text" >Notification importante</div>
+        <div class="notification">
+            <div class="notif-top">
+                <div class="image-notif-importante"></div>
+                <p class="gradienttext">Notification importante</p>
+            </div>
 
-      <div class="leftAl"
-      path="./assets/icons/close.svg"
-      >Lorem ipsum, dolor sit amet consectetur</div>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
 
+            <div class="horaire">Mardi 10h30</div>
+        </div>
 
+        <div class="notification">
+            <div class="notif-top">
+                <div class="image-notif-importante"></div>
+                <p class="gradienttext">Notification</p>
+            </div>
 
-      <div class="subtitle">Mardi 10:30</div>
-    
-     <div class="small-stroke"></div>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
 
-     <div class="low-title">
-        Produits
-    </div>
+            <div class="horaire">Mardi 10h30</div>
+        </div>
 
+        <div class="notification">
+            <div class="notif-top">
+                <div class="image-notif-importante"></div>
+                <p class="gradienttext">Notification déjà consultée</p>
+            </div>
 
+            <p>Lorem ipsum dolor sit amet consectetur</p>
 
-     <div class="small-stroke"></div>
+            <div class="horaire">Mardi 10h30</div>
+        </div>
 
-
-     <div class="low-title">
-        Utilisateurs
-    </div>
-
-    <div
-    class="input-label-container"
-    type="search"
-    name="product"
-    placeholder="Rechercher un produit"
-    path=""
-></div>
-
-
-
-
-
-    
-
-
-
-
-
-
-
-</body>
+        <div class="low-title">Utilisateurs</div>
+        <div
+            class="input-label-container"
+            type="search"
+            name="product"
+            placeholder="Rechercher un produit"
+            path="/views/assets/icons/close.svg"
+        ></div>
+    </body>
+</html>
