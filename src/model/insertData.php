@@ -2,6 +2,7 @@
 //connect to db and insert fake data
 require 'connectDb.php';
 $db = connectDb();
+
 //deletes existing users and insert fake users
 $queryAddUser = $db->prepare("INSERT INTO users 
     (`name`, `lastname`, `password`, `email`, `phone`, `birth_date`, `is_admin`) 
@@ -9,6 +10,8 @@ $queryAddUser = $db->prepare("INSERT INTO users
 
 $queryDeleteAllUser = $db->prepare('DELETE FROM users');
 echo 'request prepared' . '<br>';
+$queryDeleteAllProducts = $db->prepare('DELETE FROM products');
+$queryDeleteAllProducts->execute();
 $queryDeleteAllUser->execute();
 $queryAddUser->execute([
     'email' => 'admin@test.com',
@@ -37,8 +40,6 @@ echo 'Fake users inserted' . '<br>';
 $queryAddProduct = $db->prepare("INSERT INTO products
     (`product_name`, `room_name`, `house_name`, `product_code`, `user_code`, `expiration_date`, `db_max`, `temp_max`) 
     VALUES (:product_name, :room_name, :house_name, :product_code, :user_code, :expiration_date, :db_max, :temp_max)");
-$queryDeleteAllProducts = $db->prepare('DELETE FROM products');
-$queryDeleteAllProducts->execute();
 
 try {
     $queryAddProduct->execute([
@@ -76,4 +77,21 @@ try {
     ]);
 } catch (PDOException $e) {
     echo $e->getMessage();
+}
+
+// Import translations from json file
+$translations = json_decode(file_get_contents('translations.json'), true);
+$queryAddTranslation = $db->prepare("INSERT INTO translations
+    (`key`, `lang`, `value`) 
+    VALUES (:key, :lang, :value)");
+$queryDeleteAllTranslations = $db->prepare('DELETE FROM translations');
+$queryDeleteAllTranslations->execute();
+foreach ($translations as $key => $value) {
+    foreach ($value as $lang => $translation) {
+        $queryAddTranslation->execute([
+            'key' => $key,
+            'lang' => $lang,
+            'value' => $translation,
+        ]);
+    }
 }
