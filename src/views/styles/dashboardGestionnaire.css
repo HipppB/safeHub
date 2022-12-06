@@ -16,6 +16,13 @@
     color: #f76b1c;
 }
 
+.stroke {
+    width: 100%;
+    height: 1px;
+    background-color: #f9f9f9;
+    margin: 2%;
+}
+
 .low-container {
     display: flex;
     flex-direction: column;
@@ -50,10 +57,14 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+.notif-middle-2 {
+    display: flex;
+    justify-content: left;
+}
 
 .notif-middle {
     display: flex;
-    justify-content: space-left;
+    justify-content: space-between;
     margin-left: 10%;
 }
 
@@ -92,4 +103,18 @@
     color: #b4b4b4;
     margin-left: 10%;
     margin-top: 2%;
+}
+
+.small-2 {
+    font-size: 0.4em;
+    color: #b4b4b4;
+    margin-left: 5%;
+}
+
+.email {
+    font-size: 0.4em;
+    color: #b4b4b4;
+
+    margin-left: 47%;
+    margin-top: -3%;
 }
