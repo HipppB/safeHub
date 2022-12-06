@@ -51,11 +51,9 @@ Fichiers css :
 `common/index.css`
 , `common/topNavBar.css`<br>
 
-Fichier script :
-`common/component.js`
+Importation en php :
 
-    <div class="topNavBar-container">
-    </div>
+    <?php require 'views/components/header.php'; ?>
 
 ### Page authentifiés, Bouton Retour (Optionnel) - Titre - Bouton (Optionel)
 
