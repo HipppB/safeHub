@@ -52,7 +52,7 @@
 
             <a
                 href="./forgotPassword"
-                class="gradienttext urbanist s05 mT10 rightAl"
+                class="gradienttext urbanist s05 mT10 rightAl effectHovertext"
                 ><?php printTranslation('forgot_password'); ?>?</a
             >
 
