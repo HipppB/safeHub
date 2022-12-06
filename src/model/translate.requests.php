@@ -23,6 +23,6 @@ function printTranslation($key)
 {
     $lang = $_SESSION['lang'] ?? 'fr';
     $result = translate($key, $lang);
-    echo $result['value'];
+    echo $result['value'] ? $result['value'] : 'Undefined';
     return $result ? 1 : 0;
 }

@@ -10,5 +10,9 @@
     "connect": {
         "fr": "Se connecter",
         "en": "Log in"
+    },
+    "connexion": {
+        "fr": "Connexion",
+        "en": "Log in"
     }
 }

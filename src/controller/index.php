@@ -1,5 +1,4 @@
 <?php
-require 'model/translate.requests.php';
 include 'views/public/index.php'; // du html
 ///
 
