@@ -16,12 +16,6 @@
     color: #f76b1c;
 }
 
-.mainContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .low-container {
     display: flex;
     flex-direction: column;
@@ -49,14 +43,20 @@
     display: flex;
     justify-content: left;
 }
-.notif-middle {
+
+.notif-top-2 {
     display: flex;
     justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.notif-middle {
+    display: flex;
+    justify-content: space-left;
     margin-left: 10%;
 }
-.notifi p {
-    color: #b4b4b4;
-}
+
 .image-notif-importante {
     font-size: 0.2em;
     background-color: #ff7d7d;
@@ -92,11 +92,4 @@
     color: #b4b4b4;
     margin-left: 10%;
     margin-top: 2%;
-}
-
-.anormale-frequence {
-    display: flex;
-    font-size: 0.3em;
-    text-indent: 5px;
-    margin-left: 5%;
 }
