@@ -291,3 +291,13 @@ h1,
     font-family: 'Urbanist', sans-serif;
     font-style: italic;
 }
+
+.effectHovertext:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    width: fit-content;
+    transform: scale(101%);
+    transition-duration: 50ms;
+    background-image: linear-gradient(75deg, #fad961, #f76b1c);
+    animation: steam 10s linear infinite;
+}

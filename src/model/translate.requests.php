@@ -16,13 +16,15 @@ function translate($key, $lang)
         'keyrequested' => $key,
         'langrequested' => $lang,
     ]);
-    return $query->fetch();
+    return $query->fetch()['value'];
 }
 
-function printTranslation($key)
+function printTranslation($key, $noprint = false)
 {
     $lang = $_SESSION['lang'] ?? 'fr';
     $result = translate($key, $lang);
-    echo $result['value'] ? $result['value'] : 'Undefined';
-    return $result ? 1 : 0;
+    if (!$noprint) {
+        echo $result ? $result : 'Undefined';
+    }
+    return $result ? $result : 'Undefined';
 }

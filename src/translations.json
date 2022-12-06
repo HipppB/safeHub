@@ -14,5 +14,81 @@
     "CONNEXION": {
         "fr": "CONNEXION",
         "en": "LOG IN"
+    },
+    "rebonjour": {
+        "fr": "Rebonjour",
+        "en": "Hello again"
+    },
+    "manquer": {
+        "fr": "Vous nous avez manqué",
+        "en": "You have been missed"
+    },
+    "email": {
+        "fr": "Adresse e-mail",
+        "en": "Email address"
+    },
+    "password": {
+        "fr": "Mot de passe",
+        "en": "Password"
+    },
+    "prenom": {
+        "fr": "Prénom",
+        "en": "First name"
+    },
+    "nom": {
+        "fr": "Nom",
+        "en": "Last name"
+    },
+    "has_account": {
+        "fr": "Vous avez déjà un compte ?",
+        "en": "You already have an account ?"
+    },
+    "signin-now": {
+        "fr": "Connectez-vous",
+        "en": "Log in"
+    },
+    "no_account": {
+        "fr": "Pas de compte ?",
+        "en": "You don't have an account ?"
+    },
+    "signin": {
+        "fr": "Inscrivez-vous",
+        "en": "Sign up"
+    },
+    "inscription": {
+        "fr": "Inscription",
+        "en": "Sign up"
+    },
+    "forgot_password": {
+        "fr": "Mot de passe oublié",
+        "en": "Forgot password"
+    },
+    "pass_forgot": {
+        "fr": "Mot de passe oublié",
+        "en": "Forgot password"
+    },
+    "enter_email": {
+        "fr": "Veuillez entrer l’adresse email associée à votre compte !",
+        "en": "Please enter the email address associated with your account !"
+    },
+    "send": {
+        "fr": "Envoyer",
+        "en": "Send"
+    },
+    "welcome": {
+        "fr": "Bienvenue",
+        "en": "Welcome"
+    },
+    "fill_password": {
+        "fr": "Veuillez remplir le champ mot de passe !",
+        "en": "Please fill the password field !"
+    },
+    "signup": {
+        "fr": "S'inscrire",
+        "en": "Create account"
+    },
+    "incorrect_id": {
+        "fr": "Adresse e-mail ou mot de passe incorrect",
+        "en": "Email address or password incorrect"
     }
 }
