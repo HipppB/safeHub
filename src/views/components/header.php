@@ -17,7 +17,7 @@
             />
         </div>
         <a class="link" href="./connexion"><?php printTranslation(
-            'connexion'
+            'CONNEXION'
         ); ?></a>
         <div class="langage-selector" onclick="toggleLangages()">
         <?php echo $_SESSION['lang'] == 'en'
