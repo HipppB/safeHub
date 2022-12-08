@@ -19,7 +19,5 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/bin --fil
 WORKDIR /app
 COPY composer.json composer.lock ./
 CMD composer install
-WORKDIR /app/src/config
-CMD php init.php
 
 
