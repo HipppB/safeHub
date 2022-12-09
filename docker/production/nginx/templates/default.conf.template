@@ -1,9 +1,14 @@
 server {
     server_name ${SERVER_NAME};
-    root /src/webRoot;
+    root /app/src;
+    index index.php index.html index.htm;
 
     location / {
-        try_files $uri /index.php?is_args$args;
+        try_files $uri $uri/ @rewrite;
+    }
+
+    location @rewrite {
+        rewrite ^/(.+)$ /index.php?url=$1 last;
     }
 
     location ~ ^/index\.php(/|$) {

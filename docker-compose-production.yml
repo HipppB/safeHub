@@ -1,0 +1,66 @@
+version: '3.9'
+services:
+  nginx:
+    build:
+      context: docker/production
+      dockerfile: nginx/Dockerfile
+    environment:
+      SERVER_NAME: ${DOMAIN_NAME}
+    ports:
+      - "8080:80"
+      - "443:443"
+    volumes:
+      - ./src:/app/src
+      - ./node_modules:/app/node_modules
+      - ./vendor:/app/vendor
+      - ./composer.json:/app/composer.json
+      - ./composer.lock:/app/composer.lock
+      - ./config.php:/app/config.php
+    depends_on:
+      - php-fpm
+
+  php-fpm:
+    build:
+      context: .
+      dockerfile: docker/production/php-fpm/Dockerfile
+    environment:
+      PHP_IDE_CONFIG: serverName=${DOMAIN_NAME}
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    depends_on:
+      - php-cli
+
+  php-cli:
+    build:
+      context: .
+      dockerfile: docker/production/php-cli/Dockerfile
+    volumes:
+      - ./:/app
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./var/database:/var/lib/mysql:rw
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
