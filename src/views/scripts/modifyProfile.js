@@ -48,13 +48,16 @@ function changeFormSubmit() {
                 const email = document.querySelector(
                     'input[name="email"]'
                 ).value
-
+                const birth_date = document.querySelector(
+                    'input[name="birth_date"]'
+                ).value
                 // set to form data
                 const formData = JSON.stringify({
                     lastname: lastname,
                     name: name,
                     phone: phone,
                     email: email,
+                    birth_date: birth_date,
                 })
 
                 // send form data to server

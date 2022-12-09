@@ -27,8 +27,10 @@
         />
         <img src="views/assets/hex_incri.svg" class="blob" />
         <div class="title-container">
-            <h1 class="title gradienttext">Inscription</h1>
-            <p class="subtitle">Bienvenue !</p>
+            <h1 class="title gradienttext"><?php printTranslation(
+                'inscription'
+            ); ?></h1>
+            <p class="subtitle"><?php printTranslation('welcome'); ?> !</p>
         </div>
 
         <div class="illu-container">
@@ -40,7 +42,7 @@
                 <div
                     class="input-label-container"
                     name="firstname"
-                    placeholder="Prénom"
+                    placeholder="<?php printTranslation('prenom'); ?>"
                     path="views/assets/icons/person.svg"
                 ></div>
                 <?php if ($error['error-firstname']) {
@@ -49,7 +51,7 @@
                 <div
                     class="input-label-container"
                     name="lastname"
-                    placeholder="Nom"
+                    placeholder="<?php printTranslation('nom'); ?>"
                     path="views/assets/icons/person.svg"
                 ></div>
                 <?php if ($error['error-lastname']) {
@@ -58,8 +60,8 @@
                 <div
                     class="input-label-container"
                     type="email"
-                    name="email"
-                    placeholder="Email"
+                    name="mail"
+                    placeholder="<?php printTranslation('email'); ?>"
                     path="views/assets/icons/mail.svg"
                 ></div>
                 
@@ -67,11 +69,13 @@
                     class="input-label-container"
                     type="password"
                     name="password"
-                    placeholder="Mot de passe"
+                    placeholder="<?php printTranslation('password'); ?>"
                     path="views/assets/icons/lock.svg"
                 ></div>
                 <?php if ($error['error-password']) {
-                    echo "<div class='error'>Veuillez renseigner votre mot de passe</div>";
+                    echo "<div class='error'>" .
+                        translate('connect') .
+                        '</div>';
                 } ?>
             </div>
 
@@ -84,12 +88,14 @@
                 >
             </div>
 
-            <input type="submit" class="button mT25" value="S'inscrire" />
+            <input type="submit" class="button mT25" value="<?php printTranslation(
+                'signup'
+            ); ?>" />
 
             <div class="mT10 mB50 s05 urbanist">
-                Vous avez déjà un compte ?
-                <a href="views/connexion" class="gradienttext urbanist"
-                    >Connectez-vous</a
+            <?php printTranslation('has_account'); ?>
+                <a href="./connexion" class="gradienttext urbanist"
+                    ><?php printTranslation('signin-now'); ?></a
                 >
             </div>
         </form>

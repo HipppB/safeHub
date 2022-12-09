@@ -90,11 +90,11 @@ function register($name, $lastname, $email, $password)
 }
 
 // Update user data
-function updateUser($id, $name, $lastname, $phone, $email)
+function updateUser($id, $name, $lastname, $phone, $email, $birth)
 {
     global $db;
     $query = $db->prepare(
-        'UPDATE users SET name = :name, lastname = :lastname, phone = :phone, email = :email WHERE id = :id'
+        'UPDATE users SET name = :name, lastname = :lastname, phone = :phone, email = :email, birth_date = :birth WHERE id = :id'
     );
     try {
         $query->execute([
@@ -103,6 +103,7 @@ function updateUser($id, $name, $lastname, $phone, $email)
             'lastname' => $lastname,
             'phone' => $phone,
             'email' => $email,
+            'birth' => $birth,
         ]);
         return 1;
     } catch (PDOException $e) {

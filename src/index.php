@@ -8,7 +8,6 @@ header('Cache-Control: post-check=0, pre-check=0', false);
 header('Pragma: no-cache');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
-
 if (!isset($url)) {
     $url = 'index';
 }
@@ -26,6 +25,7 @@ if (isset($_GET['url']) && !empty($_GET['url']) && !isset($skip)) {
     }
 }
 error_log('url: ' . $url);
+require_once 'model/translate.requests.php';
 
 if (file_exists('controller/' . $url . '.php')) {
     // Check if there is a controller

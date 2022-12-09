@@ -170,6 +170,7 @@
             </div>
         </div>
         <!-- Footer -->
-        <div class="footer-container" small="false"></div>
+
+        <div class="footer-container"></div>
     </body>
 </html>

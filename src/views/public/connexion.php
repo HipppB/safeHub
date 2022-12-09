@@ -21,8 +21,12 @@
         />
         <img src="views/assets/hex.svg" class="blob" />
         <div class="title-container">
-            <h1 class="title gradienttext">Connexion</h1>
-            <p class="subtitle">Rebonjour, <br />Vous nous avez manqué !</p>
+            <h1 class="title gradienttext"><?php printTranslation(
+                'CONNEXION'
+            ); ?></h1>
+            <p class="subtitle"><?php printTranslation(
+                'rebonjour'
+            ); ?>, <br /><?php printTranslation('manquer'); ?> !</p>
         </div>
         <div class="responsiveCo"></div>
         <div class="illu-container">
@@ -34,32 +38,36 @@
                     class="input-label-container"
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="<?php printTranslation('email'); ?>"
                     path="views/assets/icons/mail.svg"
                 ></div>
                 <div
                     class="input-label-container"
                     type="password"
                     name="password"
-                    placeholder="Mot de passe"
+                    placeholder="<?php printTranslation('password'); ?>"
                     path="views/assets/icons/lock.svg"
                 ></div>
             </div>
 
             <a
                 href="./forgotPassword"
-                class="gradienttext urbanist s05 mT10 rightAl"
-                >Mot de passe oublié ?</a
+                class="gradienttext urbanist s05 mT10 rightAl effectHovertext"
+                ><?php printTranslation('forgot_password'); ?>?</a
             >
 
-            <input type="submit" class="button mT25" value="Se connecter" />
+            <input type="submit" class="button mT25" value="<?php printTranslation(
+                'connect'
+            ); ?>" />
             <?php if ($error === 401) {
-                echo "<p class='error'>Email ou mot de passe incorrect</p>";
+                echo "<p class='error'>" .
+                    printTranslation('incorrect_id', true) .
+                    '</p>';
             } ?>
             <div class="mT25 mB50 s05 urbanist">
-                Pas de compte ?
-                <a href="./inscription" class="gradienttext urbanist"
-                    >S'inscrire</a
+            <?php printTranslation('no_account'); ?> ?
+                <a href="./inscription" class="gradienttext urbanist effectHovertext"
+                    ><?php printTranslation('signup'); ?></a
                 >
             </div>
         </form>

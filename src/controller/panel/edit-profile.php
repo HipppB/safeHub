@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $req = file_get_contents('php://input');
     $req = json_decode($req);
 
+    var_dump($req);
     $error;
     $name = htmlspecialchars(
         $req->name ? $req->name : $_SESSION['user']['name']
@@ -21,6 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     );
     $email = htmlspecialchars(
         $req->email ? $req->email : $_SESSION['user']['email']
+    );
+    $birth = htmlspecialchars(
+        $req->birth_date ? $req->birth_date : $_SESSION['user']['birth_date']
     );
 
     if (empty($req->email) || empty($req->lastname) || empty($req->name)) {
@@ -41,7 +45,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'Votre numéro de téléphone doit contenir au moins 10 caractères';
     }
     //update name of the user in db
-    updateUser($_SESSION['user']['id'], $name, $lastname, $phone, $email);
+    updateUser(
+        $_SESSION['user']['id'],
+        $name,
+        $lastname,
+        $phone,
+        $email,
+        $birth
+    );
     getUser($_SESSION['user']['id'], true);
 
     if (!$error) {

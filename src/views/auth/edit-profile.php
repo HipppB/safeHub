@@ -62,6 +62,13 @@
                     value="<?php echo $user['email']; ?>"
                     path="../views/assets/icons/mail.svg"
                 ></div>
+                <div
+                    class="input-label-container"
+                    type="date"
+                    name="birth_date"
+                    placeholder="Date de naissance"
+                    value="<?php echo $user['birth_date']; ?>"
+                ></div>
             </div>
             <!-- gradienttext urbanist -->
 

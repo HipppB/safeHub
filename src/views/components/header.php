@@ -16,7 +16,9 @@
                 onclick="window.location.href = './';"
             />
         </div>
-        <a class="link" href="./connexion">CONNEXION</a>
+        <a class="link" href="./connexion"><?php printTranslation(
+            'CONNEXION'
+        ); ?></a>
         <div class="langage-selector" onclick="toggleLangages()">
         <?php echo $_SESSION['lang'] == 'en'
             ? '<img
