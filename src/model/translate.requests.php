@@ -5,6 +5,7 @@ $db = connectDb();
 function translate($key, $lang)
 {
     global $db;
+    try {
     $query = $db->prepare(
         "SELECT * 
         FROM translations
@@ -17,6 +18,11 @@ function translate($key, $lang)
         'langrequested' => $lang,
     ]);
     return $query->fetch()['value'];
+
+} catch (PDOException $e) {
+    echo $e;
+    return 'Undefined';
+}
 }
 
 function printTranslation($key, $noprint = false)
@@ -24,7 +30,7 @@ function printTranslation($key, $noprint = false)
     $lang = $_SESSION['lang'] ?? 'fr';
     $result = translate($key, $lang);
     if (!$noprint) {
-        echo $result ? $result : 'Undefined';
+        echo $result;
     }
-    return $result ? $result : 'Undefined';
+    return $result;
 }
