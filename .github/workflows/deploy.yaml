@@ -1,0 +1,19 @@
+#name: Deploy SafeHub to Raspberry
+#concurency: production
+#on:
+#  push:
+#    branches:
+#      - deploy
+#jobs:
+#  deploy:
+#    name: Deploy
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Install SSH Key
+#        uses: shimataro/ssh-key-action@v2
+#        with:
+#          key: ${{ secrets.SSH_KEY }}
+#          known_hosts: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+#
+#
+
