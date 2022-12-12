@@ -22,7 +22,7 @@
         <div class="home-container">
             <!-- Hero section -->
             <?php require 'views/components/header.php'; ?>
-            
+
             <div class="home-title-container mL25 mR25">
                 <div class="title-container">
                     <h1 class="gradienttext">Domotic for your safety</h1>
@@ -170,6 +170,7 @@
             </div>
         </div>
         <!-- Footer -->
-        <div class="footer-container" small="false"></div>
+
+        <div class="footer-container"></div>
     </body>
 </html>
