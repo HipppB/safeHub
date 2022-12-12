@@ -1,4 +1,5 @@
 <?php
+
 require 'controller/mail.php';
 $email = !empty($_POST["email"]) ? htmlspecialchars($_POST['email']) : "";
 $body = !empty($_POST["message"]) ? htmlspecialchars($_POST['message']): "";
