@@ -1,33 +1,42 @@
-class Carousel {
-    // constructor(carousel) {
-    //     // find elements
-    //     this.carousel = carousel
-    //     this.buttonPrevious = carousel.querySelector(
-    //         '[data-carousel-button-previous]'
-    //     )
-    //     this.buttonNext = carousel.querySelector('[data-carousel-button-next]')
-    //     this.slidesContainer = carousel.querySelector(
-    //         '[data-carousel-slides-container]'
-    //     )
-    //     // state
-    //     this.currentSlide = 0
-    //     this.numSlides = this.slidesContainer.children.length
-    //     // add events
-    //     this.buttonPrevious.addEventListener(
-    //         'click',
-    //         this.handlePrevious.bind(this)
-    //     )
-    //     this.buttonNext.addEventListener('click', this.handleNext.bind(this))
-    // }
-    // handleNext() {
-    //     this.currentSlide = modulo(this.currentSlide + 1, this.numSlides)
-    //     this.carousel.style.setProperty('--current-slide', this.currentSlide)
-    // }
-    // handlePrevious() {
-    //     this.currentSlide = modulo(this.currentSlide - 1, this.numSlides)
-    //     this.carousel.style.setProperty('--current-slide', this.currentSlide)
-    // }
+const slider = document.querySelector('.slides')
+const slides = document.querySelectorAll('.slide')
+const button = document.querySelectorAll('.carousel-button')
+
+let current = 0
+let prev = 4
+let next = 1
+
+for (let i = 0; i < button.length; i++) {
+    button[i].addEventListener('click', () =>
+        i == 0 ? gotoPrev() : gotoNext()
+    )
 }
 
-// const carousels = document.querySelectorAll('[data-carousel]')
-// carousels.forEach((carousel) => new Carousel(carousel))
+const gotoPrev = () =>
+    current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1)
+
+const gotoNext = () => (current < 4 ? gotoNum(current + 1) : gotoNum(0))
+
+const gotoNum = (number) => {
+    current = number
+    prev = current - 1
+    next = current + 1
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active')
+        slides[i].classList.remove('prev')
+        slides[i].classList.remove('next')
+    }
+
+    if (next == 5) {
+        next = 0
+    }
+
+    if (prev == -1) {
+        prev = 4
+    }
+
+    slides[current].classList.add('active')
+    slides[prev].classList.add('prev')
+    slides[next].classList.add('next')
+}

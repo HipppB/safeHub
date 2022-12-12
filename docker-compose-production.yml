@@ -2,12 +2,12 @@ version: '3.9'
 services:
   nginx:
     build:
-      context: docker/development
+      context: docker/production
       dockerfile: nginx/Dockerfile
     environment:
       SERVER_NAME: ${DOMAIN_NAME}
     ports:
-      - "80:80"
+      - "8080:80"
       - "443:443"
     volumes:
       - ./src:/app/src
@@ -20,20 +20,25 @@ services:
   php-fpm:
     build:
       context: .
-      dockerfile: docker/development/php-fpm/Dockerfile
+      dockerfile: docker/production/php-fpm/Dockerfile
     environment:
       PHP_IDE_CONFIG: serverName=${DOMAIN_NAME}
     env_file:
       - .env
     volumes:
       - .:/app
+    depends_on:
+      - php-cli
 
   php-cli:
     build:
       context: .
-      dockerfile: docker/development/php-cli/Dockerfile
+      dockerfile: docker/production/php-cli/Dockerfile
     volumes:
-      - .:/app
+      - ./:/app
+    depends_on:
+      - mysql
+
   mysql:
     image: mysql:8.0
     environment:
@@ -45,15 +50,3 @@ services:
       - "3306:3306"
     volumes:
       - ./var/database:/var/lib/mysql:rw
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    environment:
-      PMA_HOST: mysql
-      PMA_PORT: 3306
-      PMA_USER: ${MYSQL_USER}
-      PMA_PASSWORD: ${MYSQL_PASSWORD}
-    ports:
-      - "8080:80"
-    depends_on:
-      - mysql
