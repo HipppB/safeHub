@@ -42,7 +42,7 @@
         <?php if ($error == 401) {
             echo "<p class='error'>Code produit incorrect</p>";
         } ?>
-        <input type="submit" class="button mT25" value="Ajouter" />
+        <input type="submit" class="button mT25 mB25" value="Ajouter" />
     </form>
 </main>
 <!-- Footer -->

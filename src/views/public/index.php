@@ -110,9 +110,9 @@
                 <p class="home-subtitle-categories">
                     Ces clients nous ont fait confiance
                 </p>
-                <div class="carousel-container mT50 mB200" data-carousel>
-                    <div class="carousel-buttons">
-                        <a data-carousel-button-prev>
+    
+                <div class="carousel-container mT50 mB200">
+                    <div class="carousel-buttons">                        
                             <svg
                                 width="9"
                                 height="16"
@@ -128,8 +128,6 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </a>
-                        <a data-carousel-button-next>
                             <svg
                                 width="9"
                                 height="16"
@@ -145,10 +143,25 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </a>
                     </div>
-                    <div class="slides" data-carousel-slides-container>
-                        <div class="slide">
+                    <div class="slides" >
+                        <div class="slide active"><p>Test</p></div>
+                        <div class="slide next"><p>oui</p></div>
+                        <div class="slide "><p>hello</p></div>
+                        <div class="slide "><p>Test</p></div>
+                        <div class="slide prev"><p>Oui</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+
+        <div class="footer-container"></div>
+    </body>
+</html>
+
+
+<!-- <div class="slide active">
                             <p class="gradienttext">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Lorem ipsum dolor sit amet,
@@ -164,13 +177,4 @@
                                     <p>Ingénieur</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer -->
-
-        <div class="footer-container"></div>
-    </body>
-</html>
+                        </div> -->
