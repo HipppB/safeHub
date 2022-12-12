@@ -43,7 +43,6 @@
 
             <input type="submit" class="button mT50" value="Envoyer" />
         </form>
-        <!-- Footer -->
         <div class="footer-container mT100" small="false"></div>
     </body>
 </html>

@@ -118,7 +118,6 @@
                 </div>
             </div>
         </div>
-        <!-- Footer -->
         <div class="footer-container" small="false"></div>
     </body>
 </html>

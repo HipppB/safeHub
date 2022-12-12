@@ -99,7 +99,6 @@
                 >
             </div>
         </form>
-        <!-- Footer -->
         <div class="footer-container" small="false"></div>
     </body>
 </html>
