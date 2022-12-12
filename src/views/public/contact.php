@@ -57,7 +57,7 @@
                 ></div>
                 <div
                     class="input-label-container"
-                    name="Message"
+                    name="message"
                     placeholder="Message"
                     multiline="true"
                     path=""

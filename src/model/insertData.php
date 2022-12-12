@@ -2,7 +2,6 @@
 //connect to db and insert fake data
 // require 'connectDb.php'; // Already declared at source in translation.requests.php
 echo 'connectDb required' . '<br>';
-$db = connectDb();
 
 //deletes existing users and insert fake users
 $queryAddUser = $db->prepare("INSERT INTO users 

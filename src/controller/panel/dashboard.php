@@ -1,4 +1,6 @@
 <?php
+
+$error = '';
 require 'model/user.requests.php';
 require 'model/product.requests.php';
 if (isset($_POST['productUserCode'])) {

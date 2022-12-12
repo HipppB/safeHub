@@ -1,17 +1,16 @@
 <?php
 declare(strict_types=1);
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 // if no session start a session
-if (session_status() === PHP_SESSION_NONE) {
+if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = 'fr';
     session_start();
 }
-
 header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
 header('Cache-Control: no-store, no-cache, must-revalidate');
 header('Cache-Control: post-check=0, pre-check=0', false);
 header('Pragma: no-cache');
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__. '/..');
 $dotenv->load();
 if (!isset($url)) {
     $url = 'index';

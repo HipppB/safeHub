@@ -1,0 +1,5 @@
+FROM nginx:latest
+
+COPY ./nginx/templates /etc/nginx/templates
+
+WORKDIR /app
