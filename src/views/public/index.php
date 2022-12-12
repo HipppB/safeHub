@@ -8,7 +8,7 @@
         <script
             type="text/javascript"
             src="views/scripts/common/components.js"
-
+            async
         ></script>
         <script
             type="text/javascript"
@@ -170,7 +170,6 @@
             </div>
         </div>
         <!-- Footer -->
-
-        <div class="footer-container"></div>
+        <div class="footer-container" small="false"></div>
     </body>
 </html>
