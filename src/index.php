@@ -4,7 +4,7 @@ require_once '../vendor/autoload.php';
 // if no session start a session
 if (!isset($_SESSION['lang'])) {
     $_SESSION['lang'] = 'fr';
-    session_start();
+//    session_start();
 }
 header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
 header('Cache-Control: no-store, no-cache, must-revalidate');

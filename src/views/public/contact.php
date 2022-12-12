@@ -27,7 +27,7 @@
             <!-- <h1 class=> </h1> -->
             <h1 class="ligne"></h1>
         </div>
-        <form>
+        <form method='POST'>
             <div class="input-list-container">
                 <div
                     class="input-label-container"
@@ -57,7 +57,7 @@
                 ></div>
                 <div
                     class="input-label-container"
-                    name="Message"
+                    name="message"
                     placeholder="Message"
                     multiline="true"
                     path=""
@@ -65,6 +65,9 @@
                 <input type="submit" class="button mT25" value="Envoyer" />
             </div>
         </form>
+        <?php if(isset($response)) {
+            echo $response;
+        }?>
         <!-- Footer -->
         <div class="footer-container mT50" small="false"></div>
     </body>

@@ -1,10 +1,10 @@
 <?php
-$error;
-$email = htmlspecialchars($_POST["email"]);
-$password = htmlspecialchars($_POST["password"]);
-if($_SESSION["user"]) {
+$error='';
+$email = !empty($_POST["email"]) ?htmlspecialchars($_POST["email"]): "";
+$password = !empty($_POST["password"]) ?htmlspecialchars($_POST["password"]) : "";
+if(!empty($_SESSION["user"])) {
     header("Location: /panel/dashboard");
-} 
+}
 if(!empty($email) && !empty($password)) {
     require "model/user.requests.php";
 
@@ -13,7 +13,7 @@ if(!empty($email) && !empty($password)) {
     // with the user information
     // If the user doesn't exist or the password is incorrect we need to redirect
     // the user to the login page
-    
+
     if(loginUser($email, $password)) {
         header("Location: /panel/dashboard");
     } else {
