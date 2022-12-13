@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once '../vendor/autoload.php';
 // if no session start a session
 if (!isset($_SESSION['lang'])) {
+    session_start();
     $_SESSION['lang'] = 'fr';
 }
 header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
