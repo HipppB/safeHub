@@ -90,5 +90,9 @@
     "incorrect_id": {
         "fr": "Adresse e-mail ou mot de passe incorrect",
         "en": "Email address or password incorrect"
+    },
+    "mentions": {
+        "fr": "gzlgzbgkzb",
+        "en": "Create account"
     }
 }
