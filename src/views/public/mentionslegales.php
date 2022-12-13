@@ -19,7 +19,14 @@
             <p class="gradienttext title mT50">Mentions légales</p>
             <p class="updateTitle">Dernière mise à jour le X</p>
         </div>
-        <a><?php printTranslation('mentions'); ?></a>
+        <div class="line mT50"></div>
+        <div class="mL20 mR20 mT25 mB50">
+            <div class="mT20">
+                <p class="cguTitle">Les Mentions Légales</p>
+                <p class="paragraphCgu mT10">
+                <?php printTranslation('mentions'); ?></p>
+            </div>
+        </div>    
         <div class="footer-container" small="false"></div>
     </body>
 </html>

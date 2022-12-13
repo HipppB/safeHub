@@ -92,7 +92,7 @@
         "en": "Email address or password incorrect"
     },
     "mentions": {
-        "fr": "<br/> Bonjour les amis <br/> Commnet ça va",
+        "fr": "<br/>- SafeHub est un capteur destiné aux loueurs pour surveiller la température, la fréquence cardiaque et le niveau sonore. <br/>- Les données collectées par SafeHub ne sont pas confidentielles et sont accessibles au loueur et aux locataires.<br/>- L'utilisation de SafeHub est soumise aux lois en vigueur en matière de protection des données personnelles. <br/>- SafeHub ne peut être utilisé que dans le cadre d'un usage légal et ne peut pas être utilisé pour collecter des données illégales ou intrusives. <br/>- Le propriétaire de SafeHub est responsable de l'utilisation légale de ce dispositif et de la protection des données collectées. <br/>- Les utilisateurs de SafeHub doivent respecter les droits des autres et ne pas utiliser ce dispositif dans un but illégal ou nuisible.",
         "en": "Create account"
     }
 }
