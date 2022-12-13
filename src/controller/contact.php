@@ -10,4 +10,3 @@ if(!empty($email) && !empty($subject) && !empty($message)) {
 }else {
     require 'views/public/contact.php';
 }
-echo 'Hello' ."\r\n" . $email  ;
