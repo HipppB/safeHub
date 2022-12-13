@@ -22,7 +22,7 @@
         <div class="home-container">
             <!-- Hero section -->
             <?php require 'views/components/header.php'; ?>
-            
+
             <div class="home-title-container mL25 mR25">
                 <div class="title-container">
                     <h1 class="gradienttext">Domotic for your safety</h1>
@@ -110,9 +110,9 @@
                 <p class="home-subtitle-categories">
                     Ces clients nous ont fait confiance
                 </p>
-    
+
                 <div class="carousel-container mT50 mB200">
-                    <div class="carousel-buttons">                        
+                    <div class="carousel-buttons">
                             <svg
                                 width="9"
                                 height="16"
@@ -182,7 +182,7 @@
                 </div>
             </div>
         </div>
-        <!-- Footer -->
-        <div class="footer-container" small="false"></div>
-    </body>
-</html>
+    Footer -->
+<!--        <div class="footer-container" small="false"></div>-->
+<!--    </body>-->
+<!--</html>-->
