@@ -25,14 +25,14 @@ const inputHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
         <input type="{type}" name="{name}" placeholder="{placeholderInside}" value="{value}"/>
-        <img src="{path}" />
+        <img src="{path}" id="input-{name}"/>
     </div>
 `
 const inputTextAreaHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
         <textarea rows="5" type="{type}" name="{name}" placeholder="{placeholderInside}"></textarea>
-        <img src="{path}" />
+        <img src="{path}" id="input-{name}"/>
     </div>
 `
 
@@ -91,11 +91,16 @@ function searchForInputs() {
             .replace('{type}', type)
             .replace('{name}', name)
             .replace('{name}', name)
+            .replace('{name}', name)
             .replace('{placeholder}', placeholder)
             .replace('{path}', path)
             .replace('{placeholderInside}', placeholderInside)
             .replace('{value}', value)
         console.log(input.innerHTML)
+
+        if (!path) {
+            document.getElementById(`input-${name}`).style.display = 'none'
+        }
     })
 }
 

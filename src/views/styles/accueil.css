@@ -103,8 +103,8 @@
 
 .blob5 {
     position: absolute;
-    left: -1em;
-    top: min(56em, 2300px);
+    left: 3em;
+    top: min(50em, 2000px);
     z-index: -1;
     overflow: hidden;
     width: min(20vw, 270px);
