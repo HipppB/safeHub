@@ -24,7 +24,9 @@
 
         <div class="conseils-container">
             <div>
-                <p class="conseilsTitle">Ajouter question/réponse</p>
+                <p class="conseilsTitle"><?php printTranslation(
+                    'add-question-answer'
+                ); ?></p>
                 <form id="add-tips-form">
                     <div
                         class="input-label-container"
@@ -37,7 +39,9 @@
             </div>
 
             <div class="mT50">
-                <p class="conseilsTitle">Liste des conseils</p>
+                <p class="conseilsTitle"><?php printTranslation(
+                    'tips-list'
+                ); ?></p>
                 <div class="line"></div>
                 <?php foreach ($tips as $tip) {
                     echo "<div>

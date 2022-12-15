@@ -46,10 +46,11 @@
 
             <!-- Nos services -->
             <div class="ourService mT150">
-                <h1 class="gradienttext">Nos services</h1>
+                <h1 class="gradienttext"><?php printTranslation(
+                    'ourservices'
+                ); ?></h1>
                 <p class="home-subtitle-categories">
-                    Un produit innovant respectant nos valeurs,<br />
-                    inventé pour vous
+                <?php printTranslation('innovative-product'); ?>
                 </p>
                 <div class="images-section mT50">
                     <div class="images-container">
@@ -73,28 +74,33 @@
                     <div class="servicePoint">
                         <img src="views/assets/icons/homeInline.svg" class="" />
                         <div class="mL20">
-                            <p class="serviceTitle gradienttext">Sécurité</p>
+                            <p class="serviceTitle gradienttext"><?php printTranslation(
+                                'security'
+                            ); ?></p>
                             <p class="serviceParagraph">
-                                Un dispositif avec une sécurité à l'air du
-                                temps.
+                            <?php printTranslation('security-desc'); ?>
                             </p>
                         </div>
                     </div>
                     <div class="servicePoint">
                         <img src="views/assets/icons/homeInline.svg" class="" />
                         <div class="mL20">
-                            <p class="serviceTitle gradienttext">Fiabilité</p>
+                            <p class="serviceTitle gradienttext"><?php printTranslation(
+                                'fiability'
+                            ); ?></p>
                             <p class="serviceParagraph">
-                                Disponible pour vous à tout moment de la journée
+                            <?php printTranslation('fiability-desc'); ?>
                             </p>
                         </div>
                     </div>
                     <div class="servicePoint">
                         <img src="views/assets/icons/homeInline.svg" class="" />
                         <div class="mL20">
-                            <p class="serviceTitle gradienttext">Sérénité</p>
+                            <p class="serviceTitle gradienttext"><?php printTranslation(
+                                'serenity'
+                            ); ?></p>
                             <p class="serviceParagraph">
-                                Laissez notre produit travailler pour vous
+                            <?php printTranslation('serenity-desc'); ?>
                             </p>
                         </div>
                     </div>
@@ -106,9 +112,11 @@
             <!-- Temoignages -->
             <div class="testimonies mT150">
                 <img src="views/assets/home_blob5.svg" class="blob5" />
-                <h1 class="title gradienttext">Témoignages</h1>
+                <h1 class="title gradienttext"><?php printTranslation(
+                    'testimonials'
+                ); ?></h1>
                 <p class="home-subtitle-categories">
-                    Ces clients nous ont fait confiance
+                <?php printTranslation('testimonials-desc'); ?>
                 </p>
 
                 <div class="carousel-container mT50 mB200">
@@ -148,9 +156,7 @@
                     <div class="slides" data-carousel-slides-container>
                         <div class="slide">
                             <p class="gradienttext">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Lorem ipsum dolor sit amet,
-                                consectetur adipiscing elit.
+                            <?php printTranslation('testimonials-desc2'); ?>
                             </p>
                             <div class="profil-container">
                                 <img
@@ -159,7 +165,9 @@
                                 />
                                 <div class="name-job">
                                     <p class="name gradienttext">John Doe</p>
-                                    <p>Ingénieur</p>
+                                    <p><?php printTranslation(
+                                        'job-engineer'
+                                    ); ?></p>
                                 </div>
                             </div>
                         </div>
