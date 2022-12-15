@@ -13,9 +13,11 @@
         src="../views/scripts/common/components.js"
         async
     ></script>
+    
 </head>
 
 <body>
+
 <div
     class="header-container"
     title="Dashboard"

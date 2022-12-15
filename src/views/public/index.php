@@ -162,13 +162,18 @@
                                     <p>Ingénieur</p>
                                 </div>
                             </div>
-                        </div>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Footer -->
 
-        <div class="footer-container"></div>
+        <?php
+        $large = true;
+        require 'views/components/footer.php';
+        ?>
+
     </body>
 </html>
 
