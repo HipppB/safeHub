@@ -120,6 +120,7 @@
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="carousel-button carousel-button-previous"
+                            
                             >
                                 <path
                                     d="M8 15L1 8L8 1"
@@ -144,13 +145,24 @@
                                 />
                             </svg>
                     </div>
-                    <div class="slides" >
-                        <div class="slide active"><p>Test</p></div>
-                        <div class="slide next"><p>oui</p></div>
-                        <div class="slide "><p>hello</p></div>
-                        <div class="slide "><p>Test</p></div>
-                        <div class="slide prev"><p>Oui</p></div>
-                    </div>
+                    <div class="slides" data-carousel-slides-container>
+                        <div class="slide">
+                            <p class="gradienttext">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit.
+                            </p>
+                            <div class="profil-container">
+                                <img
+                                    src="views/assets/image-profile.png"
+                                    class="profil-image"
+                                />
+                                <div class="name-job">
+                                    <p class="name gradienttext">John Doe</p>
+                                    <p>Ingénieur</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

@@ -96,4 +96,37 @@ foreach ($translations as $key => $value) {
     }
 }
 
+$queryAddTips = $db->prepare("INSERT INTO tips
+    (`id`, `content`) 
+    VALUES (:id, :content)");
+try {
+    $queryAddTips->execute([
+        'id' => '3',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+try {
+    $queryAddTips->execute([
+        'id' => '4',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+try {
+    $queryAddTips->execute([
+        'id' => '5',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
 echo 'Fake translations created';

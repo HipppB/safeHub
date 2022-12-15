@@ -25,30 +25,31 @@
         <div class="conseils-container">
             <div>
                 <p class="conseilsTitle">Ajouter question/réponse</p>
-                <div>
+                <form id="add-tips-form">
                     <div
                         class="input-label-container"
                         name="search"
                         multiline="true"
                         placeholderInside="Conseil..."
                     ></div>
-                </div>
-                <button class="button mT25">Ajouter</button>
+                </form>
+                <input type="submit" class="button mT25" value="Ajouter"/>
             </div>
 
             <div class="mT50">
                 <p class="conseilsTitle">Liste des conseils</p>
                 <div class="line"></div>
-                <div>
-                    <div class="iconParagraph mB25">
-                        <p class="conseilsParagraph">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Lorem ipsum dolor sit amet.
-                        </p>
-                        <img src="../views/assets/icons/close.svg" />
+                <?php foreach ($tips as $tip) {
+                    echo "<div>
+                    <div class='iconParagraph mB25'>
+                        <p class='conseilsParagraph'>" .
+                        $tip['content'] .
+                        "</p>
+                        <img src='../views/assets/icons/close.svg' />
                     </div>
-                    <div class="line"></div>
-                </div>
+                    <div class='line'></div>
+                </div>";
+                } ?>
             </div>
         </div>
 
