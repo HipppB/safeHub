@@ -6,6 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 if (!isset($_SESSION['lang'])) {
+    session_start();
     $_SESSION['lang'] = 'fr';
 }
 header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
