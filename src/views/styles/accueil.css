@@ -98,7 +98,7 @@
     z-index: -1;
     overflow: hidden;
     width: min(10vw, 270px);
-    animation: scaleBlob 3s 2s infinite;
+    animation: scaleBlob 3s infinite;
 }
 
 .blob5 {

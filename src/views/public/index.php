@@ -8,7 +8,7 @@
         <script
             type="text/javascript"
             src="views/scripts/common/components.js"
-
+            async
         ></script>
         <script
             type="text/javascript"
@@ -22,7 +22,7 @@
         <div class="home-container">
             <!-- Hero section -->
             <?php require 'views/components/header.php'; ?>
-            
+
             <div class="home-title-container mL25 mR25">
                 <div class="title-container">
                     <h1 class="gradienttext">Domotic for your safety</h1>
@@ -110,9 +110,9 @@
                 <p class="home-subtitle-categories">
                     Ces clients nous ont fait confiance
                 </p>
-                <div class="carousel-container mT50 mB200" data-carousel>
+
+                <div class="carousel-container mT50 mB200">
                     <div class="carousel-buttons">
-                        <a data-carousel-button-prev>
                             <svg
                                 width="9"
                                 height="16"
@@ -120,6 +120,7 @@
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="carousel-button carousel-button-previous"
+                            
                             >
                                 <path
                                     d="M8 15L1 8L8 1"
@@ -128,8 +129,6 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </a>
-                        <a data-carousel-button-next>
                             <svg
                                 width="9"
                                 height="16"
@@ -145,10 +144,36 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </a>
                     </div>
                     <div class="slides" data-carousel-slides-container>
                         <div class="slide">
+                            <p class="gradienttext">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit.
+                            </p>
+                            <div class="profil-container">
+                                <img
+                                    src="views/assets/image-profile.png"
+                                    class="profil-image"
+                                />
+                                <div class="name-job">
+                                    <p class="name gradienttext">John Doe</p>
+                                    <p>Ingénieur</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+
+        <div class="footer-container"></div>
+    </body>
+</html>
+
+
+<!-- <div class="slide active">
                             <p class="gradienttext">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. Lorem ipsum dolor sit amet,
@@ -169,8 +194,7 @@
                 </div>
             </div>
         </div>
-        <!-- Footer -->
-
-        <div class="footer-container"></div>
-    </body>
-</html>
+    Footer -->
+<!--        <div class="footer-container" small="false"></div>-->
+<!--    </body>-->
+<!--</html>-->

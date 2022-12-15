@@ -2,7 +2,6 @@
 //connect to db and insert fake data
 // require 'connectDb.php'; // Already declared at source in translation.requests.php
 echo 'connectDb required' . '<br>';
-$db = connectDb();
 
 //deletes existing users and insert fake users
 $queryAddUser = $db->prepare("INSERT INTO users 
@@ -95,6 +94,39 @@ foreach ($translations as $key => $value) {
             'value' => $translation,
         ]);
     }
+}
+
+$queryAddTips = $db->prepare("INSERT INTO tips
+    (`id`, `content`) 
+    VALUES (:id, :content)");
+try {
+    $queryAddTips->execute([
+        'id' => '3',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+try {
+    $queryAddTips->execute([
+        'id' => '4',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+try {
+    $queryAddTips->execute([
+        'id' => '5',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
 }
 
 echo 'Fake translations created';

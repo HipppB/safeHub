@@ -65,13 +65,12 @@
                     '</p>';
             } ?>
             <div class="mT25 mB50 s05 urbanist">
-            <?php printTranslation('no_account'); ?> ?
+            <?php printTranslation('no_account'); ?>
                 <a href="./inscription" class="gradienttext urbanist effectHovertext"
                     ><?php printTranslation('signup'); ?></a
                 >
             </div>
         </form>
-        <!-- Footer -->
         <div class="footer-container" small="false"></div>
     </body>
 </html>
