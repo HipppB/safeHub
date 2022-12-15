@@ -3,4 +3,12 @@ require 'model/user.requests.php';
 if (!userIsConnected()) {
     header('Location: /connexion');
 }
-require 'views/auth/ajoutProduit.html';
+
+echo 'hey';
+if (userIsAdmin()) {
+    require 'views/auth/ajoutProduit.html';
+} else {
+    $notfirst = true;
+
+    require 'views/auth/dashboard.php';
+}
