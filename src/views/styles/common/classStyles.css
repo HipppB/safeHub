@@ -16,6 +16,18 @@
 }
 
 /* font size */
+.s015 {
+    font-size: 0.15em;
+}
+.s025 {
+    font-size: 0.25em;
+}
+.s030 {
+    font-size: 0.3em;
+}
+.s035 {
+    font-size: 0.35em;
+}
 .s05 {
     font-size: 0.5em;
 }
@@ -226,4 +238,36 @@
 
 .wm50p {
     max-width: min(80vw, 500px);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.justEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.fcolumn {
+    display: flex;
+    flex-direction: column;
+}
+.frow {
+    display: flex;
+    flex-direction: row;
+}
+
+.w20px {
+    width: 20px;
+}
+
+.w50px {
+    width: 50px;
+}
+.w100p {
+    width: 100%;
 }

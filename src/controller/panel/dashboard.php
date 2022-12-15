@@ -21,7 +21,8 @@ if (!userIsConnected()) {
 }
 
 if (userIsAdmin()) {
-    echo 'To do : Dashboard admin view'; //Dashboard Admin
+    // echo 'To do : Dashboard admin view'; //Dashboard Admin
+    require 'views/auth/dashboardGestionnaire.php';
 } else {
     $products = getUserProducts($_SESSION['user']['id']);
     if (count($products) > 0) {
