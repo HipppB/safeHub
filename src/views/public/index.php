@@ -8,7 +8,7 @@
         <script
             type="text/javascript"
             src="views/scripts/common/components.js"
-            async
+
         ></script>
         <script
             type="text/javascript"
@@ -22,7 +22,7 @@
         <div class="home-container">
             <!-- Hero section -->
             <?php require 'views/components/header.php'; ?>
-
+            
             <div class="home-title-container mL25 mR25">
                 <div class="title-container">
                     <h1 class="gradienttext">Domotic for your safety</h1>
@@ -46,11 +46,10 @@
 
             <!-- Nos services -->
             <div class="ourService mT150">
-                <h1 class="gradienttext"><?php printTranslation(
-                    'ourservices'
-                ); ?></h1>
+                <h1 class="gradienttext">Nos services</h1>
                 <p class="home-subtitle-categories">
-                <?php printTranslation('innovative-product'); ?>
+                    Un produit innovant respectant nos valeurs,<br />
+                    inventé pour vous
                 </p>
                 <div class="images-section mT50">
                     <div class="images-container">
@@ -74,33 +73,28 @@
                     <div class="servicePoint">
                         <img src="views/assets/icons/homeInline.svg" class="" />
                         <div class="mL20">
-                            <p class="serviceTitle gradienttext"><?php printTranslation(
-                                'security'
-                            ); ?></p>
+                            <p class="serviceTitle gradienttext">Sécurité</p>
                             <p class="serviceParagraph">
-                            <?php printTranslation('security-desc'); ?>
+                                Un dispositif avec une sécurité à l'air du
+                                temps.
                             </p>
                         </div>
                     </div>
                     <div class="servicePoint">
                         <img src="views/assets/icons/homeInline.svg" class="" />
                         <div class="mL20">
-                            <p class="serviceTitle gradienttext"><?php printTranslation(
-                                'fiability'
-                            ); ?></p>
+                            <p class="serviceTitle gradienttext">Fiabilité</p>
                             <p class="serviceParagraph">
-                            <?php printTranslation('fiability-desc'); ?>
+                                Disponible pour vous à tout moment de la journée
                             </p>
                         </div>
                     </div>
                     <div class="servicePoint">
                         <img src="views/assets/icons/homeInline.svg" class="" />
                         <div class="mL20">
-                            <p class="serviceTitle gradienttext"><?php printTranslation(
-                                'serenity'
-                            ); ?></p>
+                            <p class="serviceTitle gradienttext">Sérénité</p>
                             <p class="serviceParagraph">
-                            <?php printTranslation('serenity-desc'); ?>
+                                Laissez notre produit travailler pour vous
                             </p>
                         </div>
                     </div>
@@ -112,15 +106,13 @@
             <!-- Temoignages -->
             <div class="testimonies mT150">
                 <img src="views/assets/home_blob5.svg" class="blob5" />
-                <h1 class="title gradienttext"><?php printTranslation(
-                    'testimonials'
-                ); ?></h1>
+                <h1 class="title gradienttext">Témoignages</h1>
                 <p class="home-subtitle-categories">
-                <?php printTranslation('testimonials-desc'); ?>
+                    Ces clients nous ont fait confiance
                 </p>
-
+    
                 <div class="carousel-container mT50 mB200">
-                    <div class="carousel-buttons">
+                    <div class="carousel-buttons">                        
                             <svg
                                 width="9"
                                 height="16"
@@ -156,7 +148,9 @@
                     <div class="slides" data-carousel-slides-container>
                         <div class="slide">
                             <p class="gradienttext">
-                            <?php printTranslation('testimonials-desc2'); ?>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit.
                             </p>
                             <div class="profil-container">
                                 <img
@@ -165,13 +159,10 @@
                                 />
                                 <div class="name-job">
                                     <p class="name gradienttext">John Doe</p>
-                                    <p><?php printTranslation(
-                                        'job-engineer'
-                                    ); ?></p>
+                                    <p>Ingénieur</p>
                                 </div>
-                            </div>
-                            </div>
-                    </div>
+                            </div></div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -180,9 +171,7 @@
         <?php
         $large = true;
         require 'views/components/footer.php';
-        ?>
-
-    </body>
+        ?>    </body>
 </html>
 
 
@@ -202,12 +191,4 @@
                                     <p>Ingénieur</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    Footer -->
-<!--        <div class="footer-container" small="false"></div>-->
-<!--    </body>-->
-<!--</html>-->
+                        </div> -->
