@@ -28,7 +28,9 @@ function showSlides(n) {
         slides[i].style.display = 'none'
     }
 
-    slides[slideIndex - 1].style.display = 'block'
+    if (slides.length > slideIndex) {
+        slides[slideIndex - 1].style.display = 'block'
+    }
 }
 
 // for (let i = 0; i < button.length; i++) {

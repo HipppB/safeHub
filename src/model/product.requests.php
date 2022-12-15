@@ -67,3 +67,29 @@ function addProductToUserWithUserCode($user_code, $user_id)
 
     return $productAdded;
 }
+
+function getUserProducts($user_id)
+{
+    global $db;
+    $query = $db->prepare("SELECT * 
+    FROM products 
+    INNER JOIN products_users 
+    ON products_users.id_user = :user_id");
+    $query->execute([
+        'user_id' => $_SESSION['user']['id'],
+    ]);
+
+    return $query->fetchAll();
+}
+
+function getProducts()
+{
+    // If the user is admin we return all products
+    if (userIsAdmin()) {
+        global $db;
+        $query = $db->prepare('SELECT * FROM products');
+        $query->execute();
+        return $query->fetchAll();
+    }
+    return getUserProducts($_SESSION['user']['id']);
+}
