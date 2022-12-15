@@ -27,7 +27,11 @@
             <!-- <h1 class=> </h1> -->
             <h1 class="ligne"></h1>
         </div>
-        <form>
+        <?php if(!empty($response)) {
+            echo "<div class='error-contact'><p>$response</p></div>";
+        }
+        ?>
+        <form method='POST'>
             <div class="input-list-container">
                 <div
                     class="input-label-container"
@@ -62,7 +66,7 @@
                     multiline="true"
                     path=""
                 ></div>
-                <input type="submit" class="button mT25" value="Envoyer" />
+                <input type="submit" class="button mT25" value="Envoyer" name='submit' />
             </div>
         </form>
         <div class="footer-container mT50" small="false"></div>
