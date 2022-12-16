@@ -18,8 +18,8 @@ $queryAddUser->execute([
     'password' => password_hash($_ENV['PASS'], PASSWORD_DEFAULT),
     'name' => 'admin',
     'lastname' => 'admin',
-    'phone' => '0000000000',
-    'birth_date' => '2022-12-06',
+    'phone' => null,
+    'birth_date' => '2001-12-06',
     'is_admin' => '1',
 ]);
 
@@ -28,8 +28,8 @@ $queryAddUser->execute([
     'password' => password_hash($_ENV['PASS'], PASSWORD_DEFAULT),
     'name' => 'user',
     'lastname' => 'user',
-    'phone' => '0000000000',
-    'birth_date' => '2022-12-06',
+    'phone' => '+33 6 78 90 12 34',
+    'birth_date' => '2002-12-06',
     'is_admin' => '0',
 ]);
 
@@ -80,7 +80,10 @@ try {
 }
 
 // Import translations from json file
-$translations = json_decode(file_get_contents('translations.json'), true);
+$translations = json_decode(
+    file_get_contents('config/translations.json'),
+    true
+);
 $queryAddTranslation = $db->prepare("INSERT INTO translations
     (`key`, `lang`, `value`) 
     VALUES (:key, :lang, :value)");
@@ -94,6 +97,52 @@ foreach ($translations as $key => $value) {
             'value' => $translation,
         ]);
     }
+}
+$translations = json_decode(file_get_contents('translations.json'), true);
+$queryAddTranslation = $db->prepare("INSERT INTO translations
+    (`key`, `lang`, `value`) 
+    VALUES (:key, :lang, :value)");
+foreach ($translations as $key => $value) {
+    foreach ($value as $lang => $translation) {
+        $queryAddTranslation->execute([
+            'key' => $key,
+            'lang' => $lang,
+            'value' => $translation,
+        ]);
+    }
+}
+
+$queryAddTips = $db->prepare("INSERT INTO tips
+    (`id`, `content`) 
+    VALUES (:id, :content)");
+try {
+    $queryAddTips->execute([
+        'id' => '3',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+try {
+    $queryAddTips->execute([
+        'id' => '4',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+try {
+    $queryAddTips->execute([
+        'id' => '5',
+        'content' =>
+            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+} catch (PDOException $e) {
+    echo $e->getMessage();
 }
 
 echo 'Fake translations created';

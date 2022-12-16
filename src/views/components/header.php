@@ -16,9 +16,11 @@
                 onclick="window.location.href = './';"
             />
         </div>
-        <a class="link" href="./connexion"><?php printTranslation(
-            'CONNEXION'
-        ); ?></a>
+        <a class="link" href="./connexion">
+        <?php echo isset($_SESSION['user'])
+            ? 'DASHBOARD'
+            : printTranslation('CONNEXION', true); ?>
+            <?php  ?></a>
         <div class="langage-selector" onclick="toggleLangages()">
         <?php echo $_SESSION['lang'] == 'en'
             ? '<img
@@ -70,7 +72,9 @@
         </div>
         <div class="lineHeader"></div>
         <div class="link-Burger">
-            <a href="./Connexion">Connexion</a>
+            <a href="./Connexion"><?php echo isset($_SESSION['user'])
+                ? 'Dashboard'
+                : 'Connexion'; ?></a>
         </div>
     </div>
 </div>

@@ -17,6 +17,7 @@
      rightAction="window.location.href = './profile';"
 
 ></div>
+<?php require 'views/components/headerPrivate.php'; ?>
 
     <main>
       <?php foreach ($products as $product) {

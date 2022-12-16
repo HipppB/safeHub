@@ -90,5 +90,61 @@
     "incorrect_id": {
         "fr": "Adresse e-mail ou mot de passe incorrect",
         "en": "Email address or password incorrect"
+    },
+    "ourservices": {
+        "fr": "Nos services",
+        "en": "Our services"
+    },
+    "innovative-product": {
+        "fr": "Un produit innovant respectant nos valeurs, inventé pour vous",
+        "en": "An innovative product respecting our values, invented for you"
+    },
+    "security": {
+        "fr": "Sécurité",
+        "en": "Security"
+    },
+    "security-desc": {
+        "fr": "Un dispositif avec une sécurité à l'air du temps.",
+        "en": "A device with a security up to date."
+    },
+    "fiability": {
+        "fr": "Fiabilité",
+        "en": "Reliability"
+    },
+    "fiability-desc": {
+        "fr": "Disponible pour vous à tout moment de la journée",
+        "en": "Available for you at any time of the day"
+    },
+    "serenity": {
+        "fr": "Sérénité",
+        "en": "Serenity"
+    },
+    "serenity-desc": {
+        "fr": "Laissez notre produit travailler pour vous",
+        "en": "Let our product work for you"
+    },
+    "testimonials": {
+        "fr": "Témoignages",
+        "en": "Testimonials"
+    },
+    "testimonials-desc": {
+        "fr": "Ces cliens nous ont fait confiance",
+        "en": "These clients trusted us"
+    },
+    "testimonials-desc2": {
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    "job-engineer": {
+        "fr": "Ingénieur",
+        "en": "Engineer"
+    },
+    "add-question-answer": {
+        "fr": "Ajouter question/réponse",
+        "en": "Add question/answer"
+    },
+    "tips-list": {
+        "fr": "Liste des conseils",
+        "en": "Tips list"
     }
 }

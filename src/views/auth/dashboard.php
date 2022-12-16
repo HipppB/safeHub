@@ -13,9 +13,11 @@
         src="../views/scripts/common/components.js"
         async
     ></script>
+    
 </head>
 
 <body>
+
 <div
     class="header-container"
     title="Dashboard"
@@ -23,22 +25,32 @@
     rightButtonPath="../views/assets/icons/person.svg"
     rightAction="window.location.href = './profile';"
 
-></div>
+
+<?php if (isset($notfirst) && $notfirst == true) {
+    require 'views/components/headerPrivate.php';
+} ?>
 
 <main>
     <div id="text">
+        <?php if (!isset($notfirst)) { ?>
+
+        
         <p>Vous n'avez pas de produit associé à votre compte</p>
         <hr />
+        <?php } ?>
         <p>
             Rentrez le code produit qui vous a été donné afin de les
             importer.
         </p>
     </div>
+
     <form method="POST" id='form'>
         <div
             class="input-label-container"
             name="productUserCode"
             placeholder="Code produit"
+            path=""
+
         ></div>
         <?php if ($error == 401) {
             echo "<p class='error'>Code produit incorrect</p>";
