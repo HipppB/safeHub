@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link rel="stylesheet" href="../views/styles/common/index.css" />
     <link rel="stylesheet" href="../views/styles/headerPrivate.css" />
     <link rel="stylesheet" href="../views/styles/dashboard.css" />
-    <link rel="stylesheet" href="../views/styles/common/index.css" />
 
     <script
         type="text/javascript"
@@ -17,6 +17,14 @@
 </head>
 
 <body>
+
+<div
+    class="header-container"
+    title="Dashboard"
+    leftButtonPath='../views/assets/icons/backButton.svg'
+    rightButtonPath="../views/assets/icons/person.svg"
+    rightAction="window.location.href = './profile';"
+
 
 <?php if (isset($notfirst) && $notfirst == true) {
     require 'views/components/headerPrivate.php';
