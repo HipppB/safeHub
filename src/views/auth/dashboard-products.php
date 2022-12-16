@@ -20,6 +20,7 @@
 <?php require 'views/components/headerPrivate.php'; ?>
 
     <main>
+  
       <?php foreach ($products as $product) {
           echo "
           <section>

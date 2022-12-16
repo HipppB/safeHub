@@ -62,6 +62,16 @@ try {
         'db_max' => '0',
         'temp_max' => '0',
     ]);
+    $queryAddProduct->execute([
+        'product_name' => 'Produit horrible',
+        'room_name' => 'Salle à manger',
+        'house_name' => 'Maison 1',
+        'product_code' => 'DZKKOLPDLZQ',
+        'user_code' => 'HEGH',
+        'expiration_date' => '2023-12-06',
+        'db_max' => '0',
+        'temp_max' => '0',
+    ]);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
