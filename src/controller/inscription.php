@@ -1,6 +1,7 @@
 <?php
 $error;
 $email = htmlspecialchars($_POST['email']);
+
 if (empty($email)) {
     require 'views/public/inscription.php';
 } else {

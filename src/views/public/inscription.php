@@ -60,7 +60,7 @@
                 <div
                     class="input-label-container"
                     type="email"
-                    name="mail"
+                    name="email"
                     placeholder="<?php printTranslation('email'); ?>"
                     path="views/assets/icons/mail.svg"
                 ></div>

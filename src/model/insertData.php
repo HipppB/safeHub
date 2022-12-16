@@ -43,12 +43,22 @@ $queryAddProduct = $db->prepare("INSERT INTO products
 
 try {
     $queryAddProduct->execute([
-        'product_name' => 'produit magnifique',
+        'product_name' => 'Produit magnifique',
         'room_name' => 'salon',
-        'house_name' => 'maison 1',
+        'house_name' => 'Maison 1',
         'product_code' => 'NDIJQDQZZQ',
         'user_code' => 'HEGJ',
-        'expiration_date' => '2022-12-06',
+        'expiration_date' => '2023-12-06',
+        'db_max' => '0',
+        'temp_max' => '0',
+    ]);
+    $queryAddProduct->execute([
+        'product_name' => 'Produit horrible',
+        'room_name' => 'Salle à manger',
+        'house_name' => 'Maison 1',
+        'product_code' => 'DZKKOLPDLZQ',
+        'user_code' => 'HEGJ',
+        'expiration_date' => '2023-12-06',
         'db_max' => '0',
         'temp_max' => '0',
     ]);

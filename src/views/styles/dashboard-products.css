@@ -8,6 +8,7 @@ main {
 
     justify-content: center;
     display: flex;
+    flex-direction: column;
 }
 main section {
     /* justify-content: center; */
