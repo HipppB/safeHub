@@ -26,3 +26,16 @@ h2 {
 .graphList img {
     margin: 0.2rem;
 }
+
+.graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    border: none;
+}
+
+.graph:hover {
+    cursor: pointer;
+}
