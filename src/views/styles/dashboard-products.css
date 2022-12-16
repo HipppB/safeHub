@@ -5,26 +5,36 @@ main {
     /* background-color: red; */
     max-width: min(80vw, 800px);
     align-self: center;
+
+    justify-content: center;
+    display: flex;
+}
+main section {
+    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 header {
     display: flex;
     align-items: center;
     margin: 0.4rem;
+    justify-self: left;
+
+    width: 80vw;
 }
 
 h2 {
     font-weight: normal;
+
     margin-left: 0.5rem;
 }
 
 .graphList {
     display: flex;
     flex-wrap: wrap;
-}
-
-.graphList img {
-    margin: 0.2rem;
+    justify-content: center;
 }
 
 .graph {
@@ -39,3 +49,16 @@ h2 {
 .graph:hover {
     cursor: pointer;
 }
+
+.graphList div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 0.2rem;*/
+    margin-bottom: 15px;
+}
+/* 
+.graphList img {
+    margin-bottom: 2px;
+} */

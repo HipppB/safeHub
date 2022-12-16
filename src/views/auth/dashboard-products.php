@@ -33,26 +33,26 @@
             </header>
             <div class='graphList'>
             <a href='./datas'>
-            
+            <div>
                <img src='../views/assets/graph.svg' alt='graph'/>
-              <p>Température</p>
+             Température</div>
 </a>
 
                             <a href='./datas'>
-
+                            <div>
                         <img src='../views/assets/graph.svg' alt='graph'/>
-                        <p>Humidité</p></a>
+                        Humidité</div></a>
            
                           <a href='./datas'>
-
+                          <div>
               <img src='../views/assets/graph.svg' alt='graph'/>
-                <p>CO2</p>
+CO2</div>
                 </a>
 
                           <a href='./datas'>
-
+                          <div>
                <img src='../views/assets/graph.svg' alt='graph'/>
-                <p>Signal Sonore</p></a>
+Signal Sonore</div></a>
              
             </div>
         </section>
