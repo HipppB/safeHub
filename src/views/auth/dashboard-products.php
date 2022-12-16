@@ -31,24 +31,27 @@
               ")</h2>
             </header>
             <div class='graphList'>
-            <div class='graph'>
+            <a href='./datas'>
+            
                <img src='../views/assets/graph.svg' alt='graph'/>
               <p>Température</p>
-</div>
-<div class='graph'>
-                
+</a>
+
+                            <a href='./datas'>
+
                         <img src='../views/assets/graph.svg' alt='graph'/>
-                        <p>Humidité</p>
-</div>
+                        <p>Humidité</p></a>
            
-              <div class='graph'>
+                          <a href='./datas'>
+
               <img src='../views/assets/graph.svg' alt='graph'/>
                 <p>CO2</p>
-</div>
-              <div class='graph'>
+                </a>
+
+                          <a href='./datas'>
+
                <img src='../views/assets/graph.svg' alt='graph'/>
-                <p>Signal Sonore</p>
-</div>
+                <p>Signal Sonore</p></a>
              
             </div>
         </section>
