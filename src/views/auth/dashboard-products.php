@@ -12,11 +12,7 @@
 </head>
 <body>
 
-<div class='header-container' title='Dashboard' leftButtonPath='../views/assets/icons/backButton.svg'
-     rightButtonPath="../views/assets/icons/person.svg"
-     rightAction="window.location.href = './profile';"
 
-></div>
 <?php require 'views/components/headerPrivate.php'; ?>
 
     <main>
