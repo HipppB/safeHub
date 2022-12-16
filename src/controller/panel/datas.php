@@ -4,4 +4,4 @@ require 'model/user.requests.php';
 if (!userIsConnected()) {
     header('Location: /connexion');
 }
-require 'views/auth/datas.html';
+require 'views/auth/datas.php';

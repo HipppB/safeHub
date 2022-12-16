@@ -17,14 +17,7 @@
 </head>
 <body>
 
-<div
-        class="header-container"
-        title="Données"
-        leftButtonPath='../views/assets/icons/backButton.svg'
-        rightButtonPath="../views/assets/icons/person.svg"
-        rightAction="window.location.href = './profile';"
-></div>
-
+<?php require 'views/components/headerPrivate.php'; ?>
     <div class="chartContainer">
         <div class="chart">
 
