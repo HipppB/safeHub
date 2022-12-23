@@ -14,14 +14,8 @@
         <title>SafeHub - Profil</title>
     </head>
     <body>
-        <div
-            class="header-container"
-            title="Profil"
-            leftButtonPath="../views/assets/icons/backButton.svg"
-            rightButtonPath="../views/assets/icons/logout.svg"
-            rightAction="window.location.href = '/logout';"
-            width="25px"
-        ></div>
+    <?php require 'views/components/headerPrivate.php'; ?>
+
 
         <div class="central-container">
             <h2 class="gradienttext">

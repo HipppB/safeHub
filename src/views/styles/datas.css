@@ -1,0 +1,65 @@
+.chartContainer {
+
+    flex:1;
+    display: flex;
+    height: 100%;
+    margin: 0 1rem;
+    align-items: center;
+}
+
+.chart {
+    margin: 0px auto;
+    padding: 1rem;
+    width: 100%;
+    height: 30vh;
+    /*border-width: 3px;*/
+    /*border-style: solid;*/
+    /*border-image: linear-gradient(#f76b1c, #fad961) 1;*/
+    /*border-radius: 15px;*/
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(#f76b1c, #fad961) border-box;
+    border-radius: 20px;
+    border: 2px solid transparent;
+}
+
+.dataContainer {
+    flex: 2;
+    margin: 0 1rem
+}
+
+.metrics-data {
+    border-top: #F9F9F9 solid 1px;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.metrics-hour {
+    color: #b4b4b4;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+body {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .chartContainer{
+        justify-content: center;
+    }
+    .chart {
+        max-width: 500px;
+    }
+}
+
+
