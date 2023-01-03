@@ -3,12 +3,12 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-
-function sendMail($address, $subject, $body) {
+$mail = new PHPMailer(true);
+function sendEmail($reciever, $body, $subject) {
+    global $mail;
     try {
-        $mail = new PHPMailer(true);
         //Server settings
-        $mail->SMTPDebug = $_ENV['MAIL_SMTP_DEBUG'];                   // Enable verbose debug output
+        $mail->SMTPDebug = $_ENV['MAIL_SMTP_DEBUG'];                                       // Enable verbose debug output
         $mail->isSMTP();                                            // Set mailer to use SMTP
         $mail->Host       = $_ENV['MAIL_HOST'];                       // Specify main and backup SMTP servers
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -16,17 +16,17 @@ function sendMail($address, $subject, $body) {
         $mail->Password   = $_ENV['MAIL_PASSWORD'];
         $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
         $mail->Port       = 587;                                    // TCP port to connect to
-        $mail->setFrom($_ENV['MAIL_USERNAME'], $_ENV['MAiL_FROM']);
-        $mail->addAddress($address);
+        $mail->setFrom($_ENV['MAIL_USERNAME'], $_ENV['MAIL_FROM']);
+        $mail->addAddress($reciever);
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body    = $body;
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         $mail->send();
-        return "Message has been sent";
+        return 'Message has been sent';
 
     }catch (Exception $e) {
         return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
-};
+}
 

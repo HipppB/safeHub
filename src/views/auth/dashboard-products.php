@@ -3,19 +3,17 @@
 <head>
   <meta charset='UTF-8'>
   <title>Dashboard - Liste des produits</title>
-  <link rel='stylesheet' href='../views/styles/common/index.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel='stylesheet' href='../views/styles/common/index.css'>
   <link rel="stylesheet" href="../views/styles/headerPrivate.css" />
   <link rel="stylesheet" href="../views/styles/dashboard-products.css" />
   <script type='text/javascript' src='../views/scripts/common/components.js' async></script>
-  <meta name='viewport' content='width=device-width'>
 </head>
 <body>
 
-<div class='header-container' title='Dashboard' leftButtonPath='../views/assets/icons/backButton.svg'
-     rightButtonPath="../views/assets/icons/person.svg"
-     rightAction="window.location.href = './profile';"
 
-></div>
+<?php require 'views/components/headerPrivate.php'; ?>
 
     <main>
       <?php foreach ($products as $product) {
@@ -30,10 +28,28 @@
               ")</h2>
             </header>
             <div class='graphList'>
+            <a href='./datas'>
+            
+               <img src='../views/assets/graph.svg' alt='graph'/>
+              <p>Température</p>
+</a>
+
+                            <a href='./datas'>
+
+                        <img src='../views/assets/graph.svg' alt='graph'/>
+                        <p>Humidité</p></a>
+           
+                          <a href='./datas'>
+
               <img src='../views/assets/graph.svg' alt='graph'/>
-              <img src='../views/assets/graph.svg' alt='graph'/>
-              <img src='../views/assets/graph.svg' alt='graph'/>
-              <img src='../views/assets/graph.svg' alt='graph'/>
+                <p>CO2</p>
+                </a>
+
+                          <a href='./datas'>
+
+               <img src='../views/assets/graph.svg' alt='graph'/>
+                <p>Signal Sonore</p></a>
+             
             </div>
         </section>
         ";
