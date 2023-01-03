@@ -38,7 +38,7 @@ function updateTranslation($key, $value, $lang)
 {
     global $db;
     $query = $db->prepare(
-        'UPDATE translations SET value = :value WHERE id = :id, lang = :lang'
+        'UPDATE translations SET value = :value WHERE id = :id AND lang = :lang'
     );
     try {
         $query->execute([
