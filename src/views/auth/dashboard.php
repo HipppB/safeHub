@@ -17,11 +17,20 @@
 </head>
 
 <body>
+
+<div
+    class="header-container"
+    title="Dashboard"
+    leftButtonPath='../views/assets/icons/backButton.svg'
+    rightButtonPath="../views/assets/icons/person.svg"
+    rightAction="window.location.href = './profile';"
+></div>
+
 <?php if (isset($notfirst) && $notfirst == true) {
     require 'views/components/headerPrivate.php';
-} else
+} else {
     require 'views/components/headerPrivate.php';
-    ?>
+} ?>
 
 <main>
     <div id="text">

@@ -1,6 +1,7 @@
 <?php
-include 'views/public/index.php'; // du html
-///
+require 'model/user.requests.php';
 
-// require "views/public/index.html";  // du html
+$isConnected = userIsConnected();
+include 'views/public/index.php'; // du html
+
 ?>

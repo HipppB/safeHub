@@ -32,7 +32,9 @@
                        <?php printTranslation('home_sub2'); ?>
                     </p>
                     <a href="./connexion" class="outline-button mT100"
-                        ><?php printTranslation('connect'); ?></a
+                        ><?php echo $isConnected
+                            ? 'DASHBOARD'
+                            : printTranslation('connect', true); ?></a
                     >
                 </div>
                 <div>
