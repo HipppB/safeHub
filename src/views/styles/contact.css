@@ -15,3 +15,15 @@ body {
     min-height: calc(100vh - 50px);
     flex-direction: column;
 }
+
+.error-contact {
+    align-self: center;
+    background-color: #f76B1Ca0;
+    justify-content: center;
+    display: flex;
+    margin: 2rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    align-items: center;
+}

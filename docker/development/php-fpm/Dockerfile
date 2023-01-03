@@ -1,9 +1,4 @@
-FROM php:8.1-fpm-alpine
-
-RUN apk add --no-cache autoconf g++ make \
-    && pecl install xdebug \
-    && rm -rf /tmp/pear \
-    && docker-php-ext-enable xdebug
+FROM php:7.4.12-fpm-alpine
 
 RUN docker-php-ext-install pdo pdo_mysql
 

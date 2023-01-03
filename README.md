@@ -14,5 +14,23 @@ The easiest way to achieve this is to install docker desktop. the link here:
 Then, you can run the following command in the directory of the project:
     
 ```
-docker-compose up
+docker-compose up -d --build
+```
+
+### Feel the database
+
+Open a terminal in the root directory of the project (safeHub) and open a terminal.
+Then, run the following command:
+
+```
+ docker exec -it safehub-php-fpm-1 sh 
+```
+
+Then, run the following command:
+
+```
+cd src/config
+```
+```
+php init.php
 ```

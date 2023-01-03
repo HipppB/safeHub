@@ -26,6 +26,30 @@ function getUser($id, $setInSession)
     }
     return $user;
 }
+
+function getUsers()
+{
+    //If the user is admin we return all users
+    if (userIsAdmin()) {
+        global $db;
+        $query = $db->prepare('SELECT * FROM users');
+        $query->execute();
+        return $query->fetchAll();
+    }
+    //If the user is gestionnaire on a product, we return all users of this product
+    if (userIsGestionnaire()) {
+        global $db;
+        $query = $db->prepare(
+            'SELECT * FROM users INNER JOIN products_users ON products_users.id_user = users.id WHERE products_users.id_product = :id_product'
+        );
+        $query->execute([
+            'id_product' => $_SESSION['user']['id_product'],
+        ]);
+        return $query->fetchAll();
+    }
+    //If the user is a simple user, we return the user
+    return [$_SESSION['user']];
+}
 function loginUser($email, $password)
 {
     $user = getUserByEmail($email);
@@ -54,19 +78,9 @@ function userIsAdmin()
     }
     return false;
 }
-
-function getUserProducts($user_id)
+function userIsGestionnaire()
 {
-    global $db;
-    $query = $db->prepare("SELECT * 
-    FROM products 
-    INNER JOIN products_users 
-    ON products_users.id_user = :user_id");
-    $query->execute([
-        'user_id' => $_SESSION['user']['id'],
-    ]);
-
-    return $query->fetchAll();
+    return false;
 }
 
 function register($name, $lastname, $email, $password)
