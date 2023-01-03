@@ -66,7 +66,7 @@ try {
         'product_name' => 'Produit horrible',
         'room_name' => 'Salle à manger',
         'house_name' => 'Maison 1',
-        'product_code' => 'DZKKOLPDLZQ',
+        'product_code' => 'DUKKOLPDLZQ',
         'user_code' => 'HEGH',
         'expiration_date' => '2023-12-06',
         'db_max' => '0',
