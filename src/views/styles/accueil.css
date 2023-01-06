@@ -1,3 +1,7 @@
+.body {
+    width: 100vw;
+    overflow: hidden;
+}
 .home-container {
     width: min(80vw, 1450px);
     align-self: center;
