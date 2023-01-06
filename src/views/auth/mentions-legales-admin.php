@@ -24,6 +24,14 @@
         <div class="icon-container-modify mR25 mT50">
             <a> <img src="../views/assets/icons/modify.svg" /></a>
         </div>
+        <form action="updateTranslation" method="post">
+            <label for="mentions">Champ à mettre à jour :</label><br>
+            <input type="text" id="mentions" name="mentions"><br>
+            <input type="submit" value="Envoyer">
+        </form>
+        <form action="updateTranslation" method="post">
+            <input type="text" id="mentions">
+        </form>
         <form>
             <p class="paragraphCgu mT10">
                 <?php printTranslation('mentions'); ?>

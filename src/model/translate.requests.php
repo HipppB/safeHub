@@ -42,6 +42,8 @@ function updateTranslation($key, $value, $lang)
     );
     try {
         $query->execute([
+            'id' => $id,
+            'lang' => $lang,
             'value' => $value,
         ]);
     } catch (PDOException $error) {
