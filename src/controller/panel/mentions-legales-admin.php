@@ -4,4 +4,4 @@ require 'model/translate.requests.php';
 if (!userIsConnected()) {
     header('Location: /connexion');
 }
-include 'views/auth/mentions-legales-admin.html';
+include 'views/auth/mentions-legales-admin.php';
