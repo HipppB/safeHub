@@ -59,9 +59,6 @@
 
     
         <!-- Footer -->
-    <?php
-    $large = false;
-    require 'views/components/footer.php';
-    ?>
+    <?php require 'views/components/footer.php'; ?>
     </body>
 </html>

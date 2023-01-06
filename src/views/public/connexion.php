@@ -72,10 +72,7 @@
             </div>
         </form>
         <!-- Footer -->
-        <?php
-        $large = true;
-        require 'views/components/footer.php';
-        ?>
+        <?php require 'views/components/footer.php'; ?>
 
     </body>
 </html>
