@@ -181,7 +181,8 @@
         <?php
         $large = true;
         require 'views/components/footer.php';
-        ?>    </body>
+        ?>
+        </body>
 </html>
 
 

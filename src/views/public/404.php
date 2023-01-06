@@ -40,6 +40,10 @@
                 </div>
             </div>
         </div>
-        <div class="footer-container" small="false"></div>
+        <!-- Footer -->
+        <?php
+        $large = true;
+        require 'views/components/footer.php';
+        ?>
     </body>
 </html>
