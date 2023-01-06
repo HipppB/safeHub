@@ -57,6 +57,9 @@ Signal Sonore</div></a>
       } ?>
     </main>
     <!-- Footer -->
-    <div class="footer-container" small="true"></div>
+    <?php
+    $large = false;
+    require 'views/components/footer.php';
+    ?>
 </body>
 </html>

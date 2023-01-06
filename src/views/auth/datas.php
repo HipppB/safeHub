@@ -38,8 +38,9 @@
 
 
 
-<div class="footer-container" small="true"></div>
 
+<!-- Footer -->
+<?php require 'views/components/footer.php'; ?>
 </body>
 
 <script>

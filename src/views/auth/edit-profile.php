@@ -82,6 +82,10 @@
             </div>
         </form>
         <!-- Footer -->
-        <div class="footer-container" small="true"></div>
+        <!-- Footer -->
+    <?php
+    $large = false;
+    require 'views/components/footer.php';
+    ?>
     </body>
 </html>

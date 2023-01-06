@@ -163,8 +163,12 @@
         } ?>
         </div>
 
-        <div class="footer-container mT100"></div>
-
+        <div class="mT100"></div>
+<!-- Footer -->
+<?php
+$large = false;
+require 'views/components/footer.php';
+?>
 
     </body>
 </html>

@@ -44,7 +44,11 @@
             <a class="button-outlined"  href="./ticketuser"> Nouveau ticket </a>
         </div>
         <img src="../views/assets/message_icon.svg" class="messageIcon" />
-        <div class="footer-container mT100" small="true"></div>
-
+        <div class="mT100"></div>
+<!-- Footer -->
+<?php
+$large = false;
+require 'views/components/footer.php';
+?>
     </body>
 </html>
