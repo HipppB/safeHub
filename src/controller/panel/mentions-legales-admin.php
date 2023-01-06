@@ -1,6 +1,5 @@
 <?php
 require 'model/user.requests.php';
-require 'model/translate.requests.php';
 if (!userIsConnected()) {
     header('Location: /connexion');
 }
