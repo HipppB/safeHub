@@ -38,7 +38,9 @@
                     >
                 </div>
                 <div>
-                    <img src="views/assets/home_blob.svg" class="blob" />
+
+                        <img src="views/assets/home_blob.svg" class="blob" />
+
                     <img
                         src="views/assets/home_image.svg"
                         class="mT100 homeImage"
