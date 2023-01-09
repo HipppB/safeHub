@@ -9,12 +9,24 @@ $submit = !empty($_POST["submit"]) ? htmlspecialchars($_POST['submit']): "";
 $response = "";
 
 if(!empty($email) && !empty($body) && !empty($firstname) && !empty($surname)) {
-    $body = "Email: $email <br/> 
+    $body = "<h1>Une nouvelle demande de contact est arrivée</h1>
+<h2>Coordonnées du contact:</h2>
+<p>
+
+Email: $email <br/> 
     $firstname <br/>    
     $surname <br/>
     $telephone <br/>        
-Message:<br/> $body";
-    $response =sendEmail($email ,$body, 'Contact');
+</p>
+<p>
+Message: 
+</p>
+<p>
+
+$body
+</p>
+";
+    $response =sendEmail($_ENV['MAIL_USERNAME'] ,$body, 'Contact');
 }else if($submit){
     $response = "Veuillez remplir tous les champs";
 }
