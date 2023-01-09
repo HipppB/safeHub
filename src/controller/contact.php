@@ -1,7 +1,7 @@
 <?php
 require 'controller/mail.php';
 $email = !empty($_POST["email"]) ? htmlspecialchars($_POST['email']) : "";
-$body = !empty($_POST["message"]) ? htmlspecialchars($_POST['message']): "";
+$body = !empty($_POST["message"]) ? nl2br($_POST['message']): "";
 $firstname = !empty($_POST["firstname"]) ? htmlspecialchars($_POST['firstname']): "";
 $surname = !empty($_POST["surname"]) ? htmlspecialchars($_POST['surname']): "";
 $telephone = !empty($_POST["telephone"]) ? htmlspecialchars($_POST['telephone']): "";
@@ -13,21 +13,22 @@ if(!empty($email) && !empty($body) && !empty($firstname) && !empty($surname)) {
 <h2>Coordonnées du contact:</h2>
 <p>
 
-Email: $email <br/> 
-    $firstname <br/>    
+Email: $email <br/>
+    $firstname <br/>
     $surname <br/>
-    $telephone <br/>        
+    $telephone <br/>
 </p>
-<p>
-Message: 
-</p>
+<h2>
+Message:
+</h2>
 <p>
 
 $body
 </p>
 ";
-    $response =sendEmail($_ENV['MAIL_USERNAME'] ,$body, 'Contact');
+    $response =sendEmail($_ENV['MAIL_CONTACT'] ,$body, 'Contact');
 }else if($submit){
     $response = "Veuillez remplir tous les champs";
 }
+
 include 'views/public/contact.php';

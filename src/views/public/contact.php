@@ -66,6 +66,8 @@
                     multiline="true"
                     path=""
                 ></div>
+
+                </textarea>
                 <input type="submit" class="button mT25" value="Envoyer" name='submit' />
             </div>
         </form>
