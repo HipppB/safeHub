@@ -31,32 +31,24 @@
                 echo 'Bien mis a jour';
             } ?></p>
             <h3>Pour la version française</h3>
-            <textarea type="text" id="mentionsFr" name="mentionsFr" cols="25" rows="5"> <?php echo translate(
+            <textarea type="text" id="mentionsFr" name="mentionsFr" cols="60" rows="10"> <?php echo translate(
                 'mentions',
                 'fr'
             ); ?></textarea>
             </br>
             <h3>Pour la version anglaise</h3>
-            <textarea type="text" id="mentionsEn" name="mentionsEn" cols="25" rows="5"> <?php echo translate(
+            <textarea type="text" id="mentionsEn" name="mentionsEn" cols="60" rows="10"> <?php echo translate(
                 'mentions',
                 'en'
             ); ?></textarea>
-            <input type="submit" value="Envoyer">
+            <input type="submit" class="button mT25" value="Envoyer" name='submit' />
         </form>
         <form>
             <h3>Le rendu</h3>
-            <p class="paragraphCgu mT10">
+            <p class="paragraphCgu mT10 rendu">
                 <?php printTranslation('mentions'); ?>
             </p>
         </form>
-        <div class="mL20 mR20 mB50">
-            <div class="mT20">
-                <p class="cguTitle">1. Lorem</p>
-                <p class="paragraphCgu mT10">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-            </div>
-        </div>
         <!-- Footer -->
         <div class="footer-container" small="true"></div>
     </body>
