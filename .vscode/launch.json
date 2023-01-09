@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open modifProfile.html",
-            "file": "c:\\Users\\massi\\Documents\\ISEP\\APP\\safeHub-1\\views\\modifProfile.html"
+            "file": "c:\\MAMP\\htdocs\\safeHub\\src"
         }
     ]
 }

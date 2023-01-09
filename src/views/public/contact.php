@@ -27,10 +27,9 @@
             <!-- <h1 class=> </h1> -->
             <h1 class="ligne"></h1>
         </div>
-        <?php if(!empty($response)) {
+        <?php if (!empty($response)) {
             echo "<div class='error-contact'><p>$response</p></div>";
-        }
-        ?>
+        } ?>
         <form method='POST'>
             <div class="input-list-container">
                 <div
@@ -69,6 +68,9 @@
                 <input type="submit" class="button mT25" value="Envoyer" name='submit' />
             </div>
         </form>
-        <div class="footer-container mT50" small="false"></div>
+        <div class="mT50"></div>
+        <!-- Footer -->
+        <?php require 'views/components/footer.php'; ?>
+
     </body>
 </html>

@@ -1,6 +1,8 @@
 <div class="footer-container">
+
     <p class="gradienttext mT10">Crée par AllSafe - Copyright 2022</p>
-    <?php if (isset($large) && $large) { ?>
+
+    <?php if (strpos($_SERVER['REQUEST_URI'], 'panel') === false) { ?>
     
             <a href="./cgu">Conditions générales d'utilisation</a>
             <a href="./mentionslegales">Mentions légales</a>

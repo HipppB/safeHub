@@ -43,6 +43,9 @@
 
             <input type="submit" class="button mT50" value="Envoyer" />
         </form>
-        <div class="footer-container mT100" small="false"></div>
+        <div class="mT100"></div>
+        <!-- Footer -->
+        <?php require 'views/components/footer.php'; ?>
+
     </body>
 </html>

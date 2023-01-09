@@ -49,4 +49,6 @@
             <input type="submit" class="button mT25" value="Réinitialiser" />
         </form>
     </body>
+    <!-- Footer -->
+    <?php require 'views/components/footer.php'; ?>
 </html>

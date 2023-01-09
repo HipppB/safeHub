@@ -67,18 +67,18 @@ function changeFormSubmit() {
                     try {
                         var response = JSON.parse(response)
                     } catch (e) {
-                        window.alert(
-                            'Une erreur est intervenue, veuillez réessayer plus tard.'
-                        )
+                        // window.alert(
+                        //     'Une erreur est intervenue, veuillez réessayer plus tard.'
+                        // )
                     }
                     // if response is successful
-                    window.alert(response.message)
+                    window.alert('Votre profil à été modifié !')
                 }
                 // get result
                 sendXMLHttpObject(formData, '', callback)
             })
     } catch (e) {
-        window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
+        // window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
         console.log(e)
     }
 }

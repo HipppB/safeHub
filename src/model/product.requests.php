@@ -53,16 +53,15 @@ function addProductToUserWithUserCode($user_code, $user_id)
         $productUser = $querydb->fetch();
         // check if user has already this product
 
-        if ($productUser[0] > 0) {
-            continue;
+        if ($productUser[0] == '0') {
+            $query->execute([
+                'id_user' => $user_id,
+                'id_product' => $product['id'],
+                'id_role' => 2,
+                'date' => '2022-12-06', //Expiration date... To be changed to depend on user code
+            ]);
+            $productAdded++;
         }
-        $query->execute([
-            'id_user' => $user_id,
-            'id_product' => $product['id'],
-            'id_role' => 2,
-            'date' => '2022-12-06', //Expiration date... To be changed to depend on user code
-        ]);
-        $productAdded++;
     }
 
     return $productAdded;
