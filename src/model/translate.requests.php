@@ -38,16 +38,16 @@ function updateTranslation($key, $value, $lang)
 {
     global $db;
     $query = $db->prepare(
-        'UPDATE translations SET value = :value WHERE id = :id AND lang = :lang'
+        'UPDATE translations SET value = :value WHERE `key` = :key AND `lang` = :lang'
     );
     try {
         $query->execute([
-            'id' => $id,
+            'key' => $key,
             'lang' => $lang,
             'value' => $value,
         ]);
+        return 'success';
     } catch (PDOException $error) {
-        echo $error;
-        return 'Undefined';
+        return $error;
     }
 }

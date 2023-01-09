@@ -24,36 +24,34 @@
         <div class="icon-container-modify mR25 mT50">
             <a> <img src="../views/assets/icons/modify.svg" /></a>
         </div>
-        <form action="updateTranslation" method="post">
-            <label for="mentions">Champ à mettre à jour :</label><br>
-            <input type="text" id="mentions" name="mentions"><br>
+        <form method="post">
+            <label for="mentions">Champs à mettre à jour :<img src="../views/assets/icons/modify.svg" /></label><br>
+            
+            <p><?php if ($responseEn == 'success') {
+                echo 'Bien mis a jour';
+            } ?></p>
+            <h3>Pour la version française</h3>
+            <textarea type="text" id="mentionsFr" name="mentionsFr" cols="25" rows="5"> <?php echo translate(
+                'mentions',
+                'fr'
+            ); ?></textarea>
+            </br>
+            <h3>Pour la version anglaise</h3>
+            <textarea type="text" id="mentionsEn" name="mentionsEn" cols="25" rows="5"> <?php echo translate(
+                'mentions',
+                'en'
+            ); ?></textarea>
             <input type="submit" value="Envoyer">
         </form>
-        <form action="updateTranslation" method="post">
-            <input type="text" id="mentions">
-        </form>
         <form>
+            <h3>Le rendu</h3>
             <p class="paragraphCgu mT10">
                 <?php printTranslation('mentions'); ?>
             </p>
-            <br />
-            <input type="text" id="mentions" /><br />
         </form>
         <div class="mL20 mR20 mB50">
             <div class="mT20">
                 <p class="cguTitle">1. Lorem</p>
-                <p class="paragraphCgu mT10">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-            </div>
-            <div class="mT20">
-                <p class="cguTitle">2. Lorem</p>
-                <p class="paragraphCgu mT10">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </p>
-            </div>
-            <div class="mT20">
-                <p class="cguTitle">3. Lorem</p>
                 <p class="paragraphCgu mT10">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
