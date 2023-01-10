@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-around;
     background-color: rgb(10, 10, 10);
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 .footer-container a {
@@ -26,4 +26,5 @@
 .footer-container p {
     margin: 0;
     font-size: 0.5em;
+    margin-bottom: 10px;
 }

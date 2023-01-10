@@ -1,6 +1,14 @@
+.body {
+    width: 100vw;
+    overflow: hidden;
+}
 .home-container {
-    width: min(80vw, 1450px);
+    overflow-x: hidden;
+    position: relative;
+    /* padding-inline: 5vw; */
+    width: 100vw;
     align-self: center;
+    justify-content: center;
 }
 
 .home-title-container {
@@ -55,9 +63,10 @@
     right: -3em;
     top: 10em;
     z-index: -1;
-    overflow: hidden;
+
     width: min(90vw, 800px);
     animation: scaleBlob 3s infinite;
+    /* background-color: red; */
 }
 @keyframes scaleBlob {
     0% {
@@ -155,8 +164,16 @@
 
 .images-container {
     display: flex;
-    width: 76vw;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
 }
+/* @media screen and (min-width: 460px) {
+    .images-container {
+        display: flex;
+        width: 400px;
+    }
+} */
 
 .servicePoints {
     display: flex;
@@ -284,7 +301,6 @@
 
 @media screen and (min-width: 1300px) {
     .home-container {
-        width: min(80vw, 1450px);
         align-self: center;
         display: flex;
         flex-direction: column;

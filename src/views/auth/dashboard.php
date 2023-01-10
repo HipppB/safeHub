@@ -17,11 +17,13 @@
 </head>
 
 <body>
+
+
 <?php if (isset($notfirst) && $notfirst == true) {
     require 'views/components/headerPrivate.php';
-} else
+} else {
     require 'views/components/headerPrivate.php';
-    ?>
+} ?>
 
 <main>
     <div id="text">
@@ -52,7 +54,6 @@
     </form>
 </main>
 <!-- Footer -->
-<div class="footer-container" small="true"></div>
-</body>
+<?php require 'views/components/footer.php'; ?>
 </html>
 

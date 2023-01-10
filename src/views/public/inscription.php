@@ -60,7 +60,7 @@
                 <div
                     class="input-label-container"
                     type="email"
-                    name="mail"
+                    name="email"
                     placeholder="<?php printTranslation('email'); ?>"
                     path="views/assets/icons/mail.svg"
                 ></div>
@@ -99,6 +99,7 @@
                 >
             </div>
         </form>
-        <div class="footer-container" small="false"></div>
+        <!-- Footer -->
+        <?php require 'views/components/footer.php'; ?>
     </body>
 </html>
