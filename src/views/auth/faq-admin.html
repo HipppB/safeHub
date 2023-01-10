@@ -24,18 +24,30 @@
         <div class="faq-container">
             <p class="titleFAQ">Ajouter question/réponse</p>
             <div>
-                <div
-                    class="input-label-container"
-                    name="search"
-                    path=""
-                    placeholderInside="Question..."
-                ></div>
-                <div
+                <form
+                    method="post"
+                    action="../controller/panel/faq-admin.php"
                     class="input-label-container mT15"
-                    name="search"
-                    multiline="true"
-                    placeholderInside="Réponse..."
-                ></div>
+                >
+                    <input
+                        type="text"
+                        name="question"
+                        placeholder="Question..."
+                    />
+                </form>
+
+                <form
+                    method="post"
+                    action="../controller/panel/faq-admin.php"
+                    class="input-label-container mT15"
+                >
+                    <input
+                        type="text"
+                        name="reponse"
+                        multiline="true"
+                        placeholderInside="Réponse..."
+                    />
+                </form>
             </div>
             <button class="button mT10">Ajouter</button>
 
