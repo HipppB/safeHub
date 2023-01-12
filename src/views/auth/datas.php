@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../views/styles/common/index.css" />
     <link rel="stylesheet" href="../views/styles/headerPrivate.css" />
     <link rel="stylesheet" href="../views/styles/datas.css" />
+    <script type='text/javascript' src='../views/scripts/chart.js'></script>
     <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
