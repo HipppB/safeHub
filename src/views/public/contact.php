@@ -15,6 +15,7 @@
             src="views/scripts/common/components.js"
             async
         ></script>
+        <script type="text/javascript" src="views/scripts/contact.js" async></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -31,20 +32,24 @@
             echo "<div class='error-contact'><p>$response</p></div>";
         }
         ?>
-        <form method='POST'>
+        <form  method='post' id='contact_form'>
             <div class="input-list-container">
                 <div
                     class="input-label-container"
                     name="firstname"
                     placeholder="Prénom"
                     path=""
-                ></div>
+                >
+                </div>
+                <span class='error-block'></span>
                 <div
                     class="input-label-container"
                     name="surname"
                     placeholder="Nom"
                     path=""
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     type="email"
@@ -52,6 +57,8 @@
                     placeholder="Email"
                     path=""
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     type="number"
@@ -59,6 +66,8 @@
                     placeholder="Telephone"
                     path=""
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     name="message"
@@ -66,6 +75,8 @@
                     multiline="true"
                     path=""
                 ></div>
+                <span class='error-block'></span>
+
                 <input type="submit" class="button mT25" value="Envoyer" name='submit' />
             </div>
         </form>
