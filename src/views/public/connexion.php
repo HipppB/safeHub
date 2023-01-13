@@ -14,23 +14,20 @@
     </head>
     <body>
     <?php require 'views/components/header.php'; ?>
-        <img
-            src="views/assets/icons/backButton.svg"
-            class="backButton"
-            onclick="window.location.href = './';"
-        />
-        <img src="views/assets/hex.svg" class="blob" />
-        <div class="title-container">
-            <h1 class="title gradienttext"><?php printTranslation(
-                'CONNEXION'
-            ); ?></h1>
-            <p class="subtitle"><?php printTranslation(
-                'rebonjour'
-            ); ?>, <br /><?php printTranslation('manquer'); ?> !</p>
-        </div>
-        <div class="responsiveCo"></div>
-        <div class="illu-container">
-            <img src="views/assets/form.svg" class="illu" />
+    <div class="authentificationPageContainer"> 
+        <!-- <img src="views/assets/hex.svg" class="blob" /> -->
+        <div class="title-blob-container">
+            <div class="title-container">
+                <h1 class="title gradienttext"><?php printTranslation(
+                    'CONNEXION'
+                ); ?></h1>
+                <p class="subtitle"><?php printTranslation(
+                    'rebonjour'
+                ); ?>, <br /><?php printTranslation('manquer'); ?>&nbsp!</p>
+            </div>
+            <div class="illu-container">
+                <img src="views/assets/form.svg" class="illu" />
+            </div>
         </div>
         <form method="POST">
             <div class="input-list-container">
@@ -49,7 +46,7 @@
                     path="views/assets/icons/lock.svg"
                 ></div>
             </div>
-
+                
             <a
                 href="./forgotPassword"
                 class="gradienttext urbanist s05 mT10 rightAl effectHovertext"
@@ -71,6 +68,7 @@
                 >
             </div>
         </form>
+    </div>
         <!-- Footer -->
         <?php require 'views/components/footer.php'; ?>
 
