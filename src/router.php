@@ -33,6 +33,7 @@ class Router
         $this->routes[] = $route;
         return $route;
     }
+
     public function run()
     {
         return end($this->routes)->call();

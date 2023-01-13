@@ -233,7 +233,7 @@ function searchforAll() {
     searchForInputs()
 
     searchForHeader()
-    searchForFooter()
+
     searchErrors()
 }
 
