@@ -1,6 +1,8 @@
-.illu-container {
-    height: min(40vmin, 300px);
+@media screen and (min-width: 768px) {
+    form {
+        margin-top: 50px;
+    }
 }
-.illu {
-    top: 0px;
+.title-blob-container {
+    align-self: auto;
 }

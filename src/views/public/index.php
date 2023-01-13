@@ -38,7 +38,9 @@
                     >
                 </div>
                 <div>
-                    <img src="views/assets/home_blob.svg" class="blob" />
+
+                        <img src="views/assets/home_blob.svg" class="blob" />
+
                     <img
                         src="views/assets/home_image.svg"
                         class="mT100 homeImage"
@@ -178,10 +180,8 @@
             </div>
         </div>
         <!-- Footer -->
-        <?php
-        $large = true;
-        require 'views/components/footer.php';
-        ?>    </body>
+        <?php require 'views/components/footer.php'; ?>
+        </body>
 </html>
 
 

@@ -223,7 +223,7 @@ function onClickLangage(lang) {
     console.log(window.location.pathname)
     sendXMLHttpObject(
         '',
-        `../action?action=changeLang&lang=${lang}&path=${window.location.pathname}`,
+        `${window.location.pathname}?action=changeLang&lang=${lang}`,
         callback,
         'GET'
     )
@@ -233,7 +233,7 @@ function searchforAll() {
     searchForInputs()
 
     searchForHeader()
-    searchForFooter()
+
     searchErrors()
 }
 

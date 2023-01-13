@@ -1,12 +1,13 @@
 <?php
 //connect to db and insert fake data
-// require 'connectDb.php'; // Already declared at source in translation.requests.php
+require_once 'connectDb.php'; // Already declared at source in translation.requests.php
 echo 'connectDb required' . '<br>';
-
+$db = connectDb();
 //deletes existing users and insert fake users
 $queryAddUser = $db->prepare("INSERT INTO users 
     (`name`, `lastname`, `password`, `email`, `phone`, `birth_date`, `is_admin`) 
     VALUES (:name, :lastname, :password, :email, :phone, :birth_date, :is_admin)");
+echo 'request prepared' . '<br>';
 
 $queryDeleteAllUser = $db->prepare('DELETE FROM users');
 echo 'request prepared' . '<br>';

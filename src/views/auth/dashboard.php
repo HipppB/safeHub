@@ -54,7 +54,6 @@
     </form>
 </main>
 <!-- Footer -->
-<div class="footer-container" small="true"></div>
-</body>
+<?php require 'views/components/footer.php'; ?>
 </html>
 
