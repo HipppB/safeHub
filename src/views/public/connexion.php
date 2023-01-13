@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <title>SafeHub - Connexion</title>
-        <link rel="stylesheet" href="views/styles/common/index.css" />
         <link rel="stylesheet" href="views/styles/connexion.css" />
+        <link rel="stylesheet" href="views/styles/identificationPagesStyles.css" />
+
+        <link rel="stylesheet" href="views/styles/common/index.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
             type="text/javascript"
@@ -14,8 +16,9 @@
     </head>
     <body>
     <?php require 'views/components/header.php'; ?>
+    <img src="views/assets/hex.svg" class="blob" />
+
     <div class="authentificationPageContainer"> 
-        <!-- <img src="views/assets/hex.svg" class="blob" /> -->
         <div class="title-blob-container">
             <div class="title-container">
                 <h1 class="title gradienttext"><?php printTranslation(

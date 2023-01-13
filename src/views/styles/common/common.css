@@ -313,3 +313,22 @@ h1,
         display: none;
     }
 }
+
+.backButton {
+    display: none;
+}
+
+body {
+    /* padding-inline: 5vw; */
+    /* width: 90vw; */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    min-height: calc(100vh - 50px);
+    /* background-color: red; */
+}
+.title-container {
+    margin-top: 60px;
+    margin-left: 20px;
+}

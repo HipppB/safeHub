@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <title>SafeHub - Inscription</title>
-        <link rel="stylesheet" href="views/styles/common/index.css" />
+        <link rel="stylesheet" href="views/styles/identificationPagesStyles.css" />
         <link rel="stylesheet" href="views/styles/inscription.css" />
 
-        <link rel="stylesheet" href="views/styles/common/classStyles.css" />
-        <link rel="stylesheet" href="views/styles/common/topNavBar.css" />
-        <link rel="stylesheet" href="views/styles/common/footer.css" />
+        <link rel="stylesheet" href="views/styles/common/index.css" />
+
+    
 
         <script
             type="text/javascript"
@@ -20,21 +20,21 @@
     </head>
     <body>
         <?php require 'views/components/header.php'; ?>
-        <img
-            src="views/assets/icons/backButton.svg"
-            class="backButton"
-            onclick="window.location.href = './';"
-        />
+  
         <img src="views/assets/hex_incri.svg" class="blob" />
+        <div class="authentificationPageContainer"> 
+        <div class="title-blob-container">
+
         <div class="title-container">
             <h1 class="title gradienttext"><?php printTranslation(
                 'inscription'
             ); ?></h1>
-            <p class="subtitle"><?php printTranslation('welcome'); ?> !</p>
+            <p class="subtitle"><?php printTranslation('welcome'); ?>&nbsp!</p>
         </div>
 
         <div class="illu-container">
             <img src="views/assets/form_inscri.svg" class="illu" />
+        </div>
         </div>
 
         <form method="POST">
@@ -80,11 +80,13 @@
             </div>
 
             <div class="urbanist s05 mT10 leftAl">
-                En vous inscrivant, vous acceptez nos
-                <a href="./CGU" class="gradienttext inter mT15">CGU</a>
-                et nos <br />
+            <?php printTranslation('bySubscribing'); ?>
+                <a href="./CGU" class="gradienttext inter mT15"><?php printTranslation(
+                    'terms'
+                ); ?></a>
+                <?php printTranslation('andour'); ?> <br />
                 <a href="./mentionslegales" class="gradienttext inter mT15"
-                    >Mentions Légales ?</a
+                    ><?php printTranslation('legal'); ?></a
                 >
             </div>
 
@@ -99,6 +101,8 @@
                 >
             </div>
         </form>
+        </div>
+
         <!-- Footer -->
         <?php require 'views/components/footer.php'; ?>
     </body>
