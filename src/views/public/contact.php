@@ -16,6 +16,9 @@
             async
         ></script>
 
+
+        <script type="text/javascript" src="views/scripts/contact.js" async></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
@@ -31,43 +34,56 @@
             echo "<div class='error-contact'><p>$response</p></div>";
         }
         ?>
-        <form method='POST'>
+        <form id="contact_form" method='POST'>
             <div class="input-list-container">
                 <div
                     class="input-label-container"
                     name="firstname"
                     placeholder="Prénom"
                     path=""
+                    value='<?php echo $firstname; ?>'
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     name="surname"
                     placeholder="Nom"
                     path=""
+                    value='<?php echo $surname; ?>'
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     type="email"
                     name="email"
                     placeholder="Email"
                     path=""
+                    value='<?php echo $email; ?>'
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     type="number"
                     name="telephone"
                     placeholder="Telephone"
                     path=""
+                    value='<?php echo $telephone; ?>'
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     name="message"
                     placeholder="Message"
                     multiline="true"
                     path=""
+                    value="<?php echo strip_tags($message); ?>"
                 ></div>
+                <span class='error-block'></span>
 
-                </textarea>
                 <input type="submit" class="button mT25" value="Envoyer" name='submit' />
             </div>
         </form>
