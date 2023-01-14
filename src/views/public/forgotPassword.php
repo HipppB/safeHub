@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Mot de passe oublié</title>
+        <title>SafeHub - <?php printTranslation('forgot_password'); ?></title>
         <link rel="stylesheet" href="views/styles/identificationPagesStyles.css" />
 
         <link rel="stylesheet" href="views/styles/common/index.css" />
@@ -22,10 +22,11 @@
         <div class="title-blob-container">
 
         <div class="title-container">
-            <h1 class="title gradienttext">Mot de passe oublié</h1>
+            <h1 class="title gradienttext"><?php printTranslation(
+                'forgot_password'
+            ); ?></h1>
             <p class="subtitle">
-                Veuillez entrer l’adresse email <br />
-                associée à votre compte&nbsp!
+            <?php printTranslation('enter_email'); ?>
             </p>
         </div>
         <div class="illu-container">
@@ -38,12 +39,14 @@
                     class="input-label-container"
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="<?php printTranslation('email'); ?>"
                     path="views/assets/icons/mail.svg"
                 ></div>
             </div>
 
-            <input type="submit" class="button mT50" value="Envoyer" />
+            <input type="submit" class="button mT50" value="<?php printTranslation(
+                'send'
+            ); ?>" />
         </form>
         </div>
         <div class="mT50"></div>

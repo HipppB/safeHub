@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Réinitialiser le mot de passe</title>
+        <title>SafeHub - <?php printTranslation('resetPassword'); ?></title>
         <link rel="stylesheet" href="views/styles/common/index.css" />
 
         <link rel="stylesheet" href="views/styles/resetPassword.css" />
@@ -22,8 +22,12 @@
         />
         <img src="views/assets/hex_reset.svg" class="blob" />
         <div class="title-container">
-            <h1 class="title gradienttext">Réinitialiser le mot de passe</h1>
-            <p class="subtitle">Veuillez entrer votre nouveau mot de passe !</p>
+            <h1 class="title gradienttext"><?php printTranslation(
+                'resetPassword'
+            ); ?></h1>
+            <p class="subtitle"><?php printTranslation(
+                'enterNewPassword'
+            ); ?>&bnsp!</p>
         </div>
         <div class="illu-container">
             <img src="views/assets/form_reset.svg" class="illu" />
@@ -34,19 +38,21 @@
                     class="input-label-container"
                     type="password"
                     name="password"
-                    placeholder="Mot de passe"
+                    placeholder="<?php printTranslation('password'); ?>"
                     path="views/assets/icons/lock.svg"
                 ></div>
                 <div
                     class="input-label-container"
                     type="password"
                     name="password"
-                    placeholder="Confirmer mot de passe"
+                    placeholder="<?php printTranslation('confirmPassword'); ?>"
                     path="views/assets/icons/lock.svg"
                 ></div>
             </div>
 
-            <input type="submit" class="button mT25" value="Réinitialiser" />
+            <input type="submit" class="button mT25" value="<?php printTranslation(
+                'reset'
+            ); ?>" />
         </form>
     </body>
     <!-- Footer -->

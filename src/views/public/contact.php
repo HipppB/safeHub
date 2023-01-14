@@ -26,7 +26,9 @@
         <div class="title-container">
             <h1 class="title gradienttext">Contact</h1>
 
-            <p class="mT25 mB25 s05 urbanist">Parlez nous de nos produits !</p>
+            <p class="mT25 mB25 s05 urbanist"><?php printTranslation(
+                'talkToUs'
+            ); ?>&nbsp!</p>
             <!-- <h1 class=> </h1> -->
             <h1 class="ligne"></h1>
         </div>
@@ -39,7 +41,7 @@
                 <div
                     class="input-label-container"
                     name="firstname"
-                    placeholder="Prénom"
+                    placeholder="<?php printTranslation('prenom'); ?>"
                     path=""
                     value='<?php echo $firstname; ?>'
                 ></div>
@@ -48,7 +50,7 @@
                 <div
                     class="input-label-container"
                     name="surname"
-                    placeholder="Nom"
+                    placeholder="<?php printTranslation('nom'); ?>"
                     path=""
                     value='<?php echo $surname; ?>'
                 ></div>
@@ -58,9 +60,10 @@
                     class="input-label-container"
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="<?php printTranslation('email'); ?>"
                     path=""
                     value='<?php echo $email; ?>'
+                    required
                 ></div>
                 <span class='error-block'></span>
 
@@ -68,7 +71,7 @@
                     class="input-label-container"
                     type="number"
                     name="telephone"
-                    placeholder="Telephone"
+                    placeholder="<?php printTranslation('phone'); ?>"
                     path=""
                     value='<?php echo $telephone; ?>'
                 ></div>
@@ -80,11 +83,16 @@
                     placeholder="Message"
                     multiline="true"
                     path=""
+                    required
                     value="<?php echo strip_tags($message); ?>"
                 ></div>
                 <span class='error-block'></span>
 
-                <input type="submit" class="button mT25" value="Envoyer" name='submit' />
+               <input type="submit" class="button mT25" value="<?php printTranslation(
+                    'send'
+                ); ?>" name='submit' />
+      
+                
             </div>
         </form>
         <div class="mT50"></div>

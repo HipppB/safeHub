@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Conditions générales d'utilisations</title>
+        <title>SafeHub - <?php printTranslation('terms'); ?></title>
         <link rel="stylesheet" href="views/styles/common/index.css" />
         <link rel="stylesheet" href="views/styles/cguMentionsLegales.css" />
 
@@ -18,7 +18,9 @@
     <?php require 'views/components/header.php'; ?>
         <div class="mL20">
             <p class="gradienttext title mT50">CGU</p>
-            <p class="updateTitle">Dernière mise à jour le 12/12/2022</p>
+            <p class="updateTitle"><?php printTranslation(
+                'lastUpdated'
+            ); ?> 12/12/2022</p>
         </div>
         <div class="line mT50"></div>
         <div class="mL20 mR20 mT25 mB50">

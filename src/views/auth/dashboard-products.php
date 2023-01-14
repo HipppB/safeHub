@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
-  <title>Dashboard - Liste des produits</title>
+  <title>Dashboard - <?php printTranslation('product_list'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel='stylesheet' href='../views/styles/common/index.css'>
@@ -32,13 +32,17 @@
             <a href='./datas'>
             <div>
                <img src='../views/assets/graph.svg' alt='graph'/>
-             Température</div>
+             " .
+              printTranslation('temperature', true) .
+              "</div>
 </a>
 
                             <a href='./datas'>
                             <div>
                         <img src='../views/assets/graph.svg' alt='graph'/>
-                        Humidité</div></a>
+                        " .
+              printTranslation('humidity', true) .
+              "</div></a>
            
                           <a href='./datas'>
                           <div>
@@ -49,7 +53,9 @@ CO2</div>
                           <a href='./datas'>
                           <div>
                <img src='../views/assets/graph.svg' alt='graph'/>
-Signal Sonore</div></a>
+               " .
+              printTranslation('sound', true) .
+              "</div></a>
              
             </div>
         </section>
