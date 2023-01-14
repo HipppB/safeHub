@@ -43,7 +43,7 @@
 
                     <img
                         src="views/assets/home_image.svg"
-                        class="mT100 homeImage"
+                        class=" homeImage"
                     />
                 </div>
             </div>
@@ -178,10 +178,12 @@
                         </div>
                 </div>
             </div>
+            <?php require 'views/components/footer.php'; ?>
+
         </div>
         <!-- Footer -->
-        <?php require 'views/components/footer.php'; ?>
         </body>
+
 </html>
 
 

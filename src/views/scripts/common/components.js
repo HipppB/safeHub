@@ -24,14 +24,14 @@ css :
 const inputHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
-        <input type="{type}" name="{name}" placeholder="{placeholderInside}" value="{value}"/>
+        <input type="{type}" name="{name}" placeholder="{placeholderInside}" id="input-input-{name}" value="{value}"/>
         <img src="{path}" id="input-{name}"/>
     </div>
 `
 const inputTextAreaHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
-        <textarea rows="5" type="{type}" name="{name}" placeholder="{placeholderInside}">{value}</textarea>
+        <textarea rows="5" type="{type}" name="{name}" id="input-input-{name}" placeholder="{placeholderInside}">{value}</textarea>
         <img src="{path}" id="input-{name}"/>
     </div>
 `
@@ -81,6 +81,8 @@ function searchForInputs() {
         const isTextArea = input.getAttribute('multiline')
         const value = input.getAttribute('value') || ''
         let newInput = inputHTML
+        // check if attribute required exists
+        const isRequired = input.hasAttribute('required')
 
         if (isTextArea === 'true') {
             console.log('IS TEXT AREA')
@@ -92,13 +94,19 @@ function searchForInputs() {
             .replace('{name}', name)
             .replace('{name}', name)
             .replace('{name}', name)
+            .replace('{name}', name)
             .replace('{placeholder}', placeholder)
             .replace('{path}', path)
             .replace('{placeholderInside}', placeholderInside)
             .replace('{value}', value)
         console.log(input.innerHTML)
 
+        document.getElementById(`input-input-${name}`).required = isRequired
+
         if (!path) {
+            document.getElementById(`input-input-${name}`).style.paddingRight =
+                '20px'
+
             document.getElementById(`input-${name}`).style.display = 'none'
         }
     })
