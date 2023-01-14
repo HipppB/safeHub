@@ -16,6 +16,9 @@
             async
         ></script>
 
+
+        <script type="text/javascript" src="views/scripts/contact.js" async></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
@@ -31,36 +34,49 @@
         </div>
         <?php if (!empty($response)) {
             echo "<div class='error-contact'><p>$response</p></div>";
-        } ?>
-        <form method='POST'>
+        }
+        ?>
+        <form id="contact_form" method='POST'>
             <div class="input-list-container">
                 <div
                     class="input-label-container"
                     name="firstname"
                     placeholder="<?php printTranslation('prenom'); ?>"
                     path=""
+                    value='<?php echo $firstname; ?>'
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     name="surname"
                     placeholder="<?php printTranslation('nom'); ?>"
                     path=""
+                    value='<?php echo $surname; ?>'
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     type="email"
                     name="email"
                     placeholder="<?php printTranslation('email'); ?>"
                     path=""
+                    value='<?php echo $email; ?>'
                     required
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     type="number"
                     name="telephone"
                     placeholder="<?php printTranslation('phone'); ?>"
                     path=""
+                    value='<?php echo $telephone; ?>'
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     name="message"
@@ -68,10 +84,15 @@
                     multiline="true"
                     path=""
                     required
+                    value="<?php echo strip_tags($message); ?>"
                 ></div>
-                <input type="submit" class="button mT25" value="<?php printTranslation(
+                <span class='error-block'></span>
+
+               <input type="submit" class="button mT25" value="<?php printTranslation(
                     'send'
                 ); ?>" name='submit' />
+      
+                
             </div>
         </form>
         <div class="mT50"></div>

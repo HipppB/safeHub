@@ -1,7 +1,7 @@
 /* Importing this file will add the following components to the pages :
 - Header Public Pages
 <div class="topNavBar-container"></div>
-css : 
+css :
     <link rel="stylesheet" href="./styles/common/topNavBar.css" />
 
 
@@ -31,7 +31,7 @@ const inputHTML = `
 const inputTextAreaHTML = `
 <label for="{name}">{placeholder}</label>
     <div class="input-container">
-        <textarea rows="5" type="{type}" name="{name}" id="input-input-{name}" placeholder="{placeholderInside}"></textarea>
+        <textarea rows="5" type="{type}" name="{name}" id="input-input-{name}" placeholder="{placeholderInside}">{value}</textarea>
         <img src="{path}" id="input-{name}"/>
     </div>
 `
