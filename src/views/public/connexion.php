@@ -40,6 +40,7 @@
                     name="email"
                     placeholder="<?php printTranslation('email'); ?>"
                     path="views/assets/icons/mail.svg"
+                    required
                 ></div>
                 <div
                     class="input-label-container"
@@ -47,6 +48,7 @@
                     name="password"
                     placeholder="<?php printTranslation('password'); ?>"
                     path="views/assets/icons/lock.svg"
+                    required
                 ></div>
             </div>
                 
