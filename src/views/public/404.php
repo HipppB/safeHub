@@ -21,9 +21,11 @@
             <div class="home-title-container">
                 <div class="title-container">
                     <h1 class="gradienttext">404</h1>
-                    <p class="home-subtitle">La page demandé n'existe pas</p>
+                    <p class="home-subtitle"><?php printTranslation(
+                        '404'
+                    ); ?></p>
                     <a href="/" class="outline-button mT100"
-                        >Retourner à l'accueil</a
+                        ><?php printTranslation('backHome'); ?></a
                     >
                 </div>
                 <div>
