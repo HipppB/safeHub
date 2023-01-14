@@ -8,8 +8,6 @@
 
         <link rel="stylesheet" href="views/styles/common/index.css" />
 
-    
-
         <script
             type="text/javascript"
             src="views/scripts/common/components.js"
