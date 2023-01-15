@@ -15,7 +15,6 @@
             src="../views/scripts/common/components.js"
             async
     >
-        const datas = <?php echo "test"; ?>;
     </script>
 </head>
 <body>
