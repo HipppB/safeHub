@@ -38,7 +38,7 @@ let datas = [];
 sendXMLHttpObject('', 'http://localhost/get-metrics', function (response) {
     datas = JSON.parse(response);
     datas =datas.slice(datas.length - 10, datas.length);
-    new Chart(ctx, {
+    let chart  =new Chart(ctx, {
         // The type of chart we want to create
         type: 'bar',
 // The data for our dataset
@@ -63,6 +63,7 @@ sendXMLHttpObject('', 'http://localhost/get-metrics', function (response) {
         },
 // Configuration options go here
         options: {
+            barThickness: 30,
             plugins: {
                 legend: {
                     display: false,
@@ -74,13 +75,9 @@ sendXMLHttpObject('', 'http://localhost/get-metrics', function (response) {
             maintainAspectRatio: false,
             scales: {
                 x: {
-                    display: false,
+                    display: window.innerWidth >= 1000,
                     ticks: {
                         display: true,
-                        callback: function(val, index) {
-                            // Hide every 2nd tick label
-                            return index % 2 === 0 ? this.getLabelForValue(val) : '';
-                        },
                     },
                     grid: {
                         display: false,
@@ -92,7 +89,12 @@ sendXMLHttpObject('', 'http://localhost/get-metrics', function (response) {
             }
 
         }
+    })
+    window.addEventListener('resize', () => {
+        chart.options.scales.x.display = window.innerWidth >= 1000;
+        chart.update();
     });
-
 });
+
+
 
