@@ -24,7 +24,8 @@
 
 .dataContainer {
     flex: 2;
-    margin: 0 1rem
+    padding: 0 1rem;
+    overflow: scroll;
 }
 
 .metrics-data {
@@ -60,6 +61,13 @@ p {
     .chart {
         max-width: 500px;
     }
+}
+
+.content-container {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 
