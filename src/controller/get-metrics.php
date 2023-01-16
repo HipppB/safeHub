@@ -1,3 +1,11 @@
 <?php
 require 'model/productDatas.request.php';
-echo json_encode(retrieveProductDatasByType("carbon_dioxide"));
+$productId = !empty($_GET['productId']) ? htmlspecialchars($_GET['productId']) : "";
+$type = !empty($_GET['type']) ? htmlspecialchars($_GET['type']) : "";
+
+if(!empty($productId) && !empty($type)){
+    $datas = retrieveProductDatasByType($type, $productId);
+    echo json_encode($datas);
+} else {
+    echo json_encode([]);
+}
