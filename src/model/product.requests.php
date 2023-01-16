@@ -71,11 +71,10 @@ function getUserProducts($user_id)
 {
     global $db;
     $query = $db->prepare("SELECT * 
-    FROM products 
-    INNER JOIN products_users 
-    ON products_users.id_user = :user_id");
+    FROM products_users 
+    INNER JOIN products ON products_users.id_product = products.id WHERE id_user = :userId");
     $query->execute([
-        'user_id' => $_SESSION['user']['id'],
+        'userId' => $user_id,
     ]);
 
     return $query->fetchAll();

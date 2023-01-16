@@ -136,6 +136,7 @@ foreach ($translations as $key => $value) {
 $queryAddTips = $db->prepare("INSERT INTO tips
     (`id`, `content`) 
     VALUES (:id, :content)");
+
 try {
     $queryAddTips->execute([
         'id' => '3',
@@ -167,3 +168,83 @@ try {
 }
 
 echo 'Fake translations created';
+
+// insert fake data types and fake datas
+
+$queryAddMetricsTypes = $db->prepare("INSERT INTO types
+    (`id`, `type_name`) 
+    VALUES (:id, :name)");
+
+try {
+    $queryAddMetricsTypes->execute([
+        'id' => '1',
+        'name' => 'temperature',
+    ]);
+    $queryAddMetricsTypes->execute([
+        'id' => '2',
+        'name' => 'humidity',
+    ]);
+    $queryAddMetricsTypes->execute([
+        'id' => '3',
+        'name' => 'carbon_dioxide',
+    ]);
+    $queryAddMetricsTypes->execute([
+        'id' => '4',
+        'name' => 'sound_level',
+    ]);
+
+    echo 'Fake data types created';
+
+
+
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+
+$queryAddMetrics = $db->prepare("INSERT INTO metrics (`id`, `id_product`, `id_type`, `data`, `date`) VALUES (:id, :id_product, :type_id, :value, :date)");
+$getProducts = $db->prepare('SELECT * FROM products');
+
+try {
+    $getProducts->execute();
+    $products = $getProducts->fetchAll();
+    $i = 0;
+    while ($i < 100) {
+        $timestamp = strtotime("2023-01-14 12:47:14")+(60*60*$i);
+        $date = new DateTime();
+        $date->setTimestamp($timestamp);
+        $queryAddMetrics->execute([
+            'id' => $i,
+            'id_product' => $products[0]['id'],
+            'type_id' => '1',
+            'value' => rand(0, 100),
+            'date' => $date->format('Y-m-d H:i:s'),
+        ]);
+        $queryAddMetrics->execute([
+            'id' => $i + 1,
+            'id_product' => $products[0]['id'],
+            'type_id' => '2',
+            'value' => rand(0, 100),
+            'date' => $date->format('Y-m-d H:i:s'),
+        ]);
+        $queryAddMetrics->execute([
+            'id' => $i + 2,
+            'id_product' => $products[0]['id'],
+            'type_id' => '3',
+            'value' => rand(0, 100),
+            'date' => $date->format('Y-m-d H:i:s'),
+        ]);
+        $queryAddMetrics->execute([
+            'id' => $i + 3,
+            'id_product' => $products[0]['id'],
+            'type_id' => '4',
+            'value' => rand(0, 100),
+            'date' => $date->format('Y-m-d H:i:s'),
+        ]);
+        $i += 4;
+    }
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+
+echo 'Fake metrics created';
