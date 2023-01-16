@@ -1,3 +1,10 @@
+<?php
+
+/** @var array $products */
+
+?>
+
+
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -16,7 +23,7 @@
 <?php require 'views/components/headerPrivate.php'; ?>
 
     <main>
-  
+
       <?php foreach ($products as $product) {
           echo "
           <section>
