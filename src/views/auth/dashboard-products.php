@@ -9,7 +9,7 @@
 <html lang='en'>
 <head>
   <meta charset='UTF-8'>
-  <title>Dashboard - Liste des produits</title>
+    <title>Dashboard - <?php printTranslation('product_list'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel='stylesheet' href='../views/styles/common/index.css'>
@@ -62,6 +62,6 @@ Signal Sonore</div></a>
 <?php      } ?>
     </main>
     <!-- Footer -->
-    <div class="footer-container" small="true"></div>
+    <?php require 'views/components/footer.php'; ?>
 </body>
 </html>
