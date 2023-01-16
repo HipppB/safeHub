@@ -71,3 +71,27 @@ p {
 }
 
 
+.dataNotFound {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+}
+
+.outline-button {
+    border: 1px solid #f76b1c;
+    border-radius: 50px;
+    padding: 10px 50px;
+    font-size: 0.5em;
+    color: #f76b1c;
+}
+
+.outline-button:hover {
+    border: transparent;
+    border-radius: 50px;
+    padding: 11px 52px;
+    font-size: 0.5em;
+    background: linear-gradient(130deg, #f76b1c, #fad961);
+    color: #fff;
+}
+

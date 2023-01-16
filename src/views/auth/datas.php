@@ -1,3 +1,7 @@
+<?php
+/** @var array $datas */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +24,7 @@
 <body>
 
 <?php require 'views/components/headerPrivate.php'; ?>
+<?php if(sizeof($datas) !== 0) { ?>
 <div class='content-container'>
 
     <div class="chartContainer">
@@ -38,7 +43,19 @@
     </div>
     <?php } ?>
 </div>
+<?php } else { ?>
+    <div class="dataNotFound">
+        <p>
+            Aucune donnée disponible pour ce produit
+        </p>
+        <div>
+            <a href="./dashboard" class="outline-button mT100"
+            >Retour au dashboad</a>
+        </div>
 
+    </div>
+
+    <?php } ?>
 
 
 <div class="footer-container" small="true"></div>
