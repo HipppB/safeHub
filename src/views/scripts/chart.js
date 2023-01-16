@@ -2,7 +2,6 @@ const ctx = document.getElementById('myChart').getContext('2d')
 const gradient = ctx.createLinearGradient(0, 0, 0, 600)
 gradient.addColorStop(0, '#f76b1c')
 gradient.addColorStop(1, '#fad961')
-// console.log(datas)
 
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)
