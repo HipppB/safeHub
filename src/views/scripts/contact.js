@@ -5,10 +5,10 @@ let email = document.getElementsByName('email')[1]
 let phoneNumber = document.getElementsByName('telephone')[1]
 let message = document.getElementsByName('message')[1]
 
-let firstNameError = 'Veuiilez entrer votre prénom'
+let firstNameError = 'Veuillez entrer votre prénom'
 let lastNameError = 'Veuillez entrer votre nom'
 let emailError = 'Veuillez entrer une adresse email valide'
-let phoneNumberError = 'Veuiilez entrer un numéro de téléphone valide'
+let phoneNumberError = 'Veuillez entrer un numéro de téléphone valide'
 let messageError = 'Veuillez entrer un message'
 
 let phpneNumberRegex =
