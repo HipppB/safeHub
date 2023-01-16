@@ -34,10 +34,20 @@
         </div>
     </div>
 <div class="dataContainer">
-    <h3>Historique des températures</h3>
+    <h3><?php printTranslation($type.'History')?></h3>
     <?php foreach ($datas as $data) { ?>
     <div class="metrics-data">
-        <p>La température est de <span class="gradienttext" style="font-size: inherit"><?php echo $data["data"]; ?></span> °C</p>
+        <p><?php printTranslation($type . "DataSentence")?>  <span class="gradienttext" style="font-size: inherit"><?php echo $data["data"]; ?></span>
+            <?php if($type === "temperature") {
+                echo '°C';
+            }elseif($type === "humidity") {
+                echo '%';
+            }elseif($type === "carbon_dioxide") {
+                echo 'ppm';
+            }elseif($type === "sound_level") {
+                echo 'dB';
+            } ?>
+            </p>
         <p class="metrics-hour"><?php $date =new DateTime($data['date']);
         echo $date ->format('d/m/Y H:i')?></p>
     </div>
@@ -46,11 +56,11 @@
 <?php } else { ?>
     <div class="dataNotFound">
         <p>
-            Aucune donnée disponible pour ce produit
+            <?php printTranslation('noDataFoundProduct')?>
         </p>
         <div>
             <a href="./dashboard" class="outline-button mT100"
-            >Retour au dashboad</a>
+            ><?php printTranslation('goToDashBoard') ?></a>
         </div>
 
     </div>

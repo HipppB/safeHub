@@ -227,9 +227,13 @@
         "fr": "Humidité",
         "en": "Humidity"
     },
-    "sound": {
+    "sound_level": {
         "fr": "Signal Sonore",
         "en": "Sound Level"
+    },
+    "carbon_dioxide": {
+        "fr": "Dioxyde de carbone",
+        "en": "Carbon Dioxide"
     },
     "product_list": {
         "fr": "Liste des produits",
@@ -242,5 +246,45 @@
     "addProductInstruction": {
         "fr": "Rentrez le code de votre produit qui vous a é été donné afin d'importer vos produits",
         "en": "Enter the code of your product that was given to you to import your products"
+    },
+    "temperatureDataSentence": {
+        "fr": "La température est de",
+        "en": "The temperature is"
+    },
+    "humidityDataSentence": {
+        "fr": "Le taux d'humidité est de",
+        "en": "The humidity level is"
+    },
+    "sound_levelDataSentence": {
+        "fr": "Le niveau sonore est de",
+        "en": "The sound level is"
+    },
+    "carbon_dioxideDataSentence": {
+        "fr": "Le taux de dioxyde de carbone est de",
+        "en": "The carbon dioxide rate is"
+    },
+    "temperatureHistory": {
+        "fr": "Historique de la température",
+        "en": "Temperature history"
+    },
+    "humidityHistory": {
+        "fr": "Historique de l'humidité",
+        "en": "Humidity history"
+    },
+    "sound_levelHistory": {
+        "fr": "Historique du niveau sonore",
+        "en": "Sound level history"
+    },
+    "carbon_dioxideHistory": {
+        "fr": "Historique du taux de dioxyde de carbone",
+        "en": "Carbon dioxide rate history"
+    },
+    "noDataFoundProduct":{
+        "fr": "Aucune donnée n'a été trouvée pour ce produit",
+        "en": "No data found for this product"
+    },
+    "goToDashBoard": {
+        "fr": "Retour au tableau de bord",
+        "en": "Go to dashboard"
     }
 }
