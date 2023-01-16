@@ -63,7 +63,7 @@ h1,
     margin: 0;
     align-items: center;
     justify-content: center;
-    width: min(80vw, 500px);
+    width: min(100%, min(80vw, 500px));
     height: 50px;
     border-radius: 10px;
     background-color: #f76b1c;
@@ -167,7 +167,7 @@ h1,
 .input-label-container {
     display: flex;
     flex-direction: column;
-    width: min(80vw, 500px);
+    width: min(100%, min(80vw, 500px));
     z-index: 2;
 }
 .input-label-container label {
@@ -301,4 +301,34 @@ h1,
     transition-duration: 50ms;
     background-image: linear-gradient(75deg, #fad961, #f76b1c);
     animation: steam 10s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+.backButton {
+    display: none;
+}
+
+body {
+    /* padding-inline: 5vw; */
+    /* width: 90vw; */
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    min-height: calc(100vh);
+    /* background-color: red; */
+}
+.title-container {
+    margin-top: 60px;
+    margin-left: 20px;
 }

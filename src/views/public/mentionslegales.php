@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Mentions légales</title>
+        <title>SafeHub - <?php printTranslation('legal'); ?></title>
         <link rel="stylesheet" href="views/styles/common/index.css" />
         <link rel="stylesheet" href="views/styles/cguMentionsLegales.css" />
         <script
@@ -16,8 +16,12 @@
     <body>
     <?php require 'views/components/header.php'; ?>
         <div class="mL20">
-            <p class="gradienttext title mT50">Mentions légales</p>
-            <p class="updateTitle">Dernière mise à jour le X</p>
+            <p class="gradienttext title mT50"><?php printTranslation(
+                'legal'
+            ); ?></p>
+            <p class="updateTitle"><?php printTranslation(
+                'lastUpdated'
+            ); ?> X</p>
         </div>
         <div class="line mT50"></div>
         <div class="mL20 mR20 mT25 mB50">

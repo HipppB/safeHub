@@ -1,6 +1,3 @@
 .illu-container {
     height: min(60vmin, 400px);
 }
-.illu {
-    top: calc(-10px);
-}

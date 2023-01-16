@@ -11,24 +11,21 @@
             src="../views/scripts/common/components.js"
             async
         ></script>
-        <script
-            type="text/javascript"
-            src="../views/scripts/carousel.js"
-            async
-        ></script>
-
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
+    
         <div class="home-container">
             <!-- Hero section -->
             <?php require 'views/components/header.php'; ?>
-            <div class="home-title-container mL25 mR25">
+            <div class="home-title-container">
                 <div class="title-container">
                     <h1 class="gradienttext">404</h1>
-                    <p class="home-subtitle">La page demandé n'existe pas</p>
+                    <p class="home-subtitle"><?php printTranslation(
+                        '404'
+                    ); ?></p>
                     <a href="/" class="outline-button mT100"
-                        >Retourner à l'accueil</a
+                        ><?php printTranslation('backHome'); ?></a
                     >
                 </div>
                 <div>

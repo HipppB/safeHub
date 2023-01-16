@@ -27,3 +27,9 @@ body {
     font-size: 1rem;
     align-items: center;
 }
+
+
+.error-block {
+    font-size: 1rem;
+    color: red;
+}

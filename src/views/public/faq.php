@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Foire aux questions</title>
+        <title>SafeHub - <?php printTranslation('faq'); ?></title>
         <link rel="stylesheet" href="views/styles/common/index.css" />
         <link rel="stylesheet" href="views/styles/faq.css" />
         <script
@@ -24,7 +24,7 @@
                     class="input-label-container"
                     name="search"
                     path=""
-                    placeholderInside="Rechercher..."
+                    placeholderInside="<?php printTranslation('search'); ?>"
                 ></div>
             </div>
             <div class="mR25 faqListContainer">

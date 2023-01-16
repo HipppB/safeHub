@@ -23,10 +23,11 @@ function sendEmail($reciever, $body, $subject) {
         $mail->Body    = $body;
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         $mail->send();
-        return 'Message has been sent';
+        return 'Le message a été envoyé';
 
     }catch (Exception $e) {
-        return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+//        return "Le message n'a pas pu être envoyé. Mailer Error: {$mail->ErrorInfo}";
+        return "Le message n'a pas pu être envoyé. Veuillez réessayer";
     }
 }
 
