@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once '../vendor/autoload.php';
+require_once '../vendor/autoload_files.php';
 require_once 'model/translate.requests.php';
 require_once 'router.php';
 require_once 'route.php';
