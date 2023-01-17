@@ -136,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `metrics` (
 CREATE TABLE IF NOT EXISTS `tips` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` text NOT NULL,
-  `date` datetime NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
