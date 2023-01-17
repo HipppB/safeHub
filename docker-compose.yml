@@ -27,6 +27,7 @@ services:
       - .env
     volumes:
       - .:/app
+      - ./vendor:/app/vendor
 
   php-cli:
     build:
@@ -34,6 +35,10 @@ services:
       dockerfile: docker/development/php-cli/Dockerfile
     volumes:
       - .:/app
+      - ./vendor:/app/vendor
+    depends_on:
+      - mysql
+
   mysql:
     image: mysql:8.0
     environment:
@@ -47,7 +52,7 @@ services:
       - ./var/database:/var/lib/mysql:rw
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin
     environment:
       PMA_HOST: mysql
       PMA_PORT: 3306
