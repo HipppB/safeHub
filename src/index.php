@@ -18,11 +18,9 @@ header('Pragma: no-cache');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
-error_log('URLURLURLURL: ' . $_GET['url']);
+$router = new Router($_GET['url'] ?? '', $_GET['action'] ?? '', $_GET);
 
-$router = new Router($_GET['url'], $_GET['action'], $_GET);
-
-$router->get($_GET['url']);
+$router->get($_GET['url'] ?? '');
 
 $router->run();
 
