@@ -16,6 +16,8 @@ services:
       - ./composer.json:/app/composer.json
     depends_on:
       - php-fpm
+    networks:
+        - default
 
   php-fpm:
     build:
@@ -27,8 +29,9 @@ services:
       - .env
     volumes:
       - .:/app
-      - ./vendor:/app/vendor
-
+    networks:
+        - default
+# Uncomment to create vendor and fill db on host machine
   php-cli:
     build:
       context: .
@@ -38,6 +41,8 @@ services:
       - ./vendor:/app/vendor
     depends_on:
       - mysql
+    networks:
+        - default
 
   mysql:
     image: mysql:8.0
@@ -50,6 +55,8 @@ services:
       - "3306:3306"
     volumes:
       - ./var/database:/var/lib/mysql:rw
+    networks:
+      - default
 
   phpmyadmin:
     image: phpmyadmin
@@ -62,3 +69,13 @@ services:
       - "8080:80"
     depends_on:
       - mysql
+    networks:
+        - default
+
+volumes:
+  var:
+  vendor:
+
+networks:
+  default:
+    driver: bridge
