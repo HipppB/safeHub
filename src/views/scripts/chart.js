@@ -48,7 +48,7 @@ sendXMLHttpObject(
         datas = datas.slice(datas.length - 10, datas.length)
         let chart = new Chart(ctx, {
             // The type of chart we want to create
-            type: 'bar',
+            type: 'line',
             // The data for our dataset
             data: {
                 //Insert the divisions for the x-axis here
@@ -68,9 +68,14 @@ sendXMLHttpObject(
                 datasets: [
                     {
                         label: 'Temperature Data',
-                        backgroundColor: gradient,
-                        borderRadius: Number.MAX_VALUE,
-                        borderSkipped: false,
+                        borderColor: gradient,
+                        fill: false,
+                        cubicInterpolationMode: 'monotone',
+                        tension: 0.4,
+                        pointStyle: 'circle',
+                        pointRadius: 10,
+                        pointHoverRadius: 15,
+
                         //Insert data points here (y-axis)
                         data: datas.map((data) => data.data),
                     },
@@ -98,9 +103,10 @@ sendXMLHttpObject(
                             display: false,
                         },
                     },
-                    y: {
-                        display: false,
-                    },
+                    y: {},
+                },
+                interaction: {
+                    intersect: false,
                 },
             },
         })
