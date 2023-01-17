@@ -69,17 +69,18 @@
                     placeholder="Date de naissance"
                     value="<?php echo $user['birth_date']; ?>"
                 ></div>
-            </div>
-            <!-- gradienttext urbanist -->
-
-            <input type="submit" class="button mT25" value="Envoyer" />
-            <div class="mT10 mB50 s05 urbanist gradienttext">
+                <input type="submit" class="button mT25" value="Envoyer" />
+                <div class="mT10 mB50 s05 urbanist gradienttext">
                 <a
-                    href="../views/resetPassword.html"
+                    href="../logout?redirect=forgotPassword"
                     class="textstyle urbanist effectHovertext"
                     >Changer votre mot de passe</a
                 >
             </div>
+            </div>
+            <!-- gradienttext urbanist -->
+
+            
         </form>
         <!-- Footer -->
         <!-- Footer -->
