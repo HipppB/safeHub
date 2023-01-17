@@ -72,7 +72,7 @@
                 ></div>
                 <?php if ($error['error-password']) {
                     echo "<div class='error'>" .
-                        translate('connect') .
+                        printTranslation('connect', true) .
                         '</div>';
                 } ?>
             </div>
