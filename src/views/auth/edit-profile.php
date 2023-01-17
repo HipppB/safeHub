@@ -21,14 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div
-            class="header-container"
-            title="Modifier le profil"
-            leftButtonPath="../views/assets/icons/backButton.svg"
-            width="25px"
-
-
-        ></div>
+    <?php require 'views/components/headerPrivate.php'; ?>
 
         <form id="modify-profile-form">
             <div class="input-list-container">
