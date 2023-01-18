@@ -2,6 +2,5 @@
 .DS_Store
 .env
 /node_modules/
-/vendor/
 /var/
 composer.lock

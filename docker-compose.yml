@@ -32,17 +32,17 @@ services:
     networks:
         - default
 # Uncomment to create vendor and fill db on host machine
-  php-cli:
-    build:
-      context: .
-      dockerfile: docker/development/php-cli/Dockerfile
-    volumes:
-      - .:/app
-      - ./vendor:/app/vendor
-    depends_on:
-      - mysql
-    networks:
-        - default
+#  php-cli:
+#    build:
+#      context: .
+#      dockerfile: docker/development/php-cli/Dockerfile
+#    volumes:
+#      - .:/app
+#      - ./vendor:/app/vendor
+#    depends_on:
+#      - mysql
+#    networks:
+#        - default
 
   mysql:
     image: mysql:8.0
