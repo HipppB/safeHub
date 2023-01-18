@@ -1,11 +1,19 @@
 <?php
-$error;
-$email = htmlspecialchars($_POST['email']);
-$password = htmlspecialchars($_POST['password']);
-if ($_SESSION['user']) {
+$error = '';
+
+if (isset($_SESSION['user'])) {
     header('Location: /panel/dashboard');
 }
-if (!empty($email) && !empty($password)) {
+
+//check if the form has been submitted
+if (
+    isset($_POST['email']) &&
+    isset($_POST['password']) &&
+    !empty($_POST['email']) &&
+    !empty($_POST['password'])
+) {
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
     require 'model/user.requests.php';
 
     // Here we need to check if the user exists and if the password is correct
