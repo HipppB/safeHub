@@ -67,7 +67,7 @@
                 <a
                     href="../logout?redirect=forgotPassword"
                     class="textstyle urbanist effectHovertext"
-                    >Changer votre mot de passe</a
+                    ><?php printTranslation('changePassword'); ?></a
                 >
             </div>
             </div>

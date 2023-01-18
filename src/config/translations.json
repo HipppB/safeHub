@@ -279,12 +279,16 @@
         "fr": "Historique du taux de dioxyde de carbone",
         "en": "Carbon dioxide rate history"
     },
-    "noDataFoundProduct":{
+    "noDataFoundProduct": {
         "fr": "Aucune donnée n'a été trouvée pour ce produit",
         "en": "No data found for this product"
     },
     "goToDashBoard": {
         "fr": "Retour au tableau de bord",
         "en": "Go to dashboard"
+    },
+    "changePassword": {
+        "fr": "Changer de mot de passe",
+        "en": "Change password"
     }
 }
