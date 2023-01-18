@@ -1,39 +1,4 @@
 <div class="topNavBar-container">
-    <div class="topNavBar-burgerMenu-content-container">
-        <div class="link-Burger">
-            <a href="./dashboard">Dashboard</a>
-        </div>
-        <div class="lineHeader"></div>
-        <div class="link-Burger">
-            <a href="./messagerie">Messagerie</a>
-        </div>
-        <div class="lineHeader"></div>
-        <div class="link-Burger">
-            <a href="./profile">Profile</a>
-        </div>
-        <div class="lineHeader"></div>
-        <div class="link-Burger">
-            <a href="../">Accueil</a>
-        </div>
-        <?php
-        if(userIsAdmin()) { ?>
-            <div class="lineHeader"></div>
-
-            <div class="link-Burger">
-                <a href="../">Ajouter un produit</a>
-            </div>
-            <div class="lineHeader"></div>
-
-            <div class="link-Burger">
-                <a href="../">Gestion du site</a>
-            </div>
-       <?php } ?>
-        <div class="lineHeader"></div>
-        <div class="link-Burger">
-            <a href="../logout">Se déconnecter</a>
-        </div>
-    </div>
-
     <div class="topNavBar-container-items">
         <div class="topNavBar-burgerMenu">
             <img
@@ -44,11 +9,6 @@
 
         <a class="link" href="./profile">PROFIL</a>
         <a class="link" href="./messagerie">MESSAGERIE</a>
-        <?php
-        if(userIsAdmin()) {
-            echo '<a class="link" href="./admin">AJOUTER UN PRODUIT</a>';
-        }
-        ?>
         <div class="topNavBar-logo-container">
             <img
                 class="topNavBar-logo"
@@ -57,36 +17,6 @@
                 onclick="window.location.href = '../';"
             />
         </div>
-        <?php
-        if(userIsAdmin()) { ?>
-            <div class="link" onclick='toggleGestion()'>GESTION DU SITE</div>
-
-            <div class="gestion-selector-content-container">
-                <div
-                    class="langage-selector-content-container__item"
-                    onclick="onClickLangage('fr')"
-                >
-                    <img
-                        src="../views/assets/frenchFlag.png"
-                        class="langage-selector__flag"
-                    />
-                    <div class="langage-selector__text">FR</div>
-                </div>
-                <div
-                    class="langage-selector-content-container__item"
-                    onclick="onClickLangage('en')"
-                >
-                    <img
-                        src="../views/assets/englishFlag.png"
-                        class="langage-selector__flag"
-                    />
-                    <div class="langage-selector__text">EN</div>
-                </div>
-            </div>
-        <?php
-        }
-        ?>
-
         <a class="link" href="./dashboard">DASHBOARD</a>
         <div class="langage-selector" onclick="toggleLangages()">
             <?php echo $_SESSION['lang'] == 'en'
@@ -127,13 +57,35 @@
                     <div class="langage-selector__text">EN</div>
                 </div>
             </div>
-
+           
         </div>
-        <div class="topNavBar-logout">
-            <img
-                src="../views/assets/icons/logout.svg"
-                onclick="window.location.href = '../logout';"
-            />
+         <div class="topNavBar-logout">
+                <img
+                    src="../views/assets/icons/logout.svg"
+                    onclick="window.location.href = '../logout';"
+                />
+            </div>
+    </div>
+
+    <div class="topNavBar-burgerMenu-content-container">
+        <div class="link-Burger">
+            <a href="./dashboard">Dashboard</a>
+        </div>
+        <div class="lineHeader"></div>
+        <div class="link-Burger">
+            <a href="./messagerie">Messagerie</a>
+        </div>
+        <div class="lineHeader"></div>
+        <div class="link-Burger">
+            <a href="./profile">Profile</a>
+        </div>
+        <div class="lineHeader"></div>
+        <div class="link-Burger">
+            <a href="../">Accueil</a>
+        </div>
+        <div class="lineHeader"></div>
+        <div class="link-Burger">
+            <a href="../logout">Se déconnecter</a>
         </div>
     </div>
 </div>

@@ -157,11 +157,6 @@ function toggleLangages() {
     lang.classList.toggle('langage-selector-content-container--shown')
 }
 
-function toggleGestion() {
-    const gest = document.querySelector('.gestion-selector-content-container')
-    gest.classList.toggle('gestion-selector-content-container--shown')
-}
-
 function searchErrors() {
     const urlSearch = window.location.search
     const urlParams = new URLSearchParams(urlSearch)
