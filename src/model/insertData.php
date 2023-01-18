@@ -36,11 +36,9 @@ try {
         'is_admin' => '0',
     ]);
     echo 'Fake users inserted' . PHP_EOL;
-}catch (PDOException $e) {
+} catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage() . PHP_EOL;
 }
-
-
 
 // create fake products
 
@@ -119,7 +117,7 @@ try {
         }
     }
     echo 'Fake translations created' . PHP_EOL;
-}catch (PDOException $e) {
+} catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;
 }
 // not useful ???
@@ -182,15 +180,13 @@ try {
     ]);
 
     echo 'Fake data types created' . PHP_EOL;
-
-
-
 } catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;
 }
 
-
-$queryAddMetrics = $db->prepare("INSERT INTO metrics (`id`, `id_product`, `id_type`, `data`, `date`) VALUES (:id, :id_product, :type_id, :value, :date)");
+$queryAddMetrics = $db->prepare(
+    'INSERT INTO metrics (`id`, `id_product`, `id_type`, `data`, `date`) VALUES (:id, :id_product, :type_id, :value, :date)'
+);
 $getProducts = $db->prepare('SELECT * FROM products');
 $getTypes = $db->prepare('SELECT * FROM types');
 
@@ -201,7 +197,7 @@ try {
     $types = $getTypes->fetchAll();
     $i = 1;
     while ($i < 100) {
-        $timestamp = strtotime("2023-01-14 12:47:14")+(60*60*$i);
+        $timestamp = strtotime('2023-01-14 12:47:14') + 60 * 60 * $i;
         $date = new DateTime();
         $date->setTimestamp($timestamp);
         $queryAddMetrics->execute([
@@ -236,6 +232,5 @@ try {
     }
     echo 'Fake metrics created' . PHP_EOL;
 } catch (PDOException $e) {
-    echo $e->getMessage()   . PHP_EOL;
+    echo $e->getMessage() . PHP_EOL;
 }
-

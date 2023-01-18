@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Modifier le profil</title>
+        <title>SafeHub - <?php printTranslation('editProfile'); ?></title>
         <link rel="stylesheet" href="../views/styles/common/index.css" />
         <link rel="stylesheet" href="../views/styles/inscription.css" />
         <link rel="stylesheet" href="../views/styles/headerprivate.css" />
@@ -21,28 +21,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div
-            class="header-container"
-            title="Modifier le profil"
-            leftButtonPath="../views/assets/icons/backButton.svg"
-            width="25px"
-
-
-        ></div>
+    <?php require 'views/components/headerPrivate.php'; ?>
 
         <form id="modify-profile-form">
             <div class="input-list-container">
                 <div
                     class="input-label-container"
                     name="name"
-                    placeholder="Prénom"
+                    placeholder="<?php printTranslation('prenom'); ?>"
                     value="<?php echo $user['name']; ?>"
                     path="../views/assets/icons/person.svg"
                 ></div>
                 <div
                     class="input-label-container"
                     name="lastname"
-                    placeholder="Nom"
+                    placeholder="<?php printTranslation('nom'); ?>"
                     value="<?php echo $user['lastname']; ?>"
                     path="../views/assets/icons/person.svg"
                 ></div>
@@ -50,7 +43,7 @@
                     class="input-label-container"
                     type="phone"
                     name="phone"
-                    placeholder="Telephone"
+                    placeholder="<?php printTranslation('phone'); ?>"
                     value="<?php echo $user['phone']; ?>"
                     path="../views/assets/icons/lock.svg"
                 ></div>
@@ -58,7 +51,7 @@
                     class="input-label-container"
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="<?php printTranslation('email'); ?>"
                     value="<?php echo $user['email']; ?>"
                     path="../views/assets/icons/mail.svg"
                 ></div>
@@ -66,23 +59,25 @@
                     class="input-label-container"
                     type="date"
                     name="birth_date"
-                    placeholder="Date de naissance"
+                    placeholder="<?php printTranslation('birthDate'); ?>"
                     value="<?php echo $user['birth_date']; ?>"
                 ></div>
+                <input type="submit" class="button mT25" value="<?php printTranslation(
+                    'send'
+                ); ?>" />
+                <div class="mT10 mB50 s05 urbanist gradienttext">
+                <a
+                    href="../logout?redirect=forgotPassword"
+                    class="textstyle urbanist effectHovertext"
+                    ><?php printTranslation('changePassword'); ?></a
+                >
+            </div>
             </div>
             <!-- gradienttext urbanist -->
 
-            <input type="submit" class="button mT25" value="Envoyer" />
-            <div class="mT10 mB50 s05 urbanist gradienttext">
-                <a
-                    href="../views/resetPassword.html"
-                    class="textstyle urbanist effectHovertext"
-                    >Changer votre mot de passe</a
-                >
-            </div>
+            
         </form>
         <!-- Footer -->
-        <!-- Footer -->
-    <?php require 'views/components/footer.php'; ?>
+        <?php require 'views/components/footer.php'; ?>
     </body>
 </html>
