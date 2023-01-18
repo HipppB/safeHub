@@ -30,7 +30,7 @@
             } else {
                 echo 'N/A';
             } ?>    
-            ans</div>
+            <?php printTranslation('year'); ?></div>
             <div class="small-stroke"></div>
             
             <?php echo '<div>' . $user['phone'] . '</div>'; ?>
@@ -39,9 +39,15 @@
             </div>
         </div>
         <div class="modifierProduit">
-            <a class="button" href="./edit-profile"> Modifier le profil </a>
-            <a class="button-outlined" href="./ajoutProduit"> Ajout produit </a>
-            <a class="button-outlined"  href="./ticketuser"> Nouveau ticket </a>
+            <a class="button" href="./edit-profile"><?php printTranslation(
+                'editProfile'
+            ); ?></a>
+            <a class="button-outlined" href="./ajoutProduit"><?php printTranslation(
+                'addProduct'
+            ); ?></a>
+            <a class="button-outlined"  href="./ticketuser"><?php printTranslation(
+                'newTicket'
+            ); ?></a>
         </div>
         <img src="../views/assets/message_icon.svg" class="messageIcon" />
         <div class="mT100"></div>

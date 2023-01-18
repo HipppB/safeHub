@@ -290,5 +290,25 @@
     "changePassword": {
         "fr": "Changer de mot de passe",
         "en": "Change password"
+    },
+    "birthDate": {
+        "fr": "Date de naissance",
+        "en": "Birth date"
+    },
+    "editProfile": {
+        "fr": "Modifier le profil",
+        "en": "Edit profile"
+    },
+    "addProduct": {
+        "fr": "Ajouter un produit",
+        "en": "Add a product"
+    },
+    "newTicket": {
+        "fr": "Nouveau ticket",
+        "en": "New ticket"
+    },
+    "year": {
+        "fr": "ans",
+        "en": "year"
     }
 }
