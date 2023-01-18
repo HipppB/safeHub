@@ -1,5 +1,5 @@
 /* Put this code in your head to incorporate the public header */
-/* 
+/*
     <link rel="stylesheet" href="./styles/common/topNavBar.css" />
     <script
         type="text/javascript"
@@ -197,6 +197,31 @@
     box-shadow: 0px 2px 92px -17px rgba(255, 205, 78, 0.79);
     z-index: 2;
 }
+
+
+.gestion-selector-content-container  {
+    display: none;
+    position: absolute;
+
+    top: 40px;
+
+    border-radius: 5px;
+    box-shadow: 0px 2px 92px -17px rgba(255, 205, 78, 0.79);
+    z-index: 2;
+}
+.gestion-selector-content-container--shown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    /* flex-grow: 1; */
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 2px 92px -17px rgba(255, 205, 78, 0.79);
+}
+
 .langage-selector-content-container--shown {
     display: flex;
     flex-direction: column;
