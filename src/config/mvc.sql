@@ -171,3 +171,17 @@ CREATE TABLE IF NOT EXISTS `translations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `faq`
+--
+
+CREATE TABLE IF NOT EXISTS `faq` (
+  `idquestion` int(11) NOT NULL AUTO_INCREMENT,
+  `lang` varchar(2) NOT NULL,
+  `question` text NOT NULL,
+  `reponse` text NOT NULL,
+  PRIMARY KEY (`idquestion`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
