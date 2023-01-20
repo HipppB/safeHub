@@ -1,11 +1,17 @@
 <?php
 require 'model/user.requests.php';
+require 'model/faq.requests.php';
+
 if (!userIsConnected()) {
     header('Location: /connexion');
 }
+if (isset($_GET['id']) && isset($_GET['action'])) {
+    if ($_GET['action'] == 'delete') {
+        suppQuestionRep($_GET['id']);
+    }
+}
 $user = $_SESSION['user'];
 
-require 'model/faq.requests.php';
 $retour = '';
 
 if (!empty($_POST['ajouter'])) {

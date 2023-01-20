@@ -19,6 +19,21 @@ function addQuestionRep($q, $r)
         return false;
     }
 }
+function suppQuestionRep($idq)
+{
+    global $db;
+    $query = $db->prepare(
+        'DELETE FROM `faq` WHERE `faq`.`idquestion` =:idquestion'
+    );
+    try {
+        $query->execute([
+            'idquestion' => $idq,
+        ]);
+        return true;
+    } catch (PDOExeption $E) {
+        return false;
+    }
+}
 
 function GetFAQ()
 {
