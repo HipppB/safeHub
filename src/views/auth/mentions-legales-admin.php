@@ -21,30 +21,32 @@ defer            async
             leftButtonPath="../views/assets/icons/backButton.svg"
             width="25px"
         ></div>
-        <div class="icon-container-modify mR25 mT50">
-            <a> <img src="../views/assets/icons/modify.svg" /></a>
-        </div>
-        <form method="post">
-            <label for="mentions">Champs à mettre à jour :<img src="../views/assets/icons/modify.svg" /></label><br>
-            
+        <form method="post" class="formModif">
+            <label for="mentions">Champs à mettre à jour :&nbsp;&nbsp;&nbsp;&nbsp;<img class="image" src="../views/assets/icons/modify.svg" /></label><br>
             <p><?php if ($responseEn == 'success') {
                 echo 'Bien mis a jour';
             } ?></p>
-            <h3>Pour la version française</h3>
+            <div class="bigContainer">
+            <div class="formContainer">
+            <h3 class="formSubTitle">Pour la version française</h3>
             <textarea type="text" id="mentionsFr" name="mentionsFr" cols="60" rows="10"> <?php echo translate(
                 'mentions',
                 'fr'
             ); ?></textarea>
+            </div>
             </br>
-            <h3>Pour la version anglaise</h3>
+            <div class="formContainer"> 
+            <h3 class="formSubTitle">Pour la version anglaise</h3>
             <textarea type="text" id="mentionsEn" name="mentionsEn" cols="60" rows="10"> <?php echo translate(
                 'mentions',
                 'en'
             ); ?></textarea>
+            </div>
+            </div>
             <input type="submit" class="button mT25" value="Envoyer" name='submit' />
         </form>
         <form>
-            <h3>Le rendu</h3>
+            <h3 class="renduTitle">Le rendu</h3>
             <p class="paragraphCgu mT10 rendu">
                 <?php printTranslation('mentions'); ?>
             </p>

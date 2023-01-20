@@ -13,17 +13,12 @@
 
 .cguTitle {
     font-size: 0.6em;
-
     font-weight: 700;
 }
 
-.icon-container-modify {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.icon-container-modify a {
-    cursor: pointer;
+.image {
+    width: 25px;
+    height: 25px;
 }
 
 textarea {
@@ -36,4 +31,46 @@ textarea {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 50px;
+}
+
+.formModif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.bigContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.formSubTitle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+textarea {
+    outline: dashed 1px black;
+}
+
+.formSubTitle h3 {
+    display: flex;
+    align-items: center;
+}
+
+.renduTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
