@@ -39,7 +39,7 @@ function addProductToUserWithUserCode($user_code, $user_id)
         'SELECT COUNT(*) FROM products_users WHERE id_user = :id_user AND id_product = :id_product'
     );
     $query = $db->prepare(
-        'INSERT INTO products_users (id_user, id_product, id_role,date) VALUES (:id_user, :id_product, :id_role, :date)'
+        'INSERT INTO products_users (id_user, id_product, date) VALUES (:id_user, :id_product, :date)'
     );
     $productAdded = 0;
     foreach ($products as $product) {
@@ -57,7 +57,6 @@ function addProductToUserWithUserCode($user_code, $user_id)
             $query->execute([
                 'id_user' => $user_id,
                 'id_product' => $product['id'],
-                'id_role' => 2,
                 'date' => '2022-12-06', //Expiration date... To be changed to depend on user code
             ]);
             $productAdded++;
