@@ -4,13 +4,6 @@
 /** @var PDO $db */
 /**    @var array $translations
  */
-//deletes existing users and insert fake users
-
-// Not useful if you use the dropDb.php script
-//$queryDeleteAllUser = $db->prepare('DELETE FROM users');
-//$queryDeleteAllProducts = $db->prepare('DELETE FROM products');
-//$queryDeleteAllProducts->execute();
-//$queryDeleteAllUser->execute();
 
 $queryAddUser = $db->prepare("INSERT INTO users 
     (`name`, `lastname`, `password`, `email`, `phone`, `birth_date`, `is_admin`) 
@@ -82,24 +75,6 @@ try {
     echo $e->getMessage() . PHP_EOL;
 }
 
-// roles
-$queryAddRoles = $db->prepare("INSERT INTO roles
-    (`id`, `role_name`) 
-    VALUES (:id, :name)");
-try {
-    $queryAddRoles->execute([
-        'id' => '1',
-        'name' => 'admin',
-    ]);
-    $queryAddRoles->execute([
-        'id' => '2',
-        'name' => 'user',
-    ]);
-    echo 'Fake roles created' . PHP_EOL;
-} catch (PDOException $e) {
-    echo $e->getMessage() . PHP_EOL;
-}
-
 // Import translations from json file
 
 $queryAddTranslation = $db->prepare("INSERT INTO translations
@@ -120,20 +95,6 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;
 }
-// not useful ???
-//$translations = json_decode(file_get_contents('translations.json'), true);
-//$queryAddTranslation = $db->prepare("INSERT INTO translations
-//    (`key`, `lang`, `value`)
-//    VALUES (:key, :lang, :value)");
-//foreach ($translations as $key => $value) {
-//    foreach ($value as $lang => $translation) {
-//        $queryAddTranslation->execute([
-//            'key' => $key,
-//            'lang' => $lang,
-//            'value' => $translation,
-//        ]);
-//    }
-//}
 
 $queryAddTips = $db->prepare("INSERT INTO tips
     (`id`, `content`) 
