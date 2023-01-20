@@ -20,7 +20,7 @@ if (!userIsConnected()) {
     header('Location: /connexion');
 }
 
-if (userIsAdmin()) {
+if (userIsAdmin() || userIsGestionnaire()) {
     // echo 'To do : Dashboard admin view'; //Dashboard Admin
     $users = getUsers();
     $products = getProducts();
