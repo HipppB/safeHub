@@ -17,7 +17,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone` varchar(20),
   `birth_date` date,
   `is_admin` tinyint(1) NOT NULL DEFAULT '0',
-  `is_gestionnaire` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
@@ -63,6 +62,8 @@ CREATE TABLE IF NOT EXISTS `products` (
   `expiration_date` date NOT NULL,
   `db_max` int(11),
   `temp_max` int(11),
+  `id_gestionnaire` int(11) NOT NULL,
+  FOREIGN KEY (id_gestionnaire) REFERENCES users(id) ON DELETE CASCADE,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
