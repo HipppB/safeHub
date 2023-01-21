@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Modifier mentions légales</title>
+        <title><?php printTranslation('titleMentions'); ?></title>
         <link rel="stylesheet" href="../views/styles/common/index.css" />
         <link rel="stylesheet" href="../views/styles/headerprivate.css" />
         <link rel="stylesheet" href="../views/styles/cguMentionsLegales.css" />
