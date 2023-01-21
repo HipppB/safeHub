@@ -326,5 +326,9 @@
     "titleMentions": {
         "fr": "Modifier mentions légales",
         "en": "Modify legal notices"
+    },
+    "titlePageMentions": {
+        "fr": "SafeHub - Modifier mentions légales",
+        "en": "Safehub - Modify legal notices"
     }
 }
