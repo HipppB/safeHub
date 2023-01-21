@@ -23,24 +23,17 @@
         ></div>
         <form method="post" class="formModif">
             <p><?php if ($responseEn == 'success' || $responseFr == 'success') {
-                echo 'Bien mis a jour';
+                echo 'Mise à jour effectuée';
             } ?></p>
             <div class="bigContainer">
-            <div class="formContainer">
-            <h3 class="formSubTitle">Pour la version française</h3>
-            <textarea type="text" id="mentionsFr" name="mentionsFr" cols="60" rows="10"> <?php echo translate(
+            <div class="input-label-container" name="mentionsFr" multiline="true" placeholderInside="" placeholder="Version française" value="<?php echo translate(
                 'mentions',
                 'fr'
-            ); ?></textarea>
-            </div>
-            </br>
-            <div class="formContainer"> 
-            <h3 class="formSubTitle">Pour la version anglaise</h3>
-            <textarea type="text" id="mentionsEn" name="mentionsEn" cols="60" rows="10"> <?php echo translate(
+            ); ?>" ></div>
+            <div class="input-label-container" name="mentionsEn" multiline="true" placeholderInside="" placeholder="Version anglaise" value="<?php echo translate(
                 'mentions',
                 'en'
-            ); ?></textarea>
-            </div>
+            ); ?>" ></div>
             </div>
             <input type="submit" class="button mT25" value="Envoyer" name='submit' />
         </form>
