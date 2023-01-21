@@ -45,12 +45,6 @@
             </div>
             <input type="submit" class="button mT25" value="Envoyer" name='submit' />
         </form>
-        <form>
-            <h3 class="renduTitle">Le rendu</h3>
-            <p class="paragraphCgu mT10 rendu">
-                <?php printTranslation('mentions'); ?>
-            </p>
-        </form>
         <!-- Footer -->
         <div class="footer-container" small="true"></div>
     </body>
