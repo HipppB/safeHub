@@ -17,26 +17,23 @@
     </head>
 
     <body>
-        <div
-            class="header-container"
-            title="Gestion"
-            leftButtonPath="../views/assets/icons/backButton.svg"
-        ></div>
+    <?php require 'views/components/headerPrivate.php'; ?>
 
-        <div class="input-list-container">
-            <button class="button-outlined">Tickets</button>
 
-            <button class="button-outlined">Messages</button>
+    <div class="input-list-container">
+            <a class="button-outlined" href='./gestion-ticket'>Tickets</a>
 
-            <button class="button-outlined">FAQ</button>
+            <a class="button-outlined" href='./messagerie-admin'>Messages</a>
 
-            <div class="wm50p">
-                <button class="small-button-outlined">Mentions légales</button>
+            <a class="button-outlined" href='./faq-admin'>FAQ</a>
 
-                <button class="small-button-outlined">CGU</button>
+            <div class="wm50p" id="small-buttons">
+                <a class="button-outlined" href='./mentions-legales-admin'>Mentions légales</a>
+
+                <a class="button-outlined" href='./cgu-admin'>CGU</a>
             </div>
         </div>
         <!-- Footer -->
-        <div class="footer-container" small="true"></div>
+        <?php require 'views/components/footer.php'; ?>
     </body>
 </html>
