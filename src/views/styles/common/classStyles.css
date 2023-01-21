@@ -1,9 +1,11 @@
 .rightAl {
     align-self: flex-end;
+    text-align: right;
 }
 
 .leftAl {
     align-self: flex-start;
+    text-align: left;
 }
 
 /* font weight */
@@ -273,4 +275,16 @@
 }
 .w100p {
     width: 100%;
+}
+
+.rwidth {
+    width: min(100%, min(80vw, 500px));
+}
+
+.bgred {
+    background-color: red;
+}
+
+.gap10 {
+    gap: 10px;
 }

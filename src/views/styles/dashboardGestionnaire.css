@@ -1,3 +1,42 @@
+.low-title {
+    display: flex;
+    justify-content: left;
+    font-weight: 500;
+    font-size: 0.5em;
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.small-text {
+    font-size: 0.4em;
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.item-in-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+.item-in-list:hover {
+    background-color: #f76c1c2f;
+}
+.name {
+    flex-grow: 1;
+}
+.line {
+    background-color: #aeaeae;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0;
+}
+
+.input-list-container {
+    gap: 0;
+}
 @media screen and (max-width: 500px) {
     .onlyMobile {
         display: block;
@@ -13,15 +52,6 @@
         height: 1px;
         background-color: #f9f9f9;
         margin: 2%;
-    }
-    .low-title {
-        display: flex;
-        justify-content: left;
-        font-weight: bold;
-        font-size: 0.6em;
-        margin-left: 5%;
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
 
     .notification {
@@ -113,16 +143,6 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-    }
-
-    .low-title {
-        display: flex;
-        justify-content: left;
-        font-weight: bold;
-        font-size: 0.8em;
-        margin-left: 7.5%;
-        margin-top: 10px;
-        margin-bottom: 1%;
     }
 
     .notification {
