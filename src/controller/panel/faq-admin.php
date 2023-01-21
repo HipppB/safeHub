@@ -6,16 +6,16 @@ if (!userIsConnected()) {
 $user = $_SESSION['user'];
 include 'views/auth/faq-admin.html';
 
-$bdd= new PDO('mysql:host=mysql:3306;db=safeHub;charset=utf8', '')
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-if (isset($_POST['question'] && $_POST['question']!="")){
-    $q=$_POST['question'];
-}
-
-if (isset($_POST['reponse'] && $_POST['reponse']!="")){
-    $r=$_POST['reponse'];
-}
+//$bdd= new PDO('mysql:host=mysql:3306;db=safeHub;charset=utf8', '')
+//$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//
+//if (isset($_POST['question'] && $_POST['question']!="")){
+//    $q=$_POST['question'];
+//}
+//
+//if (isset($_POST['reponse'] && $_POST['reponse']!="")){
+//    $r=$_POST['reponse'];
+//}
 
 
 
