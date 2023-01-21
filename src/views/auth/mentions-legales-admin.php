@@ -17,12 +17,11 @@ defer            async
     <body>
         <div
             class="header-container"
-            title="Mentions légales"
+            title="Modifier mentions légales"
             leftButtonPath="../views/assets/icons/backButton.svg"
             width="25px"
         ></div>
         <form method="post" class="formModif">
-            <label for="mentions">Champs à mettre à jour :&nbsp;&nbsp;&nbsp;&nbsp;<img class="image" src="../views/assets/icons/modify.svg" /></label><br>
             <p><?php if ($responseEn == 'success' || $responseFr == 'success') {
                 echo 'Bien mis a jour';
             } ?></p>
@@ -46,6 +45,6 @@ defer            async
             <input type="submit" class="button mT25" value="Envoyer" name='submit' />
         </form>
         <!-- Footer -->
-        <div class="footer-container" small="true"></div>
+        <?php require 'views/components/footer.php'; ?>
     </body>
 </html>

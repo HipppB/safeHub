@@ -21,12 +21,6 @@
     height: 25px;
 }
 
-textarea {
-    font-size: 1rem;
-    line-height: 1.5em;
-    font-family: 'Roboto';
-}
-
 .rendu {
     margin-left: 5%;
     margin-right: 5%;
@@ -45,6 +39,7 @@ textarea {
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    margin-top: -75px;
 }
 
 .formContainer {
@@ -58,26 +53,43 @@ textarea {
     align-items: center;
     width: 100%;
     height: 200px;
+    font-size: 1em;
 }
 
 textarea {
-    color: #f76b1c;
-    font-family: 'Urbanist', sans-serif;
+    line-height: 1.5em;
+    font-family: 'Roboto';
     font-weight: 400;
     font-size: 0.3em;
     margin-bottom: 5px;
+    border: solid 1px rgb(255, 51, 51);
+    border-radius: 15px;
+    padding: 5px;
+    height: 45vh;
 }
 
-.formSubTitle h3 {
-    display: flex;
-    align-items: center;
+.button {
+    margin-bottom: 25px;
 }
 
-.renduTitle {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
+@media screen and (max-width: 768px) {
+    .formModif {
+        margin-top: 75px;
+    }
+    .bigContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    textarea {
+        height: 25vh;
+    }
+    .formContainer {
+        width: 90%;
+    }
 
-.mentionsFr {
+    .formSubTitle {
+        font-size: 13px;
+        height: 15px;
+    }
 }
