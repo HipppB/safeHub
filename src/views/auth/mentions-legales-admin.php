@@ -22,9 +22,6 @@
             width="25px"
         ></div>
         <form method="post" class="formModif">
-            <p><?php if ($responseEn == 'success' || $responseFr == 'success') {
-                echo 'Mise à jour effectuée';
-            } ?></p>
             <div class="bigContainer">
             <div class="input-label-container" name="mentionsFr" multiline="true" placeholderInside="" placeholder="<?php printTranslation(
                 'versionMentionsFr'
@@ -33,6 +30,9 @@
                 'versionMentionsEn'
             ); ?>" value="<?php echo translate('mentions', 'en'); ?>" ></div>
             </div>
+            <p><?php if ($responseEn == 'success' || $responseFr == 'success') {
+                echo 'Mise à jour effectuée';
+            } ?></p>
             <input type="submit" class="button mT25" value="<?php printTranslation(
                 'send'
             ); ?>" name='submit' />
