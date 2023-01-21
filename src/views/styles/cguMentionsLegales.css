@@ -61,7 +61,11 @@ textarea {
 }
 
 textarea {
-    outline: dashed 1px black;
+    color: #f76b1c;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 400;
+    font-size: 0.3em;
+    margin-bottom: 5px;
 }
 
 .formSubTitle h3 {
@@ -73,4 +77,7 @@ textarea {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}
+
+.mentionsFr {
 }

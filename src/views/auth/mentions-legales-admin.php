@@ -23,7 +23,7 @@ defer            async
         ></div>
         <form method="post" class="formModif">
             <label for="mentions">Champs à mettre à jour :&nbsp;&nbsp;&nbsp;&nbsp;<img class="image" src="../views/assets/icons/modify.svg" /></label><br>
-            <p><?php if ($responseEn == 'success') {
+            <p><?php if ($responseEn == 'success' || $responseFr == 'success') {
                 echo 'Bien mis a jour';
             } ?></p>
             <div class="bigContainer">
