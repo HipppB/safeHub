@@ -310,5 +310,13 @@
     "year": {
         "fr": "ans",
         "en": "year"
+    },
+    "versionMentionsFr": {
+        "fr": "Version française",
+        "en": "French version"
+    },
+    "versionMentionsEn": {
+        "fr": "Version englaise",
+        "en": "English version"
     }
 }

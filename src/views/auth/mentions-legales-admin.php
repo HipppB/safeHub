@@ -26,16 +26,16 @@ defer            async
                 echo 'Mise à jour effectuée';
             } ?></p>
             <div class="bigContainer">
-            <div class="input-label-container" name="mentionsFr" multiline="true" placeholderInside="" placeholder="Version française" value="<?php echo translate(
-                'mentions',
-                'fr'
-            ); ?>" ></div>
-            <div class="input-label-container" name="mentionsEn" multiline="true" placeholderInside="" placeholder="Version anglaise" value="<?php echo translate(
-                'mentions',
-                'en'
-            ); ?>" ></div>
+            <div class="input-label-container" name="mentionsFr" multiline="true" placeholderInside="" placeholder="<?php printTranslation(
+                'versionMentionsFr'
+            ); ?>" value="<?php echo translate('mentions', 'fr'); ?>" ></div>
+            <div class="input-label-container" name="mentionsEn" multiline="true" placeholderInside="" placeholder="<?php printTranslation(
+                'versionMentionsEn'
+            ); ?>" value="<?php echo translate('mentions', 'en'); ?>" ></div>
             </div>
-            <input type="submit" class="button mT25" value="Envoyer" name='submit' />
+            <input type="submit" class="button mT25" value="<?php printTranslation(
+                'send'
+            ); ?>" name='submit' />
         </form>
         <!-- Footer -->
         <?php require 'views/components/footer.php'; ?>
