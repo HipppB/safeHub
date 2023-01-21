@@ -17,7 +17,7 @@
     <body>
         <div
             class="header-container"
-            title="Modifier mentions légales"
+            title="<?php printTranslation('titleMentions'); ?>"
             leftButtonPath="../views/assets/icons/backButton.svg"
             width="25px"
         ></div>
@@ -31,7 +31,7 @@
             ); ?>" value="<?php echo translate('mentions', 'en'); ?>" ></div>
             </div>
             <p><?php if ($responseEn == 'success' || $responseFr == 'success') {
-                echo 'Mise à jour effectuée';
+                echo printTranslation('goodUpdate');
             } ?></p>
             <input type="submit" class="button mT25" value="<?php printTranslation(
                 'send'

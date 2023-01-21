@@ -5,7 +5,6 @@
         <title>SafeHub - Connexion</title>
         <link rel="stylesheet" href="views/styles/connexion.css" />
         <link rel="stylesheet" href="views/styles/identificationPagesStyles.css" />
-
         <link rel="stylesheet" href="views/styles/common/index.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
