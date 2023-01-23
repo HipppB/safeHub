@@ -27,7 +27,7 @@
         <div class="mL20 mR20 mT25 mB50">
             <div class="mT20">
                 <p class="cguTitle">Les Mentions Légales</p>
-                <p><?php echo translate('mentions', 'fr'); ?></p>
+                <p><?php printTranslation('mentions'); ?></p>
             </div>
         </div>
         <?php require 'views/components/footer.php'; ?>
