@@ -12,13 +12,11 @@ $updatedTranslationEn = isset($_POST['mentionsEn'])
     : null;
 $responseEn = 'none';
 $responseFr = 'none';
-if (!empty($updatedTranslationEn)) {
+if ($updatedTranslationEn != null) {
     $responseEn = updateTranslation('mentions', $updatedTranslationEn, 'en');
 }
-if (!empty($updatedTranslationFr)) {
+if ($updatedTranslationEn != null) {
     $responseFr = updateTranslation('mentions', $updatedTranslationFr, 'fr');
-}
-if ($responseEn == 'success') {
 }
 include 'views/auth/mentions-legales-admin.php';
 ?>
