@@ -4,16 +4,19 @@ if (!userIsConnected()) {
     header('Location: /connexion');
 }
 
-$updatedTranslationFr = $_POST['mentionsFr'] ? $_POST['mentionsFr'] : '';
-$updatedTranslationEn = $_POST['mentionsEn'] ? $_POST['mentionsEn'] : '';
-$responseEn;
-$responseFr;
-if (!empty($updatedTranslationEn)) {
+$updatedTranslationFr = isset($_POST['mentionsFr'])
+    ? $_POST['mentionsFr']
+    : null;
+$updatedTranslationEn = isset($_POST['mentionsEn'])
+    ? $_POST['mentionsEn']
+    : null;
+$responseEn = 'none';
+$responseFr = 'none';
+if ($updatedTranslationEn != null) {
     $responseEn = updateTranslation('mentions', $updatedTranslationEn, 'en');
 }
-if (!empty($updatedTranslationFr)) {
+if ($updatedTranslationEn != null) {
     $responseFr = updateTranslation('mentions', $updatedTranslationFr, 'fr');
 }
-if ($responseEn == 'success') {
-}
 include 'views/auth/mentions-legales-admin.php';
+?>
