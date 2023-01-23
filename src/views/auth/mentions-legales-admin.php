@@ -31,7 +31,7 @@ defer            async
             ); ?>" value="<?php echo translate('mentions', 'en'); ?>" ></div>
             </div>
             <p><?php if ($responseEn == 'success' || $responseFr == 'success') {
-                echo printTranslation('goodUpdate');
+                printTranslation('goodUpdate');
             } ?></p>
             <input type="submit" class="button mT25" value="<?php printTranslation(
                 'send'
