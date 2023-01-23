@@ -1,31 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>SafeHub - Messagerie admin</title>
-        <link rel="stylesheet" href="views/styles/common/index.css" />
-        <link rel="stylesheet" href="views/styles/headerprivate.css" />
-        <script
-            type="text/javascript"
-            src="views/scripts/common/components.js"
-            async
-        ></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    </head>
-        <body>
-            <p>bonjour</p>
-            <div
-            class="header-container"
-            title="Messagerie"
-            leftButtonPath="views/assets/icons/backButton.svg"
-            width="25px"
-        ></div>
-        <div
-            class="input-container"
-            type="search"
-            name="contact"
-            placeholder="Rechercher un contact"
-            path=""
-        > 
 
-        </body></html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Messagerie</title>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="card-header">
+                <div class="h">
+                     
+                     <h2 style="color: #F76B1C; text-indent:88px">          
+                             <ion-icon   name="chevron-back-outline" style="color: black;text-indent: 160px;"></ion-icon>                   
+                        MESSAGERIE</h2>
+                </div>
+            </div>
+
+            <div class="search-chat">
+              
+                <input type="text" placeholder="Rechercher un contact...">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+
+            <div class="chat-list">
+                <div class="chat">
+                    <div class="imgBx">
+                        <h4 class="h4" style="position: absolute;
+                        left: 13px;">HB</h4>
+                    </div>
+
+                    <div class="details">
+                        <div class="head">
+                            <h4 class="name">Hippolyte Bach</h4>
+                        </div>
+
+                        <div class="msgs">
+                            <p class="msg" style="color: gray;">
+                                Un message qui a déjà été lu
+                            </p>
+                            <b class="num"></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="imgBx">
+                        <h4 class="h4" style="position: absolute;
+                        left: 13px;">CJ</h4>
+                    </div>
+
+                    <div class="details">
+                        <div class="head">
+                            <h4 class="name">César Jules</h4>
+                        </div>
+
+                        <div class="msgs">
+                            <p class="msg" style="color: black;">
+                                Un message qui n'est pas encore lu
+                            </p>
+                            <b class="num"></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="imgBx">
+                        <h4 class="h4" style="position: absolute;
+                        left: 13px;">CJ</h4>
+                    </div>
+                    <div class="details">
+                        <div class="head">
+                            <h4 class="name">César Jules</h4>
+                        </div>
+                        <div class="msgs">
+                            <p class="msg" style="color: black;">
+                                Un message qui a déjà été lu </p>
+                            <b class="num"></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- icons -->
+    <!--inclut une bibliothèque JavaScript externe nommée Ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
