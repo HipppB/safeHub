@@ -62,8 +62,6 @@ CREATE TABLE IF NOT EXISTS `products` (
   `expiration_date` date NOT NULL,
   `db_max` int(11),
   `temp_max` int(11),
-  `id_gestionnaire` int(11) NOT NULL,
-  FOREIGN KEY (id_gestionnaire) REFERENCES users(id) ON DELETE CASCADE,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
@@ -76,6 +74,7 @@ CREATE TABLE IF NOT EXISTS `products_users` (
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
   `date` datetime NOT NULL,
+  `is_gestionnaire` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE
