@@ -50,12 +50,14 @@
                 <div class="line"></div>
                 <div id='listConseil'>
                 <?php foreach ($tips as $tip) {
-                    echo "<div>
+                    echo "<div id='conseilListContainer'>
                     <div class='iconParagraph mB25'>
                         <p class='conseilsParagraph'>" .
                         $tip['content'] .
                         "</p>
-                        <img src='../views/assets/icons/close.svg' id='deleteBtn' onClick='deleteTips(:id)'/>
+                        <img src='../views/assets/icons/close.svg' id='deleteBtn' onClick='deleteTips(" .
+                        $tip['id'] .
+                        ")'/>
                     </div>
                     <div class='line'></div>
                 </div>";

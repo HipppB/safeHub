@@ -97,6 +97,32 @@ function updateListConseil(listConseil) {
 }
 
 function deleteTips(id) {
-    document.addEventListener('click')
-    document.getElementById('deleteBtn').innerHTML = ''
+    console.log('id', id)
+    try {
+        // set to form data
+        const formData = JSON.stringify({
+            id: id,
+            action: 'delete',
+        })
+        //send form data to server
+        function callback(response) {
+            // parse response
+            console.log(response)
+            try {
+                response = JSON.parse(response)
+                updateListConseil(response.tips)
+            } catch (e) {
+                // window.alert(
+                //     'Une erreur est survenue, veuillez réessayer plus tard'
+                // )
+            }
+            // if reponse is successful
+            // window.alert('Success')
+        }
+        // get result
+        sendXMLHttpObject(formData, '', callback)
+    } catch (e) {
+        window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
+        console.log(e)
+    }
 }

@@ -13,6 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $req = file_get_contents('php://input');
     $req = json_decode($req);
 
+    if ($req->action == 'delete') {
+        deleteTips($req->id);
+        $tips = getTips();
+
+        echo json_encode([
+            'tips' => $tips,
+            'success' => true,
+        ]);
+        exit();
+    }
+
     $content = htmlspecialchars($req->content);
 
     if (empty($req->content)) {
