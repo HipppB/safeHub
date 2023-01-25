@@ -28,7 +28,7 @@ defer            async
             <a class="button-outlined" href="./ajoutProduit"><?php printTranslation(
                 'addProduct'
             ); ?></a>
-            <a class="button-outlined"  href="./ticketuser"><?php printTranslation(
+            <a class="button-outlined"  href="./ticket"><?php printTranslation(
                 'newTicket'
             ); ?></a>
         </div>

@@ -33,7 +33,7 @@
             <div class="input-list-container gap10">
                 <button class="button">Ajouter un produit</button>
 
-                <button class="button">Gestion du site</button>
+                <button class="button" onclick="window.location.href='gestion'">Gestion du site</button>
             </div>
         <?php } ?>
             <div class="low-title">Dernières notifications</div>

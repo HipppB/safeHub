@@ -80,10 +80,14 @@ h2 {
 
 .imgText {
     display: flex;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     color: #fff;
     justify-content: space-between;
+}
+
+.imgText p {
+    width: 90%;
 }
 
 .imgText img {

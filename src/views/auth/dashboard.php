@@ -47,7 +47,7 @@ defer        async
             path=""
 
         ></div>
-        <?php if ($error == 401) {
+        <?php if (!empty($error) && $error == 401) {
             echo "<p class='error'>Code produit incorrect</p>";
         } ?>
         <input type="submit" class="button mT25 mB25" value="Ajouter" />

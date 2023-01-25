@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open modifProfile.html",
-            "file": "c:\\MAMP\\htdocs\\safeHub\\src"
+            "name": "Open index.php",
+            "file": "c:\\MAMP\\htdocs\\safeHub\\docker"
         }
     ]
 }

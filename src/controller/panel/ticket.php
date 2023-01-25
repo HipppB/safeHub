@@ -3,4 +3,7 @@ require 'model/user.requests.php';
 if (!userIsConnected()) {
     header('Location: /connexion');
 }
-include 'views/auth/ticketUser.html';
+
+require 'views/auth/ticket.php';
+
+?>
