@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title><?php printTranslation('titleMentions'); ?></title>
+        <title>SafeHub - <?php printTranslation('titleCgu'); ?></title>
         <link rel="stylesheet" href="../views/styles/common/index.css" />
         <link rel="stylesheet" href="../views/styles/headerprivate.css" />
         <link rel="stylesheet" href="../views/styles/cguMentionsLegales.css" />
@@ -15,15 +15,16 @@ defer            async
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <?php require 'views/components/headerprivate.php'; ?>
+    <?php require 'views/components/headerprivate.php'; ?>
+
         <form method="post" class="formModif">
             <div class="bigContainer">
-            <div class="input-label-container" name="mentionsFr" multiline="true" placeholderInside="" placeholder="<?php printTranslation(
+            <div class="input-label-container" name="cguFr" multiline="true" placeholderInside="" placeholder="<?php printTranslation(
                 'versionMentionsFr'
-            ); ?>" value="<?php echo translate('mentions', 'fr'); ?>" ></div>
-            <div class="input-label-container" name="mentionsEn" multiline="true" placeholderInside="" placeholder="<?php printTranslation(
+            ); ?>" value="<?php echo translate('cgu', 'fr'); ?>" ></div>
+            <div class="input-label-container" name="cguEn" multiline="true" placeholderInside="" placeholder="<?php printTranslation(
                 'versionMentionsEn'
-            ); ?>" value="<?php echo translate('mentions', 'en'); ?>" ></div>
+            ); ?>" value="<?php echo translate('cgu', 'en'); ?>" ></div>
             </div>
             <p><?php if ($responseEn == 'success' || $responseFr == 'success') {
                 printTranslation('goodUpdate');

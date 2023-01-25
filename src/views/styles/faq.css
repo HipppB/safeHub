@@ -60,3 +60,7 @@
     gap: 30px;
     cursor: pointer;
 }
+
+.HoverfaqIcon :hover {
+    color: yellow;
+}

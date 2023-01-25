@@ -104,17 +104,52 @@ try {
     $queryAddTips->execute([
         'id' => '3',
         'content' =>
-            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+            'Utilisez des moyens de transport durables comme la marche, le vélo ou les transports en commun pour réduire les émissions de gaz à effet de serre.',
     ]);
     $queryAddTips->execute([
         'id' => '4',
         'content' =>
-            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+            "Mangez des aliments locaux et de saison pour réduire l'empreinte carbone liée à l'agriculture industrielle.",
     ]);
     $queryAddTips->execute([
         'id' => '5',
         'content' =>
+            "Économisez de l'énergie en utilisant des appareils économes en énergie et en éteignant les lumières et les appareils électroniques lorsqu'ils ne sont pas utilisés.",
+    ]);
+    $queryAddTips->execute([
+        'id' => '6',
+        'content' =>
+            "Réduisez votre consommation d'eau en prenant des douches plus courtes et en réparant les fuites d'eau rapidement.",
+    ]);
+    $queryAddTips->execute([
+        'id' => '7',
+        'content' =>
+            "Utilisez des produits écologiques pour nettoyer votre maison et jardin pour réduire les polluants chimiques dans l'environnement.",
+    ]);
+    $queryAddTips->execute([
+        'id' => '8',
+        'content' =>
+            "Plantez des arbres et des plantes pour aider à absorber le dioxyde de carbone et à améliorer la qualité de l'air.",
+    ]);
+    $queryAddTips->execute([
+        'id' => '9',
+        'content' =>
+            'Recyclez les déchets pour réduire la quantité de matières qui se retrouvent en décharge.',
+    ]);
+    $queryAddTips->execute([
+        'id' => '10',
+        'content' =>
             'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+    $queryAddTips->execute([
+        'id' => '11',
+        'content' =>
+            'Soutenez les entreprises et les politiques qui ont des pratiques durables et écologiques.',
+    ]);
+    $queryAddTips->execute([
+        'id' => '12',
+        'content' =>
+            "Sensibilisez vos amis et votre famille à l'importance de prendre des mesures pour protéger l'environnement.",
     ]);
     echo 'Fake tips created' . PHP_EOL;
 } catch (PDOException $e) {

@@ -143,6 +143,11 @@
         "fr": "Ajouter question/réponse",
         "en": "Add question/answer"
     },
+    "add": {
+        "fr": "Ajouter",
+        "en": "Add"
+    },
+
     "tips-list": {
         "fr": "Liste des conseils",
         "en": "Tips list"
@@ -150,6 +155,14 @@
     "mentions": {
         "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam. Sed pulvinar proin gravida hendrerit. Etiam erat velit scelerisque in dictum. Interdum varius sit amet mattis vulputate. Pellentesque adipiscing commodo elit at imperdiet dui. In eu mi bibendum neque egestas congue quisque. Dui ut ornare lectus sit amet est placerat in. Urna molestie at elementum eu facilisis sed. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. A condimentum vitae sapien pellentesque. Velit dignissim sodales ut eu sem integer vitae justo. Enim facilisis gravida neque convallis. Quis commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc.",
         "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam. Sed pulvinar proin gravida hendrerit. Etiam erat velit scelerisque in dictum. Interdum varius sit amet mattis vulputate. Pellentesque adipiscing commodo elit at imperdiet dui. In eu mi bibendum neque egestas congue quisque. Dui ut ornare lectus sit amet est placerat in. Urna molestie at elementum eu facilisis sed. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. A condimentum vitae sapien pellentesque. Velit dignissim sodales ut eu sem integer vitae justo. Enim facilisis gravida neque convallis. Quis commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc."
+    },
+    "question-rep": {
+        "fr": "question",
+        "en": "question"
+    },
+    "rep": {
+        "fr": "reponse",
+        "en": "response"
     },
     "bySubscribing": {
         "fr": "En vous inscrivant, vous acceptez nos",
@@ -251,6 +264,14 @@
         "fr": "La température est de",
         "en": "The temperature is"
     },
+    "IncorrectCode": {
+        "fr": "Code produit incorrect",
+        "en": "Incorrect product code"
+    },
+    "ProductCode": {
+        "fr": "Code produit",
+        "en": "Product code"
+    },
     "humidityDataSentence": {
         "fr": "Le taux d'humidité est de",
         "en": "The humidity level is"
@@ -350,5 +371,37 @@
     "deleteUser": {
         "fr": "Supprimer l'utilisateur",
         "en": "Delete user"
+    },
+    "What is a ticket": {
+        "fr": "Qu'est-ce qu'un ticket ?",
+        "en": "What is a ticket ?"
+    },
+    "What is a ticketText": {
+        "fr": "Les tickets sont transmis directement aux administrateurs, si vous avez une plainte ou un bug n’hésitez pas à en faire un. <br/><br/>Si vous avez un problème dans votre habitation et que vous souhaitez contacter la personne en charge utilisez la messagerie.</p>",
+        "en": "Tickets are sent directly to the administrators, if you have a complaint or a bug do not hesitate to make one. <br/><br/>If you have a problem in your home and you want to contact the person in charge use the messaging.</p>"
+    },
+    "New ticket": {
+        "fr": "Nouveau ticket",
+        "en": "New ticket"
+    },
+    "Object": {
+        "fr": "Objet",
+        "en": "Object"
+    },
+    "What is happening ?": {
+        "fr": "Que se passe t-il ?",
+        "en": "What is happening ?"
+    },
+    "titleCgu": {
+        "fr": "Conditions générales d'utilisation",
+        "en": "Terms of use"
+    },
+    "cgu": {
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam. Sed pulvinar proin gravida hendrerit. Etiam erat velit scelerisque in dictum. Interdum varius sit amet mattis vulputate. Pellentesque adipiscing commodo elit at imperdiet dui. In eu mi bibendum neque egestas congue quisque. Dui ut ornare lectus sit amet est placerat in. Urna molestie at elementum eu facilisis sed. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. A condimentum vitae sapien pellentesque. Velit dignissim sodales ut eu sem integer vitae justo. Enim facilisis gravida neque convallis. Quis commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam. Sed pulvinar proin gravida hendrerit. Etiam erat velit scelerisque in dictum. Interdum varius sit amet mattis vulputate. Pellentesque adipiscing commodo elit at imperdiet dui. In eu mi bibendum neque egestas congue quisque. Dui ut ornare lectus sit amet est placerat in. Urna molestie at elementum eu facilisis sed. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. A condimentum vitae sapien pellentesque. Velit dignissim sodales ut eu sem integer vitae justo. Enim facilisis gravida neque convallis. Quis commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc."
+    },
+    "gestion": {
+        "fr": "GESTION",
+        "en": "MANAGEMENT"
     }
 }
