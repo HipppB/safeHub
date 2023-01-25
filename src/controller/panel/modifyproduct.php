@@ -1,5 +1,5 @@
 <?php
-require 'model/user.requests.php';
+require_once 'model/user.requests.php';
 if (!userIsConnected()) {
     header('Location: /connexion');
 }

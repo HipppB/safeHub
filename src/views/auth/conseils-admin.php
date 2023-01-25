@@ -10,7 +10,7 @@
         <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
-            async
+defer            async
         ></script>
         <script
             type="text/javascript"
