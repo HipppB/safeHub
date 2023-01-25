@@ -26,15 +26,18 @@
     <?php require 'views/components/headerPrivate.php'; ?>
 
     <body class="mT50 center">
+        
+        
         <div class="rwidth">
+        <?php if (userIsAdmin()) { ?>
             <div class="input-list-container gap10">
                 <button class="button">Ajouter un produit</button>
 
                 <button class="button">Gestion du site</button>
             </div>
-
+        <?php } ?>
             <div class="low-title">Dernières notifications</div>
-
+            
         <?php
         $notifications = false;
         if ($notifications == false) {

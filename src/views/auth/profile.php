@@ -14,30 +14,13 @@ defer            async
         <title>SafeHub - Profil</title>
     </head>
     <body>
-    <?php require 'views/components/headerPrivate.php'; ?>
+    <?php
+    require 'views/components/headerPrivate.php';
+    require 'views/components/userProfile.php';
+    ?>
 
 
-        <div class="central-container">
-            <h2 class="gradienttext">
-                <?php echo $user['name'] . ' ' . $user['lastname']; ?></h2>
-            <div>
-            <?php if (new DateTime($user['birth_date'])) {
-                $start_datetime = new DateTime();
-                $diff = $start_datetime->diff(
-                    new DateTime($user['birth_date'])
-                );
-                echo $diff->y;
-            } else {
-                echo 'N/A';
-            } ?>    
-            <?php printTranslation('year'); ?></div>
-            <div class="small-stroke"></div>
-            
-            <?php echo '<div>' . $user['phone'] . '</div>'; ?>
-            <div>
-                <?php echo $user['email']; ?></h2>
-            </div>
-        </div>
+        
         <div class="modifierProduit">
             <a class="button" href="./edit-profile"><?php printTranslation(
                 'editProfile'

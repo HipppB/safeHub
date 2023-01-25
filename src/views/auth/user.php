@@ -18,18 +18,16 @@ defer            async
         ></script>
         <title>SafeHub - utilisateur</title>
     </head>
-    <?php require 'views/components/headerPrivate.php'; ?>
-
+   
     <body class="mT50 center">
+    <?php
+    require 'views/components/headerPrivate.php';
+    require 'views/components/userProfile.php';
+    ?>
 
 
-        <div class="central-container">
-            <h2 class="gradienttext">Nom Prénom</h2>
-            <div>XX ans</div>
-            <div class="small-stroke"></div>
-            <div>+33 9 75 43 78 07</div>
-            <div>example@example.com</div>
-</div>
+
+
         <div class="input-list-container rwidth">
         <div class="low-title">Produits</div>
 
