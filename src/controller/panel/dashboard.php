@@ -37,7 +37,7 @@ if (userIsAdmin() || userIsGestionnaire()) {
     $products = getUserProducts($_SESSION['user']['id']);
     if (count($products) > 0) {
         require 'model/tips.requests.php';
-        $tipFront = getTipsById(3);
+        $tipFront = getRandomTips();
         require 'views/auth/dashboard-products.php'; //Dashboard User
     } else {
         require 'views/auth/dashboard.php';

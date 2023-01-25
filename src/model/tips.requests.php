@@ -36,12 +36,14 @@ function deleteTips($id)
     ]);
 }
 
-function getTipsById($id)
+function getRandomTips()
 {
     global $db;
-    $query = $db->prepare('SELECT * FROM tips WHERE id = :id');
-    $query->execute([
-        'id' => $id,
-    ]);
-    return $query->fetch();
+    $query = $db->prepare('SELECT * FROM tips');
+    $query->execute();
+    $tips = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    $random_index = array_rand($tips);
+
+    return $tips[$random_index];
 }
