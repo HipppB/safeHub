@@ -1,6 +1,12 @@
+
+
 <?php
+if (empty($rankMode)) {
+    $rankMode = false;
+}
 echo '
-<div class="item-in-list rwidth" onclick="window.location.href = \'./product?productid=' .
+<div class="frow w100p">
+    <div class="item-in-list rwidth onBottom"  onclick="window.location.href = \'./product?productid=' .
     $product['id'] .
     '\';">
     <div>
@@ -22,8 +28,17 @@ echo '
     $product['user_code'] .
     '
     </div>
-    </div>      
+    </div>  
+    </div>
+    ' .
+    ($rankMode
+        ? '<div class="small-2 s025  flex center relative"><img src="../views/assets/icons/' .
+            (!$product['is_gestionnaire'] ? 'upgreen.svg' : 'downred.svg') .
+            '" class="w30px onTop hover5p hoverClick left10 absolute"/></div>'
+        : '') .
+    '
 </div>
 <div class="line rwidth"></div>
 
     ';
+

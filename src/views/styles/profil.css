@@ -34,7 +34,7 @@ div:nth-child(5) {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 5%;
     flex-direction: column;
     gap: 20px;
 }

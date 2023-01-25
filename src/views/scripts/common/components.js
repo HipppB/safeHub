@@ -222,7 +222,6 @@ function onClickLangage(lang) {
         document.appendChild(element)
         searchforAll()
     }
-    console.log(window.location)
     let url = `${window.location.pathname}?action=changeLang&lang=${lang}`
     if (window.location.search) {
         url = `${window.location.pathname}${window.location.search}&action=changeLang&lang=${lang}`

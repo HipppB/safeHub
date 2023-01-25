@@ -59,7 +59,7 @@ function setUsers(response) {
         </div>
         <div>
             <div class="small-2 s025">
-                ${user['phone']}
+                ${user['phone'] ? user['phone'] : ''}
             </div>
         </div>
         </div>

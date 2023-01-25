@@ -3,21 +3,20 @@
 $error = '';
 require 'model/user.requests.php';
 require 'model/product.requests.php';
+if (!userIsConnected()) {
+    header('Location: /connexion');
+}
 if (isset($_POST['productUserCode'])) {
     $user = $_SESSION['user'];
     $products = addProductToUserWithUserCode(
         $_POST['productUserCode'],
         $user['id']
     );
-    if (count($products) > 0) {
+    if ($products > 0) {
         $error = 'success';
     } else {
         $error = 401;
     }
-}
-
-if (!userIsConnected()) {
-    header('Location: /connexion');
 }
 
 if (userIsAdmin() || userIsGestionnaire()) {

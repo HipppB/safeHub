@@ -14,7 +14,8 @@
         <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
-defer            async
+            defer
+            async
         ></script>
         <title>SafeHub - utilisateur</title>
     </head>
@@ -32,17 +33,32 @@ defer            async
                 echo '<div class="center small-text">Aucun produit</div>';
             } else {
                 foreach ($products as $product) {
+                    $rankMode = true;
                     require 'views/components/productListingAdmin.php';
                 }
             } ?>
         </div>
     
         <div class="modifierProduit">
-            <bouton class="button">Associer un produit</bouton>
-            <bouton class="button-outlined">Promouvoir gestionnaire</bouton>
-            <bouton class="button-outlined">Promouvoir administrateur</bouton>
+            <bouton class="button"><?php printTranslation(
+                'addProduct'
+            ); ?></bouton>
+            <bouton class="button-outlined">
+            <?php if ($user['is_admin']) {
+                printTranslation('promoteAdmin');
+            } else {
+                printTranslation('demoteAdmin');
+            } ?>
+            </bouton>
             <button class="button-outlined-red mT20 mB50">
-                Supprimer l'utilisateur
+                <?php if ($user['is_banned']) {
+                    printTranslation('unbanUser');
+                } else {
+                    printTranslation('banUser');
+                } ?>
+            </button>
+            <button class="button-outlined-red mT20 mB50">
+                <?php printTranslation('deleteUser'); ?>
             </button>
         </div>
 
