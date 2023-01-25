@@ -330,5 +330,25 @@
     "titlePageMentions": {
         "fr": "SafeHub - Modifier mentions légales",
         "en": "Safehub - Modify legal notices"
+    },
+    "What is a ticket": {
+        "fr": "Qu'est-ce qu'un ticket ?",
+        "en": "What is a ticket ?"
+    },
+    "What is a ticketText": {
+        "fr": "Les tickets sont transmis directement aux administrateurs, si vous avez une plainte ou un bug n’hésitez pas à en faire un. <br/><br/>Si vous avez un problème dans votre habitation et que vous souhaitez contacter la personne en charge utilisez la messagerie.</p>",
+        "en": "Tickets are sent directly to the administrators, if you have a complaint or a bug do not hesitate to make one. <br/><br/>If you have a problem in your home and you want to contact the person in charge use the messaging.</p>"
+    },
+    "New ticket": {
+        "fr": "Nouveau ticket",
+        "en": "New ticket"
+    },
+    "Object": {
+        "fr": "Objet",
+        "en": "Object"
+    },
+    "What is happening ?": {
+        "fr": "Que se passe t-il ?",
+        "en": "What is happening ?"
     }
 }
