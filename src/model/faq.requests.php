@@ -3,16 +3,17 @@
 require_once 'connectDb.php';
 $db = connectDb();
 
-function addQuestionRep($q, $r)
+function addQuestionRep($q, $r, $lang)
 {
     global $db;
     $query = $db->prepare(
-        'INSERT INTO faq (question,reponse) VALUES (:question,:reponse)'
+        'INSERT INTO faq (question,reponse, lang) VALUES (:question,:reponse, :lang)'
     );
     try {
         $query->execute([
             'question' => $q,
             'reponse' => $r,
+            'lang' => $lang,
         ]);
         return true;
     } catch (PDOExeption $E) {
@@ -41,6 +42,20 @@ function GetFAQ()
     $query = $db->prepare('SELECT * FROM faq ');
     try {
         $query->execute();
+        return $query->fetchAll();
+    } catch (PDOExeption $E) {
+        return false;
+    }
+}
+function GetFAQCurrentLang()
+{
+    $lang = $_SESSION['lang'];
+    global $db;
+    $query = $db->prepare('SELECT * FROM faq WHERE lang = :lang');
+    try {
+        $query->execute([
+            'lang' => $lang,
+        ]);
         return $query->fetchAll();
     } catch (PDOExeption $E) {
         return false;

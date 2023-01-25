@@ -11,7 +11,7 @@
             type="text/javascript"
             src="../views/scripts/common/components.js"
             defer
-            async
+            defer
         ></script>
         <script
             type="text/javascript"
@@ -22,16 +22,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
+    <?php require 'views/components/headerPrivate.php'; ?>
         <div
-            class="header-container"
+
+            class="header-container mT20"
             title="Modifier FAQ"
-            leftButtonPath="../views/assets/icons/backButton.svg"
+            leftButtonPath=""
         ></div>
 
-        <div class="faq-container">
-            <p class=" titleFAQ">Ajouter questions/réponses</p>
+        <div class="faq-container mB10">
+            <p class="titleFAQ">Ajouter questions/réponses</p>
             <div>
                 <form method="post">
+                    
                     <div
                     class="input-label-container mT15"
                     type="text"
@@ -45,6 +48,9 @@
                         multiline="true"
                         placeholder="Réponse..."
                     ></div>
+                    <div class="flex frow center mT10 ">
+                    <input type="checkbox" class="bgred" name="isEnglish"></input><div class="flex vcenter center s025 mL10">Question en anglais</div>
+</div>
                     <input
                         type="submit"
                         class="button mT10"
@@ -63,7 +69,7 @@
         
     <?php foreach ($faqs as $faq) { ?> <br>
             
-            <div class="question-container">
+            <div class="question-container ">
                 <div class="faqText">
                     <p class="titleFAQ">
                         <?php echo $faq['question']; ?>
@@ -74,6 +80,7 @@
                         </p>
                 </div>
                 <div class="faqIcon">
+                    
                     <svg
                         width="16"
                         height="16"
@@ -97,8 +104,11 @@
                             stroke="red"
                         />
                     </svg>
+                    <div class="s05">
+                        <?php echo $faq['lang']; ?>
+                    </div>
 
-                    <svg
+                    <!-- <svg
                         width="17"
                         height="17"
                         viewBox="0 0 17 17"
@@ -114,13 +124,12 @@
                             d="M14.1985 9.45097e-06C14.6456 0.000583899 15.0826 0.133656 15.4541 0.382426C15.8257 0.631196 16.1153 0.98451 16.2863 1.39776C16.4573 1.81101 16.502 2.26568 16.4149 2.70435C16.3277 3.14302 16.1126 3.54603 15.7967 3.8625L8.65668 11.0063C8.57101 11.092 8.46366 11.1527 8.34613 11.182L5.34081 11.9342C5.22884 11.9624 5.11148 11.961 5.00019 11.9303C4.88889 11.8996 4.78746 11.8405 4.70578 11.7589C4.62411 11.6773 4.56499 11.5759 4.53418 11.4646C4.50338 11.3533 4.50195 11.2359 4.53004 11.1239L5.28204 8.11779C5.31134 8.00023 5.37205 7.89285 5.45768 7.80716L12.5983 0.662685C12.808 0.451882 13.0574 0.28477 13.332 0.171021C13.6067 0.0572728 13.9012 -0.000852649 14.1985 9.45097e-06ZM7.84324 9.93079L14.8557 2.91658C14.9417 2.83048 15.01 2.72826 15.0566 2.61576C15.1032 2.50327 15.1272 2.38269 15.1272 2.26092C15.1272 2.13915 15.1032 2.01858 15.0566 1.90608C15.01 1.79358 14.9417 1.69136 14.8557 1.60526C14.7696 1.51916 14.6674 1.45086 14.5549 1.40426C14.4424 1.35766 14.3219 1.33368 14.2002 1.33368C14.0784 1.33368 13.9579 1.35766 13.8454 1.40426C13.7329 1.45086 13.6308 1.51916 13.5447 1.60526L6.53225 8.61947L6.09548 10.3677L7.84324 9.93079Z"
                             fill="#747474"
                         /> 
-                    </svg>
+                    </svg> -->
                 </div>
             </div>
     <?php } ?>
         </div>
         
-
-        <div class="footer-container" small="true"></div>
+        <?php require 'views/components/footer.php'; ?>
     </body>
 </html>

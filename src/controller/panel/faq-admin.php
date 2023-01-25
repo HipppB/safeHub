@@ -17,7 +17,8 @@ if (!empty($_POST['ajouter'])) {
     if (!empty($_POST['question']) && !empty($_POST['reponse'])) {
         $q = $_POST['question'];
         $r = $_POST['reponse'];
-        $retour = addQuestionRep($q, $r);
+        $lang = !empty($_POST['isEnglish']) ? 'en' : 'fr';
+        $retour = addQuestionRep($q, $r, $lang);
     }
 }
 $faqs = GetFAQ();
