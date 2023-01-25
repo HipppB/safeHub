@@ -80,6 +80,7 @@ function userIsAdmin()
 }
 function userIsGestionnaire()
 {
+    // if user can be gestionnaire and user, it depends on the product, so we need the product id.
     return false;
 }
 
