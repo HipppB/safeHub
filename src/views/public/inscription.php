@@ -5,7 +5,6 @@
         <title>SafeHub - Inscription</title>
         <link rel="stylesheet" href="views/styles/identificationPagesStyles.css" />
         <link rel="stylesheet" href="views/styles/inscription.css" />
-
         <link rel="stylesheet" href="views/styles/common/index.css" />
 
         <script

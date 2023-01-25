@@ -310,5 +310,25 @@
     "year": {
         "fr": "ans",
         "en": "year"
+    },
+    "versionMentionsFr": {
+        "fr": "Version française",
+        "en": "French version"
+    },
+    "versionMentionsEn": {
+        "fr": "Version englaise",
+        "en": "English version"
+    },
+    "goodUpdate": {
+        "fr": "Mise à jour effectuée",
+        "en": "Update completed"
+    },
+    "titleMentions": {
+        "fr": "Modifier mentions légales",
+        "en": "Modify legal notices"
+    },
+    "titlePageMentions": {
+        "fr": "SafeHub - Modifier mentions légales",
+        "en": "Safehub - Modify legal notices"
     }
 }
