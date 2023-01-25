@@ -63,3 +63,29 @@ h2 {
 .graphList img {
     margin-bottom: 2px;
 } */
+.modalTipsContainer {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.modalBackground {
+    position: sticky;
+    height: 100px;
+    width: 400px;
+    background-color: #f76c1cd2;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.imgText {
+    display: flex;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.imgText img {
+    cursor: pointer;
+}

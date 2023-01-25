@@ -27,6 +27,14 @@
 
       <?php } ?>
     </main>
+    <div class="modalTipsContainer">
+      <div class="modalBackground">
+        <div class="imgText">
+          <p>Lorem ispum dolor sit amet.</p>
+          <img src="../../views/assets/icons/close.svg  " alt="">
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <?php require 'views/components/footer.php'; ?>
 </body>

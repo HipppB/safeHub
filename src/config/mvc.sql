@@ -148,12 +148,12 @@ CREATE TABLE IF NOT EXISTS `tips` (
 
 CREATE TABLE IF NOT EXISTS `tips_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_product` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `id_tip` int(11) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`id_tip`) REFERENCES tips(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`id_product`) REFERENCES products(`id`) ON DELETE CASCADE
+  FOREIGN KEY (`id_user`) REFERENCES users(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
