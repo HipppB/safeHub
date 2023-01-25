@@ -30,12 +30,11 @@ defer        async
         <?php if (!isset($notfirst)) { ?>
 
         
-        <p>Vous n'avez pas de produit associé à votre compte</p>
+        <p><?php printTranslation('noProductOnAccount'); ?></p>
         <hr />
         <?php } ?>
         <p>
-            Rentrez le code produit qui vous a été donné afin de les
-            importer.
+        <?php printTranslation('addProductInstruction'); ?>
         </p>
     </div>
 
@@ -43,14 +42,18 @@ defer        async
         <div
             class="input-label-container"
             name="productUserCode"
-            placeholder="Code produit"
+            placeholder="<?php printTranslation('ProductCode'); ?>"
             path=""
 
         ></div>
         <?php if (!empty($error) && $error == 401) {
-            echo "<p class='error'>Code produit incorrect</p>";
+            echo "<p class='error center'>" .
+                printTranslation('IncorrectCode', true) .
+                '</p>';
         } ?>
-        <input type="submit" class="button mT25 mB25" value="Ajouter" />
+        <input type="submit" class="button mT25 mB25" value=" <?php printTranslation(
+            'add'
+        ); ?>" />
     </form>
 </main>
 <!-- Footer -->

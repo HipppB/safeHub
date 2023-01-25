@@ -143,6 +143,11 @@
         "fr": "Ajouter question/réponse",
         "en": "Add question/answer"
     },
+    "add": {
+        "fr": "Ajouter",
+        "en": "Add"
+    },
+
     "tips-list": {
         "fr": "Liste des conseils",
         "en": "Tips list"
@@ -258,6 +263,14 @@
     "temperatureDataSentence": {
         "fr": "La température est de",
         "en": "The temperature is"
+    },
+    "IncorrectCode": {
+        "fr": "Code produit incorrect",
+        "en": "Incorrect product code"
+    },
+    "ProductCode": {
+        "fr": "Code produit",
+        "en": "Product code"
     },
     "humidityDataSentence": {
         "fr": "Le taux d'humidité est de",
