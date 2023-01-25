@@ -47,12 +47,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         ]);
     }
 } else {
-    if (isset($_GET['id']) && isset($_GET['action'])) {
-        if ($_GET['action'] == 'delete') {
-            deleteTips($_GET['id']);
-            header('Location: /panel/conseils-admin');
-        }
-    }
-
     include 'views/auth/conseils-admin.php';
 }
