@@ -4,7 +4,7 @@ $productId = !empty($_GET['productId']) ? htmlspecialchars($_GET['productId']) :
 $type = !empty($_GET['type']) ? htmlspecialchars($_GET['type']) : "";
 
 if(!empty($productId) && !empty($type)){
-    $datas = retrieveProductDatasByType($type, $productId);
+    $datas = retrieveProductDatasByTypeLast20($type, $productId);
     echo json_encode($datas);
 } else {
     echo json_encode([]);
