@@ -1,5 +1,18 @@
-@media screen and (max-width: 1300px) {
-    .blob {
-        display: none;
+.blob {
+    display: none;
+}
+.home-title-container {
+    margin: 0;
+}
+
+.mT100 {
+    margin-top: 50px;
+}
+.home-container {
+    gap: 0px;
+}
+@media screen and (min-width: 1300px) {
+    .mT100 {
+        margin-top: 100px;
     }
 }

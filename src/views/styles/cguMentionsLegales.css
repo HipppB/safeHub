@@ -1,39 +1,45 @@
-.updateTitle {
-    font-size: 0.5em;
-}
-
-.line {
-    height: 1px;
-    background-color: #d8d8d8;
-}
-
-.paragraphCgu {
-    font-size: 0.5em;
-}
-
-.cguTitle {
-    font-size: 0.6em;
-
-    font-weight: 700;
-}
-
-.icon-container-modify {
+.formModif {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
 
-.icon-container-modify a {
-    cursor: pointer;
+.bigContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: -75px;
 }
 
-textarea {
-    font-size: 1rem;
+.input-container {
     line-height: 1.5em;
     font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 5px;
+    border: solid 1px rgb(255, 51, 51);
+    border-radius: 15px;
+    padding: 5px;
+    height: 45vh;
 }
 
-.rendu {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 50px;
+.input-container textarea {
+    height: 100%;
+}
+
+.button {
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .formModif {
+        margin-top: 75px;
+    }
+    .bigContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

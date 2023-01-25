@@ -2,7 +2,7 @@
 require 'model/user.requests.php';
 require 'model/faq.requests.php';
 
-if (!userIsConnected()) {
+if (!userIsAdmin()) {
     header('Location: /connexion');
 }
 if (isset($_GET['id']) && isset($_GET['action'])) {
@@ -11,7 +11,6 @@ if (isset($_GET['id']) && isset($_GET['action'])) {
     }
 }
 $user = $_SESSION['user'];
-
 $retour = '';
 
 if (!empty($_POST['ajouter'])) {

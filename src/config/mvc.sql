@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
 --
 -- Structure de la table `notifications`
 --
@@ -67,18 +66,6 @@ CREATE TABLE IF NOT EXISTS `products` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
-
---
--- Structure de la table `roles`
---
-CREATE TABLE IF NOT EXISTS `roles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `role_name` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
 --
 -- Structure de la table `products_users`
 --
@@ -86,12 +73,11 @@ CREATE TABLE IF NOT EXISTS `products_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
-  `id_role` int(11) NOT NULL,
   `date` datetime NOT NULL,
+  `is_gestionnaire` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE,
-  FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE,
-  FOREIGN KEY (id_role) REFERENCES roles(id) ON DELETE CASCADE
+  FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
@@ -136,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `metrics` (
 CREATE TABLE IF NOT EXISTS `tips` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` text NOT NULL,
-  `date` datetime NOT NULL,
+  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
@@ -148,12 +134,12 @@ CREATE TABLE IF NOT EXISTS `tips` (
 
 CREATE TABLE IF NOT EXISTS `tips_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_product` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `id_tip` int(11) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`id_tip`) REFERENCES tips(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`id_product`) REFERENCES products(`id`) ON DELETE CASCADE
+  FOREIGN KEY (`id_user`) REFERENCES users(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 

@@ -8,7 +8,15 @@
         </div>
 
         <a class="link" href="./profile">PROFIL</a>
-        <a class="link" href="./messagerie">MESSAGERIE</a>
+
+        <?php if (userIsAdmin()) { ?>
+            <a class="link" href="./gestion"><?php printTranslation(
+                'gestion'
+            ); ?></a>
+        <?php } else { ?>
+            <a class="link" href="./ticket">TICKET</a>
+
+        <?php } ?>
         <div class="topNavBar-logo-container">
             <img
                 class="topNavBar-logo"
@@ -72,9 +80,16 @@
             <a href="./dashboard">Dashboard</a>
         </div>
         <div class="lineHeader"></div>
+        <?php if (userIsAdmin()) { ?>
         <div class="link-Burger">
-            <a href="./messagerie">Messagerie</a>
+            <a href="./gestion">Gestion</a>
         </div>
+        <?php } else { ?>
+        <div class="link-Burger">
+            <a href="./ticket">Tickets</a>
+        </div>
+
+        <?php } ?>
         <div class="lineHeader"></div>
         <div class="link-Burger">
             <a href="./profile">Profile</a>
@@ -89,4 +104,4 @@
         </div>
     </div>
 </div>
-<div style="margin-bottom: 30px"></div>
+<div style="margin-bottom: 50px"></div>

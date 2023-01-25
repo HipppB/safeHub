@@ -13,10 +13,16 @@ function getUserByEmail($email)
     return $query->fetch();
 }
 
-function getUser($id, $setInSession)
+function getUser($id, $setInSession, $includePassword = false)
 {
     global $db;
-    $query = $db->prepare('SELECT * FROM users WHERE id = :id');
+    if ($includePassword) {
+        $query = $db->prepare('SELECT * FROM users WHERE id = :id');
+    } else {
+        $query = $db->prepare(
+            'SELECT name, id, lastname, email, phone, birth_date, is_admin FROM users WHERE id = :id'
+        );
+    }
     $query->execute([
         'id' => $id,
     ]);
@@ -27,23 +33,44 @@ function getUser($id, $setInSession)
     return $user;
 }
 
-function getUsers()
+function getUsers($search = null)
 {
     //If the user is admin we return all users
     if (userIsAdmin()) {
         global $db;
-        $query = $db->prepare('SELECT * FROM users');
-        $query->execute();
+        if (empty($search)) {
+            $query = $db->prepare(
+                'SELECT  name, id, lastname, email, phone, birth_date, is_admin FROM users'
+            );
+            $query->execute();
+            return $query->fetchAll();
+        }
+        $query = $db->prepare(
+            'SELECT name, id, lastname, email, phone, birth_date, is_admin FROM users WHERE name LIKE :search OR lastname LIKE :search OR email LIKE :search OR phone LIKE :search'
+        );
+        $query->execute([
+            'search' => '%' . $search . '%',
+        ]);
         return $query->fetchAll();
     }
     //If the user is gestionnaire on a product, we return all users of this product
     if (userIsGestionnaire()) {
         global $db;
+        if (empty($search)) {
+            $query = $db->prepare(
+                'SELECT name, id, lastname, email, phone, birth_date, is_admin FROM users INNER JOIN products_users ON products_users.id_user = users.id WHERE products_users.id_product = :id_product'
+            );
+            $query->execute([
+                'id_product' => $_SESSION['user']['id_product'],
+            ]);
+            return $query->fetchAll();
+        }
         $query = $db->prepare(
-            'SELECT * FROM users INNER JOIN products_users ON products_users.id_user = users.id WHERE products_users.id_product = :id_product'
+            'SELECT name, id, lastname, email, phone, birth_date, is_admin FROM users INNER JOIN products_users ON products_users.id_user = users.id WHERE products_users.id_product = :id_product AND (name LIKE :search OR lastname LIKE :search OR email LIKE :search OR phone LIKE :search)'
         );
         $query->execute([
             'id_product' => $_SESSION['user']['id_product'],
+            'search' => '%' . $search . '%',
         ]);
         return $query->fetchAll();
     }
@@ -80,6 +107,7 @@ function userIsAdmin()
 }
 function userIsGestionnaire()
 {
+    // if user can be gestionnaire and user, it depends on the product, so we need the product id.
     return false;
 }
 

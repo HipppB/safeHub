@@ -3,4 +3,8 @@ require 'model/user.requests.php';
 if (!userIsConnected()) {
     header('Location: /connexion');
 }
-include 'views/auth/gestion.html';
+if (userIsAdmin()){
+    require 'views/auth/gestion.php';
+} else {
+    header('Location: /panel/dashboard');
+}

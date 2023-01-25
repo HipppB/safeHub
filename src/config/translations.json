@@ -158,6 +158,217 @@
     "rep": {
         "fr": "reponse",
         "en": "response"
+    },
+    "bySubscribing": {
+        "fr": "En vous inscrivant, vous acceptez nos",
+        "en": "By subscribing, you accept our"
+    },
+    "terms": {
+        "fr": "Conditions générales d'utilisation",
+        "en": "Terms of use"
+    },
+    "andour": {
+        "fr": "et nos",
+        "en": "and our"
+    },
+    "legal": {
+        "fr": "Mentions légales",
+        "en": "Legal mentions"
+    },
+    "createby": {
+        "fr": "Crée par",
+        "en": "Created by"
+    },
+    "dashboard": {
+        "fr": "Tableau de bord",
+        "en": "Dashboard"
+    },
+    "404": {
+        "fr": "La page demandé n'existe pas",
+        "en": "The requested page does not exist"
+    },
+    "backHome": {
+        "fr": "Retour à l'accueil",
+        "en": "Back to home"
+    },
+    "lastUpdated": {
+        "fr": "Dernière mise à jour le",
+        "en": "Last updated on"
+    },
+    "talkToUs": {
+        "fr": "Parlez-nous de nos produits",
+        "en": "Talk to us about our products"
+    },
+    "phone": {
+        "fr": "Téléphone",
+        "en": "Phone"
+    },
+    "search": {
+        "fr": "Rechercher...",
+        "en": "Search..."
+    },
+    "faq": {
+        "fr": "Foire aux questions",
+        "en": "Frequently asked questions"
+    },
+    "resetPassword": {
+        "fr": "Réinitialiser le mot de passe",
+        "en": "Reset password"
+    },
+    "enterNewPassword": {
+        "fr": "Entrez votre nouveau mot de passe",
+        "en": "Enter your new password"
+    },
+    "confirmPassword": {
+        "fr": "Confirmez votre nouveau mot de passe",
+        "en": "Confirm your new password"
+    },
+    "reset": {
+        "fr": "Réinitialiser",
+        "en": "Reset"
+    },
+    "temperature": {
+        "fr": "Température",
+        "en": "Temperature"
+    },
+    "humidity": {
+        "fr": "Humidité",
+        "en": "Humidity"
+    },
+    "sound_level": {
+        "fr": "Signal Sonore",
+        "en": "Sound Level"
+    },
+    "carbon_dioxide": {
+        "fr": "Dioxyde de carbone",
+        "en": "Carbon Dioxide"
+    },
+    "product_list": {
+        "fr": "Liste des produits",
+        "en": "Product list"
+    },
+    "noProductOnAccount": {
+        "fr": "Vous n'avez aucun produit associé à votre compte",
+        "en": "You have no product associated to your account"
+    },
+    "addProductInstruction": {
+        "fr": "Rentrez le code de votre produit qui vous a é été donné afin d'importer vos produits",
+        "en": "Enter the code of your product that was given to you to import your products"
+    },
+    "temperatureDataSentence": {
+        "fr": "La température est de",
+        "en": "The temperature is"
+    },
+    "humidityDataSentence": {
+        "fr": "Le taux d'humidité est de",
+        "en": "The humidity level is"
+    },
+    "sound_levelDataSentence": {
+        "fr": "Le niveau sonore est de",
+        "en": "The sound level is"
+    },
+    "carbon_dioxideDataSentence": {
+        "fr": "Le taux de dioxyde de carbone est de",
+        "en": "The carbon dioxide rate is"
+    },
+    "temperatureHistory": {
+        "fr": "Historique de la température",
+        "en": "Temperature history"
+    },
+    "humidityHistory": {
+        "fr": "Historique de l'humidité",
+        "en": "Humidity history"
+    },
+    "sound_levelHistory": {
+        "fr": "Historique du niveau sonore",
+        "en": "Sound level history"
+    },
+    "carbon_dioxideHistory": {
+        "fr": "Historique du taux de dioxyde de carbone",
+        "en": "Carbon dioxide rate history"
+    },
+    "noDataFoundProduct": {
+        "fr": "Aucune donnée n'a été trouvée pour ce produit",
+        "en": "No data found for this product"
+    },
+    "goToDashBoard": {
+        "fr": "Retour au tableau de bord",
+        "en": "Go to dashboard"
+    },
+    "changePassword": {
+        "fr": "Changer de mot de passe",
+        "en": "Change password"
+    },
+    "birthDate": {
+        "fr": "Date de naissance",
+        "en": "Birth date"
+    },
+    "editProfile": {
+        "fr": "Modifier le profil",
+        "en": "Edit profile"
+    },
+    "addProduct": {
+        "fr": "Ajouter un produit",
+        "en": "Add a product"
+    },
+    "newTicket": {
+        "fr": "Nouveau ticket",
+        "en": "New ticket"
+    },
+    "year": {
+        "fr": "ans",
+        "en": "year"
+    },
+    "versionMentionsFr": {
+        "fr": "Version française",
+        "en": "French version"
+    },
+    "versionMentionsEn": {
+        "fr": "Version englaise",
+        "en": "English version"
+    },
+    "goodUpdate": {
+        "fr": "Mise à jour effectuée",
+        "en": "Update completed"
+    },
+    "titleMentions": {
+        "fr": "Modifier mentions légales",
+        "en": "Modify legal notices"
+    },
+    "titlePageMentions": {
+        "fr": "SafeHub - Modifier mentions légales",
+        "en": "Safehub - Modify legal notices"
+    },
+    "What is a ticket": {
+        "fr": "Qu'est-ce qu'un ticket ?",
+        "en": "What is a ticket ?"
+    },
+    "What is a ticketText": {
+        "fr": "Les tickets sont transmis directement aux administrateurs, si vous avez une plainte ou un bug n’hésitez pas à en faire un. <br/><br/>Si vous avez un problème dans votre habitation et que vous souhaitez contacter la personne en charge utilisez la messagerie.</p>",
+        "en": "Tickets are sent directly to the administrators, if you have a complaint or a bug do not hesitate to make one. <br/><br/>If you have a problem in your home and you want to contact the person in charge use the messaging.</p>"
+    },
+    "New ticket": {
+        "fr": "Nouveau ticket",
+        "en": "New ticket"
+    },
+    "Object": {
+        "fr": "Objet",
+        "en": "Object"
+    },
+    "What is happening ?": {
+        "fr": "Que se passe t-il ?",
+        "en": "What is happening ?"
+    },
+    "titleCgu": {
+        "fr": "Conditions générales d'utilisation",
+        "en": "Terms of use"
+    },
+    "cgu": {
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam. Sed pulvinar proin gravida hendrerit. Etiam erat velit scelerisque in dictum. Interdum varius sit amet mattis vulputate. Pellentesque adipiscing commodo elit at imperdiet dui. In eu mi bibendum neque egestas congue quisque. Dui ut ornare lectus sit amet est placerat in. Urna molestie at elementum eu facilisis sed. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. A condimentum vitae sapien pellentesque. Velit dignissim sodales ut eu sem integer vitae justo. Enim facilisis gravida neque convallis. Quis commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam. Sed pulvinar proin gravida hendrerit. Etiam erat velit scelerisque in dictum. Interdum varius sit amet mattis vulputate. Pellentesque adipiscing commodo elit at imperdiet dui. In eu mi bibendum neque egestas congue quisque. Dui ut ornare lectus sit amet est placerat in. Urna molestie at elementum eu facilisis sed. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. A condimentum vitae sapien pellentesque. Velit dignissim sodales ut eu sem integer vitae justo. Enim facilisis gravida neque convallis. Quis commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc."
+    },
+    "gestion": {
+        "fr": "GESTION",
+        "en": "MANAGEMENT"
     }
-  
 }
