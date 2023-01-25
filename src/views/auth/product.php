@@ -14,7 +14,12 @@
     <link rel="stylesheet" href="../views/styles/dashboardGestionnaire.css" />
     <link rel="stylesheet" href="../views/styles/common/classStyles.css" />
 
-    <script type='text/javascript' src='../views/scripts/common/components.js' async></script>
+    <script type='text/javascript' src='../views/scripts/common/components.js' defer></script>
+    <script
+            type="text/javascript"
+            src="../views/scripts/searchuser.js"
+            defer            
+        ></script>
 </head>
 <body class="mT50 center">
 

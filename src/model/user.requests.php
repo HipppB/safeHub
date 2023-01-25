@@ -33,7 +33,7 @@ function getUser($id, $setInSession, $includePassword = false)
     return $user;
 }
 
-function getUsers($search = null)
+function getUsers($search = null, $productid = null)
 {
     //If the user is admin we return all users
     if (userIsAdmin()) {
@@ -105,8 +105,33 @@ function userIsAdmin()
     }
     return false;
 }
-function userIsGestionnaire()
+function userIsGestionnaire($productId = null)
 {
+    // Check in user_product database if there is a product with the user id
+    if (isset($_SESSION['user']['id'])) {
+        global $db;
+        $query;
+        if (isset($productId)) {
+            $query = $db->prepare(
+                'SELECT * FROM products_users WHERE id_user = :id_user AND is_gestionnaire = 1 AND id_product = :id_product'
+            );
+            $query->execute([
+                'id_user' => $_SESSION['user']['id'],
+                'id_product' => $productId,
+            ]);
+        } else {
+            $query = $db->prepare(
+                'SELECT * FROM products_users WHERE id_user = :id_user AND is_gestionnaire = 1'
+            );
+            $query->execute([
+                'id_user' => $_SESSION['user']['id'],
+            ]);
+        }
+        $products = $query->fetchAll();
+        if (count($products) > 0) {
+            return true;
+        }
+    }
     // if user can be gestionnaire and user, it depends on the product, so we need the product id.
     return false;
 }

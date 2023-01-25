@@ -13,7 +13,7 @@
         <script
             type="text/javascript"
             src="views/scripts/common/components.js"
-            async
+            defer
         ></script>
 
 
@@ -34,8 +34,7 @@
         </div>
         <?php if (!empty($response)) {
             echo "<div class='error-contact'><p>$response</p></div>";
-        }
-        ?>
+        } ?>
         <form id="contact_form" method='POST'>
             <div class="input-list-container">
                 <div
@@ -89,8 +88,8 @@
                 <span class='error-block'></span>
 
                <input type="submit" class="button mT25" value="<?php printTranslation(
-                    'send'
-                ); ?>" name='submit' />
+                   'send'
+               ); ?>" name='submit' />
       
                 
             </div>
