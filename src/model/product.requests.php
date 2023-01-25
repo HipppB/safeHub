@@ -91,3 +91,24 @@ function getProducts()
     }
     return getUserProducts($_SESSION['user']['id']);
 }
+
+function getUsersOfProducts($product_id)
+{
+    global $db;
+    // $query = $db->prepare(
+    //     'SELECT * FROM products_users WHERE id_product = :id_product'
+    // );
+    // $query->execute([
+    //     'id_product' => $product_id,
+    // ]);
+    // get user data
+    $query = $db->prepare(
+        'SELECT * FROM products_users 
+        INNER JOIN users ON products_users.id_user = users.id 
+        WHERE id_product = :id_product'
+    );
+    $query->execute([
+        'id_product' => $product_id,
+    ]);
+    return $query->fetchAll();
+}
