@@ -45,7 +45,10 @@ function setUsers(response) {
 
     let userList = document.createElement('div')
     users.forEach((user) => {
-        const userItem = `<div class="item-in-list rwidth" onclick="window.location.href = "/user?userid=${user['id']};">
+        console.log(user)
+        const userItem = `<div class="item-in-list rwidth" onclick="window.location.href='user?userid=${parseInt(
+            user['id']
+        )}'">
         <div class="name">
             <div class="gradienttext s030">
                 ${user['name']} ${user['lastname']}
