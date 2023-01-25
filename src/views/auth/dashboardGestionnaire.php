@@ -82,12 +82,12 @@
         <div class="low-title ">Utilisateurs</div>
 
         <div class="input-list-container">
-        <div class="input-label-container"
-            type="search"
-            name="productSearch"
-            placeholderInside="Rechercher un utilisateur"
-            path="">
-        </div>
+            <div class="input-label-container"
+                type="search"
+                name="productSearch"
+                placeholderInside="Rechercher un utilisateur"
+                path="">
+            </div>
         
 
         <div class="stroke"></div>
