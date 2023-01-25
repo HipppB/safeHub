@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone` varchar(20),
   `birth_date` date,
   `is_admin` tinyint(1) NOT NULL DEFAULT '0',
+  `is_banned` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
