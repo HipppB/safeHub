@@ -45,9 +45,9 @@
             ); ?></bouton>
             <bouton class="button-outlined">
             <?php if ($user['is_admin']) {
-                printTranslation('promoteAdmin');
-            } else {
                 printTranslation('demoteAdmin');
+            } else {
+                printTranslation('promoteAdmin');
             } ?>
             </bouton>
             <button class="button-outlined-red mT20 mB50">
