@@ -32,14 +32,21 @@
 
       <?php } ?>
     </main>
-    <div class="modalTipsContainer">
-      <div class="modalBackground">
-        <div class="imgText">
-          <?php echo '<p>' . $tipFront['content'] . '</p>'; ?>
-          <img src="../../views/assets/icons/close.svg" alt="" onclick="closeTips()">
+    <?php if (!empty($tips)) {
+        echo '';
+    } else {
+        echo '<div class="modalTipsContainer">
+        <div class="modalBackground">
+          <div class="imgText">
+            <p>' .
+            $tipFront['content'] .
+            '</p>
+            <img src="../../views/assets/icons/close.svg" alt="" onclick="closeTips()">
+          </div>
         </div>
-      </div>
-    </div>
+      </div>';
+    } ?>
+    
     <!-- Footer -->
     <?php require 'views/components/footer.php'; ?>
 </body>

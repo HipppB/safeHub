@@ -43,6 +43,10 @@ function getRandomTips()
     $query->execute();
     $tips = $query->fetchAll(PDO::FETCH_ASSOC);
 
+    if (empty($tips)) {
+        return false;
+    }
+
     $random_index = array_rand($tips);
 
     return $tips[$random_index];
