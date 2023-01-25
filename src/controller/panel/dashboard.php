@@ -9,7 +9,7 @@ if (isset($_POST['productUserCode'])) {
         $_POST['productUserCode'],
         $user['id']
     );
-    if (count($products) > 0) {
+    if ($products > 0) {
         $error = 'success';
     } else {
         $error = 401;
