@@ -11,6 +11,7 @@
         <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
+            defer
             async
         ></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

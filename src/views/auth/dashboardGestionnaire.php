@@ -11,11 +11,15 @@
         <link rel="stylesheet" href="../views/styles/common/classStyles.css" />
 
 
-
         <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
-            async
+            defer            
+        ></script>
+        <script
+            type="text/javascript"
+            src="../views/scripts/searchuser.js"
+            defer            
         ></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>

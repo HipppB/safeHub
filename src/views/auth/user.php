@@ -14,7 +14,7 @@
         <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
-            async
+defer            async
         ></script>
         <title>SafeHub - utilisateur</title>
     </head>
@@ -79,9 +79,9 @@
             
 
         <div class="modifierProduit">
-            <bouton class="button"> Associer un produit </bouton>
-            <bouton class="button-outlined"> Promouvoir gestionnaire </bouton>
-            <bouton class="button-outlined"> Promouvoir administrateur </bouton>
+            <bouton class="button">Associer un produit</bouton>
+            <bouton class="button-outlined">Promouvoir gestionnaire</bouton>
+            <bouton class="button-outlined">Promouvoir administrateur</bouton>
             <button class="button-outlined-red mT20 mB50">
                 Supprimer l'utilisateur
             </button>
