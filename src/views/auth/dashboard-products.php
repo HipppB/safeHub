@@ -32,7 +32,7 @@
 
       <?php } ?>
     </main>
-    <?php if (!empty($tips)) {
+    <?php if (empty($tips)) {
         echo '';
     } else {
         echo '<div class="modalTipsContainer">
