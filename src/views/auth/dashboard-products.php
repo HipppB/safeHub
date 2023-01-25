@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="../views/styles/headerPrivate.css" />
   <link rel="stylesheet" href="../views/styles/dashboard-products.css" />
   <script type='text/javascript' src='../views/scripts/common/components.js' async></script>
+  <script>
+    function closeTips() {
+      document.querySelector('.modalTipsContainer').style.display = 'none';
+    }
+  </script>
 </head>
 <body>
 
@@ -27,14 +32,21 @@
 
       <?php } ?>
     </main>
-    <div class="modalTipsContainer">
-      <div class="modalBackground">
-        <div class="imgText">
-          <p>Lorem ispum dolor sit amet.</p>
-          <img src="../../views/assets/icons/close.svg  " alt="">
+    <?php if (empty($tips)) {
+        echo '';
+    } else {
+        echo '<div class="modalTipsContainer">
+        <div class="modalBackground">
+          <div class="imgText">
+            <p>' .
+            $tipFront['content'] .
+            '</p>
+            <img src="../../views/assets/icons/close.svg" alt="" onclick="closeTips()">
+          </div>
         </div>
-      </div>
-    </div>
+      </div>';
+    } ?>
+    
     <!-- Footer -->
     <?php require 'views/components/footer.php'; ?>
 </body>
