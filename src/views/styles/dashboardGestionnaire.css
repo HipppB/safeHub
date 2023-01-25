@@ -7,6 +7,9 @@
     margin-top: 20px;
     margin-bottom: 10px;
 }
+#userList {
+    width: 100%;
+}
 .small-text {
     font-size: 0.4em;
     font-family: 'Inter', sans-serif;

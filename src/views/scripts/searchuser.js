@@ -1,7 +1,8 @@
 let submitForm = document.querySelectorAll('input[name=productSearch]')
 
+console.log(submitForm)
 for (i = 0; i < submitForm.length; i++) {
-    submitForm[i].addEventListener('change', (event) =>
+    submitForm[i].addEventListener('input', (event) =>
         searchUser(event.target.value)
     )
 }
@@ -37,14 +38,48 @@ function sendXMLHttpObject(content, url, callback, method = 'POST') {
 
     return xmlHttp
 }
+
 function setUsers(response) {
-    console.log(response)
+    let users = JSON.parse(response)
+    console.log(users)
+
+    let userList = document.createElement('div')
+    users.forEach((user) => {
+        const userItem = `<div class="item-in-list rwidth" onclick="window.location.href = "/user?userid=${user['id']};">
+        <div class="name">
+            <div class="gradienttext s030">
+                ${user['name']} ${user['lastname']}
+            </div>
+            <div class="s025 leftAl">
+                ${user['email']}
+            </div>
+        </div>
+        <div>
+            <div class="small-2 s025">
+                ${user['phone']}
+            </div>
+        </div>
+        </div>
+        <div class="line rwidth"></div>
+</div>
+`
+        // create userElement with userItem
+        let userElement = document.createElement('div')
+        userElement.innerHTML = userItem
+
+        // append userElement to usersList
+        userList.innerHTML += userElement.innerHTML
+    })
+    // replace #userList with userList
+    document.getElementById('userList').innerHTML = userList.innerHTML
 }
 
 function searchUser(value) {
-    console.log(value)
     try {
-        sendXMLHttpObject(value, '', setUsers)
+        const formData = JSON.stringify({
+            search: value,
+        })
+        sendXMLHttpObject(formData, '', setUsers)
     } catch (e) {
         // window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
         console.log(e)

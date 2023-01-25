@@ -115,6 +115,7 @@
         
 
         <div class="stroke"></div>
+        <div id="userList">
         <?php if ($users == false) {
             echo '<div class="center subtitle">Aucun utilisateur</div>';
         } else {
@@ -158,6 +159,7 @@
             }
         } ?>
         </div>
+    </div>
         
         <div class="mT100"></div>
         </div>
