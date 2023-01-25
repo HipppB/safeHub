@@ -171,3 +171,15 @@ CREATE TABLE IF NOT EXISTS `translations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
+
+--
+-- Structure de la table `resetPassword`
+--
+
+CREATE TABLE if not exists `reset_password` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `email` varchar(250) NOT NULL,
+    `key` varchar(250) NOT NULL,
+    `expDate` date,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;

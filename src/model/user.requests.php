@@ -138,3 +138,15 @@ function emailExist($email)
     }
     return false;
 }
+
+function addTemporaryToken($key, $email, $expDate){
+    global $db;
+    $query = $db->prepare(
+        'INSERT INTO reset_password (key, email) VALUES (:key, :email)'
+    );
+    $query->execute([
+        'key' => "fkdjflsjf",
+        'email' =>" jfjddjfklm",
+    ]);
+    return true;
+}
