@@ -6,11 +6,16 @@
         <link rel="stylesheet" href="../views/styles/common/index.css" />
         <link rel="stylesheet" href="../views/styles/headerprivate.css" />
         <link rel="stylesheet" href="../views/styles/conseilsAdmin.css" />
+        
         <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
             async
         ></script>
+        <script
+            type="text/javascript"
+            src="../views/scripts/conseilsAdmin.js"
+            async> </script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -34,8 +39,8 @@
                         multiline="true"
                         placeholderInside="Conseil..."
                     ></div>
+                    <input type="submit" class="button mT25" value="Ajouter"/>
                 </form>
-                <input type="submit" class="button mT25" value="Ajouter"/>
             </div>
 
             <div class="mT50">
@@ -43,17 +48,21 @@
                     'tips-list'
                 ); ?></p>
                 <div class="line"></div>
+                <div id='listConseil'>
                 <?php foreach ($tips as $tip) {
-                    echo "<div>
+                    echo "<div id='conseilListContainer'>
                     <div class='iconParagraph mB25'>
                         <p class='conseilsParagraph'>" .
                         $tip['content'] .
                         "</p>
-                        <img src='../views/assets/icons/close.svg' />
+                        <img src='../views/assets/icons/close.svg' id='deleteBtn' onClick='deleteTips(" .
+                        $tip['id'] .
+                        ")'/>
                     </div>
                     <div class='line'></div>
                 </div>";
                 } ?>
+                </div>
             </div>
         </div>
 
