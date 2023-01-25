@@ -350,5 +350,17 @@
     "What is happening ?": {
         "fr": "Que se passe t-il ?",
         "en": "What is happening ?"
+    },
+    "titleCgu": {
+        "fr": "Conditions générales d'utilisation",
+        "en": "Terms of use"
+    },
+    "cgu": {
+        "fr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam. Sed pulvinar proin gravida hendrerit. Etiam erat velit scelerisque in dictum. Interdum varius sit amet mattis vulputate. Pellentesque adipiscing commodo elit at imperdiet dui. In eu mi bibendum neque egestas congue quisque. Dui ut ornare lectus sit amet est placerat in. Urna molestie at elementum eu facilisis sed. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. A condimentum vitae sapien pellentesque. Velit dignissim sodales ut eu sem integer vitae justo. Enim facilisis gravida neque convallis. Quis commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur libero id faucibus nisl tincidunt eget nullam. Sed pulvinar proin gravida hendrerit. Etiam erat velit scelerisque in dictum. Interdum varius sit amet mattis vulputate. Pellentesque adipiscing commodo elit at imperdiet dui. In eu mi bibendum neque egestas congue quisque. Dui ut ornare lectus sit amet est placerat in. Urna molestie at elementum eu facilisis sed. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. A condimentum vitae sapien pellentesque. Velit dignissim sodales ut eu sem integer vitae justo. Enim facilisis gravida neque convallis. Quis commodo odio aenean sed. Quis viverra nibh cras pulvinar mattis nunc."
+    },
+    "gestion": {
+        "fr": "GESTION",
+        "en": "MANAGEMENT"
     }
 }
