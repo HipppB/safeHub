@@ -75,46 +75,19 @@
                 echo '<div class="center small-text">Aucun produit</div>';
             } else {
                 foreach ($products as $product) {
-                    echo '
-                    <div class="item-in-list rwidth" onclick="window.location.href = \'./product?productid=' .
-                        $product['id'] .
-                        '\';">
-                        <div>
-                            <div class="image-notif-normale">
-                            </div>
-                        </div>
-                        
-                        <div class="name">
-                            <div class="gradienttext s030">' .
-                        $product['product_name'] .
-                        '</div>
-                            <div class="s025 leftAl">' .
-                        $product['room_name'] .
-                        '</div>
-                        </div>
-  
-                        <div>
-                        <div class="small-2 s025 mR10">' .
-                        $product['user_code'] .
-                        '
-                        </div>
-                        </div>      
-                    </div>
-                    <div class="line rwidth"></div>
-
-                        ';
+                    require 'views/components/productListingAdmin.php';
                 }
             } ?>
         </div>
         <div class="low-title ">Utilisateurs</div>
 
         <div class="input-list-container">
-        <div class="input-label-container"
-            type="search"
-            name="productSearch"
-            placeholderInside="Rechercher un utilisateur"
-            path="">
-        </div>
+            <div class="input-label-container"
+                type="search"
+                name="productSearch"
+                placeholderInside="Rechercher un utilisateur"
+                path="">
+            </div>
         
 
         <div class="stroke"></div>
@@ -123,42 +96,7 @@
             echo '<div class="center subtitle">Aucun utilisateur</div>';
         } else {
             foreach ($users as $user) {
-                $age = 'N/A';
-                if (new DateTime($user['birth_date'])) {
-                    $start_datetime = new DateTime();
-                    $diff = $start_datetime->diff(
-                        new DateTime($user['birth_date'])
-                    );
-                    $age = $diff->y;
-                }
-                echo '
-                <div class="item-in-list rwidth" onclick="window.location.href = \'./user?userid=' .
-                    $user['id'] .
-                    '\';">
-                       
-                        
-                        <div class="name">
-                            <div class="gradienttext s030">' .
-                    $user['name'] .
-                    ' ' .
-                    $user['lastname'] .
-                    '</div>
-                            <div class="s025 leftAl">' .
-                    $user['email'] .
-                    '</div>
-                        </div>
-  
-                        <div>
-                        <div class="small-2 s025">' .
-                    $user['phone'] .
-                    '
-                        </div>
-                        </div>
-                        
-                    </div>
-                    <div class="line rwidth"></div>
-               
-                    ';
+                require 'views/components/userListingAdmin.php';
             }
         } ?>
         </div>

@@ -45,7 +45,7 @@ sendXMLHttpObject(
         urlParams.get('type'),
     function (response) {
         datas = JSON.parse(response)
-        datas = datas.slice(datas.length - 10, datas.length)
+        console.log(datas)
         let chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
