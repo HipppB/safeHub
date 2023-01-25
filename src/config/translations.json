@@ -330,5 +330,25 @@
     "titlePageMentions": {
         "fr": "SafeHub - Modifier mentions légales",
         "en": "Safehub - Modify legal notices"
+    },
+    "promoteAdmin": {
+        "fr": "Promouvoir  administrateur",
+        "en": "Promote administrator"
+    },
+    "demoteAdmin": {
+        "fr": "Rétrograder utilisateur",
+        "en": "Demote to user"
+    },
+    "unbanUser": {
+        "fr": "Débannir l'utilisateur",
+        "en": "Unban user"
+    },
+    "banUser": {
+        "fr": "Bannir l'utilisateur",
+        "en": "Ban user"
+    },
+    "deleteUser": {
+        "fr": "Supprimer l'utilisateur",
+        "en": "Delete user"
     }
 }
