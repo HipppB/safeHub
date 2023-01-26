@@ -13,10 +13,16 @@ function getUserByEmail($email)
     return $query->fetch();
 }
 
-function getUser($id, $setInSession)
+function getUser($id, $setInSession, $includePassword = false)
 {
     global $db;
-    $query = $db->prepare('SELECT * FROM users WHERE id = :id');
+    if ($includePassword) {
+        $query = $db->prepare('SELECT * FROM users WHERE id = :id');
+    } else {
+        $query = $db->prepare(
+            'SELECT name, id, lastname, email, phone, birth_date, is_admin, is_banned FROM users WHERE id = :id'
+        );
+    }
     $query->execute([
         'id' => $id,
     ]);
@@ -27,23 +33,35 @@ function getUser($id, $setInSession)
     return $user;
 }
 
-function getUsers()
+function getUsers($search = null, $productid = null)
 {
     //If the user is admin we return all users
     if (userIsAdmin()) {
         global $db;
-        $query = $db->prepare('SELECT * FROM users');
-        $query->execute();
+        if (empty($search)) {
+            $query = $db->prepare(
+                'SELECT  name, id, lastname, email, phone, birth_date, is_admin, is_banned FROM users'
+            );
+            $query->execute();
+            return $query->fetchAll();
+        }
+        $query = $db->prepare(
+            'SELECT name, id, lastname, email, phone, birth_date, is_admin, is_banned FROM users WHERE name LIKE :search OR lastname LIKE :search OR email LIKE :search OR phone LIKE :search'
+        );
+        $query->execute([
+            'search' => '%' . $search . '%',
+        ]);
         return $query->fetchAll();
     }
     //If the user is gestionnaire on a product, we return all users of this product
     if (userIsGestionnaire()) {
+        // Get all users of all products where the user is gestionnaire
         global $db;
         $query = $db->prepare(
-            'SELECT * FROM users INNER JOIN products_users ON products_users.id_user = users.id WHERE products_users.id_product = :id_product'
+            'SELECT users.id, users.name, users.lastname, users.email, users.phone, users.birth_date, users.is_admin, is_banned FROM users INNER JOIN products_users ON users.id = products_users.id_user WHERE products_users.id_product = :id_product AND products_users.is_gestionnaire = 1'
         );
         $query->execute([
-            'id_product' => $_SESSION['user']['id_product'],
+            'id_product' => $productid,
         ]);
         return $query->fetchAll();
     }
@@ -53,7 +71,7 @@ function getUsers()
 function loginUser($email, $password)
 {
     $user = getUserByEmail($email);
-    if ($user) {
+    if ($user && $user['is_banned'] == 0) {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user'] = $user;
             return true;
@@ -78,8 +96,34 @@ function userIsAdmin()
     }
     return false;
 }
-function userIsGestionnaire()
+function userIsGestionnaire($productId = null)
 {
+    // Check in user_product database if there is a product with the user id
+    if (isset($_SESSION['user']['id'])) {
+        global $db;
+        $query;
+        if (isset($productId)) {
+            $query = $db->prepare(
+                'SELECT * FROM products_users WHERE id_user = :id_user AND is_gestionnaire = 1 AND id_product = :id_product'
+            );
+            $query->execute([
+                'id_user' => $_SESSION['user']['id'],
+                'id_product' => $productId,
+            ]);
+        } else {
+            $query = $db->prepare(
+                'SELECT * FROM products_users WHERE id_user = :id_user AND is_gestionnaire = 1'
+            );
+            $query->execute([
+                'id_user' => $_SESSION['user']['id'],
+            ]);
+        }
+        $products = $query->fetchAll();
+        if (count($products) > 0) {
+            return true;
+        }
+    }
+    // if user can be gestionnaire and user, it depends on the product, so we need the product id.
     return false;
 }
 
@@ -123,6 +167,228 @@ function updateUser($id, $name, $lastname, $phone, $email, $birth)
     } catch (PDOException $e) {
         return $e->getMessage();
     }
+}
+
+function promoteToAdmin($id)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare('UPDATE users SET is_admin = 1 WHERE id = :id');
+    try {
+        $query->execute([
+            'id' => $id,
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    return false;
+}
+
+function promoteToGestionnaire($id, $id_product)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    // Check if the user is on the product
+
+    $query = $db->prepare(
+        'SELECT * FROM products_users WHERE id_user = :id_user AND id_product = :id_product'
+    );
+    $query->execute([
+        'id_user' => $id,
+        'id_product' => $id_product,
+    ]);
+    $user = $query->fetch();
+    if ($user) {
+        $query = $db->prepare(
+            'UPDATE products_users SET is_gestionnaire = 1 WHERE id_user = :id_user AND id_product = :id_product'
+        );
+        try {
+            $query->execute([
+                'id_user' => $id,
+                'id_product' => $id_product,
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    } else {
+        $query = $db->prepare(
+            'INSERT INTO products_users (id_user, id_product, is_gestionnaire) VALUES (:id_user, :id_product, 1)'
+        );
+        try {
+            $query->execute([
+                'id_user' => $id,
+                'id_product' => $id_product,
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    return false;
+}
+function demoteGestionnaire($id, $id_product)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare(
+        'UPDATE products_users SET is_gestionnaire = 0 WHERE id_user = :id_user AND id_product = :id_product'
+    );
+    try {
+        $query->execute([
+            'id_user' => $id,
+            'id_product' => $id_product,
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    return false;
+}
+
+function toggleUserGestionnaire($id, $id_product)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    // Check if the user is on the product
+
+    $query = $db->prepare(
+        'SELECT * FROM products_users WHERE id_user = :id_user AND id_product = :id_product'
+    );
+    $query->execute([
+        'id_user' => $id,
+        'id_product' => $id_product,
+    ]);
+    $user = $query->fetch();
+    if ($user) {
+        $query = $db->prepare(
+            'UPDATE products_users SET is_gestionnaire = NOT is_gestionnaire WHERE id_user = :id_user AND id_product = :id_product'
+        );
+        try {
+            $query->execute([
+                'id_user' => $id,
+                'id_product' => $id_product,
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    } else {
+        $query = $db->prepare(
+            'INSERT INTO products_users (id_user, id_product, is_gestionnaire) VALUES (:id_user, :id_product, 1)'
+        );
+        try {
+            $query->execute([
+                'id_user' => $id,
+                'id_product' => $id_product,
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    return false;
+}
+function demoteAdmin($id)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare('UPDATE users SET is_admin = 0 WHERE id = :id');
+    try {
+        $query->execute([
+            'id' => $id,
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    return false;
+}
+
+function banUser($id)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare('UPDATE users SET is_banned = 1 WHERE id = :id');
+    try {
+        $query->execute([
+            'id' => $id,
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    return false;
+}
+function unbanUser($id)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare('UPDATE users SET is_banned = 0 WHERE id = :id');
+    try {
+        $query->execute([
+            'id' => $id,
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    return false;
+}
+function deleteUser($id)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare('DELETE FROM users WHERE id = :id');
+    try {
+        $query->execute([
+            'id' => $id,
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    return false;
+}
+
+function deleteUserFromProduct($id, $id_product)
+{
+    if (!userIsAdmin() && !userIsGestionnaire($id_product)) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare(
+        'DELETE FROM products_users WHERE id_user = :id_user AND id_product = :id_product'
+    );
+    try {
+        $query->execute([
+            'id_user' => $id,
+            'id_product' => $id_product,
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+    }
+    return false;
 }
 
 function emailExist($email)
@@ -194,4 +460,86 @@ function updatePassword($id, $password){
     } catch (PDOException $e) {
         return $e->getMessage();
     }
+}
+function toggleUserBan($id)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare('SELECT * FROM users WHERE id = :id');
+    $query->execute([
+        'id' => $id,
+    ]);
+    $user = $query->fetch();
+    if ($user) {
+        if ($user['is_banned']) {
+            $query = $db->prepare(
+                'UPDATE users SET is_banned = 0 WHERE id = :id'
+            );
+            try {
+                $query->execute([
+                    'id' => $id,
+                ]);
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        } else {
+            $query = $db->prepare(
+                'UPDATE users SET is_banned = 1 WHERE id = :id'
+            );
+            try {
+                $query->execute([
+                    'id' => $id,
+                ]);
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+    }
+    return false;
+}
+
+function toggleAdmin($id)
+{
+    if (!userIsAdmin()) {
+        return false;
+    }
+    global $db;
+    $query = $db->prepare('SELECT * FROM users WHERE id = :id');
+    $query->execute([
+        'id' => $id,
+    ]);
+    $user = $query->fetch();
+    if ($user) {
+        if ($user['is_admin']) {
+            $query = $db->prepare(
+                'UPDATE users SET is_admin = 0 WHERE id = :id'
+            );
+            try {
+                $query->execute([
+                    'id' => $id,
+                ]);
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        } else {
+            $query = $db->prepare(
+                'UPDATE users SET is_admin = 1 WHERE id = :id'
+            );
+            try {
+                $query->execute([
+                    'id' => $id,
+                ]);
+                return true;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+    }
+    return false;
+
 }

@@ -4,13 +4,6 @@
 /** @var PDO $db */
 /**    @var array $translations
  */
-//deletes existing users and insert fake users
-
-// Not useful if you use the dropDb.php script
-//$queryDeleteAllUser = $db->prepare('DELETE FROM users');
-//$queryDeleteAllProducts = $db->prepare('DELETE FROM products');
-//$queryDeleteAllProducts->execute();
-//$queryDeleteAllUser->execute();
 
 $queryAddUser = $db->prepare("INSERT INTO users 
     (`name`, `lastname`, `password`, `email`, `phone`, `birth_date`, `is_admin`) 
@@ -35,6 +28,24 @@ try {
         'birth_date' => '2002-12-06',
         'is_admin' => '0',
     ]);
+    $queryAddUser->execute([
+        'email' => 'user2@test.com',
+        'password' => password_hash($_ENV['PASS'], PASSWORD_DEFAULT),
+        'name' => 'user2',
+        'lastname' => 'user2',
+        'phone' => '+33 9 87 93 10 14',
+        'birth_date' => '1996-12-06',
+        'is_admin' => '0',
+    ]);
+    $queryAddUser->execute([
+        'email' => 'gestionnaire@test.com',
+        'password' => password_hash($_ENV['PASS'], PASSWORD_DEFAULT),
+        'name' => 'futur',
+        'lastname' => 'gestionnaire',
+        'phone' => null,
+        'birth_date' => '1902-3-06',
+        'is_admin' => '0',
+    ]);
     echo 'Fake users inserted' . PHP_EOL;
 } catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage() . PHP_EOL;
@@ -48,8 +59,8 @@ $queryAddProduct = $db->prepare("INSERT INTO products
 
 try {
     $queryAddProduct->execute([
-        'product_name' => 'Produit magnifique',
-        'room_name' => 'salon',
+        'product_name' => 'Produit Magnifique',
+        'room_name' => 'Garage',
         'house_name' => 'Maison 1',
         'product_code' => 'NDIJQDQZZQ',
         'user_code' => 'HEGJ',
@@ -58,8 +69,8 @@ try {
         'temp_max' => '0',
     ]);
     $queryAddProduct->execute([
-        'product_name' => 'Produit horrible',
-        'room_name' => 'Salle à manger',
+        'product_name' => 'Produit Prodige',
+        'room_name' => 'Chambre',
         'house_name' => 'Maison 1',
         'product_code' => 'DZKKOLPDLZQ',
         'user_code' => 'HEGJ',
@@ -68,9 +79,19 @@ try {
         'temp_max' => '0',
     ]);
     $queryAddProduct->execute([
-        'product_name' => 'Produit horrible',
+        'product_name' => 'Produit Incroyable',
         'room_name' => 'Salle à manger',
-        'house_name' => 'Maison 1',
+        'house_name' => 'Maison 2',
+        'product_code' => 'DUKKOLPDLZQ',
+        'user_code' => 'HEGH',
+        'expiration_date' => '2023-12-06',
+        'db_max' => '0',
+        'temp_max' => '0',
+    ]);
+    $queryAddProduct->execute([
+        'product_name' => 'Produit Sublime',
+        'room_name' => 'Salon',
+        'house_name' => 'Maison 3',
         'product_code' => 'DUKKOLPDLZQ',
         'user_code' => 'HEGH',
         'expiration_date' => '2023-12-06',
@@ -78,24 +99,6 @@ try {
         'temp_max' => '0',
     ]);
     echo 'Fake products created' . PHP_EOL;
-} catch (PDOException $e) {
-    echo $e->getMessage() . PHP_EOL;
-}
-
-// roles
-$queryAddRoles = $db->prepare("INSERT INTO roles
-    (`id`, `role_name`) 
-    VALUES (:id, :name)");
-try {
-    $queryAddRoles->execute([
-        'id' => '1',
-        'name' => 'admin',
-    ]);
-    $queryAddRoles->execute([
-        'id' => '2',
-        'name' => 'user',
-    ]);
-    echo 'Fake roles created' . PHP_EOL;
 } catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;
 }
@@ -120,20 +123,6 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;
 }
-// not useful ???
-//$translations = json_decode(file_get_contents('translations.json'), true);
-//$queryAddTranslation = $db->prepare("INSERT INTO translations
-//    (`key`, `lang`, `value`)
-//    VALUES (:key, :lang, :value)");
-//foreach ($translations as $key => $value) {
-//    foreach ($value as $lang => $translation) {
-//        $queryAddTranslation->execute([
-//            'key' => $key,
-//            'lang' => $lang,
-//            'value' => $translation,
-//        ]);
-//    }
-//}
 
 $queryAddTips = $db->prepare("INSERT INTO tips
     (`id`, `content`) 
@@ -143,17 +132,52 @@ try {
     $queryAddTips->execute([
         'id' => '3',
         'content' =>
-            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+            'Utilisez des moyens de transport durables comme la marche, le vélo ou les transports en commun pour réduire les émissions de gaz à effet de serre.',
     ]);
     $queryAddTips->execute([
         'id' => '4',
         'content' =>
-            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+            "Mangez des aliments locaux et de saison pour réduire l'empreinte carbone liée à l'agriculture industrielle.",
     ]);
     $queryAddTips->execute([
         'id' => '5',
         'content' =>
+            "Économisez de l'énergie en utilisant des appareils économes en énergie et en éteignant les lumières et les appareils électroniques lorsqu'ils ne sont pas utilisés.",
+    ]);
+    $queryAddTips->execute([
+        'id' => '6',
+        'content' =>
+            "Réduisez votre consommation d'eau en prenant des douches plus courtes et en réparant les fuites d'eau rapidement.",
+    ]);
+    $queryAddTips->execute([
+        'id' => '7',
+        'content' =>
+            "Utilisez des produits écologiques pour nettoyer votre maison et jardin pour réduire les polluants chimiques dans l'environnement.",
+    ]);
+    $queryAddTips->execute([
+        'id' => '8',
+        'content' =>
+            "Plantez des arbres et des plantes pour aider à absorber le dioxyde de carbone et à améliorer la qualité de l'air.",
+    ]);
+    $queryAddTips->execute([
+        'id' => '9',
+        'content' =>
+            'Recyclez les déchets pour réduire la quantité de matières qui se retrouvent en décharge.',
+    ]);
+    $queryAddTips->execute([
+        'id' => '10',
+        'content' =>
             'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+    ]);
+    $queryAddTips->execute([
+        'id' => '11',
+        'content' =>
+            'Soutenez les entreprises et les politiques qui ont des pratiques durables et écologiques.',
+    ]);
+    $queryAddTips->execute([
+        'id' => '12',
+        'content' =>
+            "Sensibilisez vos amis et votre famille à l'importance de prendre des mesures pour protéger l'environnement.",
     ]);
     echo 'Fake tips created' . PHP_EOL;
 } catch (PDOException $e) {

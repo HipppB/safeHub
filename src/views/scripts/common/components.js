@@ -212,29 +212,21 @@ function htmlToElement(html) {
 }
 
 function onClickLangage(lang) {
-    console.log(lang)
     function callback(response) {
         // parse response
         let r = htmlToElement(response.replace('<!DOCTYPE html>', ''))
-        console.log(r)
         let html = document.querySelector('html')
-        console.log('HEYHEYEHYE')
-        console.log(html)
         document.removeChild(html)
-
         var element = document.createElement('html')
         element.innerHTML = r
-        console.log(element)
         document.appendChild(element)
         searchforAll()
     }
-    console.log(window.location.pathname)
-    sendXMLHttpObject(
-        '',
-        `${window.location.pathname}?action=changeLang&lang=${lang}`,
-        callback,
-        'GET'
-    )
+    let url = `${window.location.pathname}?action=changeLang&lang=${lang}`
+    if (window.location.search) {
+        url = `${window.location.pathname}${window.location.search}&action=changeLang&lang=${lang}`
+    }
+    sendXMLHttpObject('', url, callback, 'GET')
 }
 
 function searchforAll() {

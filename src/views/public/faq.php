@@ -8,7 +8,7 @@
         <script
             type="text/javascript"
             src="views/scripts/common/components.js"
-            async
+            defer
         ></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,94 +28,17 @@
                 ></div>
             </div>
             <div class="mR25 faqListContainer">
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
-                <div>
-                    <p class="gradienttext titleFAQ">Lorem ipsum</p>
-                    <p class="paragraphFAQ mT10">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet.
-                    </p>
-                    <div class="line mT50"></div>
-                </div>
+                <?php foreach ($faq as $question) { ?>
+                    <div>
+                        <p class="gradienttext titleFAQ">
+                            <?php echo $question['question']; ?>
+                        </p>
+                        <p class="paragraphFAQ mT10">
+                            <?php echo $question['reponse']; ?>
+                        </p>
+                        <div class="line mT50"></div>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <!-- Footer -->

@@ -17,10 +17,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone` varchar(20),
   `birth_date` date,
   `is_admin` tinyint(1) NOT NULL DEFAULT '0',
+  `is_banned` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
-
 --
 -- Structure de la table `notifications`
 --
@@ -67,18 +67,6 @@ CREATE TABLE IF NOT EXISTS `products` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
-
---
--- Structure de la table `roles`
---
-CREATE TABLE IF NOT EXISTS `roles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `role_name` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
 --
 -- Structure de la table `products_users`
 --
@@ -86,12 +74,11 @@ CREATE TABLE IF NOT EXISTS `products_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
-  `id_role` int(11) NOT NULL,
   `date` datetime NOT NULL,
+  `is_gestionnaire` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   FOREIGN KEY (id_user) REFERENCES users(id) ON DELETE CASCADE,
-  FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE,
-  FOREIGN KEY (id_role) REFERENCES roles(id) ON DELETE CASCADE
+  FOREIGN KEY (id_product) REFERENCES products(id) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
@@ -148,12 +135,12 @@ CREATE TABLE IF NOT EXISTS `tips` (
 
 CREATE TABLE IF NOT EXISTS `tips_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_product` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `id_tip` int(11) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`id_tip`) REFERENCES tips(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`id_product`) REFERENCES products(`id`) ON DELETE CASCADE
+  FOREIGN KEY (`id_user`) REFERENCES users(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
@@ -182,4 +169,17 @@ CREATE TABLE if not exists `reset_password` (
     `token` varchar(250) NOT NULL,
     `expDate` date NOT NULL,
     PRIMARY KEY (`id`)
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `faq`
+--
+
+CREATE TABLE IF NOT EXISTS `faq` (
+  `idquestion` int(11) NOT NULL AUTO_INCREMENT,
+  `lang` varchar(2) NOT NULL,
+  `question` text NOT NULL,
+  `reponse` text NOT NULL,
+  PRIMARY KEY (`idquestion`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
