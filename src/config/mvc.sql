@@ -169,6 +169,7 @@ CREATE TABLE if not exists `reset_password` (
     `token` varchar(250) NOT NULL,
     `expDate` date NOT NULL,
     PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
