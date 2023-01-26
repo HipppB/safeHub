@@ -39,6 +39,10 @@ defer            async
                         multiline="true"
                         placeholderInside="Conseil..."
                     ></div>
+                    <div class="flex center mT25">
+                        <input type="checkbox" class="bgred" name="isEnglish"></input>
+                        <div class="flex vcenter center s025 mL10">Conseil en anglais</div>
+                    </div>
                     <input type="submit" class="button mT25" value="Ajouter"/>
                 </form>
             </div>

@@ -51,3 +51,18 @@ function getRandomTips()
 
     return $tips[$random_index];
 }
+
+function GetTipsCurrentLang()
+{
+    $lang = $_SESSION['lang'];
+    global $db;
+    $query = $db->prepare('SELECT * FROM tips WHERE lang = :lang');
+    try {
+        $query->execute([
+            'lang' => $lang,
+        ]);
+        return $query->fetchAll();
+    } catch (PDOException $E) {
+        return false;
+    }
+}

@@ -123,23 +123,8 @@ CREATE TABLE IF NOT EXISTS `tips` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` text NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `lang` varchar(2) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `tips_users`
---
-
-CREATE TABLE IF NOT EXISTS `tips_users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_user` int(11) NOT NULL,
-  `id_tip` int(11) NOT NULL,
-  `date` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  FOREIGN KEY (`id_tip`) REFERENCES tips(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`id_user`) REFERENCES users(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 

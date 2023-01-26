@@ -97,59 +97,63 @@ try {
 }
 
 $queryAddTips = $db->prepare("INSERT INTO tips
-    (`id`, `content`) 
-    VALUES (:id, :content)");
+    (`id`, `content`, `lang`) 
+    VALUES (:id, :content, :lang)");
 
 try {
     $queryAddTips->execute([
         'id' => '3',
         'content' =>
             'Utilisez des moyens de transport durables comme la marche, le vélo ou les transports en commun pour réduire les émissions de gaz à effet de serre.',
+        'lang' => 'fr',
     ]);
     $queryAddTips->execute([
         'id' => '4',
         'content' =>
             "Mangez des aliments locaux et de saison pour réduire l'empreinte carbone liée à l'agriculture industrielle.",
+        'lang' => 'fr',
     ]);
     $queryAddTips->execute([
         'id' => '5',
         'content' =>
             "Économisez de l'énergie en utilisant des appareils économes en énergie et en éteignant les lumières et les appareils électroniques lorsqu'ils ne sont pas utilisés.",
+        'lang' => 'fr',
     ]);
     $queryAddTips->execute([
         'id' => '6',
         'content' =>
             "Réduisez votre consommation d'eau en prenant des douches plus courtes et en réparant les fuites d'eau rapidement.",
+        'lang' => 'fr',
     ]);
     $queryAddTips->execute([
         'id' => '7',
         'content' =>
             "Utilisez des produits écologiques pour nettoyer votre maison et jardin pour réduire les polluants chimiques dans l'environnement.",
+        'lang' => 'fr',
     ]);
     $queryAddTips->execute([
         'id' => '8',
         'content' =>
             "Plantez des arbres et des plantes pour aider à absorber le dioxyde de carbone et à améliorer la qualité de l'air.",
+        'lang' => 'fr',
     ]);
     $queryAddTips->execute([
         'id' => '9',
         'content' =>
             'Recyclez les déchets pour réduire la quantité de matières qui se retrouvent en décharge.',
-    ]);
-    $queryAddTips->execute([
-        'id' => '10',
-        'content' =>
-            'Ceci est un test de conseil tres tres tres tres long parce que je veux tester le css',
+        'lang' => 'fr',
     ]);
     $queryAddTips->execute([
         'id' => '11',
         'content' =>
             'Soutenez les entreprises et les politiques qui ont des pratiques durables et écologiques.',
+        'lang' => 'fr',
     ]);
     $queryAddTips->execute([
         'id' => '12',
         'content' =>
             "Sensibilisez vos amis et votre famille à l'importance de prendre des mesures pour protéger l'environnement.",
+        'lang' => 'fr',
     ]);
     echo 'Fake tips created' . PHP_EOL;
 } catch (PDOException $e) {

@@ -59,15 +59,15 @@
                 <div class="images-section mT50">
                     <div class="images-container">
                         <img
-                            src="views/assets/imagePlaceholder.jpg"
+                            src="views/assets/homepage.png"
                             class="verticalImage"
                         />
                         <div class="mL10">
                             <img
-                                src="views/assets/imagePlaceholder.jpg"
+                                src="views/assets/homepage.png"
                                 class="horizontalImage"
                             /><img
-                                src="views/assets/imagePlaceholder.jpg"
+                                src="views/assets/homepage.png"
                                 class="horizontalImage"
                             />
                         </div>
