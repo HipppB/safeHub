@@ -11,40 +11,39 @@ if (!(userIsAdmin() || userIsGestionnaire()) || empty($_GET['userid'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $req = file_get_contents('php://input');
     $req = json_decode($req);
-
-    switch ($req->action) {
-        case 'toggleAdmin':
-            if (userIsAdmin() && !empty($req->userid)) {
+    if (!empty($req->search)) {
+        $users = getUsers($search = $req->search);
+        echo json_encode($users);
+        exit();
+    }
+    if (userIsAdmin() && !empty($req->userid)) {
+        switch ($req->action) {
+            case 'toggleAdmin':
                 toggleAdmin($req->userid);
-            }
-            break;
-
-        case 'deleteUser':
-            if (userIsAdmin() && !empty($req->userid)) {
+                break;
+            case 'deleteUser':
                 deleteUser($req->userid);
-            }
-            break;
-        case 'toggleUserBan':
-            if (userIsAdmin() && !empty($req->userid)) {
+                break;
+            case 'toggleUserBan':
                 toggleUserBan($req->userid);
-            }
-            break;
-        case 'toggleUserGestionnaire':
-            if (
-                userIsAdmin() &&
-                !empty($req->userid) &&
-                !empty($req->productid)
-            ) {
-                toggleUserGestionnaire($req->userid, $req->productid);
-            }
-            break;
-        default:
-            break;
+                break;
+            case 'toggleUserGestionnaire':
+                if (!empty($req->productid)) {
+                    toggleUserGestionnaire($req->userid, $req->productid);
+                }
+                break;
+            default:
+                break;
+        }
     }
 }
 $user = getUser($_GET['userid'], false);
 if ($user == false) {
     header('Location: /dashboard');
 }
-$products = getUserProducts($_GET['userid']);
+if (userIsAdmin()) {
+    $products = getUserProducts($_GET['userid']);
+} else {
+    $products = getUserProducts($_GET['userid']);
+}
 include 'views/auth/user.php';

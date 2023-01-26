@@ -38,19 +38,41 @@ function getUsers($search = null, $productid = null)
     //If the user is admin we return all users
     if (userIsAdmin()) {
         global $db;
+        $query;
         if (empty($search)) {
-            $query = $db->prepare(
-                'SELECT  name, id, lastname, email, phone, birth_date, is_admin, is_banned FROM users'
-            );
-            $query->execute();
+            if (empty($productid)) {
+                $query = $db->prepare(
+                    'SELECT  name, id, lastname, email, phone, birth_date, is_admin, is_banned FROM users'
+                );
+                $query->execute();
+            } else {
+                $query = $db->prepare(
+                    'SELECT users.id, users.name, users.lastname, users.email, users.phone, users.birth_date, users.is_admin, is_banned FROM users INNER JOIN products_users ON users.id = products_users.id_user WHERE products_users.id_product = :id_product'
+                );
+                $query->execute([
+                    'id_product' => $productid,
+                ]);
+            }
+
             return $query->fetchAll();
         }
-        $query = $db->prepare(
-            'SELECT name, id, lastname, email, phone, birth_date, is_admin, is_banned FROM users WHERE name LIKE :search OR lastname LIKE :search OR email LIKE :search OR phone LIKE :search'
-        );
-        $query->execute([
-            'search' => '%' . $search . '%',
-        ]);
+        if (empty($productid)) {
+            $query = $db->prepare(
+                'SELECT name, id, lastname, email, phone, birth_date, is_admin, is_banned FROM users WHERE name LIKE :search OR lastname LIKE :search OR email LIKE :search OR phone LIKE :search'
+            );
+            $query->execute([
+                'search' => '%' . $search . '%',
+            ]);
+        } else {
+            $query = $db->prepare(
+                'SELECT users.id, users.name, users.lastname, users.email, users.phone, users.birth_date, users.is_admin, is_banned FROM users INNER JOIN products_users ON users.id = products_users.id_user WHERE products_users.id_product = :id_product AND (users.name LIKE :search OR users.lastname LIKE :search OR users.email LIKE :search OR users.phone LIKE :search)'
+            );
+            $query->execute([
+                'search' => '%' . $search . '%',
+                'id_product' => $productid,
+            ]);
+        }
+
         return $query->fetchAll();
     }
     //If the user is gestionnaire on a product, we return all users of this product
@@ -104,23 +126,27 @@ function userIsGestionnaire($productId = null)
         $query;
         if (isset($productId)) {
             $query = $db->prepare(
-                'SELECT * FROM products_users WHERE id_user = :id_user AND is_gestionnaire = 1 AND id_product = :id_product'
+                'SELECT * FROM products_users WHERE id_user = :id_user AND is_gestionnaire = "1" AND id_product = :id_product'
             );
             $query->execute([
                 'id_user' => $_SESSION['user']['id'],
                 'id_product' => $productId,
             ]);
+            $products = $query->fetchAll();
+            if (count($products) > 0) {
+                return true;
+            }
         } else {
             $query = $db->prepare(
-                'SELECT * FROM products_users WHERE id_user = :id_user AND is_gestionnaire = 1'
+                'SELECT * FROM products_users WHERE id_user = :id_user AND is_gestionnaire = "1"'
             );
             $query->execute([
                 'id_user' => $_SESSION['user']['id'],
             ]);
-        }
-        $products = $query->fetchAll();
-        if (count($products) > 0) {
-            return true;
+            $products = $query->fetchAll();
+            if (count($products) > 0) {
+                return true;
+            }
         }
     }
     // if user can be gestionnaire and user, it depends on the product, so we need the product id.

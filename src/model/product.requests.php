@@ -75,8 +75,27 @@ function getUserProducts($user_id)
     $query->execute([
         'userId' => $user_id,
     ]);
+    $products = $query->fetchAll();
+    if (!userIsAdmin() && !($user_id === $_SESSION['user']['id'])) {
+        // If here, the user is not admin and is not the user himself, it means he is gestionnaire
+        // We need to filter the products to only show the ones where he is gestionnaire
+        // Get all products where the user is gestionnaire
 
-    return $query->fetchAll();
+        $query = $db->prepare(
+            'SELECT * FROM products_users 
+            INNER JOIN products ON products_users.id_product = products.id 
+            WHERE id_user = :userId AND gestionnaire = 1'
+        );
+        $query->execute([
+            'userId' => $_SESSION['user']['id'],
+        ]);
+
+        $gestionnaireProducts = $query->fetchAll();
+        // Get all products common to the user and the gestionnaire
+        $products = array_intersect($products, $gestionnaireProducts);
+    }
+
+    return $products;
 }
 
 function getProducts()

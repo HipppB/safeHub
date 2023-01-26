@@ -11,7 +11,7 @@
     <script
         type="text/javascript"
         src="../views/scripts/common/components.js"
-defer        async
+        defer
     ></script>
     
 </head>

@@ -32,7 +32,10 @@
 
     </main>
     <div class="stroke"></div>
+    
+    
     <div class="input-list-container center">
+    <?php if ($isGestionnaire || $isAdmin) { ?> 
         <div class="input-label-container"
             type="search"
             name="productSearch"
@@ -42,7 +45,8 @@
         
 
 
-            <div id="item-in-list userList" class="rwidth">
+
+            <div id="userList" class="center fcolumn rwidth">
             <?php if ($users == false) {
                 echo '<div class="center subtitle">Aucun utilisateur</div>';
             } else {
@@ -52,9 +56,10 @@
             } ?>
             </div>
 
-        <div class="mT100"></div>
-
+        
+        <?php } ?>
     </div>
+    <div class="mT100"></div>
     <!-- Footer -->
     
     <?php require 'views/components/footer.php'; ?>

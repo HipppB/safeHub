@@ -31,7 +31,7 @@ echo '
     </div>  
     </div>
     ' .
-    ($rankMode
+    ($rankMode && userIsAdmin()
         ? '<div class="small-2 s025  flex center relative" onclick="toggleUserGestionnaire(' .
             $user['id'] .
             ',' .

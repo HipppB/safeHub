@@ -17,13 +17,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 } elseif (
     isset($_GET['productid']) &&
-    (userIsAdmin() || userIsGestionnaire($_GET['productid']))
+    (userIsAdmin() || userIsGestionnaire())
 ) {
     $product = getProductById($_GET['productid']);
-    $users = getUsersOfProducts($_GET['productid']);
+
     if ($product == false) {
         header('Location: /panel/dashboard');
     } else {
+        $isGestionnaire = userIsGestionnaire($_GET['productid']);
+        $isAdmin = userIsAdmin();
+        $users = getUsersOfProducts($_GET['productid']);
         require 'views/auth/product.php';
     }
 } else {
