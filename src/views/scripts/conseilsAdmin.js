@@ -40,9 +40,17 @@ function addTips() {
                 const content = document.querySelector(
                     'textarea[name="search"]'
                 ).value
+                const isEnglish = document.querySelector(
+                    'input[name="isEnglish"]'
+                ).value
+                let lang = 'fr'
+                if (isEnglish == 'true') {
+                    return (lang = 'en')
+                }
                 // set to form data
                 const formData = JSON.stringify({
                     content: content,
+                    lang: lang,
                 })
                 //send form data to server
                 function callback(response) {

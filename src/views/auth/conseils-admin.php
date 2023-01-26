@@ -32,18 +32,18 @@ defer            async
                 <p class="conseilsTitle"><?php printTranslation(
                     'add-question-answer'
                 ); ?></p>
-                <form id="add-tips-form">
+                <form id="add-tips-form" method="POST">
                     <div
                         class="input-label-container"
                         name="search"
                         multiline="true"
                         placeholderInside="Conseil..."
                     ></div>
-                    <div class="flex center mT25">
-                        <input type="checkbox" class="bgred" name="isEnglish"></input>
+                    <div class="flex frow center mT10">
+                        <input type="checkbox" class="bgred" name="isEnglish" value="isEnglish"></input>
                         <div class="flex vcenter center s025 mL10">Conseil en anglais</div>
                     </div>
-                    <input type="submit" class="button mT25" value="Ajouter"/>
+                    <input type="submit" class="button mT25" value="Ajouter" name="ajouter"/>
                 </form>
             </div>
 

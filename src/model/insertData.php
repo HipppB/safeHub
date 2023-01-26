@@ -155,6 +155,24 @@ try {
             "Sensibilisez vos amis et votre famille à l'importance de prendre des mesures pour protéger l'environnement.",
         'lang' => 'fr',
     ]);
+    $queryAddTips->execute([
+        'id' => '13',
+        'content' =>
+            'Recycle waste to reduce the amount of material going to landfill.',
+        'lang' => 'en',
+    ]);
+    $queryAddTips->execute([
+        'id' => '14',
+        'content' =>
+            'Support businesses and policies that have sustainable and green practices.',
+        'lang' => 'en',
+    ]);
+    $queryAddTips->execute([
+        'id' => '15',
+        'content' =>
+            'Educate your friends and family about the importance of taking action to protect the environment.',
+        'lang' => 'en',
+    ]);
     echo 'Fake tips created' . PHP_EOL;
 } catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;

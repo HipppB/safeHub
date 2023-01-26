@@ -34,7 +34,9 @@ if (userIsAdmin()) {
         }
 
         if (!$error) {
-            addTips($content);
+            var_dump($_POST['isEnglish']);
+            $lang = !empty($_POST['isEnglish']) ? 'en' : 'fr';
+            addTips($content, $lang);
             $tips = getTips();
 
             echo json_encode([

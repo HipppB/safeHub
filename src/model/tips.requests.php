@@ -12,16 +12,23 @@ function getTips()
     return $query->fetchAll();
 }
 
-function addTips($content)
+function addTips($content, $lang)
 {
     if (!userIsAdmin()) {
         return false;
     }
     global $db;
-    $query = $db->prepare('INSERT INTO tips (content) VALUES (:content)');
-    $query->execute([
-        'content' => $content,
-    ]);
+    $query = $db->prepare(
+        'INSERT INTO tips (content, lang) VALUES (:content, :lang)'
+    );
+    try {
+        $query->execute([
+            'content' => $content,
+            'lang' => $lang,
+        ]);
+    } catch (PDOException $e) {
+        return false;
+    }
 }
 
 function deleteTips($id)
@@ -30,10 +37,14 @@ function deleteTips($id)
         return false;
     }
     global $db;
-    $query = $db->prepare('DELETE FROM tips WHERE id = :id');
-    $query->execute([
-        'id' => $id,
-    ]);
+    try {
+        $query = $db->prepare('DELETE FROM tips WHERE id = :id');
+        $query->execute([
+            'id' => $id,
+        ]);
+    } catch (PDOException $e) {
+        return false;
+    }
 }
 
 function getRandomTips()
