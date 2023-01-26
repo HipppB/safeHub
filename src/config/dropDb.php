@@ -12,7 +12,7 @@ $dropTranslations = $db->prepare('DROP TABLE IF EXISTS translations');
 $dropTypes = $db->prepare('DROP TABLE IF EXISTS types');
 $dropUsers = $db->prepare('DROP TABLE IF EXISTS users');
 $dropRoles = $db->prepare('DROP TABLE IF EXISTS roles');
-$dropResetPassword = $db->prepare('DROP TABLE IF EXISTS resetPassword');
+$dropResetPassword = $db->prepare('DROP TABLE IF EXISTS reset_password');
 try {
     $dropNotifUsers->execute();
     $dropTipsUsers->execute();
