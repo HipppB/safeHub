@@ -403,5 +403,41 @@
     "gestion": {
         "fr": "GESTION",
         "en": "MANAGEMENT"
+    },
+    "addProduct": {
+        "fr": "Ajouter un produit",
+        "en": "Add a product"
+    },
+    "productName": {
+        "fr": "Nom du produit",
+        "en": "Product name"
+    },
+    "accomodationName": {
+        "fr": "Nom de l'habitation",
+        "en": "Accomodation name"
+    },
+    "roomName": {
+        "fr": "Nom de la pièce",
+        "en": "Room name"
+    },
+    "productCode": {
+        "fr": "Code du produit",
+        "en": "Product code"
+    },
+    "userCode": {
+        "fr": "Code utilisateur",
+        "en": "User code"
+    },
+    "userCodeExpiration": {
+        "fr": "Date d'expiration du code utilisateur",
+        "en": "User code expiration date"
+    },
+    "comments": {
+        "fr": "Commentaires",
+        "en": "Comments"
+    },
+    "addProductButton": {
+        "fr": "Ajouter le produit",
+        "en": "Add the product"
     }
 }

@@ -19,7 +19,16 @@ if (!userIsConnected()) {
 }
 
 if (userIsAdmin()) {
-    require 'views/auth/ajoutProduit.html';
+    $name = !empty($_POST['name']) ? htmlspecialchars($_POST['name']) : "";
+    $accomodationName = !empty($_POST['accomodationName']) ? htmlspecialchars($_POST['accomodationName']) : "";
+    $roomName = !empty($_POST['roomName']) ? htmlspecialchars($_POST['roomName']) : "";
+    $productCode = !empty($_POST['productCode']) ? htmlspecialchars($_POST['productCode']) : "";
+    $productUserCode = !empty($_POST['productUserCode']) ? htmlspecialchars($_POST['productUserCode']) : "";
+    $userExpirationDate = !empty($_POST['userExpirationDate']) ? htmlspecialchars($_POST['userExpirationDate']) : "";
+    $comments = !empty($_POST['comments']) ? htmlspecialchars($_POST['comments']) : "";
+
+
+    require 'views/auth/ajoutProduit.php';
 } else {
     $notfirst = true;
 
