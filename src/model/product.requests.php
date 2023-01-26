@@ -111,3 +111,64 @@ function getUsersOfProducts($product_id)
     ]);
     return $query->fetchAll();
 }
+
+function createProduct($productName, $roomName, $houseName, $productCode, $userCode, $expirationDate, $comments){
+    $productExists = getProductByCode($productCode);
+    if($productExists){
+        return 'productAlreadyExists';
+    }
+    global $db;
+    $query = $db->prepare(
+        'INSERT INTO products (product_name, room_name, house_name, product_code, user_code, expiration_date, comments) VALUES (:productName, :roomName, :houseName, :productCode, :userCode, :expirationDate, :comments)'
+    );
+    try {
+        $query->execute([
+            'productName'=> $productName,
+            'roomName' => $roomName,
+            'houseName' => $houseName,
+            'productCode' => $productCode,
+            'userCode' => $userCode,
+            'expirationDate' => $expirationDate,
+            'comments' => $comments
+        ]);
+        return true;
+    }catch (PDOExeption $E) {
+        return false;
+    }
+}
+
+function updateProduct($productName, $roomName, $houseName, $productCode, $userCode, $expirationDate, $comments, $id){
+    global $db;
+    $query = $db->prepare(
+        'UPDATE products SET product_name = :productName, room_name = :roomName, house_name = :houseName, product_code = :productCode, user_code = :userCode, expiration_date = :expirationDate, comments = :comments WHERE id=:id'
+    );
+    try {
+        $query->execute([
+            'productName'=> $productName,
+            'roomName' => $roomName,
+            'houseName' => $houseName,
+            'productCode' => $productCode,
+            'userCode' => $userCode,
+            'expirationDate' => $expirationDate,
+            'comments' => $comments,
+            'id' => $id
+        ]);
+        return true;
+    }catch (PDOExeption $E) {
+        return false;
+    }
+}
+
+function deleteProduct($productId){
+    global $db;
+    $query = $db-> prepare('DELETE FROM products WHERE id = :id');
+
+    try {
+        $query->execute([
+            'id'=> $productId
+        ]);
+        return true;
+    }catch (PDOException $e) {
+        return false;
+    }
+}

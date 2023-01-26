@@ -439,5 +439,21 @@
     "addProductButton": {
         "fr": "Ajouter le produit",
         "en": "Add the product"
+    },
+    "error": {
+        "fr": "Une erreur est survenue",
+        "en": "An error has occured"
+    },
+    "productAdded": {
+        "fr": "Produit ajouté",
+        "en": "Product added"
+    },
+    "productAlreadyExists": {
+        "fr": "Le produit existe déjà",
+        "en": "The product already exists"
+    },
+    "modifyProduct": {
+        "fr": "Modifier un produit",
+        "en": "Modify a product"
     }
 }

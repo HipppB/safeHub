@@ -18,7 +18,7 @@
     <script
             type="text/javascript"
             src="../views/scripts/searchuser.js"
-            defer            
+            defer
         ></script>
 </head>
 <body class="mT50 center">
@@ -28,9 +28,11 @@
 
     <main>
     <?php require 'views/components/productListing.php'; ?>
-       
+
 
     </main>
+<button class="button" onclick="window.location.href='modifyProduct?productid=<?php echo $_GET['productid'] ?>'">Modifier le produit</button>
+
     <div class="stroke"></div>
     <div class="input-list-container center">
         <div class="input-label-container"
@@ -39,7 +41,7 @@
             placeholderInside="Rechercher un utilisateur"
             path="">
         </div>
-        
+
 
 
             <div id="item-in-list userList" class="rwidth">
@@ -56,7 +58,7 @@
 
     </div>
     <!-- Footer -->
-    
+
     <?php require 'views/components/footer.php'; ?>
 </body>
 </html>
