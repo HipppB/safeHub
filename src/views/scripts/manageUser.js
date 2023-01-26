@@ -30,37 +30,26 @@ function sendXMLHttpObject(content, url, callback, method = 'POST') {
     return xmlHttp
 }
 
-function promoteAdmin(id) {
+function toggleAdmin(id) {
     try {
         const formData = JSON.stringify({
-            action: 'promoteAdmin',
+            action: 'toggleAdmin',
             userid: id,
         })
-        sendXMLHttpObject(formData, '', togglePromoteButton)
+        sendXMLHttpObject(formData, '', refreshPage)
     } catch (e) {
         // window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
         console.log(e)
     }
 }
-function demoteAdmin(id) {
-    try {
-        const formData = JSON.stringify({
-            action: 'demoteAdmin',
-            userid: id,
-        })
-        sendXMLHttpObject(formData, '', togglePromoteButton)
-    } catch (e) {
-        // window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
-        console.log(e)
-    }
-}
+
 function deleteUser(id) {
     try {
         const formData = JSON.stringify({
             action: 'deleteUser',
             userid: id,
         })
-        sendXMLHttpObject(formData, '', redirectIfUserDeleted)
+        sendXMLHttpObject(formData, '', goToDashboard)
     } catch (e) {
         // window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
         console.log(e)
@@ -72,7 +61,7 @@ function toggleUserBan(id) {
             action: 'toggleUserBan',
             userid: id,
         })
-        sendXMLHttpObject(formData, '', toggleBanButton)
+        sendXMLHttpObject(formData, '', refreshPage)
     } catch (e) {
         // window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
         console.log(e)
@@ -83,16 +72,23 @@ function toggleUserGestionnaire(id, product_id) {
         const formData = JSON.stringify({
             action: 'toggleUserGestionnaire',
             userid: id,
-            product_id: product_id,
+            productid: product_id,
         })
-        sendXMLHttpObject(formData, '', toggleBanButton)
+        sendXMLHttpObject(formData, '', refreshPage)
     } catch (e) {
         // window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
         console.log(e)
     }
 }
-
-function togglePromoteButton() {}
-function toggleBanButton() {}
-function toggleGestionnaireButton() {}
-function redirectIfUserDeleted() {}
+function refreshPage(response) {
+    let r = htmlToElement(response.replace('<!DOCTYPE html>', ''))
+    let html = document.querySelector('html')
+    document.removeChild(html)
+    var element = document.createElement('html')
+    element.innerHTML = r
+    document.appendChild(element)
+    searchforAll()
+}
+function goToDashboard() {
+    window.location.href = '/panel/dashboard'
+}

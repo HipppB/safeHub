@@ -28,6 +28,24 @@ try {
         'birth_date' => '2002-12-06',
         'is_admin' => '0',
     ]);
+    $queryAddUser->execute([
+        'email' => 'user2@test.com',
+        'password' => password_hash($_ENV['PASS'], PASSWORD_DEFAULT),
+        'name' => 'user2',
+        'lastname' => 'user2',
+        'phone' => '+33 9 87 93 10 14',
+        'birth_date' => '1996-12-06',
+        'is_admin' => '0',
+    ]);
+    $queryAddUser->execute([
+        'email' => 'gestionnaire@test.com',
+        'password' => password_hash($_ENV['PASS'], PASSWORD_DEFAULT),
+        'name' => 'futur',
+        'lastname' => 'gestionnaire',
+        'phone' => null,
+        'birth_date' => '1902-3-06',
+        'is_admin' => '0',
+    ]);
     echo 'Fake users inserted' . PHP_EOL;
 } catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage() . PHP_EOL;
@@ -41,8 +59,8 @@ $queryAddProduct = $db->prepare("INSERT INTO products
 
 try {
     $queryAddProduct->execute([
-        'product_name' => 'Produit magnifique',
-        'room_name' => 'salon',
+        'product_name' => 'Produit Magnifique',
+        'room_name' => 'Garage',
         'house_name' => 'Maison 1',
         'product_code' => 'NDIJQDQZZQ',
         'user_code' => 'HEGJ',
@@ -51,8 +69,8 @@ try {
         'temp_max' => '0',
     ]);
     $queryAddProduct->execute([
-        'product_name' => 'Produit horrible',
-        'room_name' => 'Salle à manger',
+        'product_name' => 'Produit Prodige',
+        'room_name' => 'Chambre',
         'house_name' => 'Maison 1',
         'product_code' => 'DZKKOLPDLZQ',
         'user_code' => 'HEGJ',
@@ -61,9 +79,19 @@ try {
         'temp_max' => '0',
     ]);
     $queryAddProduct->execute([
-        'product_name' => 'Produit horrible',
+        'product_name' => 'Produit Incroyable',
         'room_name' => 'Salle à manger',
-        'house_name' => 'Maison 1',
+        'house_name' => 'Maison 2',
+        'product_code' => 'DUKKOLPDLZQ',
+        'user_code' => 'HEGH',
+        'expiration_date' => '2023-12-06',
+        'db_max' => '0',
+        'temp_max' => '0',
+    ]);
+    $queryAddProduct->execute([
+        'product_name' => 'Produit Sublime',
+        'room_name' => 'Salon',
+        'house_name' => 'Maison 3',
         'product_code' => 'DUKKOLPDLZQ',
         'user_code' => 'HEGH',
         'expiration_date' => '2023-12-06',

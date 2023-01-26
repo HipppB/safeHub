@@ -10,7 +10,11 @@
         <link rel="stylesheet" href="../views/styles/user.css" />
 
         <link rel="stylesheet" href="../views/styles/common/classStyles.css" />
-       
+        <script
+            type="text/javascript"
+            src="../views/scripts/manageUser.js"
+
+        ></script>
         <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
@@ -43,21 +47,27 @@
             <bouton class="button"><?php printTranslation(
                 'addProduct'
             ); ?></bouton>
-            <bouton class="button-outlined">
+            <bouton onclick="toggleAdmin(<?php echo $user[
+                'id'
+            ]; ?>)" class="button-outlined">
             <?php if ($user['is_admin']) {
                 printTranslation('demoteAdmin');
             } else {
                 printTranslation('promoteAdmin');
             } ?>
             </bouton>
-            <button class="button-outlined-red mT20 mB50">
+            <button onclick="toggleUserBan(<?php echo $user[
+                'id'
+            ]; ?>)" class="button-outlined-red mT20 mB50">
                 <?php if ($user['is_banned']) {
                     printTranslation('unbanUser');
                 } else {
                     printTranslation('banUser');
                 } ?>
             </button>
-            <button class="button-outlined-red mT20 mB50">
+            <button onclick="deleteUser(<?php echo $user[
+                'id'
+            ]; ?>)" class="button-outlined-red mT20 mB50">
                 <?php printTranslation('deleteUser'); ?>
             </button>
         </div>
