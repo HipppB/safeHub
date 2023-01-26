@@ -404,10 +404,7 @@
         "fr": "GESTION",
         "en": "MANAGEMENT"
     },
-    "addProduct": {
-        "fr": "Ajouter un produit",
-        "en": "Add a product"
-    },
+
     "productName": {
         "fr": "Nom du produit",
         "en": "Product name"
@@ -455,5 +452,45 @@
     "modifyProduct": {
         "fr": "Modifier un produit",
         "en": "Modify a product"
+    },
+    "isEnglish": {
+        "fr": "Est en anglais",
+        "en": "Is in english"
+    },
+    "Tips": {
+        "fr": "Conseils",
+        "en": "Tips"
+    },
+    "LastModif": {
+        "fr": "Dernière modification",
+        "en": "Last modification"
+    },
+    "GestioSite": {
+        "fr": "Gestion du site",
+        "en": "Site management"
+    },
+    "noNotif": {
+        "fr": "Aucune notification",
+        "en": "No notification"
+    },
+    "products": {
+        "fr": "Produits",
+        "en": "Products"
+    },
+    "noProduct": {
+        "fr": "Aucun produit",
+        "en": "No product"
+    },
+    "users": {
+        "fr": "Utilisateurs",
+        "en": "Users"
+    },
+    "noUser": {
+        "fr": "Aucun utilisateur",
+        "en": "No user"
+    },
+    "searchUser": {
+        "fr": "Rechercher un utilisateur",
+        "en": "Search a user"
     }
 }

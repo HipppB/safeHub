@@ -84,7 +84,7 @@ function updateListConseil(listConseil) {
                         <p class='conseilsParagraph'>
                         ${item.content}
                         </p>
-                        <img src='../views/assets/icons/close.svg' id='deleteBtn' onClick='deleteTips()'/>
+                        <img src='../views/assets/icons/close.svg' id='deleteBtn' onClick='deleteTips(${item.id})'/>
                         `
 
         liste.appendChild(container)
@@ -93,7 +93,7 @@ function updateListConseil(listConseil) {
         liste.appendChild(lineContainer)
     })
     console.log('fin', liste)
-    document.getElementById('listConseil').replaceWith(liste)
+    document.getElementById('listConseil').innerHTML = liste.innerHTML
 }
 
 function deleteTips(id) {

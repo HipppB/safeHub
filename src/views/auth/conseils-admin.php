@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Conseils Admin</title>
+        <title>SafeHub - <?php printTranslation('Tips'); ?> Admin</title>
         <link rel="stylesheet" href="../views/styles/common/index.css" />
         <link rel="stylesheet" href="../views/styles/headerprivate.css" />
         <link rel="stylesheet" href="../views/styles/conseilsAdmin.css" />
@@ -10,7 +10,7 @@
         <script
             type="text/javascript"
             src="../views/scripts/common/components.js"
-defer            async
+            defer 
         ></script>
         <script
             type="text/javascript"
@@ -20,10 +20,12 @@ defer            async
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
+        <!-- Header -->
+        <?php require 'views/components/headerPrivate.php'; ?>
         <div
-            class="header-container"
-            title="Conseils"
-            leftButtonPath="../views/assets/icons/backButton.svg"
+            class="header-container mT20"
+            title="<?php printTranslation('Tips'); ?>"
+            leftButtonPath=""
             width="25px"
         ></div>
 
@@ -37,9 +39,18 @@ defer            async
                         class="input-label-container"
                         name="search"
                         multiline="true"
-                        placeholderInside="Conseil..."
+                        placeholderInside="<?php printTranslation(
+                            'Tips'
+                        ); ?>..."
                     ></div>
-                    <input type="submit" class="button mT25" value="Ajouter"/>
+                    <div class="flex frow center mT10 ">
+                    <input type="checkbox" class="bgred" name="isEnglish"></input><div class="flex vcenter center s025 mL10"><?php printTranslation(
+                        'isEnglish'
+                    ); ?></div>
+</div>
+                    <input type="submit" class="button mT25" value="<?php printTranslation(
+                        'add'
+                    ); ?>"/>
                 </form>
             </div>
 

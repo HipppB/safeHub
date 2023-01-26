@@ -23,13 +23,19 @@
 
     <div class="input-list-container">
             <a class="button-outlined" href='./gestion-ticket'>Tickets</a>
+            <a class="button-outlined" href='./conseils-admin'><?php printTranslation(
+                'Tips'
+            ); ?></a>
+
 
             <a class="button-outlined" href='./messagerie-admin'>Messages</a>
 
             <a class="button-outlined" href='./faq-admin'>FAQ</a>
 
             <div class="wm50p" id="small-buttons">
-                <a class="button-outlined" href='./mentions-legales-admin'>Mentions légales</a>
+                <a class="button-outlined" href='./mentions-legales-admin'><?php printTranslation(
+                    'legal'
+                ); ?></a>
 
                 <a class="button-outlined" href='./cgu-admin'>CGU</a>
             </div>

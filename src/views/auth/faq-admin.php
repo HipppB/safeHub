@@ -49,7 +49,9 @@
                         placeholder="Réponse..."
                     ></div>
                     <div class="flex frow center mT10 ">
-                    <input type="checkbox" class="bgred" name="isEnglish"></input><div class="flex vcenter center s025 mL10">Question en anglais</div>
+                    <input type="checkbox" class="bgred" name="isEnglish"></input><div class="flex vcenter center s025 mL10"><?php printTranslation(
+                        'isEnglish'
+                    ); ?></div>
 </div>
                     <input
                         type="submit"

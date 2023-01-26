@@ -31,17 +31,23 @@
         <div class="rwidth">
         <?php if (userIsAdmin()) { ?>
             <div class="input-list-container gap10">
-                <button class="button" onclick="window.location.href='ajoutProduit'">Ajouter un produit</button>
+                <button class="button" onclick="window.location.href='ajoutProduit'"><?php printTranslation(
+                    'addProduct'
+                ); ?></button>
 
-                <button class="button" onclick="window.location.href='gestion'">Gestion du site</button>
+                <button class="button" onclick="window.location.href='gestion'"><?php printTranslation(
+                    'GestioSite'
+                ); ?></button>
             </div>
         <?php } ?>
-            <div class="low-title">Dernières notifications</div>
+            <div class="low-title"><?php printTranslation('LastModif'); ?></div>
             
         <?php
         $notifications = false;
         if ($notifications == false) {
-            echo '<div class="small-text center">Aucune notification</div>';
+            echo '<div class="small-text center">' .
+                printTranslation('noNotif', true) .
+                '</div>';
         } else {
             foreach ($notifications as $notification) {
                 echo '
@@ -69,23 +75,25 @@
         class="notif-top"
          -->
 
-        <div class="low-title">Produits</div>
+        <div class="low-title"><?php printTranslation('products'); ?></div>
         <div class="input-list-container">
             <?php if ($products == false) {
-                echo '<div class="center small-text">Aucun produit</div>';
+                echo '<div class="center small-text">' .
+                    printTranslation('noProduct', true) .
+                    '</div>';
             } else {
                 foreach ($products as $product) {
                     require 'views/components/productListingAdmin.php';
                 }
             } ?>
         </div>
-        <div class="low-title ">Utilisateurs</div>
+        <div class="low-title "><?php printTranslation('users'); ?></div>
 
         <div class="input-list-container">
             <div class="input-label-container"
                 type="search"
                 name="productSearch"
-                placeholderInside="Rechercher un utilisateur"
+                placeholderInside="<?php printTranslation('searchUser'); ?>"
                 path="">
             </div>
         
@@ -93,7 +101,9 @@
         <div class="stroke"></div>
         <div id="userList">
         <?php if ($users == false) {
-            echo '<div class="center subtitle">Aucun utilisateur</div>';
+            echo '<div class="center subtitle">' .
+                printTranslation('noUser', true) .
+                '</div>';
         } else {
             foreach ($users as $user) {
                 require 'views/components/userListingAdmin.php';
