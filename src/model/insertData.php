@@ -92,7 +92,7 @@ try {
         'product_name' => 'Produit Sublime',
         'room_name' => 'Salon',
         'house_name' => 'Maison 3',
-        'product_code' => 'DUKKOLPDLZQ',
+        'product_code' => 'DUKKOLPELZQ',
         'user_code' => 'HEGH',
         'expiration_date' => '2023-12-06',
         'db_max' => '0',
