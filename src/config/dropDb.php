@@ -12,6 +12,7 @@ $dropTranslations = $db->prepare('DROP TABLE IF EXISTS translations');
 $dropTypes = $db->prepare('DROP TABLE IF EXISTS types');
 $dropUsers = $db->prepare('DROP TABLE IF EXISTS users');
 $dropRoles = $db->prepare('DROP TABLE IF EXISTS roles');
+$dropResetPassword = $db->prepare('DROP TABLE IF EXISTS reset_password');
 try {
     $dropNotifUsers->execute();
     $dropTipsUsers->execute();
@@ -24,6 +25,8 @@ try {
     $dropTypes->execute();
     $dropUsers->execute();
     $dropRoles->execute();
+    $dropResetPassword->execute();
+
     echo 'Database cleaned' . PHP_EOL;
 } catch (PDOException $e) {
     echo 'Error: ' . $e->getMessage() . PHP_EOL;

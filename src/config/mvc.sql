@@ -159,6 +159,17 @@ CREATE TABLE IF NOT EXISTS `translations` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 
 
+--
+-- Structure de la table `resetPassword`
+--
+
+CREATE TABLE if not exists `reset_password` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `email` varchar(250) NOT NULL,
+    `token` varchar(250) NOT NULL,
+    `expDate` date NOT NULL,
+    PRIMARY KEY (`id`)
+
 -- --------------------------------------------------------
 
 --
