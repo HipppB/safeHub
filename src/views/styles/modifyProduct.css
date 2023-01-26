@@ -17,3 +17,7 @@ body {
     min-height: calc(100vh);
     justify-content: space-between;
 }
+
+button {
+    align-self: center;
+}

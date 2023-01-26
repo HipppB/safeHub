@@ -61,7 +61,10 @@ CREATE TABLE IF NOT EXISTS `products` (
   `product_code` varchar(16) NOT NULL UNIQUE,
   `user_code` varchar(16) NOT NULL,
   `expiration_date` date NOT NULL,
+  `comments` text,
   `db_max` int(11),
+  `humidity_max` int(11),
+  `co2_max` int(11),
   `temp_max` int(11),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
