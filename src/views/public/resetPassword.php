@@ -14,6 +14,8 @@
             src="views/scripts/common/components.js"
             async
         ></script>
+        <script type="text/javascript" src="views/scripts/resetPassword.js" async></script>
+
     </head>
     <body>
     <?php require 'views/components/header.php'; ?>
@@ -33,7 +35,7 @@
             <img src="views/assets/form_reset.svg" class="illu" />
         </div>
         </div>
-        <form>
+        <form method="post" id="reset_form">
             <div class="input-list-container">
                 <div
                     class="input-label-container"
@@ -41,19 +43,28 @@
                     name="password"
                     placeholder="<?php printTranslation('password'); ?>"
                     path="views/assets/icons/lock.svg"
+                    value="<?php echo $password; ?>"
                 ></div>
+                <span class='error-block'></span>
+
                 <div
                     class="input-label-container"
                     type="password"
-                    name="password"
+                    name="confirmPassword"
+                    value="<?php echo $confirmPassword; ?>"
                     placeholder="<?php printTranslation('confirmPassword'); ?>"
                     path="views/assets/icons/lock.svg"
                 ></div>
+                <span class='error-block'></span>
+
             </div>
+            <?php if(!empty($response)){
+                echo "<p class='error'>$response</p>";
+            } ?>
 
             <input type="submit" class="button mT25" value="<?php printTranslation(
                 'reset'
-            ); ?>" />
+            ); ?>" name="submit"/>
         </form>
         </div>
     <div class="mT50"></div>

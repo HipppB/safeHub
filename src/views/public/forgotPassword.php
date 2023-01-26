@@ -41,8 +41,12 @@
                     name="email"
                     placeholder="<?php printTranslation('email'); ?>"
                     path="views/assets/icons/mail.svg"
+                    value="<?php echo $email; ?>"
                 ></div>
             </div>
+            <?php if(!empty($response)){
+                echo "<div class='error-block'>$response</div>";
+            } ?>
 
             <input type="submit" class="button mT50" value="<?php printTranslation(
                 'send'
