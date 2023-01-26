@@ -13,6 +13,47 @@ let productCodeError = 'Veuillez entrer un code produit'
 let userCodeError = 'Veuillez entrer un code utilisateur'
 let userCodeExpirationError = "Veuillez entrer une date d'expiration"
 
+function sendXMLHttpObject(content, url, callback, method = 'POST') {
+    var xmlHttp = false
+    if (window.XMLHttpRequest) {
+        xmlHttp = new XMLHttpRequest()
+    } else if (window.ActiveXObject) {
+        try {
+            xmlHttp = new ActiveXObject('Microsoft.XMLHTTP')
+        } catch (e) {
+            try {
+                xmlHttp = new ActiveXObject('Msxml2.XMLHTTP')
+            } catch (e) {
+                xmlHttp = false
+            }
+        }
+    }
+    if (!xmlHttp) return false
+
+    xmlHttp.open(method, url, true)
+    xmlHttp.setRequestHeader(
+        'Content-Type',
+        'application/x-www-form-urlencoded'
+    )
+    xmlHttp.send(content)
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            callback(xmlHttp.responseText)
+        }
+    }
+
+    return xmlHttp
+}
+
+function refreshPage(response) {
+    let r = htmlToElement(response.replace('<!DOCTYPE html>', ''))
+    let html = document.querySelector('html')
+    document.removeChild(html)
+    var element = document.createElement('html')
+    element.innerHTML = r
+    document.appendChild(element)
+    searchforAll()
+}
 function messageValidation(field, error, event) {
     if (!field.value) {
         field.parentNode.parentNode.nextElementSibling.innerHTML = error
@@ -23,8 +64,6 @@ function messageValidation(field, error, event) {
         return true
     }
 }
-
-console.log('hello')
 
 function validateForm(event) {
     console.log('validateForm')
@@ -53,6 +92,19 @@ function validateForm(event) {
     ) {
         console.log('formValid')
         // event.innerHTML.submit()
+    }
+}
+
+function deleteProduct(id) {
+    try {
+        const formData = JSON.stringify({
+            action: 'deleteProduct',
+            productId: id,
+        })
+        sendXMLHttpObject(formData, '', refreshPage)
+    } catch (e) {
+        // window.alert('Une erreur est intervenue, veuillez réessayer plus tard.')
+        console.log(e)
     }
 }
 

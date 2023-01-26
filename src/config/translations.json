@@ -492,5 +492,9 @@
     "searchUser": {
         "fr": "Rechercher un utilisateur",
         "en": "Search a user"
+    },
+    "productModified": {
+        "fr": "Produit modifié",
+        "en": "Product modified"
     }
 }
