@@ -32,7 +32,11 @@ echo '
     </div>
     ' .
     ($rankMode
-        ? '<div class="small-2 s025  flex center relative"><img src="../views/assets/icons/' .
+        ? '<div class="small-2 s025  flex center relative" onclick="toggleUserGestionnaire(' .
+            $user['id'] .
+            ',' .
+            $product['id'] .
+            ')"><img src="../views/assets/icons/' .
             (!$product['is_gestionnaire'] ? 'upgreen.svg' : 'downred.svg') .
             '" class="w30px onTop hover5p hoverClick left10 absolute"/></div>'
         : '') .
