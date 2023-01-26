@@ -12,7 +12,7 @@
             defer
             async
         ></script>
-
+        <script type="text/javascript" src="../views/scripts/product.js" async></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
@@ -20,7 +20,7 @@
     <div class="title-container">
         <h1 class="title gradienttext"><?php printTranslation('modifyProduct') ?></h1>
     </div>
-    <form>
+    <form method='post'>
             <div class="input-list-container">
                 <div
                     class="input-label-container"
@@ -72,6 +72,18 @@
                     placeholder="<?php printTranslation('comments'); ?>"
                     multiline='true'
                 ></div>
+                <?php if (isset($response)) {
+                    if($response) {
+                        echo '<div class="error">';
+                        printTranslation('productModified');
+                        echo '</div>';
+                    }else {
+                        echo '<div class="error">';
+                        printTranslation("error");
+                        echo '</div>';
+                    }
+                } ?>
+
                 <input type="submit" class="button mT25" value="Valider" />
             </div>
 
@@ -79,7 +91,9 @@
             <button class="button-outlined mT10">
                 Reset les données produit
             </button>
-            <button class="button-outlined-red mT20 mB50">
+            <button class="button-outlined-red mT20 mB50" onclick="deleteProduct(<?php echo $product[
+            'id'
+            ]; ?>)">
                 Supprimer le produit
             </button>
         <!-- Footer -->

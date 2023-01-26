@@ -455,5 +455,9 @@
     "modifyProduct": {
         "fr": "Modifier un produit",
         "en": "Modify a product"
+    },
+    "productModified": {
+        "fr": "Produit modifié",
+        "en": "Product modified"
     }
 }
