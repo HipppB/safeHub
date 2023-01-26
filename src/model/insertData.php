@@ -258,3 +258,72 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage() . PHP_EOL;
 }
+
+// insert fake faq
+try {
+    $queryAddFaq = $db->prepare(
+        'INSERT INTO faq ( `lang`, `question`, `reponse`) VALUES (:lang, :question, :reponse)'
+    );
+
+    $queryAddFaq->execute([
+        'lang' => 'fr',
+        'question' => 'Qu\'est-ce qu\'un SafeHub ?',
+        'reponse' =>
+            'Un safeHub est un hub connecté vous permettant de surveiller votre maison et de la protéger.',
+    ]);
+    $queryAddFaq->execute([
+        'lang' => 'fr',
+        'question' => 'Comment puis-je me connecter à mon SafeHub ?',
+        'reponse' =>
+            'Vous pouvez vous connecter à votre SafeHub en utilisant le site SafeHub.fr avec le code produit qui vous à été fourni.',
+    ]);
+
+    $queryAddFaq->execute([
+        'lang' => 'fr',
+        'question' =>
+            'Est-ce que je peux me connecter à plusieurs Hub en même temps',
+        'reponse' =>
+            'Oui, vous pouvez vous connecter à plusieurs SafeHub en même temps. Votre gestionnaire vous donnera un ou plusieurs code produit pouvant ajouter un ou plusieurs hub.',
+    ]);
+
+    $queryAddFaq->execute([
+        'lang' => 'en',
+        'question' => 'What is a SafeHub ?',
+        'reponse' =>
+            'A SafeHub is a connected hub that allows you to monitor your home and protect it.',
+    ]);
+    $queryAddFaq->execute([
+        'lang' => 'en',
+        'question' => 'How can I connect to my SafeHub ?',
+        'reponse' =>
+            'You can connect to your SafeHub using the SafeHub.fr website with the product code that was provided to you.',
+    ]);
+
+    $queryAddFaq->execute([
+        'lang' => 'en',
+        'question' => 'Can I connect to several Hub at the same time ?',
+        'reponse' =>
+            'Yes, you can connect to several SafeHub at the same time. Your manager will give you one or more product code to add one or more hub.',
+    ]);
+    $queryAddFaq->execute([
+        'lang' => 'en',
+        'question' => 'Can I delete my SafeHub account ?',
+        'reponse' =>
+            'Yes, you must contact us to delete your account. You will not be able to access your SafeHub data anymore.',
+    ]);
+    $queryAddFaq->execute([
+        'lang' => 'en',
+        'question' => 'Can I change my SafeHub account password ?',
+        'reponse' =>
+            'Yes, you can change your password in your account settings or by doing "forgot password" on the login page.',
+    ]);
+    $queryAddFaq->execute([
+        'lang' => 'en',
+        'question' => 'Can I change my SafeHub account email ?',
+        'reponse' =>
+            'Yes, you can change your email in your account settings. Be careful, if you mischange your email, you will not be able to access your account anymore.',
+    ]);
+    echo 'Fake faq created' . PHP_EOL;
+} catch (PDOException $e) {
+    echo $e->getMessage() . PHP_EOL;
+}
