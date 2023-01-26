@@ -10,6 +10,11 @@
             src="views/scripts/common/components.js"
             defer
         ></script>
+        <script
+            type="text/javascript"
+            src="views/scripts/searchFaq.js"
+            defer
+        ></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -27,7 +32,7 @@
                     placeholderInside="<?php printTranslation('search'); ?>"
                 ></div>
             </div>
-            <div class="mR25 faqListContainer">
+            <div class="mR25 faqListContainer" id="faqListContainer">
                 <?php foreach ($faq as $question) { ?>
                     <div>
                         <p class="gradienttext titleFAQ">

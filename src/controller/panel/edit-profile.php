@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $req = file_get_contents('php://input');
     $req = json_decode($req);
 
-    var_dump($req);
     $error;
     $name = htmlspecialchars(
         $req->name ? $req->name : $_SESSION['user']['name']

@@ -47,17 +47,34 @@ function GetFAQ()
         return false;
     }
 }
-function GetFAQCurrentLang()
+function GetFAQCurrentLang($search = null)
 {
     $lang = $_SESSION['lang'];
     global $db;
-    $query = $db->prepare('SELECT * FROM faq WHERE lang = :lang');
-    try {
-        $query->execute([
-            'lang' => $lang,
-        ]);
-        return $query->fetchAll();
-    } catch (PDOExeption $E) {
-        return false;
+    if (empty($search)) {
+        $query = $db->prepare('SELECT * FROM faq WHERE lang = :lang');
+        try {
+            $query->execute([
+                'lang' => $lang,
+            ]);
+            return $query->fetchAll();
+        } catch (PDOExeption $E) {
+            return false;
+        }
+    } else {
+        // search
+
+        $query = $db->prepare(
+            'SELECT * FROM faq WHERE lang = :lang AND (question LIKE :search OR reponse LIKE :search)'
+        );
+        try {
+            $query->execute([
+                'lang' => $lang,
+                'search' => '%' . $search . '%',
+            ]);
+            return $query->fetchAll();
+        } catch (PDOExeption $E) {
+            return false;
+        }
     }
 }
