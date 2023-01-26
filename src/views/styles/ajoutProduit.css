@@ -1,3 +1,11 @@
 body {
     min-height: 100vh;
 }
+
+form {
+    margin-bottom: 2em;
+}
+.error-block {
+    font-size: 1rem;
+    color: red;
+}

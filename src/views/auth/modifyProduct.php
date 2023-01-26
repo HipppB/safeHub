@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>SafeHub - Page d'accueil</title>
+        <title>SafeHub - Modifier produit</title>
         <link rel="stylesheet" href="../views/styles/common/index.css" />
         <link rel="stylesheet" href="../views/styles/modifyProduct.css" />
         <link rel="stylesheet" href="../views/styles/headerprivate.css" />
@@ -16,67 +16,73 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
-        <div
-            class="header-container"
-            title="Modifier le produit"
-            leftButtonPath="../views/assets/icons/backButton.svg"
-            onclick="window.location.href = './';"
-        ></div>
-        <form class="page-container">
-            <div class="input-list-container list">
+    <?php require 'views/components/headerPrivate.php'; ?>
+    <div class="title-container">
+        <h1 class="title gradienttext"><?php printTranslation('modifyProduct') ?></h1>
+    </div>
+    <form>
+            <div class="input-list-container">
                 <div
                     class="input-label-container"
-                    name="surname"
-                    placeholder="Nom"
+                    name="name"
+                    placeholder="<?php printTranslation('productName'); ?>"
                     path="../views/assets/icons/person.svg"
+                    value='<?php echo $product['product_name']; ?>'
                 ></div>
                 <div
                     class="input-label-container"
-                    name="property"
-                    placeholder="Nom de la propriété"
+                    name="accomodationName"
+                    placeholder="<?php printTranslation('accomodationName'); ?>"
                     path="../views/assets/icons/house.svg"
+                    value='<?php echo $product['house_name']; ?>'
                 ></div>
                 <div
                     class="input-label-container"
-                    name="room"
-                    placeholder="Pièce"
+                    name="roomName"
+                    placeholder="<?php printTranslation('roomName'); ?>"
                     path="../views/assets/icons/house.svg"
-                ></div>
-                <div
-                    class="input-label-container"
-                    name="comment"
-                    placeholder="Commentaire"
-                    path="../views/assets/icons/modify.svg"
+                    value='<?php echo $product['room_name']; ?>'
                 ></div>
                 <div
                     class="input-label-container"
                     name="productCode"
-                    placeholder="Code produit"
+                    placeholder="<?php printTranslation('productCode'); ?>"
                     path="../views/assets/icons/mail.svg"
+                    value='<?php echo $product['product_code']; ?>'
                 ></div>
                 <div
                     class="input-label-container"
                     name="userCode"
-                    placeholder="Code utilisateur"
+                    placeholder="<?php printTranslation('userCode'); ?>"
                     path="../views/assets/icons/mail.svg"
+                    value='<?php echo $product['user_code']; ?>'
                 ></div>
                 <div
                     class="input-label-container"
-                    name="userCodeExpireDate"
-                    placeholder="Code d'expiration du Code user"
+                    name="userCodeExpirationDate"
+                    placeholder="<?php printTranslation('userCodeExpiration'); ?>"
                     path="../views/assets/icons/calendar.svg"
+                    value='<?php echo $product['expiration_date']; ?>'
                 ></div>
+                <div
+                    class="input-label-container"
+                    name="comments"
+                    placeholder="Commentaire"
+                    path="../views/assets/icons/modify.svg"
+                    placeholder="<?php printTranslation('comments'); ?>"
+                    multiline='true'
+                ></div>
+                <input type="submit" class="button mT25" value="Valider" />
             </div>
 
-            <input type="submit" class="button mT25" value="Valider" />
+        </form>
             <button class="button-outlined mT10">
                 Reset les données produit
             </button>
             <button class="button-outlined-red mT20 mB50">
                 Supprimer le produit
             </button>
-        </form>
         <!-- Footer -->
-        <div class="footer-container" small="true"></div>
+    <?php require 'views/components/footer.php'; ?>    </body>
     </body>
 </html>

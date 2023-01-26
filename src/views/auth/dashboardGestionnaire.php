@@ -31,7 +31,7 @@
         <div class="rwidth">
         <?php if (userIsAdmin()) { ?>
             <div class="input-list-container gap10">
-                <button class="button">Ajouter un produit</button>
+                <button class="button" onclick="window.location.href='ajoutProduit'">Ajouter un produit</button>
 
                 <button class="button" onclick="window.location.href='gestion'">Gestion du site</button>
             </div>
