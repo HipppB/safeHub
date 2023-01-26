@@ -431,6 +431,62 @@ function emailExist($email)
     return false;
 }
 
+function deleteUserTemporaryTokens($email)
+{
+    global $db;
+    $query = $db->prepare(
+        'DELETE FROM reset_password WHERE email = :email'
+    );
+    try {
+        $query->execute([
+            'email' => $email,
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        return $e->getMessage();
+    }
+}
+
+function addTemporaryToken($token, $email, $expDate){
+    global $db;
+    deleteUserTemporaryTokens($email);
+    $query = $db->prepare(
+        'INSERT INTO reset_password (token, email, expDate) VALUES (:token, :email, :expDate)'
+    );
+    $query->execute([
+        'token' => $token,
+        'email' => $email,
+        'expDate' => $expDate,
+    ]);
+    return true;
+}
+
+function getTemporaryToken($token){
+    global $db;
+    $query = $db->prepare(
+        'SELECT * FROM reset_password WHERE token = :token'
+    );
+    $query->execute([
+        'token' => $token,
+    ]);
+    return $query->fetchAll();
+}
+
+function updatePassword($id, $password){
+    global $db;
+    $query = $db->prepare(
+        'UPDATE users SET password = :password WHERE id = :id'
+    );
+    try {
+        $query->execute([
+            'id' => $id,
+            'password' => password_hash($password, PASSWORD_DEFAULT),
+        ]);
+        return true;
+    } catch (PDOException $e) {
+        return $e->getMessage();
+    }
+}
 function toggleUserBan($id)
 {
     if (!userIsAdmin()) {
@@ -511,4 +567,5 @@ function toggleAdmin($id)
         }
     }
     return false;
+
 }

@@ -2,10 +2,8 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-$mail = new PHPMailer(true);
 function sendEmail($reciever, $body, $subject) {
-    global $mail;
+    $mail = new PHPMailer(true);
     try {
         //Server settings
         $mail->SMTPDebug = $_ENV['MAIL_SMTP_DEBUG'];                                       // Enable verbose debug output
