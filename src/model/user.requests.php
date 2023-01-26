@@ -71,7 +71,7 @@ function getUsers($search = null, $productid = null)
 function loginUser($email, $password)
 {
     $user = getUserByEmail($email);
-    if ($user) {
+    if ($user && $user['is_banned'] == 0) {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user'] = $user;
             return true;
